@@ -1,3635 +1,3635 @@
 {
-  "法师武器": [
+  "Pháp Sư Vũ Khí": [
     {
-      "name": "学徒法杖",
+      "name": "Học Đồ Pháp Trượng",
       "cost": 15,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "法杖",
-        "攻击: 15"
+        "Pháp trượng",
+        "Tấn công: 15"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "白蜡木杖身经简单打磨，笔直无饰，顶端略粗，是新手魔法师的标配。"
+      "description": "Thân trượng bằng gỗ bạch lạp được đánh bóng đơn giản, thẳng tắp không trang trí, đỉnh hơi thô, là trang bị tiêu chuẩn của ma pháp sư tập sự."
     },
     {
-      "name": "雕花木短杖",
+      "name": "Điêu Hoa Mộc Đoản Trượng",
       "cost": 10,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "短杖",
-        "攻击: 10"
+        "Đoản trượng",
+        "Tấn công: 10"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "桦木削成的短杖，杖身刻有简单的几何纹路，适合戏法或基础咒语，便于携带。"
+      "description": "Đoản trượng được đẽo từ gỗ bạch dương, thân trượng khắc những hoa văn hình học đơn giản, thích hợp cho các trò vặt hoặc câu chú cơ bản, thuận tiện mang theo."
     },
     {
-      "name": "劣质水晶球",
+      "name": "Liệt Chất Thủy Tinh Cầu",
       "cost": 13,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "法器",
-        "攻击: 10"
+        "Pháp khí",
+        "Tấn công: 10"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "劣质水晶打磨的球体，内里浑浊且有杂质，可用于基础占卜或作为施法媒介。"
+      "description": "Quả cầu được đánh bóng từ thủy tinh kém chất lượng, bên trong vẩn đục và có tạp chất, có thể dùng để bói toán cơ bản hoặc làm vật trung gian thi pháp."
     },
     {
-      "name": "白橡木法杖",
+      "name": "Bạch Tượng Mộc Pháp Trượng",
       "cost": 30,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "法杖",
-        "攻击: 35"
+        "Pháp trượng",
+        "Tấn công: 35"
       ],
       "rarity": "uncommon",
       "effect": {
-        "法力节约": "施法时降低8%MP消耗"
+        "Pháp lực tiết kiệm": "Khi thi pháp giảm 8% tiêu hao MP"
       },
-      "description": "百年白橡木树心雕琢的法杖，杖身修长纤细，能帮助施法者更好地集中精神。"
+      "description": "Pháp trượng được điêu khắc từ lõi cây sồi trắng trăm năm, thân trượng thon dài tinh tế, có thể giúp người thi pháp tập trung tinh thần tốt hơn."
     },
     {
-      "name": "学徒魔导书",
+      "name": "Học Đồ Ma Đạo Thư",
       "cost": 27,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "魔导书",
-        "攻击: 25"
+        "Ma đạo thư",
+        "Tấn công: 25"
       ],
       "rarity": "uncommon",
       "effect": {
-        "每日首发": "每日首次施放[普通]品质技能时，不消耗MP。"
+        "Mỗi ngày mở đầu": "Mỗi ngày lần đầu thi triển kỹ năng phẩm chất [Thường], không tiêu hao MP."
       },
-      "description": "硬质皮封面，书角以黄铜包裹，记录了数个基础法术，能帮助记忆法术。"
+      "description": "Bìa da cứng, góc sách được bọc bằng đồng thau, ghi lại vài pháp thuật cơ bản, có thể giúp ghi nhớ pháp thuật."
     },
     {
-      "name": "火焰水晶",
+      "name": "Hỏa Diễm Thủy Tinh",
       "cost": 29,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "法器",
-        "攻击: 30"
+        "Pháp khí",
+        "Tấn công: 30"
       ],
       "rarity": "uncommon",
       "effect": {
-        "火焰附加": "所有造成能量伤害的技能，额外附加60点能量伤害(火)。"
+        "Hỏa diễm phụ gia": "Tất cả kỹ năng gây sát thương năng lượng, gây thêm 60 điểm sát thương năng lượng (Hỏa)."
       },
-      "description": "切割过的低纯度火水晶，被固定在黄铜底座上，能微弱增强火焰法术的威力。"
+      "description": "Tinh thể lửa độ tinh khiết thấp đã qua cắt gọt, được cố định trên đế đồng thau, có thể tăng cường yếu ớt uy lực của pháp thuật lửa."
     },
     {
-      "name": "七光祈愿诗",
+      "name": "Thất Quang Kỳ Nguyện Thi",
       "cost": 42,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "单手剑",
-        "法杖",
-        "攻击: 150"
+        "Đơn thủ kiếm",
+        "Pháp trượng",
+        "Tấn công: 150"
       ],
       "rarity": "rare",
       "effect": {
-        "伤害增幅": "提高12%伤害。",
-        "额外增幅": "额外提高8%伤害。"
+        "Sát thương tăng phúc": "Tăng 12% sát thương.",
+        "Ngạch ngoại tăng phúc": "Tăng thêm 8% sát thương."
       },
-      "description": "以整块月光石秘法锻造的符文巨剑，象牙白的宽大剑身刻有增幅魔法的彩色符文，七色宝石镶嵌在剑身的凹槽中，咏唱咒文时会散发彩色流光。"
+      "description": "Phù văn cự kiếm được rèn bằng bí pháp từ nguyên khối đá mặt trăng, thân kiếm rộng màu trắng ngà khắc các phù văn ma pháp tăng phúc đầy màu sắc, bảy viên đá quý được khảm trong rãnh kiếm, khi ngâm xướng câu chú sẽ tỏa ra ánh sáng lưu chuyển rực rỡ."
     },
     {
-      "name": "风暴之核法球",
+      "name": "Phong Bạo Chi Hạch Pháp Cầu",
       "cost": 44,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "法器",
-        "攻击: 85"
+        "Pháp khí",
+        "Tấn công: 85"
       ],
       "rarity": "rare",
       "effect": {
-        "范围扩展": "施放范围技能时，范围内的目标数量上限+1。"
+        "Phạm vi mở rộng": "Khi thi triển kỹ năng phạm vi, giới hạn số lượng mục tiêu trong phạm vi +1."
       },
-      "description": "包裹在秘银框架中的风眼石，球体核心处有微型气旋在旋转，能增强风系法术的范围与冲击力。"
+      "description": "Đá mắt bão được bao bọc trong khung bí ngân, tại lõi quả cầu có một cơn lốc xoáy nhỏ đang xoay tròn, có thể tăng cường phạm vi và lực xung kích của pháp thuật hệ gió."
     },
     {
-      "name": "奥术聚焦法杖",
+      "name": "Áo Thuật Tụ Tiêu Pháp Trượng",
       "cost": 45,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "法杖",
-        "攻击: 110"
+        "Pháp trượng",
+        "Tấn công: 110"
       ],
       "rarity": "rare",
       "effect": {
-        "能量聚焦": "你的所有单体能量伤害技能，对目标的最终伤害提升10%。"
+        "Năng lượng tụ tiêu": "Tất cả kỹ năng sát thương năng lượng đơn thể của bạn, sát thương cuối cùng lên mục tiêu tăng 10%."
       },
-      "description": "由抛光黑檀木制成，杖头镶嵌着一枚切割精巧的蓝宝石，杖身缠绕着细密的银丝符文，是中阶法师们梦寐以求的施法媒介。"
+      "description": "Được làm từ gỗ mun đánh bóng, đầu trượng khảm một viên đá sapphire cắt gọt tinh xảo, thân trượng quấn quanh bởi những sợi dây bạc khắc phù văn dày đặc, là vật trung gian thi pháp mà các pháp sư trung cấp hằng mơ ước."
     },
     {
-      "name": "冥河摆渡人的提灯·卡隆之眸",
+      "name": "Minh Hà Bài Độ Nhân Đề Đăng · Ca Long Chi Mâu",
       "cost": 666,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "法杖",
-        "攻击: 880",
-        "可成长"
+        "Pháp trượng",
+        "Tấn công: 880",
+        "Có thể trưởng thành"
       ],
       "rarity": "only",
       "effect": {
-        "引渡人": "任意召唤类技能的单次召唤数量+1(突破技能原有限制)",
-        "买路钱": "若在战斗中触发了召唤效果，战斗结束后必定遭遇一次需要“破财消灾”的叙事性倒霉事件(如钱袋掉落、贵重道具意外破损等)，损失价值与召唤物强度正相关"
+        "Người dẫn độ": "Số lượng triệu hoán đơn lần của bất kỳ kỹ năng loại triệu hoán nào +1 (phá vỡ giới hạn ban đầu của kỹ năng)",
+        "Tiền mãi lộ": "Nếu trong trận chiến đã kích hoạt hiệu quả triệu hoán, sau khi kết thúc trận chiến chắc chắn sẽ gặp phải một sự kiện xui xẻo mang tính tường thuật cần \"phá tài tiêu tai\" (như rơi túi tiền, đạo cụ quý giá bất ngờ hư hỏng, v.v.), giá trị tổn thất tỷ lệ thuận với sức mạnh của vật triệu hoán"
       },
-      "description": "杖身乃浸饱死气的腐朽黑木船蒿，挑着斑驳的青铜孤灯，燃烧的苍白竖瞳为其灯芯，贪婪窥视着虚空。召唤生效时，虚空中将传来冥河沉闷的划桨水声。传说这是卡隆遗失的提灯，它不再引渡亡魂，而是欺骗渴望渡河的怪物至现世为你而战——只要你能付得起那昂贵的过路费。"
+      "description": "Thân trượng là mái chèo gỗ đen mục nát thấm đẫm tử khí, treo một chiếc đèn bão bằng đồng thau loang lổ, con ngươi dựng thẳng màu trắng nhợt đang cháy làm tim đèn, tham lam nhìn trộm hư không. Khi triệu hoán có hiệu lực, từ hư không sẽ truyền đến tiếng chèo thuyền trầm đục trên sông Styx. Tương truyền đây là chiếc đèn lồng bị mất của Charon, nó không còn dẫn độ vong hồn nữa, mà là lừa gạt những quái vật khao khát qua sông đến hiện thế để chiến đấu cho bạn —— miễn là bạn có thể trả nổi khoản phí qua đường đắt đỏ đó."
     }
   ],
-  "牧师武器": [
+  "Mục Sư Vũ Khí": [
     {
-      "name": "木制圣徽",
+      "name": "Mộc Chế Thánh Huy",
       "cost": 7,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "圣徽",
-        "攻击: 8"
+        "Thánh huy",
+        "Tấn công: 8"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "普通木料雕刻的太阳徽记，边缘粗糙，可作为施展神术的媒介，是见习牧师的身份证明。"
+      "description": "Biểu tượng mặt trời được điêu khắc từ gỗ thường, viền thô ráp, có thể dùng làm vật trung gian thi triển thần thuật, là chứng nhận thân phận của mục sư thực tập."
     },
     {
-      "name": "粗铁圣铃",
+      "name": "Thô Thiết Thánh Linh",
       "cost": 9,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "圣铃",
-        "攻击: 10"
+        "Thánh linh",
+        "Tấn công: 10"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "粗铁铸造的小型手铃，铃声沉闷，摇动时能引导微弱的神圣力量，用于简单的祈祷仪式。"
+      "description": "Chuông tay nhỏ đúc bằng sắt thô, tiếng chuông trầm đục, khi lắc có thể dẫn dắt sức mạnh thần thánh yếu ớt, dùng cho các nghi thức cầu nguyện đơn giản."
     },
     {
-      "name": "简易权杖",
+      "name": "Giản Dịch Quyền Trượng",
       "cost": 12,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "权杖",
-        "攻击: 18"
+        "Quyền trượng",
+        "Tấn công: 18"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "硬木为柄，顶端镶嵌一块未经打磨的黄铜块，象征神权，也可作为钝器使用。"
+      "description": "Cán bằng gỗ cứng, đỉnh gắn một khối đồng thau chưa qua mài dũa, tượng trưng cho thần quyền, cũng có thể dùng như vũ khí cùn."
     },
     {
-      "name": "祷告石锤",
+      "name": "Đảo Cáo Thạch Chùy",
       "cost": 24,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "单手锤",
-        "攻击: 40"
+        "Đơn thủ chùy",
+        "Tấn công: 40"
       ],
       "rarity": "uncommon",
       "effect": {
-        "神圣转换": "使用此武器进行普通攻击时，50%的物理伤害转化为能量伤害。"
+        "Thần thánh chuyển đổi": "Khi sử dụng vũ khí này để tấn công thường, 50% sát thương vật lý chuyển hóa thành sát thương năng lượng."
       },
-      "description": "坚硬花岗岩打磨成的锤头，刻有基础的祈祷符文，能更好地引导神术能量。"
+      "description": "Đầu búa được mài từ đá hoa cương cứng, khắc các phù văn cầu nguyện cơ bản, có thể dẫn dắt năng lượng thần thuật tốt hơn."
     },
     {
-      "name": "白银圣铃",
+      "name": "Bạch Ngân Thánh Linh",
       "cost": 26,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "圣铃",
-        "攻击: 28"
+        "Thánh linh",
+        "Tấn công: 28"
       ],
       "rarity": "uncommon",
       "effect": {
-        "治疗增幅": "所有[治疗]标签的技能，额外恢复目标15点HP。"
+        "Trị liệu tăng phúc": "Tất cả kỹ năng có nhãn [Trị liệu], hồi phục thêm cho mục tiêu 15 điểm HP."
       },
-      "description": "纯银铸造的精致手铃，摇动时铃声清脆悦耳，能提升祝福类神术的效果。"
+      "description": "Chuông tay tinh xảo đúc bằng bạc nguyên chất, khi lắc tiếng chuông thanh thúy dễ nghe, có thể nâng cao hiệu quả của thần thuật loại chúc phúc."
     },
     {
-      "name": "圣言书卷",
+      "name": "Thánh Ngôn Thư Quyển",
       "cost": 28,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "魔导书",
-        "攻击: 25"
+        "Ma đạo thư",
+        "Tấn công: 25"
       ],
       "rarity": "uncommon",
       "effect": {
-        "增益延长": "所有[增益]标签的技能，持续时间增加1回合。"
+        "Tăng ích kéo dài": "Tất cả kỹ năng có nhãn [Tăng ích], thời gian duy trì tăng thêm 1 hiệp."
       },
-      "description": "抄录着基础祷文的羊皮纸卷轴，卷轴两端以镀银木材固定，诵读时可增强信仰之力。"
+      "description": "Cuộn giấy da dê chép lại các bài kinh cầu nguyện cơ bản, hai đầu cuộn giấy được cố định bằng gỗ mạ bạc, khi tụng đọc có thể tăng cường sức mạnh đức tin."
     },
     {
-      "name": "圣骨圣印记",
+      "name": "Thánh Cốt Thánh Ấn Ký",
       "cost": 40,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "圣徽",
-        "攻击: 75"
+        "Thánh huy",
+        "Tấn công: 75"
       ],
       "rarity": "rare",
       "effect": {
-        "怜悯": "你的治疗技能对HP低于30%的目标，治疗效果提升20%。"
+        "Thương xót": "Kỹ năng trị liệu của bạn đối với mục tiêu có HP dưới 30%, hiệu quả trị liệu tăng 20%."
       },
-      "description": "以一位殉道圣徒的指骨为核心，包裹在纯银铸造的太阳徽记之中，整体散发着柔和的圣光。"
+      "description": "Lấy xương ngón tay của một vị thánh tử đạo làm cốt lõi, bao bọc trong biểu tượng mặt trời đúc bằng bạc nguyên chất, tổng thể tỏa ra ánh thánh quang nhu hòa."
     },
     {
-      "name": "天使之声圣铃",
+      "name": "Thiên Sứ Chi Thanh Thánh Linh",
       "cost": 38,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "圣铃",
-        "攻击: 70"
+        "Thánh linh",
+        "Tấn công: 70"
       ],
       "rarity": "rare",
       "effect": {
-        "邪恶震慑": "当你使用技能对亡灵或深渊魔族造成伤害时，有50%几率(d20≥11)对其施加[震慑]状态，持续1回合。"
+        "Tà ác chấn nhiếp": "Khi bạn sử dụng kỹ năng gây sát thương lên Vong Linh hoặc Thâm Uyên Ma Tộc, có 50% cơ hội (d20≥11) thi triển trạng thái [Chấn nhiếp] lên chúng, duy trì 1 hiệp."
       },
-      "description": "以稀有的音银矿铸造，铃声清澈悠远，仿佛经过天使祝福，能对亡灵和恶魔造成范围性的神圣伤害。"
+      "description": "Đúc từ quặng Âm Ngân quý hiếm, tiếng chuông trong trẻo vang xa, phảng phất như được thiên sứ chúc phúc, có thể gây sát thương thần thánh phạm vi rộng lên vong linh và ác ma."
     },
     {
-      "name": "审判钉锤",
+      "name": "Thẩm Phán Đinh Chùy",
       "cost": 41,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "单手锤",
-        "攻击: 105"
+        "Đơn thủ chùy",
+        "Tấn công: 105"
       ],
       "rarity": "rare",
       "effect": {
-        "神圣裁决": "使用此武器的普通攻击或物理伤害技能命中时，额外造成40点能量伤害。此效果对亡灵或深渊魔族翻倍。"
+        "Thần thánh tài quyết": "Khi sử dụng vũ khí này tấn công thường hoặc kỹ năng sát thương vật lý trúng đích, gây thêm 40 điểm sát thương năng lượng. Hiệu quả này nhân đôi đối với Vong Linh hoặc Thâm Uyên Ma Tộc."
       },
-      "description": "秘银打造的单手钉锤，锤头呈星芒状，中心镶嵌着一枚净化的光水晶，击中敌人时会爆发小范围的神圣能量。"
+      "description": "Chùy đinh một tay làm bằng bí ngân, đầu chùy hình sao, trung tâm khảm một viên quang thủy tinh thanh tẩy, khi đánh trúng kẻ địch sẽ bùng phát năng lượng thần thánh trong phạm vi nhỏ."
     }
   ],
-  "法袍": [
+  "Pháp Bào": [
     {
-      "name": "学徒法袍",
+      "name": "Học Đồ Pháp Bào",
       "cost": 22,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "布甲",
-        "防御: 20"
+        "Giáp vải",
+        "Phòng thủ: 20"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "厚实的黑色粗棉布裁剪而成，带有宽大的兜帽，能遮蔽身形，是法师学徒的身份证明。"
+      "description": "Được cắt may từ vải bông thô dày màu đen, có mũ trùm đầu rộng, có thể che giấu thân hình, là chứng nhận thân phận của học đồ pháp sư."
     },
     {
-      "name": "旅行者斗篷",
+      "name": "Lữ Hành Giả Đấu Bồng",
       "cost": 20,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "布甲",
-        "防御: 18"
+        "Giáp vải",
+        "Phòng thủ: 18"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "粗麻布材质，连带一个大兜帽，能防风防雨，提供轻微的防护与保暖。"
+      "description": "Chất liệu vải đay thô, liền với một mũ trùm lớn, có thể chắn gió che mưa, cung cấp sự bảo vệ nhẹ và giữ ấm."
     },
     {
-      "name": "法师长袍",
+      "name": "Pháp Sư Trường Bào",
       "cost": 50,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "布甲",
-        "防御: 50"
+        "Giáp vải",
+        "Phòng thủ: 50"
       ],
       "rarity": "uncommon",
       "effect": {
-        "法力增幅": "降低8%MP的消耗。"
+        "Pháp lực tăng phúc": "Giảm 8% tiêu hao MP."
       },
-      "description": "厚实的蓝色天鹅绒制成，袖口和衣边绣有银线魔法纹路，能微弱提升法术效果。"
+      "description": "Làm từ nhung xanh dày dặn, cổ tay và viền áo thêu hoa văn ma pháp bằng chỉ bạc, có thể tăng cường yếu ớt hiệu quả pháp thuật."
     },
     {
-      "name": "奥术导师法袍",
+      "name": "Áo Thuật Đạo Sư Pháp Bào",
       "cost": 80,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "布甲",
-        "防御: 120"
+        "Giáp vải",
+        "Phòng thủ: 120"
       ],
       "rarity": "rare",
       "effect": {
-        "奥术精通": "所有能量伤害技能的最终伤害提升15%。",
-        "法力回复": "每回合额外恢复10点MP。"
+        "Áo thuật tinh thông": "Tăng 15% sát thương cuối cùng của tất cả kỹ năng gây sát thương năng lượng.",
+        "Pháp lực hồi phục": "Mỗi hiệp hồi phục thêm 10 điểm MP."
       },
-      "description": "深蓝色天鹅绒与银丝线织成的华美法袍，袖口与领口绣有星辰图案，镶嵌多颗蓝宝石。"
+      "description": "Pháp bào hoa mỹ được dệt từ nhung xanh đậm và tơ bạc, cổ tay và cổ áo thêu hình sao trời, khảm nạm nhiều viên đá sapphire."
     },
     {
-      "name": "元素庇护长袍",
+      "name": "Nguyên Tố Tí Hộ Trường Bào",
       "cost": 75,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "布甲",
-        "防御: 110"
+        "Giáp vải",
+        "Phòng thủ: 110"
       ],
       "rarity": "rare",
       "effect": {
-        "元素抗性": "受到的所有能量伤害降低10%。"
+        "Nguyên tố kháng tính": "Giảm 10% tất cả sát thương năng lượng phải chịu."
       },
-      "description": "以秘银丝线与防火布料混纺织成，布料上流动着四色元素的微光。"
+      "description": "Dệt từ sợi bí ngân pha với vải chống lửa, trên mặt vải lưu chuyển ánh sáng nhẹ của bốn màu nguyên tố."
     }
   ],
-  "近战武器": [
+  "Cận Chiến Vũ Khí": [
     {
-      "name": "精铁长剑",
+      "name": "Tinh Thiết Trường Kiếm",
       "cost": 12,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "单手剑",
-        "攻击: 18"
+        "Đơn thủ kiếm",
+        "Tấn công: 18"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "由精铁反复锻打而成，剑体修长，开有血槽，韧性良好，适用于多种战斗场景。"
+      "description": "Được rèn đúc nhiều lần từ sắt tinh luyện, thân kiếm thon dài, có rãnh huyết, độ dẻo dai tốt, thích hợp cho nhiều loại hình chiến đấu."
     },
     {
-      "name": "宫廷刺剑",
+      "name": "Cung Đình Thích Kiếm",
       "cost": 10,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "刺剑",
-        "攻击: 15"
+        "Thích kiếm",
+        "Tấn công: 15"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "精钢锻造的细长剑身，配有繁复的蝶形护手，轻巧灵活，是贵族决斗的常用武器。"
+      "description": "Thân kiếm mảnh dẻ rèn từ thép tinh luyện, phối với miếng bảo vệ tay hình bướm phức tạp, nhẹ nhàng linh hoạt, là vũ khí thường dùng trong quyết đấu của quý tộc."
     },
     {
-      "name": "手半剑",
+      "name": "Thủ Bán Kiếm",
       "cost": 13,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "单手剑",
-        "攻击: 19"
+        "Đơn thủ kiếm",
+        "Tấn công: 19"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "优质铁材锻造，剑柄长度可供单手或双手握持，战术灵活多变。"
+      "description": "Rèn từ sắt chất lượng cao, chiều dài cán kiếm có thể cầm một tay hoặc hai tay, chiến thuật linh hoạt đa biến."
     },
     {
-      "name": "十字大剑",
+      "name": "Thập Tự Đại Kiếm",
       "cost": 15,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "双手剑",
-        "攻击: 20"
+        "Song thủ kiếm",
+        "Tấn công: 20"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "精铁铸造的双刃重剑，配有长长的十字形护手，需双手挥动，威力巨大。"
+      "description": "Trọng kiếm hai lưỡi đúc bằng sắt tinh luyện, phối với miếng bảo vệ tay hình chữ thập dài, cần hai tay để huy động, uy lực to lớn."
     },
     {
-      "name": "环首刀",
+      "name": "Hoàn Thủ Đao",
       "cost": 10,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "单手刀",
-        "攻击: 16"
+        "Đơn thủ đao",
+        "Tấn công: 16"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "铁制单刃直身刀，刀柄末端带有一个铁环，重心靠前，劈砍有力。"
+      "description": "Đao thân thẳng một lưỡi bằng sắt, chuôi đao có một vòng sắt, trọng tâm dồn về phía trước, chém mạnh mẽ."
     },
     {
-      "name": "弯刀",
+      "name": "Loan Đao",
       "cost": 11,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "单手刀",
-        "攻击: 17"
+        "Đơn thủ đao",
+        "Tấn công: 17"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "铁质单刃弯刀，弧度适中，利于马背上的劈砍与划割。"
+      "description": "Đao cong một lưỡi bằng sắt, độ cong vừa phải, thuận lợi cho việc chém và cắt trên lưng ngựa."
     },
     {
-      "name": "刺杀匕首",
+      "name": "Thích Sát Chủy Thủ",
       "cost": 6,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "匕首",
-        "攻击: 10"
+        "Chủy thủ",
+        "Tấn công: 10"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "精铁锻制，刃体短小轻薄且异常锋利，专为隐蔽和刺杀设计。"
+      "description": "Rèn từ sắt tinh luyện, lưỡi dao ngắn nhỏ mỏng nhẹ và cực kỳ sắc bén, thiết kế chuyên dùng cho ẩn nấp và ám sát."
     },
     {
-      "name": "猎人砍刀",
+      "name": "Thợ Săn Khảm Đao",
       "cost": 8,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "短刀",
-        "攻击: 12"
+        "Đoản đao",
+        "Tấn công: 12"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "宽厚铁刃的短柄砍刀，重心在前，适合劈砍植被与处理猎物，是野外生存的实用工具。"
+      "description": "Đao chặt cán ngắn lưỡi sắt dày rộng, trọng tâm ở phía trước, thích hợp chặt cây cỏ và xử lý con mồi, là công cụ thực dụng để sinh tồn nơi hoang dã."
     },
     {
-      "name": "双手巨斧",
+      "name": "Song Thủ Cự Phủ",
       "cost": 14,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "双手斧",
-        "攻击: 20"
+        "Song thủ phủ",
+        "Tấn công: 20"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "沉重的双刃铁斧头，安装在坚固的木柄上，需双手挥动，破甲能力极强。"
+      "description": "Rìu sắt hai lưỡi nặng nề, gắn trên cán gỗ chắc chắn, cần hai tay để huy động, khả năng phá giáp cực mạnh."
     },
     {
-      "name": "硬头锤",
+      "name": "Ngạnh Đầu Chùy",
       "cost": 9,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "单手锤",
-        "攻击: 14"
+        "Đơn thủ chùy",
+        "Tấn công: 14"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "铁铸的方形锤头，一端呈锥形，安装在木柄上，打击力集中，可有效对付盔甲。"
+      "description": "Đầu búa hình vuông đúc bằng sắt, một đầu hình nón, gắn trên cán gỗ, lực đánh tập trung, có thể đối phó hiệu quả với áo giáp."
     },
     {
-      "name": "链锤",
+      "name": "Liên Chùy",
       "cost": 11,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "链枷",
-        "攻击: 17"
+        "Liên gia",
+        "Tấn công: 17"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "带刺的铁球通过铁链连接至握柄，挥动时能产生巨大冲击，是经典的破甲武器。"
+      "description": "Quả cầu sắt có gai nối với cán cầm qua dây xích sắt, khi vung có thể tạo ra lực xung kích to lớn, là vũ khí phá giáp kinh điển."
     },
     {
-      "name": "长柄战斧",
+      "name": "Trường Bính Chiến Phủ",
       "cost": 12,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "长柄武器",
-        "攻击: 18"
+        "Trường bính vũ khí",
+        "Tấn công: 18"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "长木柄顶端配有厚重的单刃斧头，兼具攻击范围与杀伤力，适于战场上对抗多人。"
+      "description": "Đỉnh cán gỗ dài phối với đầu rìu một lưỡi dày nặng, kiêm cụ phạm vi tấn công và sát thương, thích hợp đối kháng nhiều người trên chiến trường."
     },
     {
-      "name": "制式长矛",
+      "name": "Chế Thức Trường Mâu",
       "cost": 8,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "长柄武器",
-        "攻击: 15"
+        "Trường bính vũ khí",
+        "Tấn công: 15"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "坚韧木杆配上简单的铁制枪头，长度优势使其利于在阵线中控制距离。"
+      "description": "Cán gỗ dẻo dai phối với đầu thương sắt đơn giản, ưu thế chiều dài giúp nó thuận lợi trong việc kiểm soát khoảng cách trong trận tuyến."
     },
     {
-      "name": "陌刀",
+      "name": "Mạch Đao",
       "cost": 15,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "长柄武器",
-        "攻击: 20"
+        "Trường bính vũ khí",
+        "Tấn công: 20"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "长柄双刃大刀，刀身宽阔，斩击范围广，是步兵对抗骑兵的利器。"
+      "description": "Đại đao hai lưỡi cán dài, thân đao rộng, phạm vi chém rộng, là vũ khí lợi hại của bộ binh chống lại kỵ binh."
     },
     {
-      "name": "钩镰枪",
+      "name": "Câu Liêm Thương",
       "cost": 13,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "长柄武器",
-        "攻击: 19"
+        "Trường bính vũ khí",
+        "Tấn công: 19"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "在长枪的枪刃侧面额外带有一个弯钩，可用于钩拉敌人或割断马腿，功能多样。"
+      "description": "Bên cạnh lưỡi thương dài có thêm một móc cong, có thể dùng để móc kéo kẻ địch hoặc cắt chân ngựa, chức năng đa dạng."
     },
     {
-      "name": "鞭刃",
+      "name": "Tiên Nhận",
       "cost": 14,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "鞭",
-        "攻击: 19"
+        "Tiên",
+        "Tấn công: 19"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "由多节带刃的铁片以铁环连接而成，可如鞭般挥甩，也可收拢如剑，变幻莫测。"
+      "description": "Được nối từ nhiều đốt phiến sắt có lưỡi bằng vòng sắt, có thể vung vẩy như roi, cũng có thể thu gọn lại như kiếm, biến ảo khôn lường."
     },
     {
-      "name": "拳剑",
+      "name": "Quyền Kiếm",
       "cost": 10,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "拳套",
-        "攻击: 16"
+        "Quyền sáo",
+        "Tấn công: 16"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "铁制H形握柄，两端延伸出锋利的短刃，适合近身缠斗刺杀，难以防御。"
+      "description": "Tay cầm hình chữ H bằng sắt, hai đầu duỗi ra lưỡi ngắn sắc bén, thích hợp cận chiến quấn đấu ám sát, khó phòng ngự."
     },
     {
-      "name": "拳刺",
+      "name": "Quyền Thích",
       "cost": 5,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "拳套",
-        "攻击: 9"
+        "Quyền sáo",
+        "Tấn công: 9"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "一体成型的铁制指虎，带有四个尖锐的短刺，能极大增强拳击的杀伤力。"
+      "description": "Tay gấu bằng sắt đúc nguyên khối, có bốn gai ngắn nhọn, có thể tăng cường cực lớn sát thương của cú đấm."
     },
     {
-      "name": "钢锋长剑",
+      "name": "Cương Phong Trường Kiếm",
       "cost": 28,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "单手剑",
-        "攻击: 55"
+        "Đơn thủ kiếm",
+        "Tấn công: 55"
       ],
       "rarity": "uncommon",
       "effect": {
-        "撕裂": "普通攻击有25%几率(d20≥16)造成[流血]效果，每回合损失10点HP，持续2回合。"
+        "Xé rách": "Tấn công thường có 25% cơ hội (d20≥16) gây ra hiệu quả [Chảy máu], mỗi hiệp mất 10 điểm HP, duy trì 2 hiệp."
       },
-      "description": "百炼精钢锻造，笔直剑身带有清晰的血槽，平衡性极佳，是老练战士的可靠选择。"
+      "description": "Rèn từ thép luyện trăm lần, thân kiếm thẳng tắp có rãnh huyết rõ ràng, tính cân bằng cực tốt, là lựa chọn đáng tin cậy của các chiến binh lão luyện."
     },
     {
-      "name": "蜂鸟刺剑",
+      "name": "Phong Điểu Thích Kiếm",
       "cost": 26,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "刺剑",
-        "攻击: 50"
+        "Thích kiếm",
+        "Tấn công: 50"
       ],
       "rarity": "uncommon",
       "effect": {
-        "致命": "暴击检定阈值-1(d20≥19即可暴击)。"
+        "Chí mệnh": "Ngưỡng kiểm định bạo kích -1 (d20≥19 có thể bạo kích)."
       },
-      "description": "百炼钢锻造的极细剑身，护手镀金并雕有花纹，突刺速度极快，难以格挡。"
+      "description": "Thân kiếm cực mảnh rèn từ thép luyện trăm lần, miếng bảo vệ tay mạ vàng và khắc hoa văn, tốc độ đâm cực nhanh, khó đỡ đòn."
     },
     {
-      "name": "碎甲战锤",
+      "name": "Toái Giáp Chiến Chùy",
       "cost": 26,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "双手锤",
-        "攻击: 58"
+        "Song thủ chùy",
+        "Tấn công: 58"
       ],
       "rarity": "uncommon",
       "effect": {
-        "破甲": "攻击时，无视目标20点装备防御值。"
+        "Phá giáp": "Khi tấn công, bỏ qua 20 điểm giá trị phòng thủ trang bị của mục tiêu."
       },
-      "description": "钢制的多棱角锤头，配以坚固的硬木长柄，重心靠前，专为摧毁重甲而设计。"
+      "description": "Đầu búa thép nhiều góc cạnh, phối với cán gỗ cứng chắc chắn, trọng tâm dồn về trước, thiết kế chuyên dụng để phá hủy giáp nặng."
     },
     {
-      "name": "迅捷手半剑",
+      "name": "Tấn Tiệp Thủ Bán Kiếm",
       "cost": 27,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "单手剑",
-        "攻击: 52"
+        "Đơn thủ kiếm",
+        "Tấn công: 52"
       ],
       "rarity": "uncommon",
       "effect": {
-        "先手": "装备此武器时，你的先攻检定获得+2加值。"
+        "Tiên thủ": "Khi trang bị vũ khí này, kiểm định tiên công của bạn nhận được +2 giá trị cộng thêm."
       },
-      "description": "精钢锻造的轻量化剑身，剑柄可供单双两用，能微弱提升攻击速度。"
+      "description": "Thân kiếm nhẹ hóa rèn từ thép tinh luyện, cán kiếm có thể dùng một hoặc hai tay, có thể tăng nhẹ tốc độ tấn công."
     },
     {
-      "name": "新月弯刀",
+      "name": "Tân Nguyệt Loan Đao",
       "cost": 26,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "单手刀",
-        "攻击: 50"
+        "Đơn thủ đao",
+        "Tấn công: 50"
       ],
       "rarity": "uncommon",
       "effect": {
-        "割裂": "造成暴击时，必定对目标施加[流血]效果，每回合损失15点HP，持续2回合。"
+        "Cắt đứt": "Khi gây bạo kích, chắc chắn thi triển hiệu quả [Chảy máu] lên mục tiêu, mỗi hiệp mất 15 điểm HP, duy trì 2 hiệp."
       },
-      "description": "优质精钢打造的弯刃，拥有优美的新月弧线，能造成持续流血的伤口。"
+      "description": "Lưỡi cong làm từ thép tinh luyện chất lượng cao, sở hữu đường cong trăng lưỡi liềm tuyệt đẹp, có thể tạo ra vết thương chảy máu liên tục."
     },
     {
-      "name": "破甲长矛",
+      "name": "Phá Giáp Trường Mâu",
       "cost": 25,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "长柄武器",
-        "攻击: 48"
+        "Trường bính vũ khí",
+        "Tấn công: 48"
       ],
       "rarity": "uncommon",
       "effect": {
-        "穿刺": "所有物理伤害技能，额外获得20点真实伤害。"
+        "Xuyên thấu": "Tất cả kỹ năng sát thương vật lý, nhận thêm 20 điểm sát thương chuẩn."
       },
-      "description": "硬木长杆配上三棱形精钢枪头，其长度优势与穿透力使其易于穿透装甲。"
+      "description": "Cán gỗ cứng phối với đầu thương thép tinh luyện hình ba cạnh, ưu thế chiều dài và lực xuyên thấu giúp nó dễ dàng xuyên qua áo giáp."
     },
     {
-      "name": "碎颅巨斧",
+      "name": "Toái Lô Cự Phủ",
       "cost": 29,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "双手斧",
-        "攻击: 60"
+        "Song thủ phủ",
+        "Tấn công: 60"
       ],
       "rarity": "uncommon",
       "effect": {
-        "震荡": "攻击检定为[有效命中]或更高时，有50%几率(d20≥11)击倒目标，使其下一回合无法行动。"
+        "Chấn động": "Khi kiểm định tấn công là [Hữu hiệu trúng đích] hoặc cao hơn, có 50% cơ hội (d20≥11) đánh ngã mục tiêu, khiến nó không thể hành động trong hiệp sau."
       },
-      "description": "巨大的精钢双刃斧头，斧柄经过加固，专为破坏重型护甲与坚固工事而设计。"
+      "description": "Rìu hai lưỡi khổng lồ bằng thép tinh luyện, cán rìu đã được gia cố, thiết kế chuyên để phá hủy giáp nặng và công sự kiên cố."
     },
     {
-      "name": "流星链锤",
+      "name": "Lưu Tinh Liên Chùy",
       "cost": 24,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "链枷",
-        "攻击: 55"
+        "Liên gia",
+        "Tấn công: 55"
       ],
       "rarity": "uncommon",
       "effect": {
-        "眩晕": "攻击检定为[有效命中]或更高时，有50%几率(d20≥11)使目标[头晕]，命中率降低20%，持续1回合。"
+        "Choáng váng": "Khi kiểm định tấn công là [Hữu hiệu trúng đích] hoặc cao hơn, có 50% cơ hội (d20≥11) làm mục tiêu [Chóng mặt], tỷ lệ trúng đích giảm 20%, duy trì 1 hiệp."
       },
-      "description": "比常规更大的带刺铁球，通过加固的铁链连接，挥动时冲击力巨大，适于破甲。"
+      "description": "Quả cầu sắt có gai lớn hơn bình thường, nối bằng dây xích sắt gia cố, khi vung lực xung kích cực lớn, thích hợp phá giáp."
     },
     {
-      "name": "毒蛇拳剑",
+      "name": "Độc Xà Quyền Kiếm",
       "cost": 22,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "拳套",
-        "攻击: 45"
+        "Quyền sáo",
+        "Tấn công: 45"
       ],
       "rarity": "uncommon",
       "effect": {
-        "淬毒": "攻击时有25%几率(d20≥16)施加[中毒]效果，每回合造成10点真实伤害，持续3回合。"
+        "Tôi độc": "Khi tấn công có 25% cơ hội (d20≥16) thi triển hiệu quả [Trúng độc], mỗi hiệp gây 10 điểm sát thương chuẩn, duy trì 3 hiệp."
       },
-      "description": "精钢打造的H形握柄，双刃涂有弱效麻痹毒素，提升攻击速度。"
+      "description": "Tay cầm hình chữ H rèn từ thép tinh luyện, hai lưỡi được bôi độc tố gây tê liệt yếu, tăng tốc độ tấn công."
     },
     {
-      "name": "影袭匕首",
+      "name": "Ảnh Tập Chủy Thủ",
       "cost": 20,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "匕首",
-        "攻击: 40"
+        "Chủy thủ",
+        "Tấn công: 40"
       ],
       "rarity": "uncommon",
       "effect": {
-        "背刺": "从背后攻击未发现你的敌人时，第一次攻击必定暴击。"
+        "Bối thích": "Khi tấn công từ phía sau kẻ địch chưa phát hiện ra bạn, đòn tấn công đầu tiên chắc chắn bạo kích."
       },
-      "description": "黑铁锻制的无反光匕首，刃体轻薄，能微弱提升造成致命一击的几率。"
+      "description": "Thân dao đen tuyền rèn từ sắt đen không phản quang, lưỡi dao mỏng nhẹ, có thể tăng nhẹ tỷ lệ gây ra đòn chí mạng."
     },
     {
-      "name": "裂铠钩镰枪",
+      "name": "Liệt Khải Câu Liêm Thương",
       "cost": 28,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "长柄武器",
-        "攻击: 56"
+        "Trường bính vũ khí",
+        "Tấn công: 56"
       ],
       "rarity": "uncommon",
       "effect": {
-        "破损": "攻击命中时，有25%几率(d20≥16)使目标的一个[防具]装备防御值降低10%，持续至战斗结束。"
+        "Phá tổn": "Khi tấn công trúng đích, có 25% cơ hội (d20≥16) làm giảm 10% giá trị phòng thủ của một trang bị [Phòng cụ] của mục tiêu, duy trì đến khi kết thúc chiến đấu."
       },
-      "description": "精钢枪头侧面焊接了强化的弯钩，更易于钩住并撕裂敌人的铠甲。"
+      "description": "Bên cạnh đầu thương thép tinh luyện hàn thêm móc cong cường hóa, càng dễ móc và xé rách áo giáp của kẻ địch."
     },
     {
-      "name": "斩马陌刀",
+      "name": "Trảm Mã Mạch Đao",
       "cost": 30,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "长柄武器",
-        "攻击: 60"
+        "Trường bính vũ khí",
+        "Tấn công: 60"
       ],
       "rarity": "uncommon",
       "effect": {
-        "巨物杀手": "对体型大于自身的敌人造成的物理伤害提升15%。"
+        "Cự vật sát thủ": "Sát thương vật lý gây ra cho kẻ địch có thể hình lớn hơn bản thân tăng 15%."
       },
-      "description": "加长加宽的精钢刀刃，安装在坚韧的长杆上，巨大的斩击范围使其成为对抗骑兵的噩梦。"
+      "description": "Lưỡi đao thép tinh luyện được kéo dài và mở rộng, gắn trên cán dài dẻo dai, phạm vi chém khổng lồ biến nó thành cơn ác mộng khi đối đầu kỵ binh."
     },
     {
-      "name": "撼地硬头锤",
+      "name": "Hám Địa Ngạnh Đầu Chùy",
       "cost": 23,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "单手锤",
-        "攻击: 45"
+        "Đơn thủ chùy",
+        "Tấn công: 45"
       ],
       "rarity": "uncommon",
       "effect": {
-        "断骨": "攻击检定为[有效命中]或更高时，有50%几率(d20≥11)使目标[骨折]，敏捷临时-1，持续2回合。"
+        "Đoạn cốt": "Khi kiểm định tấn công là [Hữu hiệu trúng đích] hoặc cao hơn, có 50% cơ hội (d20≥11) làm mục tiêu [Gãy xương], Nhạy bén tạm thời -1, duy trì 2 hiệp."
       },
-      "description": "实心精钢打造的锤头，表面布满凸起，能轻易击碎骨骼与岩石。"
+      "description": "Đầu búa đúc từ thép tinh luyện đặc ruột, bề mặt đầy những chỗ lồi lên, có thể dễ dàng đập nát xương cốt và đá tảng."
     },
     {
-      "name": "炽焰附魔长剑",
+      "name": "Xí Diễm Phụ Ma Trường Kiếm",
       "cost": 42,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "单手剑",
-        "攻击: 120"
+        "Đơn thủ kiếm",
+        "Tấn công: 120"
       ],
       "rarity": "rare",
       "effect": {
-        "烈焰": "所有攻击额外附加50点能量伤害(火焰)。"
+        "Liệt diễm": "Tất cả đòn tấn công kèm thêm 50 điểm sát thương năng lượng (Hỏa)."
       },
-      "description": "百炼钢精心锻造的剑身，十字护手中央镶嵌着一枚炽热的红宝石，挥舞时剑刃会缠绕高温流炎。"
+      "description": "Thân kiếm được rèn tỉ mỉ từ thép luyện trăm lần, trung tâm miếng bảo vệ tay hình chữ thập khảm một viên hồng ngọc nóng rực, khi huy vũ lưỡi kiếm sẽ quấn quanh dòng lửa nhiệt độ cao."
     },
     {
-      "name": "圣光十字大剑",
+      "name": "Thánh Quang Thập Tự Đại Kiếm",
       "cost": 42,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "双手剑",
-        "攻击: 140"
+        "Song thủ kiếm",
+        "Tấn công: 140"
       ],
       "rarity": "rare",
       "effect": {
-        "神圣惩戒": "对亡灵与深渊魔族造成的最终伤害提升30%。"
+        "Thần thánh trừng phạt": "Sát thương cuối cùng gây ra cho Vong Linh và Thâm Uyên Ma Tộc tăng 30%."
       },
-      "description": "镀银钢铁铸造的宽刃大剑，剑身厚重，中心蚀刻着光芒圣徽，是圣殿骑士的标准配装。"
+      "description": "Đại kiếm lưỡi rộng đúc bằng thép mạ bạc, thân kiếm dày nặng, trung tâm khắc thánh huy tỏa sáng, là trang bị tiêu chuẩn của Thánh Điện Kỵ Sĩ."
     },
     {
-      "name": "熔岩重剑",
+      "name": "Dung Nham Trọng Kiếm",
       "cost": 43,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "双手剑",
-        "攻击: 145"
+        "Song thủ kiếm",
+        "Tấn công: 145"
       ],
       "rarity": "rare",
       "effect": {
-        "熔岩爆发": "重击(消耗[攻击]与[动作])：猛击地面，对自身周围3米内的最多3个敌人造成80点能量伤害(火焰)。"
+        "Dung nham bạo phát": "Trọng kích (tiêu hao [Tấn công] và [Hành động]): Đập mạnh xuống đất, gây 80 điểm sát thương năng lượng (Hỏa) cho tối đa 3 kẻ địch trong vòng 3 mét xung quanh bản thân."
       },
-      "description": "黑钢与火山岩融合锻造的宽刃巨剑，剑身中心嵌有一枚跳动的熔火核心，破坏力惊人但极为沉重。"
+      "description": "Cự kiếm lưỡi rộng rèn từ hắc cương dung hợp với đá núi lửa, trung tâm thân kiếm khảm một lõi dung nham đang đập, sức phá hoại kinh người nhưng cực kỳ nặng nề."
     },
     {
-      "name": "霜之哀伤",
+      "name": "Sương Chi Ai Thương",
       "cost": 120,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "双手剑",
-        "攻击: 700"
+        "Song thủ kiếm",
+        "Tấn công: 700"
       ],
       "rarity": "legendary",
       "effect": {
-        "霜之哀伤": "武器造成伤害时每次攻击额外造成700点能量伤害(冰)。",
-        "权能:灵魂收割": "释放技能攻击时额外造成15%目标最大生命的能量伤害。",
-        "窃取灵魂": "敌人死亡时，将会被武器收集化作灵魂水晶，可用于炼金。"
+        "Sương Chi Ai Thương": "Khi vũ khí gây sát thương, mỗi lần tấn công gây thêm 700 điểm sát thương năng lượng (Băng).",
+        "Quyền năng: Linh hồn thu hoạch": "Khi tung kỹ năng tấn công, gây thêm sát thương năng lượng bằng 15% HP tối đa của mục tiêu.",
+        "Thiết thủ linh hồn": "Khi kẻ địch chết, sẽ bị vũ khí thu thập hóa thành tinh thể linh hồn, có thể dùng cho giả kim thuật."
       },
-      "description": "融汇恶魔精华、扭曲虚空的寒冰碎片及堕落圣光之力制作的巨大符文双手剑，剑身缠绕永不消散的冰霜雾气，幽蓝符文闪烁诡异光芒，骷髅剑柄散发出慑人寒意。"
+      "description": "Cự kiếm phù văn hai tay được chế tạo từ tinh hoa ác ma, mảnh vỡ hàn băng vặn vẹo hư không cùng sức mạnh thánh quang sa đọa, thân kiếm quấn quanh sương mù băng giá không bao giờ tan, phù văn xanh u ám lóe lên ánh sáng quỷ dị, chuôi kiếm đầu lâu tỏa ra hàn ý khiếp người."
     },
     {
-      "name": "潮汐三叉戟",
+      "name": "Triều Tịch Tam Xoa Kích",
       "cost": 42,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "长柄武器",
-        "攻击: 130"
+        "Trường bính vũ khí",
+        "Tấn công: 130"
       ],
       "rarity": "rare",
       "effect": {
-        "潮湿": "攻击命中时有50%几率(d20≥11)使目标[潮湿]，受到的能量伤害(雷电)增加20%，持续2回合。"
+        "Ẩm ướt": "Khi tấn công trúng đích có 50% cơ hội (d20≥11) làm mục tiêu [Ẩm ướt], sát thương năng lượng (Lôi) phải chịu tăng 20%, duy trì 2 hiệp."
       },
-      "description": "以深海寒铁锻造，三个戟刃如波浪般起伏，中心镶嵌着纯净的海蓝宝石，是海洋神殿护卫的武器。"
+      "description": "Được rèn từ hàn thiết dưới biển sâu, ba lưỡi kích nhấp nhô như sóng biển, trung tâm khảm đá aquamarine tinh khiết, là vũ khí của hộ vệ Thần Điện Đại Dương."
     },
     {
-      "name": "风暴战斧",
+      "name": "Phong Bạo Chiến Phủ",
       "cost": 40,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "双手斧",
-        "攻击: 135"
+        "Song thủ phủ",
+        "Tấn công: 135"
       ],
       "rarity": "rare",
       "effect": {
-        "顺劈": "当你使用消耗[攻击]资源的技能时，对目标周围2米内最多2个额外敌人造成25%的溅射物理伤害。"
+        "Thuận phách": "Khi bạn sử dụng kỹ năng tiêu hao tài nguyên [Tấn công], gây 25% sát thương vật lý lan tỏa cho tối đa 2 kẻ địch khác trong vòng 2 mét xung quanh mục tiêu."
       },
-      "description": "陨铁打造的对称双面战斧，斧面光滑，中心镶嵌着一枚微缩的风眼宝石，需要双手才能驾驭。"
+      "description": "Chiến rìu hai mặt đối xứng làm từ vẫn sắt, mặt rìu trơn bóng, trung tâm khảm một viên đá mắt bão thu nhỏ, cần hai tay mới có thể điều khiển."
     },
     {
-      "name": "冰霜使者战斧",
+      "name": "Băng Sương Sứ Giả Chiến Phủ",
       "cost": 40,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "双手斧",
-        "攻击: 135"
+        "Song thủ phủ",
+        "Tấn công: 135"
       ],
       "rarity": "rare",
       "effect": {
-        "霜冻": "攻击命中时有50%几率(d20≥11)施加[霜冻]效果，使目标的移动速度降低30%，持续2回合。"
+        "Sương đống": "Khi tấn công trúng đích có 50% cơ hội (d20≥11) thi triển hiệu quả [Đóng băng], làm tốc độ di chuyển của mục tiêu giảm 30%, duy trì 2 hiệp."
       },
-      "description": "极北寒铁铸成的双刃战斧，斧面天然覆盖着一层难以融化的冰霜，挥砍时释放的冻气能延缓敌人行动。"
+      "description": "Chiến rìu hai lưỡi đúc từ hàn thiết cực bắc, mặt rìu tự nhiên phủ một lớp băng sương khó tan chảy, khí lạnh tỏa ra khi vung chém có thể làm chậm hành động của kẻ địch."
     },
     {
-      "name": "雷霆之锤",
+      "name": "Lôi Đình Chi Chùy",
       "cost": 38,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "单手锤",
-        "攻击: 110"
+        "Đơn thủ chùy",
+        "Tấn công: 110"
       ],
       "rarity": "rare",
       "effect": {
-        "麻痹": "攻击命中时有25%几率(d20≥16)使目标[麻痹]，下一回合无法使用[动作]资源。"
+        "Ma túy": "Khi tấn công trúng đích có 25% cơ hội (d20≥16) làm mục tiêu [Tê liệt], hiệp sau không thể sử dụng tài nguyên [Hành động]."
       },
-      "description": "由一整块陨铁打造的方形锤头，表面镶嵌着数颗不规则的雷晶石，击中目标时会迸发耀眼的电弧。"
+      "description": "Đầu búa hình vuông làm từ nguyên khối vẫn sắt, bề mặt khảm vài viên lôi tinh thạch không quy tắc, khi đánh trúng mục tiêu sẽ bùng phát hồ quang điện chói mắt."
     },
     {
-      "name": "月光双刃",
+      "name": "Nguyệt Quang Song Nhận",
       "cost": 38,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "双刀",
-        "攻击: 95"
+        "Song đao",
+        "Tấn công: 95"
       ],
       "rarity": "rare",
       "effect": {
-        "月之祝福": "在夜间或昏暗环境下，你的所有攻击额外附加30点能量伤害。"
+        "Nguyệt chi chúc phúc": "Vào ban đêm hoặc môi trường tối tăm, tất cả đòn tấn công của bạn kèm thêm 30 điểm sát thương năng lượng."
       },
-      "description": "月光金属熔铸而成的弧形双刀，刃面在暗处会流动着清冷的微光，是月精灵斥候的挚爱。"
+      "description": "Song đao hình vòng cung đúc từ kim loại ánh trăng, mặt lưỡi dao trong bóng tối sẽ lưu chuyển ánh sáng lạnh lẽo, là tình yêu của các trinh sát Tinh Linh."
     },
     {
-      "name": "暗影匕首",
+      "name": "Ám Ảnh Chủy Thủ",
       "cost": 36,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "匕首",
-        "攻击: 90"
+        "Chủy thủ",
+        "Tấn công: 90"
       ],
       "rarity": "rare",
       "effect": {
-        "虚弱": "攻击命中时有50%几率(d20≥11)对目标施加[虚弱]状态，使其造成的物理伤害降低15%，持续2回合。"
+        "Hư nhược": "Khi tấn công trúng đích có 50% cơ hội (d20≥11) thi triển trạng thái [Suy yếu] lên mục tiêu, khiến sát thương vật lý gây ra giảm 15%, duy trì 2 hiệp."
       },
-      "description": "陨铁混合黑曜石粉末锻造的漆黑刃身，几乎不反射任何光线，是刺客执行任务的理想工具。"
+      "description": "Thân dao đen tuyền rèn từ vẫn sắt trộn bột đá vỏ chai, gần như không phản xạ bất kỳ ánh sáng nào, là công cụ lý tưởng để thích khách thi hành nhiệm vụ."
     },
     {
-      "name": "荆棘鞭刃",
+      "name": "Kinh Cức Tiên Nhận",
       "cost": 35,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "鞭",
-        "攻击: 85"
+        "Tiên",
+        "Tấn công: 85"
       ],
       "rarity": "rare",
       "effect": {
-        "汲取生命": "造成伤害时，恢复造成伤害值10%的HP。"
+        "Cấp thủ sinh mệnh": "Khi gây sát thương, hồi phục HP bằng 10% giá trị sát thương gây ra."
       },
-      "description": "由数十个锋利钢片通过魔化荆棘链接而成的柔性武器，可鞭可刺，能汲取少量生命力反哺持有者。"
+      "description": "Vũ khí mềm dẻo được nối từ hàng chục phiến thép sắc bén qua gai nhọn ma hóa, có thể quất có thể đâm, có thể hút một lượng nhỏ sinh mệnh lực nuôi ngược lại người cầm."
     }
   ],
-  "远程武器": [
+  "Viễn Trình Vũ Khí": [
     {
-      "name": "复合短弓",
+      "name": "Phức Hợp Đoản Cung",
       "cost": 11,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "弓",
-        "攻击: 17"
+        "Cung",
+        "Tấn công: 17"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "木材与兽角层压复合制成的弓身，拉力适中，精度良好，是猎人与斥候的常用武器。"
+      "description": "Thân cung được chế tạo từ gỗ và sừng thú ép lại, lực kéo vừa phải, độ chính xác tốt, là vũ khí thường dùng của thợ săn và trinh sát."
     },
     {
-      "name": "长弓",
+      "name": "Trường Cung",
       "cost": 13,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "弓",
-        "攻击: 19"
+        "Cung",
+        "Tấn công: 19"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "由一整根紫杉木制成，弓身修长，射程远，需要较强的臂力才能拉开。"
+      "description": "Làm từ một cây gỗ thủy tùng nguyên vẹn, thân cung thon dài, tầm bắn xa, cần lực tay khá mạnh mới có thể kéo ra."
     },
     {
-      "name": "十字弩",
+      "name": "Thập Tự Nỏ",
       "cost": 15,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "弩",
-        "攻击: 20"
+        "Nỏ",
+        "Tấn công: 20"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "铁质的弩臂与木制弩托构成，通过机械结构上弦，精度高但装填缓慢，适合城防与狙击。"
+      "description": "Cấu tạo từ cánh nỏ sắt và thân nỏ gỗ, lên dây bằng cơ cấu cơ khí, độ chính xác cao nhưng nạp đạn chậm, thích hợp phòng thủ thành và bắn tỉa."
     },
     {
-      "name": "鹰眼长弓",
+      "name": "Ưng Nhãn Trường Cung",
       "cost": 28,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "弓",
-        "攻击: 55"
+        "Cung",
+        "Tấn công: 55"
       ],
       "rarity": "uncommon",
       "effect": {
-        "精准": "你的攻击检定结果为[勉强命中]时，自动提升为[有效命中]。"
+        "Tinh chuẩn": "Kết quả kiểm định tấn công của bạn là [Miễn cưỡng trúng đích] thì tự động nâng lên thành [Hữu hiệu trúng đích]."
       },
-      "description": "杉木与角复合层压制成，弓梢雕刻着鹰眼符文，射程与精度均超越普通长弓。"
+      "description": "Chế tạo từ gỗ sam và sừng ép lại, đầu cung khắc phù văn mắt ưng, tầm bắn và độ chính xác đều vượt xa trường cung thông thường."
     },
     {
-      "name": "燧发手铳",
+      "name": "Toại Phát Thủ Súng",
       "cost": 30,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "火枪",
-        "攻击: 60"
+        "Súng",
+        "Tấn công: 60"
       ],
       "rarity": "uncommon",
       "effect": {
-        "破甲射击": "攻击时，无视目标15点装备防御值。"
+        "Phá giáp xạ kích": "Khi tấn công, bỏ qua 15 điểm giá trị phòng thủ trang bị của mục tiêu."
       },
-      "description": "黄铜枪管与胡桃木枪托，采用后置装药的燧发击锤结构，能略微减少射击时的偏差。"
+      "description": "Nòng súng bằng đồng thau và báng súng gỗ óc chó, sử dụng cơ cấu búa đập đá lửa nạp đạn sau, có thể giảm nhẹ độ lệch khi bắn."
     },
     {
-      "name": "猎手复合弩",
+      "name": "Thợ Săn Phức Hợp Nỏ",
       "cost": 29,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "弩",
-        "攻击: 58"
+        "Nỏ",
+        "Tấn công: 58"
       ],
       "rarity": "uncommon",
       "effect": {
-        "致命射击": "你的暴击伤害倍率额外提升0.2倍(从1.5倍提升至1.7倍)。"
+        "Chí mệnh xạ kích": "Bội số sát thương bạo kích của bạn tăng thêm 0.2 lần (từ 1.5 lần lên 1.7 lần)."
       },
-      "description": "钢制弩臂与硬木弩托，结构经过优化，精度极高但装填速度依旧缓慢。"
+      "description": "Cánh nỏ bằng thép và thân nỏ gỗ cứng, cấu trúc đã qua tối ưu hóa, độ chính xác cực cao nhưng tốc độ nạp đạn vẫn chậm."
     },
     {
-      "name": "线膛燧发步枪",
+      "name": "Tuyến Thang Toại Phát Bộ Súng",
       "cost": 30,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "火枪",
-        "攻击: 60"
+        "Súng",
+        "Tấn công: 60"
       ],
       "rarity": "uncommon",
       "effect": {
-        "远程优势": "攻击距离超过20米的目标时，最终伤害提升10%。"
+        "Viễn trình ưu thế": "Khi tấn công mục tiêu cách xa hơn 20 mét, sát thương cuối cùng tăng 10%."
       },
-      "description": "钢制长枪管内刻有膛线，配有木制枪托，能进行超远距离的精准射击。"
+      "description": "Nòng súng dài bằng thép bên trong có rãnh xoắn, phối với báng súng bằng gỗ, có thể tiến hành bắn tỉa chính xác ở cự ly siêu xa."
     },
     {
-      "name": "精准飞刀",
+      "name": "Tinh Chuẩn Phi Đao",
       "cost": 18,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "投掷武器",
-        "攻击: 30"
+        "Vũ khí ném",
+        "Tấn công: 30"
       ],
       "rarity": "uncommon",
       "effect": {
-        "灵巧投掷": "装备此武器时，你的敏捷在攻击检定中额外提供+2加值。"
+        "Linh xảo đầu trịch": "Khi trang bị vũ khí này, Nhạy bén của bạn cung cấp thêm +2 giá trị cộng thêm trong kiểm định tấn công."
       },
-      "description": "一套三柄的精钢飞刀，经过精心平衡，极大地提升了投掷的命中率。"
+      "description": "Một bộ ba con dao ném bằng thép tinh luyện, được cân bằng tỉ mỉ, nâng cao đáng kể tỷ lệ trúng đích khi ném."
     },
     {
-      "name": "魔导步枪·鹰隼",
+      "name": "Ma Đạo Bộ Súng · Ưng Chuẩn",
       "cost": 45,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "火枪",
-        "攻击: 150"
+        "Súng",
+        "Tấn công: 150"
       ],
       "rarity": "rare",
       "effect": {
-        "稳定射击": "若你此回合未使用[动作]资源进行移动，则你的下一次[攻击]造成的伤害提升25%。"
+        "Ổn định xạ kích": "Nếu hiệp này bạn chưa sử dụng tài nguyên [Hành động] để di chuyển, thì lần [Tấn công] tiếp theo của bạn gây thêm 25% sát thương."
       },
-      "description": "精致胡桃木枪托与钢制长枪管的完美结合，内置微型魔晶石作为动力源，是进行超远距离狙击的致命利器。"
+      "description": "Sự kết hợp hoàn hảo giữa báng súng gỗ óc chó tinh chế và nòng súng dài bằng thép, tích hợp ma tinh thạch vi mô làm nguồn động lực, là vũ khí chí mạng để bắn tỉa siêu xa."
     },
     {
-      "name": "赤焰手炮",
+      "name": "Xích Diễm Thủ Pháo",
       "cost": 44,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "火枪",
-        "攻击: 145"
+        "Súng",
+        "Tấn công: 145"
       ],
       "rarity": "rare",
       "effect": {
-        "爆炸弹": "攻击命中时，对目标及其周围2米内最多2个敌人造成40点溅射能量伤害(火焰)。"
+        "Bạo tạc đạn": "Khi tấn công trúng đích, gây 40 điểm sát thương năng lượng (Hỏa) lan tỏa cho mục tiêu và tối đa 2 kẻ địch trong vòng 2 mét xung quanh."
       },
-      "description": "青铜铸造的短管手炮，枪身粗犷，以大型魔晶石作为激发装置，射出的弹丸在接触目标后会产生小范围的火焰爆炸。"
+      "description": "Súng ngắn nòng ngắn đúc bằng đồng thau, thân súng thô kệch, dùng ma tinh thạch cỡ lớn làm thiết bị kích phát, đạn bắn ra sau khi tiếp xúc mục tiêu sẽ tạo ra vụ nổ lửa phạm vi nhỏ."
     },
     {
-      "name": "风语者长弓",
+      "name": "Phong Ngữ Giả Trường Cung",
       "cost": 43,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "弓",
-        "攻击: 140"
+        "Cung",
+        "Tấn công: 140"
       ],
       "rarity": "rare",
       "effect": {
-        "风之迅捷": "攻击检定为[有效命中]或更高时，有50%几率(d20≥11)使你的敏捷临时提升1点，持续2回合。"
+        "Phong chi tấn tiệp": "Khi kiểm định tấn công là [Hữu hiệu trúng đích] hoặc cao hơn, có 50% cơ hội (d20≥11) làm Nhạy bén của bạn tạm thời tăng 1 điểm, duy trì 2 hiệp."
       },
-      "description": "白蜡木与精灵藤蔓制成的弓身，中央镶嵌着一枚通透的风晶石，射出的箭矢会附加气旋，显著提升飞行速度与精度。"
+      "description": "Thân cung làm từ gỗ tần bì và dây leo Tinh Linh, trung tâm khảm một viên phong tinh thạch trong suốt, mũi tên bắn ra sẽ kèm theo lốc xoáy, nâng cao đáng kể tốc độ bay và độ chính xác."
     },
     {
-      "name": "魔能左轮·毒蛇",
+      "name": "Ma Năng Tả Luân · Độc Xà",
       "cost": 41,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "火枪",
-        "攻击: 130"
+        "Súng",
+        "Tấn công: 130"
       ],
       "rarity": "rare",
       "effect": {
-        "穿甲弹": "攻击无视目标50%的装备防御值。"
+        "Xuyên giáp đạn": "Tấn công bỏ qua 50% giá trị phòng thủ trang bị của mục tiêu."
       },
-      "description": "精钢锻造的六发转轮手枪，握把处有蛇鳞纹理，采用魔晶石击发装置，子弹能穿透常规护甲和魔法屏障。"
+      "description": "Súng lục 6 phát ổ quay rèn từ thép tinh luyện, báng cầm có vân vảy rắn, sử dụng thiết bị kích phát ma tinh thạch, đạn có thể xuyên qua giáp thông thường và lá chắn ma pháp."
     },
     {
-      "name": "幽魂手枪",
+      "name": "U Hồn Thủ Thương",
       "cost": 39,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "火枪",
-        "攻击: 115"
+        "Súng",
+        "Tấn công: 115"
       ],
       "rarity": "rare",
       "effect": {
-        "灵魂汲取": "造成伤害时，恢复造成伤害值15%的MP。"
+        "Linh hồn cấp thủ": "Khi gây sát thương, hồi phục lượng MP bằng 15% giá trị sát thương gây ra."
       },
-      "description": "黑檀木握把与镂空银制枪身的奇特组合，能直接击发灵魂能量。"
+      "description": "Sự kết hợp kỳ lạ giữa báng cầm gỗ mun và thân súng bạc chạm rỗng, có thể trực tiếp bắn ra năng lượng linh hồn."
     },
     {
-      "name": "雷霆投枪",
+      "name": "Lôi Đình Đầu Thương",
       "cost": 37,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "投掷武器",
-        "攻击: 105"
+        "Vũ khí ném",
+        "Tấn công: 105"
       ],
       "rarity": "rare",
       "effect": {
-        "感电": "攻击命中时，有25%几率(d20≥16)使目标[感电]，受到的所有伤害增加10%，持续1回合。",
-        "自动回收": "投掷后此武器将在你的下回合开始时自动返回手中。"
+        "Cảm điện": "Khi tấn công trúng đích, có 25% cơ hội (d20≥16) làm mục tiêu [Cảm điện], chịu tất cả sát thương tăng 10%, duy trì 1 hiệp.",
+        "Tự động hồi thu": "Sau khi ném vũ khí này sẽ tự động quay về tay bạn vào đầu hiệp sau."
       },
-      "description": "坚硬的铁木枪杆与钢制三棱枪尖，枪尖后部镶嵌着一枚雷晶石，无需回收。"
+      "description": "Cán thương gỗ sắt cứng rắn và mũi thương thép ba cạnh, phần sau mũi thương khảm một viên lôi tinh thạch, không cần thu hồi."
     },
     {
-      "name": "魔晶手弩",
+      "name": "Ma Tinh Thủ Nỏ",
       "cost": 37,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "弩",
-        "攻击: 110"
+        "Nỏ",
+        "Tấn công: 110"
       ],
       "rarity": "rare",
       "effect": {
-        "机会": "攻击时若攻击检定为[失手]，则可以立即消耗10点SP，重新进行一次攻击检定(每回合限一次)。"
+        "Cơ hội": "Khi tấn công nếu kiểm định tấn công là [Trượt], thì có thể lập tức tiêu hao 10 điểm SP, tiến hành lại một lần kiểm định tấn công (mỗi hiệp giới hạn một lần)."
       },
-      "description": "紧凑的钢制弩身，以魔晶石为动力源，可实现快速上弦，射出的弩箭能小幅度自动修正轨迹，提高命中率。"
+      "description": "Thân nỏ thép nhỏ gọn, lấy ma tinh thạch làm nguồn động lực, có thể nạp đạn nhanh chóng, mũi tên bắn ra có thể tự động điều chỉnh quỹ đạo biên độ nhỏ, nâng cao tỷ lệ trúng đích."
     }
   ],
-  "副手武器": [
+  "Phó Thủ Vũ Khí": [
     {
-      "name": "投石索",
+      "name": "Đầu Thạch Tác",
       "cost": 3,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "投掷武器",
-        "攻击: 5"
+        "Vũ khí ném",
+        "Tấn công: 5"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "由两股皮绳和一个皮兜组成，用于高速投掷石块，是最简易的远程装备。"
+      "description": "Cấu tạo từ hai sợi dây da và một túi da, dùng để ném đá tốc độ cao, là trang bị tầm xa đơn giản nhất."
     },
     {
-      "name": "投掷短刺",
+      "name": "Đầu Trịch Đoản Thích",
       "cost": 5,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "投掷武器",
-        "攻击: 8"
+        "Vũ khí ném",
+        "Tấn công: 8"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "铁制纺锤形尖锐短刺，经过配重平衡，适合快速投掷以骚扰敌人。"
+      "description": "Gai ngắn nhọn hình thoi bằng sắt, đã được cân bằng trọng lượng, thích hợp ném nhanh để quấy rối kẻ địch."
     },
     {
-      "name": "格挡匕首",
+      "name": "Cách Đáng Chủy Thủ",
       "cost": 6,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "匕首",
-        "攻击: 10"
+        "Chủy thủ",
+        "Tấn công: 10"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "加宽的铁质匕首，带有向上弯曲的护手，专门用于格挡与反击。"
+      "description": "Dao găm sắt bản rộng, có miếng bảo vệ tay cong lên trên, chuyên dùng để đỡ đòn và phản công."
     },
     {
-      "name": "小手斧",
+      "name": "Tiểu Thủ Phủ",
       "cost": 5,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "手斧",
-        "攻击: 9"
+        "Thủ phủ",
+        "Tấn công: 9"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "短柄单刃铁斧，重量均衡，既可近身劈砍，也适合投掷。"
+      "description": "Rìu sắt một lưỡi cán ngắn, trọng lượng cân bằng, vừa có thể chém gần, cũng thích hợp để ném."
     },
     {
-      "name": "钩刀",
+      "name": "Câu Đao",
       "cost": 7,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "短刀",
-        "攻击: 11"
+        "Đoản đao",
+        "Tấn công: 11"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "短柄单刃刀，刀尖处带有一个锐利的弯钩，可钩拉对手的武器或盔甲。"
+      "description": "Đao một lưỡi cán ngắn, chỗ mũi dao có một móc cong sắc bén, có thể móc kéo vũ khí hoặc mũ giáp của đối thủ."
     },
     {
-      "name": "短鞭",
+      "name": "Đoản Tiên",
       "cost": 4,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "鞭",
-        "攻击: 7"
+        "Tiên",
+        "Tấn công: 7"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "厚皮革编织而成的短柄软鞭，末端加重，主要用于抽打以扰乱对手节奏。"
+      "description": "Roi mềm cán ngắn đan bằng da dày, phần cuối gia trọng, chủ yếu dùng để quất làm rối loạn nhịp điệu của đối thủ."
     },
     {
-      "name": "格挡短剑",
+      "name": "Cách Đáng Đoản Kiếm",
       "cost": 19,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "短剑",
-        "攻击: 30"
+        "Đoản kiếm",
+        "Tấn công: 30"
       ],
       "rarity": "uncommon",
       "effect": {
-        "强化防御": "当你使用[动作]进行防御时，额外获得20点临时物理减伤。"
+        "Cường hóa phòng ngự": "Khi bạn sử dụng [Hành động] để phòng ngự, nhận thêm 20 điểm miễn thương vật lý tạm thời."
       },
-      "description": "加宽的钢制剑身与大型碟形护手，经过韧性处理，专为招架重击而设计。"
+      "description": "Thân kiếm thép bản rộng và miếng bảo vệ tay hình đĩa lớn, đã qua xử lý dẻo dai, thiết kế chuyên để đỡ đòn đánh mạnh."
     },
     {
-      "name": "护卫匕首",
+      "name": "Hộ Vệ Chủy Thủ",
       "cost": 20,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "匕首",
-        "攻击: 35"
+        "Chủy thủ",
+        "Tấn công: 35"
       ],
       "rarity": "uncommon",
       "effect": {
-        "伺机反击": "成功闪避敌人攻击后，你的下一次普通攻击伤害提升25%。"
+        "Tự cơ phản kích": "Sau khi né tránh thành công đòn tấn công của kẻ địch, sát thương tấn công thường tiếp theo của bạn tăng 25%."
       },
-      "description": "精钢锻造，带有宽大的S形护手，在格挡的同时能有效反击。"
+      "description": "Rèn từ thép tinh luyện, có miếng bảo vệ tay hình chữ S rộng, đồng thời với lúc đỡ đòn có thể phản công hiệu quả."
     },
     {
-      "name": "飞掷手斧",
+      "name": "Phi Trịch Thủ Phủ",
       "cost": 18,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "手斧",
-        "攻击: 32"
+        "Thủ phủ",
+        "Tấn công: 32"
       ],
       "rarity": "uncommon",
       "effect": {
-        "致命投掷": "投掷攻击的暴击检定阈值-1(d20≥19即可暴击)。"
+        "Chí mệnh đầu trịch": "Ngưỡng kiểm định bạo kích của đòn ném -1 (d20≥19 có thể bạo kích)."
       },
-      "description": "短柄单刃精钢斧，斧身轻巧，投掷时飞行轨迹更稳定。"
+      "description": "Rìu thép tinh luyện một lưỡi cán ngắn, thân rìu nhẹ nhàng, quỹ đạo bay khi ném ổn định hơn."
     },
     {
-      "name": "破甲钩刀",
+      "name": "Phá Giáp Câu Đao",
       "cost": 21,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "短刀",
-        "攻击: 38"
+        "Đoản đao",
+        "Tấn công: 38"
       ],
       "rarity": "uncommon",
       "effect": {
-        "撕裂护甲": "攻击时，有15%几率(d20≥18)无视目标50%的装备防御值。"
+        "Xé rách hộ giáp": "Khi tấn công, có 15% cơ hội (d20≥18) bỏ qua 50% giá trị phòng thủ trang bị của mục tiêu."
       },
-      "description": "短柄带钩单刃，由精钢打造，钩刃能更有效地撕开铁甲缝隙。"
+      "description": "Lưỡi một cạnh có móc cán ngắn, làm từ thép tinh luyện, lưỡi móc có thể xé mở khe hở giáp sắt hiệu quả hơn."
     },
     {
-      "name": "刺棘短鞭",
+      "name": "Thích Cức Đoản Tiên",
       "cost": 17,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "鞭",
-        "攻击: 28"
+        "Tiên",
+        "Tấn công: 28"
       ],
       "rarity": "uncommon",
       "effect": {
-        "精力削弱": "攻击检定为[有效命中]或更高时，有50%几率(d20≥11)使目标SP恢复速度降低20%，持续2回合。"
+        "Tinh lực tước nhược": "Khi kiểm định tấn công là [Hữu hiệu trúng đích] hoặc cao hơn, có 50% cơ hội (d20≥11) làm tốc độ hồi phục SP của mục tiêu giảm 20%, duy trì 2 hiệp."
       },
-      "description": "皮革编织的鞭身中镶嵌了细小的钢刺，抽打时能给敌人造成持续的骚扰。"
+      "description": "Trong thân roi đan bằng da có khảm gai thép nhỏ, khi quất có thể gây quấy rối liên tục cho kẻ địch."
     },
     {
-      "name": "暗影格斗爪",
+      "name": "Ám Ảnh Cách Đấu Trảo",
       "cost": 34,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "拳套",
-        "攻击: 85"
+        "Quyền sáo",
+        "Tấn công: 85"
       ],
       "rarity": "rare",
       "effect": {
-        "暗影反击": "若你本回合成功闪避或格挡了敌人的攻击，你的下一次攻击额外附加40点真实伤害。"
+        "Ám ảnh phản kích": "Nếu hiệp này bạn né tránh hoặc đỡ đòn thành công công kích của kẻ địch, lần tấn công tiếp theo của bạn đính kèm thêm 40 điểm sát thương chuẩn."
       },
-      "description": "与臂甲一体的黑钢利爪，爪刃锋利，护臂坚固，格挡成功后的反击会附带暗影伤害。"
+      "description": "Móng vuốt sắt đen liền với giáp tay, lưỡi vuốt sắc bén, hộ tay chắc chắn, đòn phản công sau khi đỡ đòn thành công sẽ kèm theo sát thương bóng tối."
     },
     {
-      "name": "闪电投刃",
+      "name": "Thiểm Điện Đầu Nhận",
       "cost": 31,
-      "type": "武器",
+      "type": "Vũ Khí",
       "tag": [
-        "投掷武器",
-        "攻击: 80"
+        "Vũ khí ném",
+        "Tấn công: 80"
       ],
       "rarity": "rare",
       "effect": {
-        "连锁闪电": "投掷攻击命中时，会弹射至2米内的另一名敌人，造成50%的初始伤害。",
-        "自动回收": "投掷后此武器将在你的下回合开始时自动返回手中。"
+        "Liên tỏa thiểm điện": "Khi ném trúng đích, sẽ bật nảy sang một kẻ địch khác trong vòng 2 mét, gây 50% sát thương ban đầu.",
+        "Tự động hồi thu": "Sau khi ném vũ khí này sẽ tự động quay về tay bạn vào đầu hiệp sau."
       },
-      "description": "边缘锋利的精钢圆刃，中心镶嵌着雷晶石，整体平衡极佳，投掷后能自动返回并电击路径上的所有敌人。"
+      "description": "Dao ném tròn bằng thép tinh luyện có cạnh sắc bén, trung tâm khảm lôi tinh thạch, tổng thể cân bằng cực tốt, sau khi ném có thể tự động quay về và giật điện tất cả kẻ địch trên đường đi."
     }
   ],
-  "副手防具": [
+  "Phó Thủ Phòng Cụ": [
     {
-      "name": "小圆盾",
+      "name": "Tiểu Viên Thuẫn",
       "cost": 5,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "盾牌",
-        "防御: 8"
+        "Khiên",
+        "Phòng thủ: 8"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "直径约一臂长的小型铁面圆盾，轻便灵活，利于快速格挡对手的攻击。"
+      "description": "Khiên tròn mặt sắt nhỏ đường kính khoảng một cánh tay, nhẹ nhàng linh hoạt, thuận lợi để đỡ nhanh đòn tấn công của đối thủ."
     },
     {
-      "name": "结实的木盾",
+      "name": "Kiên Cố Mộc Thuẫn",
       "cost": 6,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "盾牌",
-        "防御: 10"
+        "Khiên",
+        "Phòng thủ: 10"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "多层木板压制并覆盖皮革的圆形盾牌，中央有铁质盾心，提供可靠的基础防护。"
+      "description": "Khiên tròn ép từ nhiều lớp ván gỗ và phủ da, trung tâm có lòng khiên bằng sắt, cung cấp bảo hộ cơ bản đáng tin cậy."
     },
     {
-      "name": "筝形盾",
+      "name": "Tranh Hình Thuẫn",
       "cost": 8,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "盾牌",
-        "防御: 12"
+        "Khiên",
+        "Phòng thủ: 12"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "上宽下窄的木质筝形设计，能有效保护躯干，是步兵冲锋时的标准配置。"
+      "description": "Thiết kế hình diều gỗ trên rộng dưới hẹp, có thể bảo vệ hiệu quả thân mình, là trang bị tiêu chuẩn khi bộ binh xung phong."
     },
     {
-      "name": "塔盾",
+      "name": "Tháp Thuẫn",
       "cost": 10,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "盾牌",
-        "防御: 18"
+        "Khiên",
+        "Phòng thủ: 18"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "与人等高的大型木质长方盾，边缘以铁皮加固，提供全面的防护但极为笨重。"
+      "description": "Khiên chữ nhật lớn bằng gỗ cao bằng người, mép gia cố bằng lá sắt, cung cấp bảo hộ toàn diện nhưng cực kỳ cồng kềnh."
     },
     {
-      "name": "臂铠",
+      "name": "Tí Khải",
       "cost": 6,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "臂甲",
-        "防御: 8"
+        "Tí giáp",
+        "Phòng thủ: 8"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "由数片铁甲和皮带构成的臂甲，保护整个前臂，可用于格挡刀剑。"
+      "description": "Giáp tay cấu tạo từ vài phiến giáp sắt và đai da, bảo vệ toàn bộ cẳng tay, có thể dùng để đỡ đao kiếm."
     },
     {
-      "name": "钢制鸢盾",
+      "name": "Cương Chế Diên Thuẫn",
       "cost": 22,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "盾牌",
-        "防御: 40"
+        "Khiên",
+        "Phòng thủ: 40"
       ],
       "rarity": "uncommon",
       "effect": {
-        "物理减伤": "受到的物理伤害降低5%。"
+        "Vật lý giảm thương": "Sát thương vật lý phải chịu giảm 5%."
       },
-      "description": "橡木盾体正面覆盖了一层薄钢片，呈水滴形，防护面积大且更为坚固。"
+      "description": "Mặt chính thân khiên gỗ sồi được phủ một lớp thép mỏng, hình giọt nước, diện tích bảo hộ lớn và kiên cố hơn."
     },
     {
-      "name": "百炼圆盾",
+      "name": "Bách Luyện Viên Thuẫn",
       "cost": 24,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "盾牌",
-        "防御: 35"
+        "Khiên",
+        "Phòng thủ: 35"
       ],
       "rarity": "uncommon",
       "effect": {
-        "精力回复": "成功格挡敌人攻击后，自身SP恢复15点。"
+        "Tinh lực hồi phục": "Sau khi đỡ thành công đòn tấn công của kẻ địch, bản thân hồi phục 15 điểm SP."
       },
-      "description": "由百炼精钢冲压而成的小型圆盾，轻便灵活，能更轻松地偏转攻击。"
+      "description": "Khiên tròn nhỏ dập từ thép tinh luyện trăm lần, nhẹ nhàng linh hoạt, có thể dễ dàng làm chệch hướng tấn công hơn."
     },
     {
-      "name": "格挡臂铠",
+      "name": "Cách Đáng Tí Khải",
       "cost": 23,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "臂甲",
-        "防御: 38"
+        "Tí giáp",
+        "Phòng thủ: 38"
       ],
       "rarity": "uncommon",
       "effect": {
-        "体质加成": "装备此防具时，你的体质在计算物理减免时额外+2。"
+        "Thể chất gia thành": "Khi trang bị phòng cụ này, Thể chất của bạn được +2 khi tính toán giảm miễn vật lý."
       },
-      "description": "多层精钢甲片铆接而成，完全包裹前臂，在格挡时能提供更强的保护。"
+      "description": "Nhiều phiến giáp thép tinh luyện tán đinh lại, bao bọc hoàn toàn cẳng tay, khi đỡ đòn có thể cung cấp sự bảo vệ mạnh hơn."
     },
     {
-      "name": "巨熊塔盾",
+      "name": "Cự Hùng Tháp Thuẫn",
       "cost": 30,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "盾牌",
-        "防御: 60"
+        "Khiên",
+        "Phòng thủ: 60"
       ],
       "rarity": "uncommon",
       "effect": {
-        "失衡": "被攻击时，有25%几率(d20≥16)使攻击者[失衡]，下一次攻击检定结果降低一级。"
+        "Thất hoành": "Khi bị tấn công, có 25% cơ hội (d20≥16) làm người tấn công [Mất thăng bằng], kết quả kiểm định tấn công lần sau giảm một cấp."
       },
-      "description": "大型精钢包边盾牌，正面绘有熊头纹章，提供全面的防护，但极为笨重。"
+      "description": "Khiên tháp lớn viền thép tinh luyện, mặt trước vẽ huy hiệu đầu gấu, cung cấp bảo hộ toàn diện, nhưng cực kỳ cồng kềnh."
     },
     {
-      "name": "圣光护符盾",
+      "name": "Thánh Quang Hộ Phù Thuẫn",
       "cost": 37,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "盾牌",
-        "防御: 80"
+        "Khiên",
+        "Phòng thủ: 80"
       ],
       "rarity": "rare",
       "effect": {
-        "守护祷言": "当你或你的盟友受到亡灵或深渊魔族攻击时，你可以消耗[动作]为目标提供一次格挡，吸收等同于你最大HP 10%的伤害。"
+        "Thủ hộ đảo ngôn": "Khi bạn hoặc đồng minh chịu tấn công từ Vong Linh hoặc Thâm Uyên Ma Tộc, bạn có thể tiêu hao [Hành động] để cung cấp một lần đỡ đòn cho mục tiêu, hấp thụ sát thương bằng 10% HP tối đa của bạn."
       },
-      "description": "银制的小型鸢盾，盾面中心镶嵌着一枚散发柔光的圣晶石，能有效抵抗黑暗与亡灵能量的侵蚀。"
+      "description": "Khiên hình diều nhỏ bằng bạc, trung tâm mặt khiên khảm một viên thánh tinh thạch tỏa ánh sáng dịu nhẹ, có thể chống lại sự ăn mòn của năng lượng bóng tối và vong linh hiệu quả."
     },
     {
-      "name": "符文鸢盾",
+      "name": "Phù Văn Diên Thuẫn",
       "cost": 36,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "盾牌",
-        "防御: 90"
+        "Khiên",
+        "Phòng thủ: 90"
       ],
       "rarity": "rare",
       "effect": {
-        "法术偏转": "当你被单体法术作为目标时，有15%几率(d20≥18)使该法术无效。"
+        "Pháp thuật thiên chuyển": "Khi bạn trở thành mục tiêu của pháp thuật đơn thể, có 15% cơ hội (d20≥18) làm pháp thuật đó vô hiệu."
       },
-      "description": "坚韧橡木制成的鸢形盾牌，表面覆盖着秘银薄片，其上雕刻着密集的防护符文。"
+      "description": "Khiên hình diều làm từ gỗ sồi dẻo dai, bề mặt phủ lá bí ngân mỏng, bên trên khắc dày đặc phù văn phòng hộ."
     },
     {
-      "name": "奥术典籍",
+      "name": "Áo Thuật Điển Tịch",
       "cost": 35,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "魔导书",
-        "防御: 70"
+        "Sách ma đạo",
+        "Phòng thủ: 70"
       ],
       "rarity": "rare",
       "effect": {
-        "法术吸收": "每场战斗一次，当你受到能量伤害时，可以消耗[动作]将该次伤害的50%储存起来，并在你的下一次攻击中释放，附加等量的能量伤害。"
+        "Pháp thuật hấp thu": "Mỗi trận chiến một lần, khi bạn chịu sát thương năng lượng, có thể tiêu hao [Hành động] lưu trữ 50% sát thương lần đó, và giải phóng trong lần tấn công tiếp theo của bạn, đính kèm lượng sát thương năng lượng tương đương."
       },
-      "description": "幼龙皮制成的封面，书页由银箔制成，书脊处镶嵌着幽蓝水晶，能自动格挡一次低级法术的攻击。"
+      "description": "Bìa làm từ da rồng con, trang sách làm từ lá bạc, gáy sách khảm pha lê lam u ám, có thể tự động đỡ một lần tấn công pháp thuật cấp thấp."
     },
     {
-      "name": "风暴招架器",
+      "name": "Phong Bạo Chiêu Giá Khí",
       "cost": 35,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "臂甲",
-        "防御: 75"
+        "Tí giáp",
+        "Phòng thủ: 75"
       ],
       "rarity": "rare",
       "effect": {
-        "弹道偏转": "受到的所有远程物理伤害降低20%。"
+        "Đạn đạo thiên chuyển": "Tất cả sát thương vật lý tầm xa phải chịu giảm 20%."
       },
-      "description": "轻质合金打造的臂甲，外侧有数道精密的导流槽，能有效改变远程物理攻击的弹道。"
+      "description": "Giáp tay chế tạo từ hợp kim nhẹ, bên ngoài có vài rãnh dẫn lưu tinh mật, có thể thay đổi đạn đạo tấn công vật lý tầm xa hiệu quả."
     },
     {
-      "name": "荆棘圆盾",
+      "name": "Kinh Cức Viên Thuẫn",
       "cost": 34,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "盾牌",
-        "防御: 85"
+        "Khiên",
+        "Phòng thủ: 85"
       ],
       "rarity": "rare",
       "effect": {
-        "荆棘反伤": "成功格挡近战攻击时，对攻击者造成等同于格挡前伤害值15%的物理伤害。"
+        "Kinh cức phản thương": "Khi đỡ đòn cận chiến thành công, gây cho kẻ tấn công sát thương vật lý bằng 15% giá trị sát thương trước khi đỡ."
       },
-      "description": "钢铁铸造的圆形盾牌，盾面遍布淬毒的魔化荆棘尖刺，能将部分伤害反射给攻击者。"
+      "description": "Khiên tròn đúc bằng sắt thép, mặt khiên đầy gai nhọn bụi gai ma hóa tẩm độc, có thể phản xạ một phần sát thương cho kẻ tấn công."
     },
     {
-      "name": "烈焰护手",
+      "name": "Liệt Diễm Hộ Thủ",
       "cost": 33,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "臂甲",
-        "防御: 70"
+        "Tí giáp",
+        "Phòng thủ: 70"
       ],
       "rarity": "rare",
       "effect": {
-        "火焰吸收": "受到的能量伤害(火焰)降低30%，并将降低值的50%转化为你下一次攻击的额外能量伤害(火焰)。"
+        "Hỏa diễm hấp thu": "Sát thương năng lượng (Hỏa) phải chịu giảm 30%, và chuyển hóa 50% giá trị giảm thiểu thành sát thương năng lượng (Hỏa) thêm cho lần tấn công tiếp theo của bạn."
       },
-      "description": "由火蜥蜴的皮革制成，手背处镶嵌着一枚温热的红宝石，可抵挡火系伤害并将其转化为能量。"
+      "description": "Làm từ da thằn lằn lửa, mu bàn tay khảm một viên hồng ngọc ấm áp, có thể ngăn cản sát thương hệ hỏa và chuyển hóa nó thành năng lượng."
     },
     {
-      "name": "冰晶小盾",
+      "name": "Băng Tinh Tiểu Thuẫn",
       "cost": 32,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "盾牌",
-        "防御: 80"
+        "Khiên",
+        "Phòng thủ: 80"
       ],
       "rarity": "rare",
       "effect": {
-        "冰霜格挡": "成功格挡近战攻击时，有50%几率(d20≥11)对攻击者施加[霜冻]效果，使其移动速度降低30%，持续1回合。"
+        "Băng sương cách đáng": "Khi đỡ đòn cận chiến thành công, có 50% cơ hội (d20≥11) thi triển hiệu ứng [Sương giá] lên kẻ tấn công, làm tốc độ di chuyển của hắn giảm 30%, duy trì 1 hiệp."
       },
-      "description": "由深层冰川的冰核锻造的透明圆盾，盾体坚硬无比，寒气四溢，能短暂冻结对方。"
+      "description": "Khiên tròn trong suốt rèn từ lõi băng của sông băng tầng sâu, thân khiên vô cùng cứng rắn, hàn khí tràn trề, có thể đóng băng đối phương trong thời gian ngắn."
     }
   ],
-  "防具": [
+  "Phòng Cụ": [
     {
-      "name": "棉甲套装",
+      "name": "Miên Giáp Sáo Trang",
       "cost": 20,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "轻甲",
-        "防御: 18"
+        "Giáp nhẹ",
+        "Phòng thủ: 18"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "多层亚麻布或棉布缝合填充而成，提供最基础的防护，聊胜于无。"
+      "description": "May và nhồi từ nhiều lớp vải lanh hoặc vải bông, cung cấp sự bảo vệ cơ bản nhất, có còn hơn không."
     },
     {
-      "name": "镶钉皮甲套装",
+      "name": "Tương Đinh Bì Giáp Sáo Trang",
       "cost": 28,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "轻甲",
-        "防御: 20"
+        "Giáp nhẹ",
+        "Phòng thủ: 20"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "在硬质皮革的基底上镶嵌了密集的铁钉，在保持灵活性的同时增强了对劈砍的防护。"
+      "description": "Trên nền da cứng khảm dày đặc đinh sắt, trong khi giữ được sự linh hoạt đồng thời tăng cường bảo vệ đối với đòn chém."
     },
     {
-      "name": "皮革头盔",
+      "name": "Bì Cách Đầu Khôi",
       "cost": 5,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "轻甲",
-        "防御: 6"
+        "Giáp nhẹ",
+        "Phòng thủ: 6"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "硬化皮革缝制而成的简易头盔，仅能覆盖头顶，提供最基础的冲击防护。"
+      "description": "Mũ giáp đơn giản may từ da thuộc cứng, chỉ che được đỉnh đầu, cung cấp sự bảo vệ chấn động cơ bản nhất."
     },
     {
-      "name": "铁质护鼻盔",
+      "name": "Thiết Chất Hộ Tị Khôi",
       "cost": 5,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 8"
+        "Giáp nặng",
+        "Phòng thủ: 8"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "锅形的铁盔，前方铆接一根向下的铁条以保护鼻梁，是军队中的常见装备。"
+      "description": "Mũ sắt hình nồi, phía trước tán đinh một thanh sắt hướng xuống để bảo vệ sống mũi, là trang bị thường thấy trong quân đội."
     },
     {
-      "name": "皮手套",
+      "name": "Bì Thủ Sáo",
       "cost": 5,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "轻甲",
-        "防御: 5"
+        "Giáp nhẹ",
+        "Phòng thủ: 5"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "鞣制过的厚实皮革缝制，保护手掌与手指，防止武器磨损。"
+      "description": "Da thuộc dày dặn đã qua xử lý may thành, bảo vệ lòng bàn tay và ngón tay, ngăn vũ khí mài mòn."
     },
     {
-      "name": "铁质护手",
+      "name": "Thiết Chất Hộ Thủ",
       "cost": 5,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 7"
+        "Giáp nặng",
+        "Phòng thủ: 7"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "覆盖手背的铁片，通过皮带固定，能防护手部在格挡时受到的劈砍。"
+      "description": "Miếng sắt che mu bàn tay, cố định bằng dây da, có thể bảo vệ tay khỏi đòn chém khi đỡ đòn."
     },
     {
-      "name": "皮革靴",
+      "name": "Bì Cách Ngoa",
       "cost": 5,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "轻甲",
-        "防御: 5"
+        "Giáp nhẹ",
+        "Phòng thủ: 5"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "牛皮制成的结实短靴，靴底较厚，能保护脚部并适应长途旅行。"
+      "description": "Giày ống ngắn chắc chắn làm từ da bò, đế giày khá dày, có thể bảo vệ chân và thích ứng với việc đi đường dài."
     },
     {
-      "name": "铁质护足",
+      "name": "Thiết Chất Hộ Túc",
       "cost": 5,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 7"
+        "Giáp nặng",
+        "Phòng thủ: 7"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "由多块铰接铁片构成的足部护甲，通常套在靴子外面，保护双脚。"
+      "description": "Giáp chân cấu tạo từ nhiều miếng sắt khớp nối, thường bọc bên ngoài giày, bảo vệ đôi chân."
     },
     {
-      "name": "隐匿皮甲套装",
+      "name": "Ẩn Nặc Bì Giáp Sáo Trang",
       "cost": 55,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "轻甲",
-        "防御: 55"
+        "Giáp nhẹ",
+        "Phòng thủ: 55"
       ],
       "rarity": "uncommon",
       "effect": {
-        "隐匿": "在非战斗状态下，降低被敌人发现的几率。"
+        "Ẩn nặc": "Trong trạng thái phi chiến đấu, giảm tỷ lệ bị kẻ địch phát hiện."
       },
-      "description": "染成黑色的柔软皮革缝制，剪裁贴身，能微弱降低行动时发出的噪音。"
+      "description": "May bằng da mềm nhuộm đen, cắt may vừa vặn, có thể giảm nhẹ tiếng ồn phát ra khi hành động."
     },
     {
-      "name": "链甲套装",
+      "name": "Liên Giáp Sáo Trang",
       "cost": 55,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 60"
+        "Giáp nặng",
+        "Phòng thủ: 60"
       ],
       "rarity": "uncommon",
       "effect": {
-        "链甲防护": "受到的物理伤害(挥砍/穿刺)降低10%。"
+        "Liên giáp phòng hộ": "Sát thương vật lý (Chém/Đâm) phải chịu giảm 10%."
       },
-      "description": "由数千个精钢环编织而成的全身链甲套装，能有效防御切割与劈砍。"
+      "description": "Bộ giáp lưới toàn thân đan từ hàng ngàn vòng thép tinh luyện, có thể phòng ngự cắt và chém hiệu quả."
     },
     {
-      "name": "骑士板甲套装",
+      "name": "Kỵ Sĩ Bản Giáp Sáo Trang",
       "cost": 60,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 65"
+        "Giáp nặng",
+        "Phòng thủ: 65"
       ],
       "rarity": "uncommon",
       "effect": {
-        "生命加成": "最大HP上限提升80点。"
+        "Sinh mệnh gia thành": "Giới hạn HP tối đa tăng 80 điểm."
       },
-      "description": "一体成型的精钢板甲，防御力极强，是骑士的核心护具。"
+      "description": "Giáp tấm thép tinh luyện đúc nguyên khối, lực phòng ngự cực mạnh, là hộ cụ cốt lõi của kỵ sĩ."
     },
     {
-      "name": "鳞甲套装",
+      "name": "Lân Giáp Sáo Trang",
       "cost": 55,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 58"
+        "Giáp nặng",
+        "Phòng thủ: 58"
       ],
       "rarity": "uncommon",
       "effect": {
-        "抗暴击": "受到的物理暴击伤害降低20%。"
+        "Kháng bạo kích": "Sát thương bạo kích vật lý phải chịu giảm 20%."
       },
-      "description": "将大量小型钢片像鳞片一样层叠固定在皮甲上，能有效防御劈砍。"
+      "description": "Cố định lượng lớn miếng thép nhỏ xếp chồng lên nhau như vảy cá trên áo da, có thể phòng ngự đòn chém hiệu quả."
     },
     {
-      "name": "旅者皮衣套装",
+      "name": "Lữ Giả Bì Y Sáo Trang",
       "cost": 50,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "轻甲",
-        "防御: 52"
+        "Giáp nhẹ",
+        "Phòng thủ: 52"
       ],
       "rarity": "uncommon",
       "effect": {
-        "耐力加成": "最大SP上限提升50点。"
+        "Nại lực gia thành": "Giới hạn SP tối đa tăng 50 điểm."
       },
-      "description": "硬质皮革缝制，内侧有柔软衬垫，能减轻长途跋涉带来的疲劳。"
+      "description": "May bằng da cứng, bên trong có lớp đệm mềm, có thể giảm bớt mệt mỏi do đi đường dài."
     },
     {
-      "name": "守护者面盔",
+      "name": "Thủ Hộ Giả Diện Khôi",
       "cost": 17,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 30"
+        "Giáp nặng",
+        "Phòng thủ: 30"
       ],
       "rarity": "uncommon",
       "effect": {
-        "坚定": "免疫因攻击检定为[暴击]而产生的负面效果。"
+        "Kiên định": "Miễn dịch hiệu ứng tiêu cực sinh ra do kiểm định tấn công là [Bạo kích]."
       },
-      "description": "精钢打造的封闭式头盔，完全覆盖头部和面部，提供全面的头部防护。"
+      "description": "Mũ sắt kín mít bằng thép tinh luyện, che kín hoàn toàn đầu và mặt, cung cấp sự bảo vệ đầu toàn diện."
     },
     {
-      "name": "强化护鼻盔",
+      "name": "Cường Hóa Hộ Tị Khôi",
       "cost": 18,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 32"
+        "Giáp nặng",
+        "Phòng thủ: 32"
       ],
       "rarity": "uncommon",
       "effect": {
-        "精神防护": "受到的精神伤害降低10%。"
+        "Tinh thần phòng hộ": "Sát thương tinh thần phải chịu giảm 10%."
       },
-      "description": "钢制头盔带有一个可活动的护鼻，内衬加厚皮革，在不影响视野的情况下提升了防护性。"
+      "description": "Mũ sắt có một đồ bảo vệ mũi có thể cử động, lót da dày, nâng cao tính bảo vệ trong khi không ảnh hưởng tầm nhìn."
     },
     {
-      "name": "巨熊之力手套",
+      "name": "Cự Hùng Chi Lực Thủ Sáo",
       "cost": 18,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "轻甲",
-        "防御: 25"
+        "Giáp nhẹ",
+        "Phòng thủ: 25"
       ],
       "rarity": "uncommon",
       "effect": {
-        "重击": "普通攻击的最终伤害提升10点。"
+        "Trọng kích": "Sát thương cuối cùng của tấn công thường tăng 10 điểm."
       },
-      "description": "鞣制熊皮制成，手背处缝有加固的铁片，能微弱提升使用者的抓握力量。"
+      "description": "Làm từ da gấu thuộc, mu bàn tay khâu miếng sắt gia cố, có thể tăng nhẹ lực nắm của người sử dụng."
     },
     {
-      "name": "铁握板甲手套",
+      "name": "Thiết Ác Bản Giáp Thủ Sáo",
       "cost": 22,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 35"
+        "Giáp nặng",
+        "Phòng thủ: 35"
       ],
       "rarity": "uncommon",
       "effect": {
-        "力量增幅": "使用[力量]关联的技能时，最终伤害提升5%。"
+        "Lực lượng tăng phúc": "Khi sử dụng kỹ năng liên quan đến [Sức mạnh], sát thương cuối cùng tăng 5%."
       },
-      "description": "由多块精钢甲片铰接而成，完全覆盖手部，能显著增强拳击的力量。"
+      "description": "Cấu tạo từ nhiều miếng giáp thép tinh luyện khớp nối, che phủ hoàn toàn bàn tay, có thể tăng cường đáng kể sức mạnh nắm đấm."
     },
     {
-      "name": "旅者长靴",
+      "name": "Lữ Giả Trường Ngoa",
       "cost": 19,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "轻甲",
-        "防御: 28"
+        "Giáp nhẹ",
+        "Phòng thủ: 28"
       ],
       "rarity": "uncommon",
       "effect": {
-        "急行": "每日可进行一次持续1小时的快速移动，不消耗额外体力。"
+        "Cấp hành": "Mỗi ngày có thể tiến hành một lần di chuyển nhanh kéo dài 1 giờ, không tiêu hao thêm thể lực."
       },
-      "description": "高筒皮革靴，靴底坚固耐磨，能减少长途旅行中的疲劳感。"
+      "description": "Giày ống da cao cổ, đế giày chắc chắn chịu mài mòn, có thể giảm bớt cảm giác mệt mỏi khi đi đường dài."
     },
     {
-      "name": "镶钢板甲靴",
+      "name": "Tương Cương Bản Giáp Ngoa",
       "cost": 21,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 34"
+        "Giáp nặng",
+        "Phòng thủ: 34"
       ],
       "rarity": "uncommon",
       "effect": {
-        "稳固": "免疫[击倒]效果。"
+        "Ổn cố": "Miễn dịch hiệu ứng [Đánh ngã]."
       },
-      "description": "皮革靴身的关键部位，如脚背和脚踝，都镶嵌了钢片，提供了额外的保护。"
+      "description": "Các bộ phận quan trọng của giày da, như mu bàn chân và mắt cá chân, đều được khảm miếng thép, cung cấp sự bảo vệ thêm."
     },
     {
-      "name": "重装板甲靴",
+      "name": "Trọng Trang Bản Giáp Ngoa",
       "cost": 27,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 40"
+        "Giáp nặng",
+        "Phòng thủ: 40"
       ],
       "rarity": "uncommon",
       "effect": {
-        "范围减伤": "受到的范围伤害降低15%。"
+        "Phạm vi giảm thương": "Sát thương phạm vi phải chịu giảm 15%."
       },
-      "description": "完全由精钢甲片构成的重型战靴，能有效防御下段攻击，代价是牺牲了灵活性。"
+      "description": "Chiến hài hạng nặng hoàn toàn cấu tạo từ miếng giáp thép tinh luyện, có thể phòng ngự hiệu quả đòn tấn công tầm thấp, cái giá phải trả là hy sinh sự linh hoạt."
     },
     {
-      "name": "骑士板甲套装·坚毅",
+      "name": "Kỵ Sĩ Bản Giáp Sáo Trang · Kiên Nghị",
       "cost": 85,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 150"
+        "Giáp nặng",
+        "Phòng thủ: 150"
       ],
       "rarity": "rare",
       "effect": {
-        "物理防护": "受到的所有物理伤害降低15%。"
+        "Vật lý phòng hộ": "Tất cả sát thương vật lý phải chịu giảm 15%."
       },
-      "description": "以精钢锻造成型的板甲套装，表面打磨光滑，边缘雕刻着守护符文，是战场前线人员的可靠保障。"
+      "description": "Bộ giáp tấm rèn tạo hình từ thép tinh luyện, bề mặt đánh bóng nhẵn mịn, rìa khắc phù văn thủ hộ, là bảo đảm đáng tin cậy cho nhân viên tiền tuyến chiến trường."
     },
     {
-      "name": "元素抵抗链甲套装",
+      "name": "Nguyên Tố Để Kháng Liên Giáp Sáo Trang",
       "cost": 85,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 140"
+        "Giáp nặng",
+        "Phòng thủ: 140"
       ],
       "rarity": "rare",
       "effect": {
-        "元素防护": "受到的所有能量伤害降低15%。"
+        "Nguyên tố phòng hộ": "Tất cả sát thương năng lượng phải chịu giảm 15%."
       },
-      "description": "由数千个细小的秘银环编织而成，环间镶嵌着代表四元素的微小宝石，能均衡地抵抗各类元素伤害，泛用性强。"
+      "description": "Đan từ hàng ngàn vòng bí ngân nhỏ, giữa các vòng khảm đá quý nhỏ tượng trưng cho bốn nguyên tố, có thể kháng cự cân bằng các loại sát thương nguyên tố, tính đa dụng cao."
     },
     {
-      "name": "影遁皮甲套装",
+      "name": "Ảnh Độn Bì Giáp Sáo Trang",
       "cost": 85,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "轻甲",
-        "防御: 130"
+        "Giáp nhẹ",
+        "Phòng thủ: 130"
       ],
       "rarity": "rare",
       "effect": {
-        "阴影闪避": "在阴影或昏暗环境中，你的闪避检定获得+3加值。"
+        "Âm ảnh thiểm tị": "Trong môi trường bóng tối hoặc mờ tối, kiểm định né tránh của bạn nhận thêm +3 giá trị cộng thêm."
       },
-      "description": "用暗影豹的毛皮缝制，关键部位镶嵌着吸收光线的黑曜石，能让使用者更容易地融入阴影。"
+      "description": "May bằng da báo bóng đêm, bộ phận quan trọng khảm đá hắc diện thạch hấp thụ ánh sáng, có thể để người sử dụng dễ dàng hòa nhập vào bóng tối hơn."
     },
     {
-      "name": "巨熊之力链甲套装",
+      "name": "Cự Hùng Chi Lực Liên Giáp Sáo Trang",
       "cost": 85,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 145"
+        "Giáp nặng",
+        "Phòng thủ: 145"
       ],
       "rarity": "rare",
       "effect": {
-        "力量加成": "你的[力量]属性在计算伤害时额外+2。"
+        "Lực lượng gia thành": "Thuộc tính [Sức mạnh] của bạn khi tính toán sát thương được +2 thêm."
       },
-      "description": "精钢链甲套装，织网编织着象征力量的巨熊符文，能显著提升穿着者的爆发力与冲击力。"
+      "description": "Bộ giáp lưới thép tinh luyện, lưới đan bện phù văn đầu gấu tượng trưng cho sức mạnh, có thể nâng cao đáng kể sức bùng nổ và lực xung kích của người mặc."
     },
     {
-      "name": "遁风游侠皮甲套装",
+      "name": "Độn Phong Du Hiệp Bì Giáp Sáo Trang",
       "cost": 85,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "轻甲",
-        "防御: 135"
+        "Giáp nhẹ",
+        "Phòng thủ: 135"
       ],
       "rarity": "rare",
       "effect": {
-        "敏捷加成": "你的[敏捷]属性在计算闪避和先攻时额外+2。"
+        "Mẫn tiệp gia thành": "Thuộc tính [Nhạy bén] của bạn khi tính toán né tránh và tiên công được +2 thêm."
       },
-      "description": "由魔化丝绸与软皮缝制，镶嵌着轻盈的风晶石，能让穿着者的移动更加迅速，闪避更加灵敏。"
+      "description": "May từ tơ lụa ma hóa và da mềm, khảm phong tinh thạch nhẹ nhàng, có thể làm người mặc di chuyển nhanh chóng hơn, né tránh linh hoạt hơn."
     },
     {
-      "name": "谎言假面",
+      "name": "Hoang Ngôn Giả Diện",
       "cost": 38,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "饰品",
-        "防御: 20"
+        "Trang sức",
+        "Phòng thủ: 20"
       ],
       "rarity": "rare",
       "effect": {
-        "伪装": "在对抗精神探查或魅惑效果的检定时，你的[精神]属性视为额外+5。"
+        "Ngụy trang": "Khi kiểm định đối kháng thám tra tinh thần hoặc hiệu ứng mị hoặc, thuộc tính [Tinh thần] của bạn được coi như +5 thêm."
       },
-      "description": "一张轻薄的、可以完美贴合面部的秘银面具。佩戴后，可以完美隐藏你的微表情，并让你在说谎时心跳和体温都不会有任何变化。"
+      "description": "Một chiếc mặt nạ bí ngân mỏng nhẹ, có thể dán khít hoàn hảo vào mặt. Sau khi đeo, có thể che giấu hoàn hảo biểu cảm vi mô của bạn, và làm cho nhịp tim cùng nhiệt độ cơ thể bạn không có bất kỳ thay đổi nào khi nói dối."
     },
     {
-      "name": "龙鳞头盔",
+      "name": "Long Lân Đầu Khôi",
       "cost": 38,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 80"
+        "Giáp nặng",
+        "Phòng thủ: 80"
       ],
       "rarity": "rare",
       "effect": {
-        "火焰抗性": "受到的能量伤害(火焰)降低25%。"
+        "Hỏa diễm kháng tính": "Sát thương năng lượng (Hỏa) phải chịu giảm 25%."
       },
-      "description": "用亚种火飞龙的鳞片与精钢锻造而成的全覆式头盔，带有可开合的面甲，能有效抵抗高温环境与火焰法术的伤害。"
+      "description": "Mũ sắt toàn thân rèn từ vảy á chủng phi long lửa và thép tinh luyện, có giáp mặt có thể đóng mở, có thể kháng cự sát thương môi trường nhiệt độ cao và pháp thuật lửa hiệu quả."
     },
     {
-      "name": "洞察头冠",
+      "name": "Động Sát Đầu Quan",
       "cost": 35,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "布甲",
-        "防御: 40"
+        "Giáp vải",
+        "Phòng thủ: 40"
       ],
       "rarity": "rare",
       "effect": {
-        "真视": "你可以感知到10米范围内隐形的单位。"
+        "Chân thị": "Bạn có thể cảm nhận được đơn vị tàng hình trong phạm vi 10 mét."
       },
-      "description": "由秘银打造的简约头冠，眉心处镶嵌着一颗纯净的蓝宝石，能帮助佩戴者更快地感知和解析周围的魔法波动。"
+      "description": "Vương miện đơn giản làm từ bí ngân, giữa trán khảm một viên lam ngọc thuần khiết, có thể giúp người đeo cảm nhận và phân tích dao động ma pháp xung quanh nhanh hơn."
     },
     {
-      "name": "符文皮帽",
+      "name": "Phù Văn Bì Mạo",
       "cost": 33,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "轻甲",
-        "防御: 45"
+        "Giáp nhẹ",
+        "Phòng thủ: 45"
       ],
       "rarity": "rare",
       "effect": {
-        "施法警示": "当有敌意的施法者在15米内开始施法时，你会立即获得警示。"
+        "Thi pháp cảnh thị": "Khi có người thi pháp thù địch bắt đầu thi pháp trong vòng 15 mét, bạn sẽ lập tức nhận được cảnh báo."
       },
-      "description": "由魔化野牛皮缝制而成，帽檐内侧刻满了微型警示符文，当侦测到恶意的魔法波动时，符文会发出微光预警。"
+      "description": "May từ da trâu rừng ma hóa, bên trong vành mũ khắc đầy phù văn cảnh báo vi mô, khi trinh sát được dao động ma pháp ác ý, phù văn sẽ phát sáng cảnh báo."
     },
     {
-      "name": "铁握之力护手",
+      "name": "Thiết Ác Chi Lực Hộ Thủ",
       "cost": 37,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 70"
+        "Giáp nặng",
+        "Phòng thủ: 70"
       ],
       "rarity": "rare",
       "effect": {
-        "铁拳": "你的徒手攻击造成等同于(力量x5)的物理伤害，并有25%几率(d20≥16)击倒目标。"
+        "Thiết quyền": "Tấn công tay không của bạn gây sát thương vật lý tương đương (Sức mạnh x5), và có 25% cơ hội (d20≥16) đánh ngã mục tiêu."
       },
-      "description": "布满划痕的精钢护手，指关节和手背处雕刻着力量符文，能显著提升佩戴者的抓握与打击力量。"
+      "description": "Găng tay thép tinh luyện đầy vết xước, khớp ngón tay và mu bàn tay khắc phù văn sức mạnh, có thể nâng cao đáng kể lực nắm và lực đánh của người đeo."
     },
     {
-      "name": "法师之手手套",
+      "name": "Pháp Sư Chi Thủ Thủ Sáo",
       "cost": 34,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "布甲",
-        "防御: 40"
+        "Giáp vải",
+        "Phòng thủ: 40"
       ],
       "rarity": "rare",
       "effect": {
-        "施法节约": "所有需要施法动作的技能，MP或SP消耗降低10%。"
+        "Thi pháp tiết ước": "Tất cả kỹ năng cần động tác thi pháp, tiêu hao MP hoặc SP giảm 10%."
       },
-      "description": "银色丝绸编织而成，手背处用奥术水晶粉末绣出了复杂的魔法阵，能提升需要手势施法时的速度与流畅度。"
+      "description": "Làm từ tơ lụa màu bạc, mu bàn tay dùng bột pha lê áo thuật thêu thành ma pháp trận phức tạp, có thể nâng cao tốc độ và sự trôi chảy khi cần thi pháp bằng cử chỉ."
     },
     {
-      "name": "风行者长靴",
+      "name": "Phong Hành Giả Trường Ngoa",
       "cost": 36,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "轻甲",
-        "防御: 65"
+        "Giáp nhẹ",
+        "Phòng thủ: 65"
       ],
       "rarity": "rare",
       "effect": {
-        "无声移动": "你的移动不会发出任何声音，且移动速度提升15%。"
+        "Vô thanh di động": "Di chuyển của bạn sẽ không phát ra bất kỳ âm thanh nào, và tốc độ di chuyển tăng 15%."
       },
-      "description": "由柔软的鹿皮制成，靴底刻有风系符文，两侧镶嵌着风晶石，适合快速潜行。"
+      "description": "Làm từ da hươu mềm mại, đế giày khắc phù văn hệ phong, hai bên khảm phong tinh thạch, thích hợp tiềm hành nhanh chóng."
     },
     {
-      "name": "旅行者秘法护腿",
+      "name": "Lữ Hành Giả Bí Pháp Hộ Thối",
       "cost": 35,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "轻甲",
-        "防御: 60"
+        "Giáp nhẹ",
+        "Phòng thủ: 60"
       ],
       "rarity": "rare",
       "effect": {
-        "负重增强": "你的负重能力提升50%。"
+        "Phụ trọng tăng cường": "Khả năng mang vác của bạn tăng 50%."
       },
-      "description": "耐磨皮革与帆布制成的实用护腿，内侧口袋里藏着一枚微小的空间宝石，能极大缓解长途跋涉带来的疲劳感。"
+      "description": "Giáp chân thực dụng làm từ da chịu mài mòn và vải bạt, trong túi bên trong giấu một viên đá không gian nhỏ bé, có thể giảm bớt đáng kể cảm giác mệt mỏi khi đi đường dài."
     },
     {
-      "name": "岩石践踏者",
+      "name": "Nham Thạch Tiễn Đạp Giả",
       "cost": 35,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "重甲",
-        "防御: 75"
+        "Giáp nặng",
+        "Phòng thủ: 75"
       ],
       "rarity": "rare",
       "effect": {
-        "不动如山": "当你被强制位移时，你可以进行一次体质检定(d20+体质)，若结果大于15，则抵抗该次位移效果。"
+        "Bất động như sơn": "Khi bạn bị cưỡng chế di dời, bạn có thể tiến hành một lần kiểm định thể chất (d20+Thể chất), nếu kết quả lớn hơn 15, thì kháng cự hiệu quả di dời lần đó."
       },
-      "description": "硬化皮革与钢板结合制成的重型战靴，靴底厚重如岩石，能让穿着者在冲击下稳如磐石。"
+      "description": "Chiến hài hạng nặng làm từ da cứng và tấm thép kết hợp, đế giày dày nặng như nham thạch, có thể giúp người mặc vững như bàn thạch trước xung kích."
     },
     {
-      "name": "水行靴",
+      "name": "Thủy Hành Ngoa",
       "cost": 33,
-      "type": "防具",
+      "type": "Phòng cụ",
       "tag": [
-        "轻甲",
-        "防御: 55"
+        "Giáp nhẹ",
+        "Phòng thủ: 55"
       ],
       "rarity": "rare",
       "effect": {
-        "水上行走": "你可以消耗[动作]资源在水面上行走，如同在平地上一样，持续1分钟。"
+        "Thủy thượng hành tẩu": "Bạn có thể tiêu hao tài nguyên [Hành động] để đi lại trên mặt nước, giống như trên đất bằng, duy trì 1 phút."
       },
-      "description": "由防水的海兽皮革制成，靴边镶嵌着数颗水蓝宝石，能让使用者在水面上短时间站立或行走。"
+      "description": "Làm từ da hải thú không thấm nước, viền giày khảm vài viên lam ngọc, có thể giúp người sử dụng đứng hoặc đi lại trên mặt nước trong thời gian ngắn."
     }
   ],
-  "饰品": [
+  "Trang Sức": [
     {
-      "name": "银戒指",
+      "name": "Ngân Giới Chỉ",
       "cost": 4,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "戒指",
-        "防御: 5"
+        "Nhẫn",
+        "Phòng thủ: 5"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "普通的银质指环，设计简单无纹饰，可作为附魔的基底或用作信物。"
+      "description": "Nhẫn bạc bình thường, thiết kế đơn giản không hoa văn, có thể dùng làm nền tảng phụ ma hoặc dùng làm tín vật."
     },
     {
-      "name": "皮制护符",
+      "name": "Bì Chế Hộ Phù",
       "cost": 3,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 5"
+        "Dây chuyền",
+        "Phòng thủ: 5"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "皮绳系着一个小皮袋，内装一些草药或祝福石片，提供心理上的安慰。"
+      "description": "Dây da buộc một túi da nhỏ, bên trong đựng một ít thảo dược hoặc mảnh đá chúc phúc, cung cấp an ủi về mặt tâm lý."
     },
     {
-      "name": "铜质手镯",
+      "name": "Đồng Chất Thủ Trạc",
       "cost": 2,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "手镯",
-        "防御: 6"
+        "Vòng tay",
+        "Phòng thủ: 6"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "铜料打造的开口手镯，做工粗糙但十分耐用，是佣兵和冒险者中常见的饰品。"
+      "description": "Vòng tay hở làm bằng đồng, gia công thô sơ nhưng vô cùng bền, là trang sức thường thấy trong giới lính đánh thuê và mạo hiểm giả."
     },
     {
-      "name": "骨制项链",
+      "name": "Cốt Chế Hạng Liên",
       "cost": 5,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 8"
+        "Dây chuyền",
+        "Phòng thủ: 8"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "用野兽的牙齿或小块骨头串成，象征着猎人的勇气与狩猎技能。"
+      "description": "Xâu chuỗi từ răng dã thú hoặc mẩu xương nhỏ, tượng trưng cho dũng khí và kỹ năng săn bắn của thợ săn."
     },
     {
-      "name": "镶嵌宝石的胸针",
+      "name": "Tương Khảm Bảo Thạch Hung Châm",
       "cost": 13,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "胸针",
-        "防御: 10"
+        "Trâm ngực",
+        "Phòng thủ: 10"
       ],
       "rarity": "common",
       "effect": {},
-      "description": "银质的叶形胸针，中央镶嵌着一颗廉价的小宝石，能略微增强佩戴者的魅力。"
+      "description": "Trâm ngực hình lá bằng bạc, ở giữa khảm một viên đá quý nhỏ rẻ tiền, có thể tăng nhẹ mị lực của người đeo."
     },
     {
-      "name": "精准指环",
+      "name": "Tinh Chuẩn Chỉ Hoàn",
       "cost": 18,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "戒指",
-        "防御: 30"
+        "Nhẫn",
+        "Phòng thủ: 30"
       ],
       "rarity": "uncommon",
       "effect": {
-        "远程增伤": "所有远程物理攻击的最终伤害提升10点。"
+        "Viễn trình tăng thương": "Sát thương cuối cùng của tất cả tấn công vật lý tầm xa tăng 10 điểm."
       },
-      "description": "银环上镶嵌着一颗打磨过的猫眼石，能微弱提升远程攻击的稳定性。"
+      "description": "Trên vòng bạc khảm một viên đá mắt mèo đã mài giũa, có thể tăng nhẹ tính ổn định của tấn công tầm xa."
     },
     {
-      "name": "防护项链",
+      "name": "Phòng Hộ Hạng Liên",
       "cost": 19,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 35"
+        "Dây chuyền",
+        "Phòng thủ: 35"
       ],
       "rarity": "uncommon",
       "effect": {
-        "物理护盾": "获得一个可吸收30点物理伤害的护盾。该护盾被破坏后，在下一场战斗开始时恢复。"
+        "Vật lý hộ thuẫn": "Nhận được một lá chắn có thể hấp thụ 30 điểm sát thương vật lý. Sau khi lá chắn này bị phá hủy, sẽ hồi phục khi bắt đầu trận chiến tiếp theo."
       },
-      "description": "银链悬挂着一个经过圣水净化的微缩盾牌吊坠，能自动格挡一次微弱的物理伤害。"
+      "description": "Dây bạc treo một mặt dây chuyền hình khiên nhỏ đã qua nước thánh thanh tẩy, có thể tự động đỡ một lần sát thương vật lý yếu ớt."
     },
     {
-      "name": "敏捷靴刺",
+      "name": "Mẫn Tiệp Ngoa Thích",
       "cost": 18,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "靴饰",
-        "防御: 28"
+        "Giày sức",
+        "Phòng thủ: 28"
       ],
       "rarity": "uncommon",
       "effect": {
-        "先发制人": "你的先攻检定获得+2加值。"
+        "Tiên phát chế nhân": "Kiểm định tiên công của bạn nhận thêm +2 giá trị cộng thêm."
       },
-      "description": "安装在靴跟的钢制马刺，能微弱提升使用者的反应速度。"
+      "description": "Cựa ngựa bằng thép gắn ở gót giày, có thể tăng nhẹ tốc độ phản ứng của người sử dụng."
     },
     {
-      "name": "守护护符",
+      "name": "Thủ Hộ Hộ Phù",
       "cost": 18,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 32"
+        "Dây chuyền",
+        "Phòng thủ: 32"
       ],
       "rarity": "uncommon",
       "effect": {
-        "能量护盾": "获得一个可吸收30点能量伤害的护盾。该护盾被破坏后，在下一场战斗开始时恢复。"
+        "Năng lượng hộ thuẫn": "Nhận được một lá chắn có thể hấp thụ 30 điểm sát thương năng lượng. Sau khi lá chắn này bị phá hủy, sẽ hồi phục khi bắt đầu trận chiến tiếp theo."
       },
-      "description": "银质的圆形护身符，刻有守护法阵，能自动生成一个临时结界格挡微弱的法术伤害。"
+      "description": "Hộ thân phù hình tròn bằng bạc, khắc pháp trận bảo vệ, có thể tự động tạo ra một kết giới tạm thời đỡ sát thương phép thuật yếu ớt."
     },
     {
-      "name": "生命守护项链",
+      "name": "Sinh Mệnh Thủ Hộ Hạng Liên",
       "cost": 38,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 90"
+        "Dây chuyền",
+        "Phòng thủ: 90"
       ],
       "rarity": "rare",
       "effect": {
-        "生命恢复": "每回合结束时，恢复15点HP。"
+        "Sinh mệnh khôi phục": "Khi kết thúc mỗi hiệp, hồi phục 15 điểm HP."
       },
-      "description": "秘银链条串起一颗色泽温润的生命宝石，散发着柔和的绿光，能缓慢而持续地治愈佩戴者的伤势。"
+      "description": "Dây xích bí ngân xâu một viên đá sinh mệnh màu sắc ôn nhuận, tỏa ra ánh sáng xanh nhu hòa, có thể chữa trị thương thế của người đeo chậm rãi mà liên tục."
     },
     {
-      "name": "法师护盾发生器",
+      "name": "Pháp Sư Hộ Thuẫn Phát Sinh Khí",
       "cost": 37,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "腰饰",
-        "防御: 85"
+        "Thát sức",
+        "Phòng thủ: 85"
       ],
       "rarity": "rare",
       "effect": {
-        "应急护盾": "当你的HP首次低于50%时，自动获得一个可吸收200点全类型伤害的护盾，持续3回合。每场战斗只能触发一次。"
+        "Ứng cấp hộ thuẫn": "Khi HP của bạn lần đầu tiên thấp hơn 50%, tự động nhận được một lá chắn có thể hấp thụ 200 điểm sát thương toàn loại, duy trì 3 hiệp. Mỗi trận chiến chỉ có thể kích hoạt một lần."
       },
-      "description": "银制圆盘上镶嵌着多颗充能水晶，构成一个微型魔法阵，在遭受攻击时会自动生成一个临时的魔法护盾。"
+      "description": "Trên đĩa tròn bằng bạc khảm nhiều viên pha lê nạp năng lượng, cấu thành một ma pháp trận vi mô, khi chịu tấn công sẽ tự động tạo ra một lá chắn ma pháp tạm thời."
     },
     {
-      "name": "雷霆之力手镯",
+      "name": "Lôi Đình Chi Lực Thủ Trạc",
       "cost": 36,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "手镯",
-        "防御: 80"
+        "Vòng tay",
+        "Phòng thủ: 80"
       ],
       "rarity": "rare",
       "effect": {
-        "雷电附加": "你的物理伤害攻击有25%几率(d20≥16)额外附加60点能量伤害(雷电)。"
+        "Lôi điện phụ gia": "Tấn công sát thương vật lý của bạn có 25% cơ hội (d20≥16) đính kèm thêm 60 điểm sát thương năng lượng (Lôi điện)."
       },
-      "description": "粗糙的钢制手镯，表面镶嵌着一颗随时可能迸发电流的雷晶石，佩戴者的物理攻击有几率附加电击效果。"
+      "description": "Vòng tay thép thô kệch, bề mặt khảm một viên lôi tinh thạch có thể bắn ra dòng điện bất cứ lúc nào, tấn công vật lý của người đeo có xác suất kèm theo hiệu ứng điện giật."
     },
     {
-      "name": "精准瞄准镜",
+      "name": "Tinh Chuẩn Miêu Chuẩn Kính",
       "cost": 35,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "装备配件",
-        "防御: 20"
+        "Phụ kiện trang bị",
+        "Phòng thủ: 20"
       ],
       "rarity": "rare",
       "effect": {
-        "瞄准加成": "装备在弓、弩或火枪上。装备该武器的攻击检定获得+3加值。"
+        "Miêu chuẩn gia thành": "Trang bị trên cung, nỏ hoặc súng. Kiểm định tấn công khi trang bị vũ khí này nhận thêm +3 giá trị cộng thêm."
       },
-      "description": "黄铜镜筒与多层水晶镜片构成的精密炼金造物，能大幅提升远程武器的瞄准精度。"
+      "description": "Vật tạo tác luyện kim tinh mật cấu tạo từ ống kính đồng thau và thấu kính pha lê đa lớp, có thể nâng cao đáng kể độ chính xác khi ngắm bắn của vũ khí tầm xa."
     },
     {
-      "name": "元素抗性护符",
+      "name": "Nguyên Tố Kháng Tính Hộ Phù",
       "cost": 34,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 88"
+        "Dây chuyền",
+        "Phòng thủ: 88"
       ],
       "rarity": "rare",
       "effect": {
-        "元素抵抗": "受到的所有能量伤害降低10%。"
+        "Nguyên tố để kháng": "Tất cả sát thương năng lượng phải chịu giảm 10%."
       },
-      "description": "五色宝石环绕着一枚银制的圆形护符，象征着五种主要元素，能均衡地提升对各类元素伤害的抗性。"
+      "description": "Đá quý năm màu bao quanh một hộ phù hình tròn bằng bạc, tượng trưng cho năm nguyên tố chính, có thể nâng cao kháng tính đối với các loại sát thương nguyên tố một cách cân bằng."
     },
     {
-      "name": "暗影隐匿徽章",
+      "name": "Ám Ảnh Ẩn Nặc Huy Chương",
       "cost": 33,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "胸针",
-        "防御: 75"
+        "Trâm ngực",
+        "Phòng thủ: 75"
       ],
       "rarity": "rare",
       "effect": {
-        "潜行强化": "在潜行状态下，敌人对你的侦测检定需要额外克服10点的难度。"
+        "Tiềm hành cường hóa": "Trong trạng thái tiềm hành, kiểm định trinh sát của kẻ địch đối với bạn cần phải vượt qua thêm 10 điểm độ khó."
       },
-      "description": "由黑铁铸造的乌鸦形态徽章，表面雕刻着复杂的潜行符文，能帮助佩戴者更好地融入阴影。"
+      "description": "Huy hiệu hình quạ đen đúc từ sắt đen, bề mặt khắc phù văn tiềm hành phức tạp, có thể giúp người đeo hòa nhập vào bóng tối tốt hơn."
     },
     {
-      "name": "奥术能量指环",
+      "name": "Áo Thuật Năng Lượng Chỉ Hoàn",
       "cost": 32,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "戒指",
-        "防御: 70"
+        "Nhẫn",
+        "Phòng thủ: 70"
       ],
       "rarity": "rare",
       "effect": {
-        "法力恢复": "每回合结束时，恢复10点MP。"
+        "Pháp lực khôi phục": "Khi kết thúc mỗi hiệp, hồi phục 10 điểm MP."
       },
-      "description": "简约的银环上镶嵌着一颗切割完美的奥术水晶，能够持续为佩戴者恢复少量魔力，是法师续航的保障。"
+      "description": "Trên vòng bạc đơn giản khảm một viên pha lê áo thuật cắt gọt hoàn mỹ, có thể liên tục hồi phục lượng nhỏ ma lực cho người đeo, là bảo đảm cho khả năng duy trì của pháp sư."
     },
     {
-      "name": "敏捷之羽靴刺",
+      "name": "Mẫn Tiệp Chi Vũ Ngoa Thích",
       "cost": 31,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "靴饰",
-        "防御: 72"
+        "Giày sức",
+        "Phòng thủ: 72"
       ],
       "rarity": "rare",
       "effect": {
-        "闪避加成": "敌人对你发动的攻击，其攻击检定结果-2。"
+        "Thiểm tị gia thành": "Kẻ địch phát động tấn công đối với bạn, kết quả kiểm định tấn công của hắn -2."
       },
-      "description": "固定在靴跟的钢制马刺，末端点缀着一根轻盈的狮鹫羽毛，能提升佩戴者的闪避能力。"
+      "description": "Cựa ngựa thép cố định ở gót giày, phần đuôi điểm xuyết một chiếc lông sư điểu nhẹ nhàng, có thể nâng cao khả năng né tránh của người đeo."
     }
   ],
-  "法环护符扩展": [
+  "Pháp Hoàn Hộ Phù Mở Rộng": [
     {
-      "name": "红琥珀小链坠",
+      "name": "Hồng Hổ Phách Tiểu Liên Trụ",
       "cost": 13,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 28"
+        "Dây chuyền",
+        "Phòng thủ: 28"
       ],
       "rarity": "uncommon",
       "effect": {
-        "生命加成": "最大HP上限提升6%。"
+        "Sinh mệnh gia thành": "Giới hạn HP tối đa tăng 6%."
       },
-      "description": "镶有小块红色琥珀的链坠。红琥珀蕴藏着原始的生命力，能提升佩戴者的活力。"
+      "description": "Mặt dây chuyền có khảm hổ phách đỏ nhỏ. Hổ phách đỏ ẩn chứa sức sống nguyên thủy, có thể nâng cao sức sống của người đeo."
     },
     {
-      "name": "蓝琥珀小链坠",
+      "name": "Lam Hổ Phách Tiểu Liên Trụ",
       "cost": 13,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 28"
+        "Dây chuyền",
+        "Phòng thủ: 28"
       ],
       "rarity": "uncommon",
       "effect": {
-        "法力加成": "降低8% MP的消耗。"
+        "Pháp lực gia thành": "Giảm 8% tiêu hao MP."
       },
-      "description": "镶有小块蓝色琥珀的链坠。蓝琥珀蕴藏着原始的魔力，能帮助佩戴者集中精神。"
+      "description": "Mặt dây chuyền có khảm hổ phách xanh lam nhỏ. Hổ phách xanh lam ẩn chứa ma lực nguyên thủy, có thể giúp người đeo tập trung tinh thần."
     },
     {
-      "name": "绿琥珀小链坠",
+      "name": "Lục Hổ Phách Tiểu Liên Trụ",
       "cost": 13,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 28"
+        "Dây chuyền",
+        "Phòng thủ: 28"
       ],
       "rarity": "uncommon",
       "effect": {
-        "耐力加成": "降低8% SP的消耗。"
+        "Nại lực gia thành": "Giảm 8% tiêu hao SP."
       },
-      "description": "镶有小块绿色琥珀的链坠。绿琥珀蕴藏着原始的活力，能让佩戴者精力充沛。"
+      "description": "Mặt dây chuyền có khảm hổ phách xanh lục nhỏ. Hổ phách xanh lục ẩn chứa sức sống nguyên thủy, có thể làm người đeo tràn trề tinh lực."
     },
     {
-      "name": "绿龟挂坠",
+      "name": "Lục Quy Quải Trụ",
       "cost": 14,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 30"
+        "Dây chuyền",
+        "Phòng thủ: 30"
       ],
       "rarity": "uncommon",
       "effect": {
-        "耐力恢复": "每回合结束时，恢复60点SP。"
+        "Nại lực khôi phục": "Khi kết thúc mỗi hiệp, hồi phục 60 điểm SP."
       },
-      "description": "参考绿乌龟的模样制成的护符。乌龟是精力无穷的象征。"
+      "description": "Hộ phù chế tạo tham khảo dáng vẻ của rùa xanh. Rùa là biểu tượng của tinh lực vô tận."
     },
     {
-      "name": "虹龙盾型徽章",
+      "name": "Hồng Long Thuẫn Hình Huy Chương",
       "cost": 18,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 35"
+        "Huy chương",
+        "Phòng thủ: 35"
       ],
       "rarity": "uncommon",
       "effect": {
-        "多重防护": "受到的所有能量和真实伤害降低8%。"
+        "Đa trọng phòng hộ": "Tất cả sát thương năng lượng và chuẩn phải chịu giảm 8%."
       },
-      "description": "有着巨大虹彩龙浮雕的古代熟铁制护符。虹彩龙的图案被视为各种庇佑的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu rồng cầu vồng khổng lồ. Hoa văn rồng cầu vồng được coi là biểu tượng của các loại che chở."
     },
     {
-      "name": "魔龙盾型徽章",
+      "name": "Ma Long Thuẫn Hình Huy Chương",
       "cost": 18,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 35"
+        "Huy chương",
+        "Phòng thủ: 35"
       ],
       "rarity": "uncommon",
       "effect": {
-        "魔法防护": "受到的能量伤害降低8%。"
+        "Ma pháp phòng hộ": "Sát thương năng lượng phải chịu giảm 8%."
       },
-      "description": "有着巨大魔龙浮雕的古代熟铁制护符。魔龙的图案被视为抵抗魔力的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu ma long khổng lồ. Hoa văn ma long được coi là biểu tượng kháng cự ma lực."
     },
     {
-      "name": "火龙盾型徽章",
+      "name": "Hỏa Long Thuẫn Hình Huy Chương",
       "cost": 18,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 35"
+        "Huy chương",
+        "Phòng thủ: 35"
       ],
       "rarity": "uncommon",
       "effect": {
-        "火焰防护": "受到的能量伤害(火焰)降低20%。"
+        "Hỏa diễm phòng hộ": "Sát thương năng lượng (Hỏa) phải chịu giảm 20%."
       },
-      "description": "有着巨大火龙浮雕的古代熟铁制护符。火龙的图案被视为抵抗火焰的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu hỏa long khổng lồ. Hoa văn hỏa long được coi là biểu tượng kháng cự lửa."
     },
     {
-      "name": "雷龙盾型徽章",
+      "name": "Lôi Long Thuẫn Hình Huy Chương",
       "cost": 18,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 35"
+        "Huy chương",
+        "Phòng thủ: 35"
       ],
       "rarity": "uncommon",
       "effect": {
-        "雷电防护": "受到的能量伤害(雷电)降低20%。"
+        "Lôi điện phòng hộ": "Sát thương năng lượng (Lôi điện) phải chịu giảm 20%."
       },
-      "description": "有着巨大雷龙浮雕的古代熟铁制护符。雷龙的图案被视为抵抗雷电的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu lôi long khổng lồ. Hoa văn lôi long được coi là biểu tượng kháng cự sấm sét."
     },
     {
-      "name": "圣龙盾型徽章",
+      "name": "Thánh Long Thuẫn Hình Huy Chương",
       "cost": 18,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 35"
+        "Huy chương",
+        "Phòng thủ: 35"
       ],
       "rarity": "uncommon",
       "effect": {
-        "神圣防护": "受到的能量伤害(神圣)降低20%。"
+        "Thần thánh phòng hộ": "Sát thương năng lượng (Thần thánh) phải chịu giảm 20%."
       },
-      "description": "有着巨大圣龙浮雕的古代熟铁制护符。圣龙的图案被视为抵抗神圣的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu thánh long khổng lồ. Hoa văn thánh long được coi là biểu tượng kháng cự thần thánh."
     },
     {
-      "name": "兽族免疫小角饰品",
+      "name": "Thú Tộc Miễn Dịch Tiểu Giác Trang Sức",
       "cost": 17,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "头饰",
-        "防御: 32"
+        "Đầu sức",
+        "Phòng thủ: 32"
       ],
       "rarity": "uncommon",
       "effect": {
-        "抗毒": "在对抗[中毒]效果的检定时，你的体质检定+5。"
+        "Kháng độc": "Trong kiểm định đối kháng hiệu ứng [Trúng độc], kiểm định thể chất của bạn +5."
       },
-      "description": "据说此为兽族代代制作的古老象征，能抵抗各种毒素与中毒状态。"
+      "description": "Nghe nói đây là biểu tượng cổ xưa thú tộc đời đời chế tác, có thể kháng cự các loại độc tố và trạng thái trúng độc."
     },
     {
-      "name": "兽族健壮小角饰品",
+      "name": "Thú Tộc Kiện Tráng Tiểu Giác Trang Sức",
       "cost": 17,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "头饰",
-        "防御: 32"
+        "Đầu sức",
+        "Phòng thủ: 32"
       ],
       "rarity": "uncommon",
       "effect": {
-        "强韧": "受到的持续性物理伤害(如流血)降低25%。"
+        "Cường nhận": "Sát thương vật lý liên tục phải chịu (như chảy máu) giảm 25%."
       },
-      "description": "据说此为兽族代代制作的古老象征，能抵抗各种流血与冻伤效果。"
+      "description": "Nghe nói đây là biểu tượng cổ xưa thú tộc đời đời chế tác, có thể kháng cự các loại hiệu quả chảy máu và đông thương."
     },
     {
-      "name": "兽族理智小角饰品",
+      "name": "Thú Tộc Lý Trí Tiểu Giác Trang Sức",
       "cost": 17,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "头饰",
-        "防御: 32"
+        "Đầu sức",
+        "Phòng thủ: 32"
       ],
       "rarity": "uncommon",
       "effect": {
-        "清醒": "在对抗精神类减益效果(如魅惑、恐惧)的检定时，你的精神检定+5。"
+        "Thanh tỉnh": "Trong kiểm định đối kháng hiệu ứng giảm ích loại tinh thần (như mị hoặc, sợ hãi), kiểm định tinh thần của bạn +5."
       },
-      "description": "据说此为兽族代代制作的古老象征，能抵抗各种影响精神的效果。"
+      "description": "Nghe nói đây là biểu tượng cổ xưa thú tộc đời đời chế tác, có thể kháng cự các loại hiệu quả ảnh hưởng tinh thần."
     },
     {
-      "name": "杖护符",
+      "name": "Trượng Hộ Phù",
       "cost": 12,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 25"
+        "Hộ phù",
+        "Phòng thủ: 25"
       ],
       "rarity": "uncommon",
       "effect": {
-        "法术增伤": "所有能量伤害技能的最终伤害提升5%。"
+        "Pháp thuật tăng thương": "Sát thương cuối cùng của tất cả kỹ năng sát thương năng lượng tăng 5%."
       },
-      "description": "以握住学徒制式法杖的手为形象制成的护符。此为法术的古老起源。"
+      "description": "Hộ phù chế tác theo hình tượng bàn tay nắm ma trượng chế thức học đồ. Đây là khởi nguyên cổ xưa của pháp thuật."
     },
     {
-      "name": "炼金师护符",
+      "name": "Luyện Kim Sư Hộ Phù",
       "cost": 12,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 25"
+        "Hộ phù",
+        "Phòng thủ: 25"
       ],
       "rarity": "uncommon",
       "effect": {
-        "炼金强化": "你使用的[消耗品]道具，其数值效果提升10%。"
+        "Luyện kim cường hóa": "Đạo cụ [Tiêu hao phẩm] bạn sử dụng, hiệu quả trị số tăng 10%."
       },
-      "description": "参考炼金烧瓶的模样制成的护符，是当代所有炼金师的制式装备。"
+      "description": "Hộ phù chế tác tham khảo dáng vẻ bình thí nghiệm luyện kim, là trang bị chế thức của tất cả các nhà luyện kim đương đại."
     },
     {
-      "name": "山羊饰品",
+      "name": "Sơn Dương Trang Sức",
       "cost": 16,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 30"
+        "Hộ phù",
+        "Phòng thủ: 30"
       ],
       "rarity": "uncommon",
       "effect": {
-        "专注": "当你使用需要引导的技能时，抵抗打断的体质检定获得+5加值。"
+        "Chuyên chú": "Khi bạn sử dụng kỹ năng cần dẫn đạo, kiểm định thể chất kháng cự đánh gãy nhận thêm +5 giá trị cộng thêm."
       },
-      "description": "参考山羊的角制成的护符。山羊是坚韧的象征，即使受到攻击也会坚持发动攻击。"
+      "description": "Hộ phù chế tác tham khảo sừng của dê núi. Dê núi là biểu tượng của kiên nhẫn, cho dù chịu công kích cũng sẽ kiên trì phát động công kích."
     },
     {
-      "name": "羽翼护符",
+      "name": "Vũ Dực Hộ Phù",
       "cost": 19,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 15"
+        "Hộ phù",
+        "Phòng thủ: 15"
       ],
       "rarity": "uncommon",
       "effect": {
-        "轻盈": "你的闪避检定获得+3加值，但你受到的所有伤害提升15%。"
+        "Khinh doanh": "Kiểm định né tránh của bạn nhận thêm +3 giá trị cộng thêm, nhưng tất cả sát thương bạn phải chịu tăng 15%."
       },
-      "description": "以翼民的起源为形象制成的护符。在那过去，羽翼还未宽大、优美。"
+      "description": "Hộ phù chế tác theo hình tượng khởi nguyên của Dực Nhân. Ở thời quá khứ đó, đôi cánh vẫn chưa rộng lớn, ưu mỹ."
     },
     {
-      "name": "红琥珀链坠",
+      "name": "Hồng Hổ Phách Liên Trụ",
       "cost": 26,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 75"
+        "Dây chuyền",
+        "Phòng thủ: 75"
       ],
       "rarity": "rare",
       "effect": {
-        "强效生命加成": "最大HP上限提升12%。"
+        "Cường hiệu sinh mệnh gia thành": "Giới hạn HP tối đa tăng 12%."
       },
-      "description": "镶有多块红色琥珀的链坠。红琥珀蕴藏了原始的生命力，能大幅提升佩戴者的活力。"
+      "description": "Mặt dây chuyền có khảm nhiều hổ phách đỏ. Hổ phách đỏ ẩn chứa sức sống nguyên thủy, có thể nâng cao đáng kể sức sống của người đeo."
     },
     {
-      "name": "蓝琥珀链坠",
+      "name": "Lam Hổ Phách Liên Trụ",
       "cost": 26,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 75"
+        "Dây chuyền",
+        "Phòng thủ: 75"
       ],
       "rarity": "rare",
       "effect": {
-        "强效法力加成": "最大MP上限提升12%。"
+        "Cường hiệu pháp lực gia thành": "Giới hạn MP tối đa tăng 12%."
       },
-      "description": "镶有多块蓝色琥珀的链坠。蓝琥珀蕴藏了原始的魔力，能大幅帮助佩戴者集中精神。"
+      "description": "Mặt dây chuyền có khảm nhiều hổ phách xanh lam. Hổ phách xanh lam ẩn chứa ma lực nguyên thủy, có thể giúp người đeo tập trung tinh thần rất nhiều."
     },
     {
-      "name": "绿琥珀链坠",
+      "name": "Lục Hổ Phách Liên Trụ",
       "cost": 26,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 75"
+        "Dây chuyền",
+        "Phòng thủ: 75"
       ],
       "rarity": "rare",
       "effect": {
-        "强效耐力加成": "最大SP上限提升12%。"
+        "Cường hiệu nại lực gia thành": "Giới hạn SP tối đa tăng 12%."
       },
-      "description": "镶有多块绿色琥珀的链坠。绿琥珀蕴藏了原始的活力，能让佩戴者时刻精力充沛。"
+      "description": "Mặt dây chuyền có khảm nhiều hổ phách xanh lục. Hổ phách xanh lục ẩn chứa sức sống nguyên thủy, có thể làm người đeo luôn tràn trề tinh lực."
     },
     {
-      "name": "恩惠露滴护符",
+      "name": "Ân Huệ Lộ Tích Hộ Phù",
       "cost": 25,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 80"
+        "Dây chuyền",
+        "Phòng thủ: 80"
       ],
       "rarity": "rare",
       "effect": {
-        "生命恢复": "每回合结束时，恢复10点HP。"
+        "Sinh mệnh khôi phục": "Khi kết thúc mỗi hiệp, hồi phục 10 điểm HP."
       },
-      "description": "用金色琥珀与黄铜制成，参考久远以前，大地上的生命承接世界树滴下的露滴时的模样。"
+      "description": "Chế tạo từ hổ phách vàng và đồng thau, tham khảo dáng vẻ khi sinh mệnh trên mặt đất đón nhận giọt sương nhỏ xuống từ Cây Thế Giới vào thời xa xưa."
     },
     {
-      "name": "蓝色恩惠露滴护符",
+      "name": "Lam Sắc Ân Huệ Lộ Tích Hộ Phù",
       "cost": 25,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 80"
+        "Dây chuyền",
+        "Phòng thủ: 80"
       ],
       "rarity": "rare",
       "effect": {
-        "法力恢复": "每回合结束时，恢复10点MP。"
+        "Pháp lực khôi phục": "Khi kết thúc mỗi hiệp, hồi phục 10 điểm MP."
       },
-      "description": "用蓝色琥珀与黄铜制成，参考久远以前，大地上的生命承接世界树滴下的露滴时的模样。"
+      "description": "Chế tạo từ hổ phách xanh lam và đồng thau, tham khảo dáng vẻ khi sinh mệnh trên mặt đất đón nhận giọt sương nhỏ xuống từ Cây Thế Giới vào thời xa xưa."
     },
     {
-      "name": "双头绿龟挂坠",
+      "name": "Song Đầu Lục Quy Quải Trụ",
       "cost": 28,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 85"
+        "Dây chuyền",
+        "Phòng thủ: 85"
       ],
       "rarity": "rare",
       "effect": {
-        "耐力恢复": "每回合结束时，恢复10点SP。"
+        "Nại lực khôi phục": "Khi kết thúc mỗi hiệp, hồi phục 10 điểm SP."
       },
-      "description": "参考双头绿乌龟的模样制成的护符。乌龟是精力无穷的象征。"
+      "description": "Hộ phù chế tạo tham khảo dáng vẻ của rùa xanh hai đầu. Rùa là biểu tượng của tinh lực vô tận."
     },
     {
-      "name": "红种子坠饰",
+      "name": "Hồng Chủng Tử Trụ Sức",
       "cost": 27,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 82"
+        "Dây chuyền",
+        "Phòng thủ: 82"
       ],
       "rarity": "rare",
       "effect": {
-        "治疗增幅": "所有来源的HP恢复效果提升30%。"
+        "Trị liệu tăng phúc": "Tất cả hiệu quả hồi phục HP từ mọi nguồn tăng 30%."
       },
-      "description": "将红琥珀与黄金制成种子的样子，是祈求世界树为之响应的美好愿景。"
+      "description": "Dùng hổ phách đỏ và vàng ròng chế tạo thành hình dáng hạt giống, là nguyện cảnh tốt đẹp cầu mong Cây Thế Giới đáp lại."
     },
     {
-      "name": "蓝种子坠饰",
+      "name": "Lam Chủng Tử Trụ Sức",
       "cost": 27,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 82"
+        "Dây chuyền",
+        "Phòng thủ: 82"
       ],
       "rarity": "rare",
       "effect": {
-        "法力回复增幅": "所有来源的MP恢复效果提升30%。"
+        "Pháp lực hồi phục tăng phúc": "Tất cả hiệu quả hồi phục MP từ mọi nguồn tăng 30%."
       },
-      "description": "将蓝琥珀与黄金制成种子的样子，是祈求世界树为之响应的美好愿景。"
+      "description": "Dùng hổ phách xanh lam và vàng ròng chế tạo thành hình dáng hạt giống, là nguyện cảnh tốt đẹp cầu mong Cây Thế Giới đáp lại."
     },
     {
-      "name": "古龙盾型徽章",
+      "name": "Cổ Long Thuẫn Hình Huy Chương",
       "cost": 30,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 100"
+        "Huy chương",
+        "Phòng thủ: 100"
       ],
       "rarity": "rare",
       "effect": {
-        "物理防护": "受到的所有物理伤害降低10%。"
+        "Vật lý phòng hộ": "Tất cả sát thương vật lý phải chịu giảm 10%."
       },
-      "description": "有着巨大古龙浮雕的古代熟铁制护符。龙的图案被视为各种庇佑的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu cổ long khổng lồ. Hoa văn rồng được coi là biểu tượng của các loại che chở."
     },
     {
-      "name": "虹龙坚盾徽章",
+      "name": "Hồng Long Kiên Thuẫn Huy Chương",
       "cost": 32,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 110"
+        "Huy chương",
+        "Phòng thủ: 110"
       ],
       "rarity": "rare",
       "effect": {
-        "强效多重防护": "受到的所有能量、精神、真实伤害降低10%。"
+        "Cường hiệu đa trọng phòng hộ": "Tất cả sát thương năng lượng, tinh thần, chuẩn phải chịu giảm 10%."
       },
-      "description": "有着巨大虹彩龙浮雕的古代熟铁制护符。虹彩龙的图案被视为各种庇佑的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu rồng cầu vồng khổng lồ. Hoa văn rồng cầu vồng được coi là biểu tượng của các loại che chở."
     },
     {
-      "name": "魔龙坚盾徽章",
+      "name": "Ma Long Kiên Thuẫn Huy Chương",
       "cost": 32,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 110"
+        "Huy chương",
+        "Phòng thủ: 110"
       ],
       "rarity": "rare",
       "effect": {
-        "强效魔法防护": "受到的能量伤害降低25%。"
+        "Cường hiệu ma pháp phòng hộ": "Sát thương năng lượng phải chịu giảm 25%."
       },
-      "description": "有着巨大魔龙浮雕的古代熟铁制护符。魔龙的图案被视为抵抗魔力的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu ma long khổng lồ. Hoa văn ma long được coi là biểu tượng kháng cự ma lực."
     },
     {
-      "name": "火龙坚盾徽章",
+      "name": "Hỏa Long Kiên Thuẫn Huy Chương",
       "cost": 32,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 110"
+        "Huy chương",
+        "Phòng thủ: 110"
       ],
       "rarity": "rare",
       "effect": {
-        "强效火焰防护": "受到的能量伤害(火焰)降低40%。"
+        "Cường hiệu hỏa diễm phòng hộ": "Sát thương năng lượng (Hỏa) phải chịu giảm 40%."
       },
-      "description": "有着巨大火龙浮雕的古代熟铁制护符。火龙的图案被视为抵抗火焰的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu hỏa long khổng lồ. Hoa văn hỏa long được coi là biểu tượng kháng cự lửa."
     },
     {
-      "name": "雷龙坚盾徽章",
+      "name": "Lôi Long Kiên Thuẫn Huy Chương",
       "cost": 32,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 110"
+        "Huy chương",
+        "Phòng thủ: 110"
       ],
       "rarity": "rare",
       "effect": {
-        "强效雷电防护": "受到的能量伤害(雷电)降低40%。"
+        "Cường hiệu lôi điện phòng hộ": "Sát thương năng lượng (Lôi điện) phải chịu giảm 40%."
       },
-      "description": "有着巨大雷龙浮雕的古代熟铁制护符。雷龙的图案被视为抵抗雷电的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu lôi long khổng lồ. Hoa văn lôi long được coi là biểu tượng kháng cự sấm sét."
     },
     {
-      "name": "圣龙坚盾徽章",
+      "name": "Thánh Long Kiên Thuẫn Huy Chương",
       "cost": 32,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 110"
+        "Huy chương",
+        "Phòng thủ: 110"
       ],
       "rarity": "rare",
       "effect": {
-        "强效神圣防护": "受到的能量伤害(神圣)降低40%。"
+        "Cường hiệu thần thánh phòng hộ": "Sát thương năng lượng (Thần thánh) phải chịu giảm 40%."
       },
-      "description": "有着巨大圣龙浮雕的古代熟铁制护符。圣龙的图案被视为抵抗神圣的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu thánh long khổng lồ. Hoa văn thánh long được coi là biểu tượng kháng cự thần thánh."
     },
     {
-      "name": "兽族免疫大角饰品",
+      "name": "Thú Tộc Miễn Dịch Đại Giác Trang Sức",
       "cost": 31,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "头饰",
-        "防御: 90"
+        "Đầu sức",
+        "Phòng thủ: 90"
       ],
       "rarity": "rare",
       "effect": {
-        "毒素免疫": "在对抗[中毒]效果的检定时，你有70%的几率(d20≥7)直接免疫该效果。"
+        "Độc tố miễn dịch": "Trong kiểm định đối kháng hiệu ứng [Trúng độc], bạn có 70% cơ hội (d20≥7) trực tiếp miễn dịch hiệu quả này."
       },
-      "description": "据说此为兽族代代制作的古老象征，能大幅抵抗各种毒素与中毒状态。"
+      "description": "Nghe nói đây là biểu tượng cổ xưa thú tộc đời đời chế tác, có thể kháng cự mạnh mẽ các loại độc tố và trạng thái trúng độc."
     },
     {
-      "name": "兽族健壮大角饰品",
+      "name": "Thú Tộc Kiện Tráng Đại Giác Trang Sức",
       "cost": 31,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "头饰",
-        "防御: 90"
+        "Đầu sức",
+        "Phòng thủ: 90"
       ],
       "rarity": "rare",
       "effect": {
-        "强韧身躯": "受到的持续性物理伤害(如流血)降低50%。"
+        "Cường nhận thân khu": "Sát thương vật lý liên tục phải chịu (như chảy máu) giảm 50%."
       },
-      "description": "据说此为兽族代代制作的古老象征，能大幅抵抗各种流血与冻伤效果。"
+      "description": "Nghe nói đây là biểu tượng cổ xưa thú tộc đời đời chế tác, có thể kháng cự mạnh mẽ các loại hiệu quả chảy máu và đông thương."
     },
     {
-      "name": "兽族理智大角饰品",
+      "name": "Thú Tộc Lý Trí Đại Giác Trang Sức",
       "cost": 31,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "头饰",
-        "防御: 90"
+        "Đầu sức",
+        "Phòng thủ: 90"
       ],
       "rarity": "rare",
       "effect": {
-        "钢铁意志": "在对抗精神类减益效果(如魅惑、恐惧)的检定时，你有75%的几率(d20≥6)直接免疫该效果。"
+        "Cương thiết ý chí": "Trong kiểm định đối kháng hiệu ứng giảm ích loại tinh thần (như mị hoặc, sợ hãi), bạn có 75% cơ hội (d20≥6) trực tiếp miễn dịch hiệu quả này."
       },
-      "description": "据说此为兽族代代制作的古老象征，能大幅抵抗各种影响精神的效果。"
+      "description": "Nghe nói đây là biểu tượng cổ xưa thú tộc đời đời chế tác, có thể kháng cự mạnh mẽ các loại hiệu quả ảnh hưởng tinh thần."
     },
     {
-      "name": "疾病护符",
+      "name": "Tật Bệnh Hộ Phù",
       "cost": 29,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 88"
+        "Hộ phù",
+        "Phòng thủ: 88"
       ],
       "rarity": "rare",
       "effect": {
-        "适应性": "当你成功抵抗一个减益效果后，你在本场战斗中对同名减益效果的抵抗检定获得+5加值。此效果最多叠加3次。"
+        "Thích ứng tính": "Sau khi bạn kháng cự thành công một hiệu quả tiêu cực, kiểm định kháng cự đối với hiệu quả tiêu cực cùng tên của bạn trong trận chiến này nhận thêm +5 giá trị cộng thêm. Hệu quả này cộng dồn tối đa 3 lần."
       },
-      "description": "参考病死的模样制成的护符。体弱的人若能从可怕的疾病中幸存，将不再受其侵扰。"
+      "description": "Hộ phù chế tác tham khảo dáng vẻ chết bệnh. Người yếu ớt nếu có thể sống sót sau cơn bạo bệnh đáng sợ, sẽ không còn bị nó xâm nhiễu nữa."
     },
     {
-      "name": "匕首护符",
+      "name": "Chủy Thủ Hộ Phù",
       "cost": 22,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 70"
+        "Hộ phù",
+        "Phòng thủ: 70"
       ],
       "rarity": "rare",
       "effect": {
-        "偷袭": "当你攻击一个未进入战斗状态的敌人时，你的第一次攻击造成的最终伤害提升70%。"
+        "Thâu tập": "Khi bạn tấn công một kẻ địch chưa tiến vào trạng thái chiến đấu, sát thương cuối cùng đòn tấn công đầu tiên của bạn tăng 70%."
       },
-      "description": "以匕首与刺客的形象制成的护符，代表着‘暗影之手’公会那见不得光的致命一击。"
+      "description": "Hộ phù làm theo hình tượng dao găm và sát thủ, đại diện cho đòn chí mạng không thể lộ ra ánh sáng của công hội 'Ám Ảnh Chi Thủ'."
     },
     {
-      "name": "曲剑护符",
+      "name": "Khúc Kiếm Hộ Phù",
       "cost": 22,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 70"
+        "Hộ phù",
+        "Phòng thủ: 70"
       ],
       "rarity": "rare",
       "effect": {
-        "反击": "当你成功格挡或闪避敌人攻击后的1回合内，你的下一次攻击造成的最终伤害提升50%。"
+        "Phản kích": "Trong vòng 1 hiệp sau khi bạn đỡ đòn hoặc né tránh thành công kẻ địch tấn công, sát thương cuối cùng đòn tấn công tiếp theo của bạn tăng 50%."
       },
-      "description": "以曲剑与剑士的形象制成的护符。那体现险中求胜的杰出剑术，是传说中的剑士领悟的技术。"
+      "description": "Hộ phù làm theo hình tượng kiếm cong và kiếm sĩ. Thứ đó thể hiện kiệt xuất kiếm thuật cầu thắng trong hiểm cảnh, là kỹ thuật mà kiếm sĩ trong truyền thuyết lĩnh ngộ."
     },
     {
-      "name": "双头剑护符",
+      "name": "Song Đầu Kiếm Hộ Phù",
       "cost": 22,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 70"
+        "Hộ phù",
+        "Phòng thủ: 70"
       ],
       "rarity": "rare",
       "effect": {
-        "终结一击": "当你使用带有[连击]或[多段]标签的技能时，该技能的最后一次攻击伤害提升40%。"
+        "Chung kết nhất kích": "Khi bạn sử dụng kỹ năng có gắn thẻ [Liên kích] hoặc [Đa đoạn], sát thương tấn công lần cuối cùng của kỹ năng đó tăng 40%."
       },
-      "description": "以双头剑与密使的形象制成的护符。密使们贯彻攻击招招不致命，但最后一击最为强力的作法。"
+      "description": "Hộ phù làm theo hình tượng kiếm hai đầu và mật sứ. Các mật sứ quán triệt cách làm tấn công chiêu nào cũng không trí mạng, nhưng đòn cuối cùng là mạnh mẽ nhất."
     },
     {
-      "name": "斧护符",
+      "name": "Phủ Hộ Phù",
       "cost": 22,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 70"
+        "Hộ phù",
+        "Phòng thủ: 70"
       ],
       "rarity": "rare",
       "effect": {
-        "蓄力攻击强化": "你的蓄力攻击(消耗[攻击]与[动作]的强力一击)造成的最终伤害提升30%。"
+        "Súc lực công kích cường hóa": "Tấn công tụ lực của bạn (đòn đánh mạnh tiêu hao [Công kích] và [Hành động]) gây ra sát thương cuối cùng tăng 30%."
       },
-      "description": "以斧与战士的形象制成的护符。斧是北境战王的武器，他们擅长使出蓄满力量的攻击。"
+      "description": "Hộ phù làm theo hình tượng rìu và chiến binh. Rìu là vũ khí của chiến vương phương bắc, họ am hiểu tung ra đòn tấn công tích tụ đầy sức mạnh."
     },
     {
-      "name": "锤护符",
+      "name": "Chuy Hộ Phù",
       "cost": 22,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 70"
+        "Hộ phù",
+        "Phòng thủ: 70"
       ],
       "rarity": "rare",
       "effect": {
-        "破盾": "当你攻击装备了[重甲]或[盾牌]的敌人时，造成的物理伤害提升20%。"
+        "Phá thuẫn": "Khi bạn tấn công kẻ địch trang bị [Giáp nặng] hoặc [Khiên], sát thương vật lý gây ra tăng 20%."
       },
-      "description": "以大槌与骑士的形象制成的护符。槌在对上持盾重甲敌人时相当有效，是狩猎骑士的知名武器。"
+      "description": "Hộ phù làm theo hình tượng búa lớn và kỵ sĩ. Búa khá hiệu quả khi đối đầu với kẻ địch mặc giáp nặng cầm khiên, là vũ khí nổi danh săn giết kỵ sĩ."
     },
     {
-      "name": "矛护符",
+      "name": "Mâu Hộ Phù",
       "cost": 22,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 70"
+        "Hộ phù",
+        "Phòng thủ: 70"
       ],
       "rarity": "rare",
       "effect": {
-        "迎击": "当你对正在进行攻击动作的敌人造成伤害时，该次伤害提升30%。"
+        "Nghênh kích": "Khi bạn gây sát thương cho kẻ địch đang thực hiện động tác tấn công, sát thương lần đó tăng 30%."
       },
-      "description": "以矛与士兵的形象制成的护符。遇上强敌时，抓住敌人攻击的间隙进行反击，往往能收获奇效。"
+      "description": "Hộ phù làm theo hình tượng giáo và binh lính. Khi gặp kẻ địch mạnh, nắm bắt khe hở tấn công của kẻ địch để phản kích, thường có thể thu được hiệu quả kì lạ."
     },
     {
-      "name": "骑兵护符",
+      "name": "Kỵ Binh Hộ Phù",
       "cost": 22,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 80"
+        "Hộ phù",
+        "Phòng thủ: 80"
       ],
       "rarity": "rare",
       "effect": {
-        "骑乘攻击强化": "在骑乘状态下，你的所有攻击造成的最终伤害提升20%。"
+        "Kỵ thừa công kích cường hóa": "Trong trạng thái cưỡi ngựa, sát thương cuối cùng của tất cả tấn công của bạn tăng 20%."
       },
-      "description": "以骑枪与骑士的形象制成的护符。骑在马上的骑士十分可畏，身在高处，视野更加全面。"
+      "description": "Hộ phù làm theo hình tượng thương kỵ sĩ và kỵ sĩ. Kỵ sĩ cưỡi trên lưng ngựa vô cùng đáng sợ, thân ở trên cao, tầm nhìn toàn diện hơn."
     },
     {
-      "name": "钩爪护符",
+      "name": "Câu Trảo Hộ Phù",
       "cost": 22,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 80"
+        "Hộ phù",
+        "Phòng thủ: 80"
       ],
       "rarity": "rare",
       "effect": {
-        "高地优势": "当你从高于目标的位置发动攻击时，该次攻击的最终伤害提升50%。"
+        "Cao địa ưu thế": "Khi bạn phát động tấn công từ vị trí cao hơn mục tiêu, sát thương cuối cùng của lần tấn công đó tăng 50%."
       },
-      "description": "以钩爪与死士的形象制成的护符。‘暗影之手’的刺客们擅长利用高低差发动致命一击。"
+      "description": "Hộ phù làm theo hình tượng móc vuốt và tử sĩ. Các sát thủ của 'Ám Ảnh Chi Thủ' am hiểu lợi dụng chênh lệch độ cao phát động đòn chí mạng."
     },
     {
-      "name": "大盾护符",
+      "name": "Đại Thuẫn Hộ Phù",
       "cost": 24,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 85"
+        "Hộ phù",
+        "Phòng thủ: 85"
       ],
       "rarity": "rare",
       "effect": {
-        "盾防强化": "当你装备[盾牌]时，抵抗[击退]效果的检定获得+5加值，并且格挡攻击时受到的SP伤害降低30%。"
+        "Thuẫn phòng cường hóa": "Khi bạn trang bị [Khiên], kiểm định kháng cự hiệu ứng [Đẩy lui] nhận thêm +5 giá trị cộng thêm, đồng thời sát thương SP phải chịu khi đỡ đòn giảm 30%."
       },
-      "description": "以阴影中握着匕首的手为形象制成的护符。荣耀的骑士们，该先举起的不是剑，是盾。"
+      "description": "Hộ phù làm theo hình tượng bàn tay nắm dao găm trong bóng tối. Các kỵ sĩ vinh quang, thứ nên giơ lên trước không phải là kiếm, là khiên."
     },
     {
-      "name": "双手剑護符",
+      "name": "Song Thủ Kiếm Hộ Phù",
       "cost": 24,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 85"
+        "Hộ phù",
+        "Phòng thủ: 85"
       ],
       "rarity": "rare",
       "effect": {
-        "双手持握": "当你双手持用一把近战武器时，你造成的物理伤害提升10%。"
+        "Song thủ trì ác": "Khi bạn cầm một vũ khí cận chiến bằng hai tay, sát thương vật lý bạn gây ra tăng 10%."
       },
-      "description": "以双手剑与战士的形象制成的护符。战士沉浸于战斗，放弃了持盾，转而双手握住大剑。"
+      "description": "Hộ phù làm theo hình tượng kiếm hai tay và chiến binh. Chiến binh đắm chìm trong chiến đấu, từ bỏ cầm khiên, chuyển sang cầm đại kiếm bằng hai tay."
     },
     {
-      "name": "弓护符",
+      "name": "Cung Hộ Phù",
       "cost": 23,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 82"
+        "Hộ phù",
+        "Phòng thủ: 82"
       ],
       "rarity": "rare",
       "effect": {
-        "弓术精通": "所有使用[弓]类型武器的攻击，最终伤害提升20%。"
+        "Cung thuật tinh thông": "Tất cả tấn công sử dụng vũ khí loại [Cung], sát thương cuối cùng tăng 20%."
       },
-      "description": "以弓与兽族的形象制成的护符。兽族狩猎着野兽，野兽也狩猎着兽族。"
+      "description": "Hộ phù làm theo hình tượng cung và thú tộc. Thú tộc săn bắn dã thú, dã thú cũng săn bắn thú tộc."
     },
     {
-      "name": "箭护符",
+      "name": "Tiễn Hộ Phù",
       "cost": 23,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 82"
+        "Hộ phù",
+        "Phòng thủ: 82"
       ],
       "rarity": "rare",
       "effect": {
-        "远程射击": "所有[弓]类型武器的有效攻击距离提升50%，并且造成的最终伤害提升10%。"
+        "Viễn trình xạ kích": "Tầm tấn công hiệu quả của tất cả vũ khí loại [Cung] tăng 50%, đồng thời sát thương cuối cùng gây ra tăng 10%."
       },
-      "description": "以羽毛箭与铁箭组合制成的护符。选择不同种类的箭进行狩猎，兽族的猎手深谙此道。"
+      "description": "Hộ phù chế tạo từ sự kết hợp của mũi tên lông vũ và mũi tên sắt. Lựa chọn các loại mũi tên khác nhau để đi săn, thợ săn thú tộc rất am hiểu đạo này."
     },
     {
-      "name": "狙击护符",
+      "name": "Thư Kích Hộ Phù",
       "cost": 23,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 82"
+        "Hộ phù",
+        "Phòng thủ: 82"
       ],
       "rarity": "rare",
       "effect": {
-        "瞄准射击": "你可以消耗[动作]资源进行瞄准，你的下一次使用[弓]或[弩]的攻击，最终伤害提升50%。"
+        "Miêu chuẩn xạ kích": "Bạn có thể tiêu hao tài nguyên [Hành động] để tiến hành ngắm bắn, lần tấn công sử dụng [Cung] hoặc [Nỏ] tiếp theo của bạn, sát thương cuối cùng tăng 50%."
       },
-      "description": "以长弓与射手的形象制成的护符。兽族的猎手会进行短暂的精密瞄准，然后一击致命。"
+      "description": "Hộ phù làm theo hình tượng trường cung và xạ thủ. Thợ săn thú tộc sẽ tiến hành ngắm bắn chính xác ngắn ngủi, sau đó một đòn chết mạng."
     },
     {
-      "name": "书护符",
+      "name": "Thư Hộ Phù",
       "cost": 25,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 85"
+        "Hộ phù",
+        "Phòng thủ: 85"
       ],
       "rarity": "rare",
       "effect": {
-        "法术伤害强化": "所有能量伤害技能的最终伤害提升10%。"
+        "Pháp thuật thương hại cường hóa": "Sát thương cuối cùng của tất cả kỹ năng sát thương năng lượng tăng 10%."
       },
-      "description": "以持有魔法书的手为形象制成的护符。历代魔法师的智慧构成了魔法协会的无数图书馆。"
+      "description": "Hộ phù làm theo hình tượng bàn tay cầm sách ma pháp. Trí tuệ của các pháp sư qua các thời đại đã cấu thành vô số thư viện của hiệp hội ma pháp."
     },
     {
-      "name": "咆哮链坠",
+      "name": "Bào Hao Liên Trụ",
       "cost": 26,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 90"
+        "Dây chuyền",
+        "Phòng thủ: 90"
       ],
       "rarity": "rare",
       "effect": {
-        "咆哮强化": "你的咆哮类或吐息类技能，造成的最终伤害提升20%。"
+        "Bào hao cường hóa": "Kỹ năng loại gầm thét hoặc loại phun thở của bạn, sát thương cuối cùng gây ra tăng 20%."
       },
-      "description": "以嘶吼巨人的形象制成的青铜链坠。据说巨人轰然的咆哮能破坏自然——譬如引发山崩，或召来冰风暴。"
+      "description": "Dây chuyền bằng đồng xanh làm theo hình tượng người khổng lồ gào thét. Nghe nói tiếng gầm vang dội của người khổng lồ có thể phá hoại tự nhiên —— tỷ như gây ra lở núi, hoặc gọi đến bão tuyết."
     },
     {
-      "name": "魔剑徽章",
+      "name": "Ma Kiếm Huy Chương",
       "cost": 28,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 95"
+        "Huy chương",
+        "Phòng thủ: 95"
       ],
       "rarity": "rare",
       "effect": {
-        "魔剑士": "当你使用近战武器施放可以造成能量伤害的技能时，该技能的MP或SP消耗降低30%。"
+        "Ma kiếm sĩ": "Khi bạn sử dụng vũ khí cận chiến thi triển kỹ năng có thể gây ra sát thương năng lượng, tiêu hao MP hoặc SP của kỹ năng đó giảm 30%."
       },
-      "description": "在盾面有着魔剑徽章的护符。长久以来，有那么一批魔法师偏爱近战。"
+      "description": "Hộ phù có huy hiệu ma kiếm trên mặt khiên. Từ lâu, có một nhóm pháp sư yêu thích cận chiến."
     },
     {
-      "name": "战士壶饰品",
+      "name": "Chiến Sĩ Hồ Trang Sức",
       "cost": 28,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 95"
+        "Hộ phù",
+        "Phòng thủ: 95"
       ],
       "rarity": "rare",
       "effect": {
-        "战技强化": "你的武器战技(消耗SP的武器专属技能)，造成的最终伤害提升20%。"
+        "Chiến kỹ cường hóa": "Chiến kỹ vũ khí của bạn (kỹ năng chuyên thuộc vũ khí tiêu hao SP), sát thương cuối cùng gây ra tăng 20%."
       },
-      "description": "参考承装战士灰烬的壶制成的护符。在古代，勇猛的战士死去的后，会接受火化。"
+      "description": "Hộ phù chế tạo tham khảo hũ đựng tro cốt chiến binh. Ở thời cổ đại, sau khi chiến binh dũng mãnh chết đi, sẽ được hỏa táng."
     },
     {
-      "name": "大山羊饰品",
+      "name": "Đại Sơn Dương Trang Sức",
       "cost": 30,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 100"
+        "Hộ phù",
+        "Phòng thủ: 100"
       ],
       "rarity": "rare",
       "effect": {
-        "强韧": "当你使用需要引导的技能时，抵抗打断的体质检定获得+10加值。"
+        "Cường nhận": "Khi bạn sử dụng kỹ năng cần dẫn đạo, kiểm định thể chất kháng cự đánh gãy nhận thêm +10 giá trị cộng thêm."
       },
-      "description": "参考大山羊的角制成的护符。山羊是坚韧的象征，即使受到攻击也会坚持发动攻击。"
+      "description": "Hộ phù chế tạo tham khảo sừng của dê núi lớn. Dê núi là biểu tượng của kiên nhẫn, cho dù chịu công kích cũng sẽ kiên trì phát động công kích."
     },
     {
-      "name": "裂石护符",
+      "name": "Liệt Thạch Hộ Phù",
       "cost": 24,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 85"
+        "Hộ phù",
+        "Phòng thủ: 85"
       ],
       "rarity": "rare",
       "effect": {
-        "冲击强化": "你的踢击、踏地或冲撞类技能，造成的最终伤害提升15%。"
+        "Xung kích cường hóa": "Các kỹ năng loại đá, dậm đất hoặc húc của bạn, sát thương cuối cùng gây ra tăng 15%."
       },
-      "description": "镇邪石是用于镇住地震的灵异石。据说当它裂开以后，城镇也随之陷入地面。"
+      "description": "Đá trấn tà là đá linh dị dùng để trấn áp động đất. Nghe nói sau khi nó nứt ra, thành trấn cũng theo đó sụp xuống lòng đất."
     },
     {
-      "name": "铜绿圆饼",
+      "name": "Đồng Lục Viên Bính",
       "cost": 29,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 150"
+        "Hộ phù",
+        "Phòng thủ: 150"
       ],
       "rarity": "rare",
       "effect": {
-        "负重防御": "你的装备总重量每超过你基础负重上限的25%，你获得的物理伤害减免就提升3%。(最高12%)"
+        "Phụ trọng phòng ngự": "Tổng trọng lượng trang bị của bạn mỗi khi vượt quá 25% giới hạn tải trọng cơ bản của bạn, giảm miễn sát thương vật lý bạn nhận được tăng 3%. (Tối đa 12%)"
       },
-      "description": "以十分沉重的锈蚀青铜制成的圆饼。重量代表着强度，也是守护他人的力量。"
+      "description": "Bánh tròn làm bằng đồng thau rỉ sét vô cùng nặng nề. Trọng lượng đại biểu cho cường độ, cũng là sức mạnh bảo vệ người khác."
     },
     {
-      "name": "魔力对蝎",
+      "name": "Ma Lực Đối Hạt",
       "cost": 33,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 50"
+        "Hộ phù",
+        "Phòng thủ: 50"
       ],
       "rarity": "rare",
       "effect": {
-        "魔力增幅": "你造成的所有能量伤害提升12%，但你受到的所有物理伤害也提升10%。"
+        "Ma lực tăng phúc": "Tất cả sát thương năng lượng bạn gây ra tăng 12%, nhưng tất cả sát thương vật lý bạn phải chịu cũng tăng 10%."
       },
-      "description": "参考刚蜕皮的蝎子制成，蝎螯夹着魔力色的干缩心脏。能提升魔力属性攻击力，但降低减伤率。"
+      "description": "Chế tạo tham khảo bọ cạp vừa lột xác, càng bọ cạp kẹp trái tim teo tóp màu ma lực. Có thể nâng cao lực tấn công thuộc tính ma lực, nhưng giảm tỷ lệ giảm thương."
     },
     {
-      "name": "火焰对蝎",
+      "name": "Hỏa Diễm Đối Hạt",
       "cost": 33,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 50"
+        "Hộ phù",
+        "Phòng thủ: 50"
       ],
       "rarity": "rare",
       "effect": {
-        "火焰增幅": "你造成的能量伤害(火焰)提升15%，但你受到的所有物理伤害也提升10%。"
+        "Hỏa diễm tăng phúc": "Sát thương năng lượng (Hỏa) bạn gây ra tăng 15%, nhưng tất cả sát thương vật lý bạn phải chịu cũng tăng 10%."
       },
-      "description": "参考刚蜕皮的蝎子制成，蝎螯夹着火焰色的干缩心脏。能提升火焰属性攻击力，但降低减伤率。"
+      "description": "Chế tạo tham khảo bọ cạp vừa lột xác, càng bọ cạp kẹp trái tim teo tóp màu lửa. Có thể nâng cao lực tấn công thuộc tính lửa, nhưng giảm tỷ lệ giảm thương."
     },
     {
-      "name": "雷电对蝎",
+      "name": "Lôi Điện Đối Hạt",
       "cost": 33,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 50"
+        "Hộ phù",
+        "Phòng thủ: 50"
       ],
       "rarity": "rare",
       "effect": {
-        "雷电增幅": "你造成的能量伤害(雷电)提升15%，但你受到的所有物理伤害也提升10%。"
+        "Lôi điện tăng phúc": "Sát thương năng lượng (Lôi điện) bạn gây ra tăng 15%, nhưng tất cả sát thương vật lý bạn phải chịu cũng tăng 10%."
       },
-      "description": "参考刚蜕皮的蝎子制成，蝎螯夹着雷电色的干缩心脏。能提升雷电属性攻击力，但降低减伤率。"
+      "description": "Chế tạo tham khảo bọ cạp vừa lột xác, càng bọ cạp kẹp trái tim teo tóp màu sấm sét. Có thể nâng cao lực tấn công thuộc tính sấm sét, nhưng giảm tỷ lệ giảm thương."
     },
     {
-      "name": "神圣对蝎",
+      "name": "Thần Thánh Đối Hạt",
       "cost": 33,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 50"
+        "Hộ phù",
+        "Phòng thủ: 50"
       ],
       "rarity": "rare",
       "effect": {
-        "神圣增幅": "你造成的能量伤害(神圣)提升15%，但你受到的所有物理伤害也提升10%。"
+        "Thần thánh tăng phúc": "Sát thương năng lượng (Thần thánh) bạn gây ra tăng 15%, nhưng tất cả sát thương vật lý bạn phải chịu cũng tăng 10%."
       },
-      "description": "参考刚蜕皮的蝎子制成，蝎螯夹着神圣色的干缩心脏。能提升神圣属性攻击力，但降低减伤率。"
+      "description": "Chế tạo tham khảo bọ cạp vừa lột xác, càng bọ cạp kẹp trái tim teo tóp màu thần thánh. Có thể nâng cao lực tấn công thuộc tính thần thánh, nhưng giảm tỷ lệ giảm thương."
     },
     {
-      "name": "红羽七刃剑",
+      "name": "Hồng Vũ Thất Nhận Kiếm",
       "cost": 34,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 70"
+        "Hộ phù",
+        "Phòng thủ: 70"
       ],
       "rarity": "rare",
       "effect": {
-        "濒死爆发": "当你的HP低于20%时，你造成的所有伤害提升20%。"
+        "Tần tử bạo phát": "Khi HP của bạn thấp hơn 20%, tất cả sát thương bạn gây ra tăng 20%."
       },
-      "description": "红色羽毛的护符，与死亡比邻时，情绪会为之高昂——那拚命求生的模样，会让随后到来的死亡更加耀眼。"
+      "description": "Hộ phù lông vũ màu đỏ. Khi cận kề cái chết, cảm xúc sẽ dâng trào —— dáng vẻ liều mạng cầu sinh đó, sẽ khiến cái chết sắp đến càng thêm chói mắt."
     },
     {
-      "name": "蓝羽七刃剑",
+      "name": "Lam Vũ Thất Nhận Kiếm",
       "cost": 34,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 110"
+        "Hộ phù",
+        "Phòng thủ: 110"
       ],
       "rarity": "rare",
       "effect": {
-        "濒死守护": "当你的HP低于20%时，你受到的所有伤害降低30%。"
+        "Tần tử thủ hộ": "Khi HP của bạn thấp hơn 20%, tất cả sát thương bạn phải chịu giảm 30%."
       },
-      "description": "蓝色羽毛的护符，与死亡比邻时，情绪会为之高昂——那拚命求生的模样，会让随后到来的死亡更加耀眼。"
+      "description": "Hộ phù lông vũ màu xanh. Khi cận kề cái chết, cảm xúc sẽ dâng trào —— dáng vẻ liều mạng cầu sinh đó, sẽ khiến cái chết sắp đến càng thêm chói mắt."
     },
     {
-      "name": "献斗剑坠饰",
+      "name": "Hiến Đấu Kiếm Trụ Sức",
       "cost": 28,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 90"
+        "Dây chuyền",
+        "Phòng thủ: 90"
       ],
       "rarity": "rare",
       "effect": {
-        "完好增伤": "当你的HP为100%时，你造成的所有伤害提升10%。"
+        "Hoàn hảo tăng thương": "Khi HP của bạn là 100%, tất cả sát thương bạn gây ra tăng 10%."
       },
-      "description": "过去献给战王与神祇的战斗仪式中使用的剑形护符。如今仪式早已废除，北境的竞技场是其遗留。"
+      "description": "Hộ phù hình kiếm dùng trong nghi thức chiến đấu dâng lên chiến vương và thần linh trong quá khứ. Nay nghi thức đã sớm bị bãi bỏ, đấu trường phương bắc là di tích của nó."
     },
     {
-      "name": "献斗盾坠饰",
+      "name": "Hiến Đấu Thuẫn Trụ Sức",
       "cost": 28,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 120"
+        "Dây chuyền",
+        "Phòng thủ: 120"
       ],
       "rarity": "rare",
       "effect": {
-        "完好减伤": "当你的HP为100%时，你受到的所有伤害降低25%。"
+        "Hoàn hảo giảm thương": "Khi HP của bạn là 100%, tất cả sát thương bạn phải chịu giảm 25%."
       },
-      "description": "过去献给战王与神祇的战斗仪式中使用的盾形护符。如今仪式早已废除，北境的竞技场是其遗留。"
+      "description": "Hộ phù hình khiên dùng trong nghi thức chiến đấu dâng lên chiến vương và thần linh trong quá khứ. Nay nghi thức đã sớm bị bãi bỏ, đấu trường phương bắc là di tích của nó."
     },
     {
-      "name": "染红凶刀",
+      "name": "Nhiễm Hồng Hung Đao",
       "cost": 30,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 75"
+        "Hộ phù",
+        "Phòng thủ: 75"
       ],
       "rarity": "rare",
       "effect": {
-        "暴击吸血": "当你对一个目标造成暴击时，恢复(85 + 10%最大HP)的生命值。每个目标只能触发一次。"
+        "Bạo kích hấp huyết": "Khi bạn gây bạo kích lên một mục tiêu, hồi phục (85 + 10% HP tối đa) sinh mệnh. Mỗi mục tiêu chỉ có thể kích hoạt một lần."
       },
-      "description": "形状蜿蜒，染上红色的匕首。曾经发生的轰动大陆的刺杀，此为其中一把凶刃的摸样。"
+      "description": "Hình dáng uốn lượn, dao găm nhuốm màu đỏ. Vụ ám sát từng gây chấn động đại lục, đây là hình dáng của một trong những hung nhận đó."
     },
     {
-      "name": "染蓝凶刀",
+      "name": "Nhiễm Lam Hung Đao",
       "cost": 30,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 75"
+        "Hộ phù",
+        "Phòng thủ: 75"
       ],
       "rarity": "rare",
       "effect": {
-        "暴击吸蓝": "当你对一个目标造成暴击时，恢复(85 + 10%最大MP)的法力值。每个目标只能触发一次。"
+        "Bạo kích hấp lam": "Khi bạn gây bạo kích lên một mục tiêu, hồi phục (85 + 10% MP tối đa) pháp lực. Mỗi mục tiêu chỉ có thể kích hoạt một lần."
       },
-      "description": "形状蜿蜒，染上蓝色的匕首。曾经发生的轰动大陆的刺杀，此为其中一把凶刃的摸样。"
+      "description": "Hình dáng uốn lượn, dao găm nhuốm màu xanh. Vụ ám sát từng gây chấn động đại lục, đây là hình dáng của một trong những hung nhận đó."
     },
     {
-      "name": "介错刀",
+      "name": "Giới Thác Đao",
       "cost": 26,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 80"
+        "Hộ phù",
+        "Phòng thủ: 80"
       ],
       "rarity": "rare",
       "effect": {
-        "暴击增伤": "当你造成暴击后，你的所有伤害在接下来的2回合内提升20%。此效果不叠加。"
+        "Bạo kích tăng thương": "Sau khi bạn gây ra bạo kích, tất cả sát thương của bạn trong 2 hiệp tiếp theo tăng 20%. Hiệu quả này không cộng dồn."
       },
-      "description": "刀身窄短、沾满血液的短刀。曾作为让受伤的战士解脱用的物品，如今带有一丝邪气。"
+      "description": "Đao ngắn lưỡi hẹp, dính đầy máu. Từng là vật dùng để giải thoát cho các chiến binh bị thương, nay mang theo một tia tà khí."
     },
     {
-      "name": "圣战徽章",
+      "name": "Thánh Chiến Huy Chương",
       "cost": 26,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 80"
+        "Huy chương",
+        "Phòng thủ: 80"
       ],
       "rarity": "rare",
       "effect": {
-        "击杀增伤": "当你击杀一个敌人后，你的所有伤害在接下来的2回合内提升20%。此效果不叠加。"
+        "Kích sát tăng thương": "Sau khi bạn hạ gục một kẻ địch, tất cả sát thương của bạn trong 2 hiệp tiếp theo tăng 20%. Hiệu quả này không cộng dồn."
       },
-      "description": "参考高举的矛与火焰制成的护符，与英雄并肩作战，为圣战捐躯的人们拥有的徽章。"
+      "description": "Hộ phù làm theo hình tượng ngọn giáo giơ cao và ngọn lửa, là huy chương thuộc về những người sát cánh chiến đấu cùng anh hùng, hy sinh vì thánh chiến."
     },
     {
-      "name": "干枯花束",
+      "name": "Can Khô Hoa Thúc",
       "cost": 26,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "饰品",
-        "防御: 80"
+        "Trang sức",
+        "Phòng thủ: 80"
       ],
       "rarity": "rare",
       "effect": {
-        "召唤物死亡增伤": "当你召唤的生物死亡或消失时，你的所有伤害在接下来的2回合内提升20%。此效果不叠加。"
+        "Triệu hoán vật tử vong tăng thương": "Khi sinh vật triệu hồi của bạn chết hoặc biến mất, tất cả sát thương của bạn trong 2 hiệp tiếp theo tăng 20%. Hiệu quả này không cộng dồn."
       },
-      "description": "惹人怜爱的干枯花束，供养在小墓碑前的物品。对深爱之人的不幸感到心伤——这情感不论身处何地，皆是如此。"
+      "description": "Bó hoa khô đáng yêu, vật phẩm cúng tế trước mộ bia nhỏ. Cảm thấy đau lòng trước sự bất hạnh của người mình yêu thương sâu sắc —— tình cảm này bất luận ở nơi nào, đều là như thế."
     },
     {
-      "name": "老翁的欢愉",
+      "name": "Lão Ông Chi Hoan Du",
       "cost": 26,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 80"
+        "Hộ phù",
+        "Phòng thủ: 80"
       ],
       "rarity": "rare",
       "effect": {
-        "混乱增伤": "当你周围10米内有单位陷入[混乱]或[恐惧]状态时，你的所有伤害提升20%，直到该状态结束。"
+        "Hỗn loạn tăng thương": "Khi trong vòng 10 mét quanh bạn có đơn vị rơi vào trạng thái [Hỗn loạn] hoặc [Sợ hãi], tất cả sát thương của bạn tăng 20%, cho đến khi trạng thái đó kết thúc."
       },
-      "description": "以禁触老翁欢欣的模样制成的护符。让那癫狂之主来到世间，让所有人陷入癫狂的欢愉吧。"
+      "description": "Hộ phù làm theo dáng vẻ vui mừng của lão ông cấm kỵ. Để cho chúa tể điên cuồng đó đến thế gian, để tất cả mọi người rơi vào niềm vui sướng điên cuồng đi."
     },
     {
-      "name": "融泥的欢愉",
+      "name": "Dung Nê Chi Hoan Du",
       "cost": 26,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 80"
+        "Hộ phù",
+        "Phòng thủ: 80"
       ],
       "rarity": "rare",
       "effect": {
-        "睡眠增伤": "当你周围10米内有单位陷入[睡眠]状态时，你的所有伤害提升20%，直到该状态结束。"
+        "Thụy miên tăng thương": "Khi trong vòng 10 mét quanh bạn có đơn vị rơi vào trạng thái [Ngủ] , tất cả sát thương của bạn tăng 20%, cho đến khi trạng thái đó kết thúc."
       },
-      "description": "以深眠之主熟睡时的微笑模样制成的护符。深眠之主让融泥获得了深沉酣眠，那是永恒的安宁。"
+      "description": "Hộ phù làm theo dáng vẻ mỉm cười khi ngủ say của chúa tể giấc ngủ sâu. Chúa tể giấc ngủ sâu ban cho bùn nhão giấc ngủ say nồng, đó là sự an ninh vĩnh hằng."
     },
     {
-      "name": "腐败眷属的欢愉",
+      "name": "Phụ Bại Quyến Thuộc Chi Hoan Du",
       "cost": 26,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 80"
+        "Hộ phù",
+        "Phòng thủ: 80"
       ],
       "rarity": "rare",
       "effect": {
-        "中毒增伤": "当你周围10米内有单位陷入[中毒]状态时，你的所有伤害提升20%，直到该状态结束。"
+        "Trung độc tăng thương": "Khi trong vòng 10 mét quanh bạn có đơn vị rơi vào trạng thái [Trúng độc], tất cả sát thương của bạn tăng 20%, cho đến khi trạng thái đó kết thúc."
       },
-      "description": "以剧毒虫群欢欣的模样制成的护符。向猩红之主献上腐败吧——回到我们这群弃子的身旁吧。"
+      "description": "Hộ phù làm theo dáng vẻ vui mừng của bầy côn trùng kịch độc. Dâng lên sự mục nát cho chúa tể đỏ thẫm đi nào —— hãy quay về bên cạnh đám con bị bỏ rơi chúng ta đi."
     },
     {
-      "name": "鲜血君王的欢愉",
+      "name": "Tiên Huyết Quân Vương Chi Hoan Du",
       "cost": 26,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 80"
+        "Hộ phù",
+        "Phòng thủ: 80"
       ],
       "rarity": "rare",
       "effect": {
-        "流血增伤": "当你周围10米内有单位陷入[流血]状态时，你的所有伤害提升20%，直到该状态结束。"
+        "Lưu huyết tăng thương": "Khi trong vòng 10 mét quanh bạn có đơn vị rơi vào trạng thái [Chảy máu], tất cả sát thương của bạn tăng 20%, cho đến khi trạng thái đó kết thúc."
       },
-      "description": "以鲜血君王欢欣的模样制成的护符。向鲜血君王献上鲜血吧——王的神祇正在渴望。"
+      "description": "Hộ phù làm theo dáng vẻ vui mừng của Tiên Huyết Quân Vương. Dâng lên máu tươi cho Tiên Huyết Quân Vương đi nào —— thần của vương đang khát khao."
     },
     {
-      "name": "世界树的恩惠",
+      "name": "Thế Giới Thụ Chi Ân Huệ",
       "cost": 45,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 200"
+        "Hộ phù",
+        "Phòng thủ: 200"
       ],
       "rarity": "epic",
       "effect": {
-        "全面提升": "最大HP、MP、SP上限均提升10%。"
+        "Toàn diện đề thăng": "Giới hạn HP, MP, SP tối đa đều tăng 10%."
       },
-      "description": "用黄金制成，是为久远以前，大地上的生命赞颂世界树时使用的古老饰品。"
+      "description": "Làm bằng vàng ròng, là trang sức cổ xưa được sinh mệnh trên mặt đất sử dụng khi ca tụng Cây Thế Giới vào thời xa xưa."
     },
     {
-      "name": "古龙坚盾徽章",
+      "name": "Cổ Long Kiên Thuẫn Huy Chương",
       "cost": 42,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 300"
+        "Huy chương",
+        "Phòng thủ: 300"
       ],
       "rarity": "epic",
       "effect": {
-        "强效物理防护": "受到的所有物理伤害降低20%。"
+        "Cường hiệu vật lý phòng hộ": "Tất cả sát thương vật lý phải chịu giảm 20%."
       },
-      "description": "有着巨大古龙浮雕的古代熟铁制护符。龙的图案被视为各种庇佑的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu cổ long khổng lồ. Hoa văn rồng được coi là biểu tượng của các loại che chở."
     },
     {
-      "name": "虹龙大盾徽章",
+      "name": "Hồng Long Đại Thuẫn Huy Chương",
       "cost": 44,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 320"
+        "Huy chương",
+        "Phòng thủ: 320"
       ],
       "rarity": "epic",
       "effect": {
-        "究极多重防护": "受到的所有能量、精神、真实伤害降低15%。"
+        "Cứu cực đa trọng phòng hộ": "Tất cả sát thương năng lượng, tinh thần, chuẩn phải chịu giảm 15%."
       },
-      "description": "有着巨大虹彩龙浮雕的古代熟铁制护符。虹彩龙的图案被视为各种庇佑的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu rồng cầu vồng khổng lồ. Hoa văn rồng cầu vồng được coi là biểu tượng của các loại che chở."
     },
     {
-      "name": "魔龙大盾徽章",
+      "name": "Ma Long Đại Thuẫn Huy Chương",
       "cost": 44,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 320"
+        "Huy chương",
+        "Phòng thủ: 320"
       ],
       "rarity": "epic",
       "effect": {
-        "究极魔法防护": "受到的能量伤害降低35%。"
+        "Cứu cực ma pháp phòng hộ": "Sát thương năng lượng phải chịu giảm 35%."
       },
-      "description": "有着巨大魔龙浮雕的古代熟铁制护符。魔龙的图案被视为抵抗魔力的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu ma long khổng lồ. Hoa văn ma long được coi là biểu tượng kháng cự ma lực."
     },
     {
-      "name": "火龙大盾徽章",
+      "name": "Hỏa Long Đại Thuẫn Huy Chương",
       "cost": 44,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 320"
+        "Huy chương",
+        "Phòng thủ: 320"
       ],
       "rarity": "epic",
       "effect": {
-        "究极火焰防护": "受到的能量伤害(火焰)降低60%。"
+        "Cứu cực hỏa diễm phòng hộ": "Sát thương năng lượng (Hỏa) phải chịu giảm 60%."
       },
-      "description": "有着巨大火龙浮雕的古代熟铁制护符。火龙的图案被视为抵抗火焰的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu hỏa long khổng lồ. Hoa văn hỏa long được coi là biểu tượng kháng cự lửa."
     },
     {
-      "name": "雷龙大盾徽章",
+      "name": "Lôi Long Đại Thuẫn Huy Chương",
       "cost": 44,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 320"
+        "Huy chương",
+        "Phòng thủ: 320"
       ],
       "rarity": "epic",
       "effect": {
-        "究极雷电防护": "受到的能量伤害(雷电)降低60%。"
+        "Cứu cực lôi điện phòng hộ": "Sát thương năng lượng (Lôi điện) phải chịu giảm 60%."
       },
-      "description": "有着巨大雷龙浮雕的古代熟铁制护符。雷龙的图案被视为抵抗雷电的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu lôi long khổng lồ. Hoa văn lôi long được coi là biểu tượng kháng cự sấm sét."
     },
     {
-      "name": "圣龙大盾徽章",
+      "name": "Thánh Long Đại Thuẫn Huy Chương",
       "cost": 32,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 320"
+        "Huy chương",
+        "Phòng thủ: 320"
       ],
       "rarity": "epic",
       "effect": {
-        "究极神圣防护": "受到的能量伤害(神圣)降低60%。"
+        "Cứu cực thần thánh phòng hộ": "Sát thương năng lượng (Thần thánh) phải chịu giảm 60%."
       },
-      "description": "有着巨大圣龙浮雕的古代熟铁制护符。圣龙的图案被视为抵抗神圣的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu thánh long khổng lồ. Hoa văn thánh long được coi là biểu tượng kháng cự thần thánh."
     },
     {
-      "name": "塔护符",
+      "name": "Tháp Hộ Phù",
       "cost": 40,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 250"
+        "Hộ phù",
+        "Phòng thủ: 250"
       ],
       "rarity": "epic",
       "effect": {
-        "大法师": "所有能量伤害技能的最终伤害提升20%。"
+        "Đại pháp sư": "Sát thương cuối cùng của tất cả kỹ năng sát thương năng lượng tăng 20%."
       },
-      "description": "以初始法杖、初始魔法书、学派魔法师塔一同为形象制成的护符。只存在过八枚，那是开宗立派的传奇。"
+      "description": "Hộ phù làm theo hình tượng pháp trượng sơ khởi, sách ma pháp sơ khởi, tháp ma pháp học phái. Chỉ từng tồn tại tám cái, đó là truyền kỳ khai tông lập phái."
     },
     {
-      "name": "友好壶",
+      "name": "Hữu Hảo Hồ",
       "cost": 48,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 280"
+        "Hộ phù",
+        "Phòng thủ: 280"
       ],
       "rarity": "epic",
       "effect": {
-        "爆炸物强化": "你使用的造成能量伤害(火焰)的[消耗品]道具，伤害提升100%。"
+        "Bạo tạc vật cường hóa": "Đạo cụ [Tiêu hao phẩm] gây sát thương năng lượng (Hỏa) bạn sử dụng, sát thương tăng 100%."
       },
-      "description": "火焰元素精灵送给朋友的罐子样式护符。将易燃易爆的东西填入陶罐中，这便是炼金术的起源。"
+      "description": "Hộ phù hình hũ tinh linh nguyên tố lửa tặng cho bạn bè. Nhồi những thứ dễ cháy nổ vào hũ sành, đây chính là nguồn gốc của thuật giả kim."
     },
     {
-      "name": "星辰碎片刀",
+      "name": "Tinh Thần Toái Phiến Đao",
       "cost": 46,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 200"
+        "Hộ phù",
+        "Phòng thủ: 200"
       ],
       "rarity": "epic",
       "effect": {
-        "玻璃大炮": "所有技能的MP消耗降低35%，但你的最大HP上限降低15%。"
+        "Pha lê đại pháo": "Tiêu hao MP của tất cả kỹ năng giảm 35%, nhưng giới hạn HP tối đa của bạn giảm 15%."
       },
-      "description": "染血的古老星屑刀。古老的魔法师为了将自己的命运送入星间，会用这把刀划开心脏，接着步入死亡。"
+      "description": "Đao tinh thạch cổ xưa nhuốm máu. Các pháp sư cổ đại vì muốn đưa vận mệnh của mình vào giữa các vì sao, sẽ dùng thanh đao này rạch tim, sau đó bước vào cái chết."
     },
     {
-      "name": "久远羽翼护符",
+      "name": "Cửu Viễn Vũ Dực Hộ Phù",
       "cost": 48,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 220"
+        "Hộ phù",
+        "Phòng thủ: 220"
       ],
       "rarity": "epic",
       "effect": {
-        "究极闪避": "你的闪避修正获得+5加值，但你受到的所有伤害提升10%。"
+        "Cứu cực thiểm tị": "Kiểm định né tránh của bạn nhận thêm +5 giá trị cộng thêm, nhưng tất cả sát thương bạn phải chịu tăng 10%."
       },
-      "description": "以翼民的起源为形象制成的护符。在久远的过去，羽翼还未宽大、优美。"
+      "description": "Hộ phù chế tác theo hình tượng khởi nguyên của Dực Nhân. Ở thời quá khứ xa xưa, đôi cánh vẫn chưa rộng lớn, ưu mỹ."
     },
     {
-      "name": "掠夺浮雕坠饰",
+      "name": "Lược Đoạt Phù Điêu Trụ Sức",
       "cost": 47,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 260"
+        "Dây chuyền",
+        "Phòng thủ: 260"
       ],
       "rarity": "epic",
       "effect": {
-        "掠夺生命": "当你周围15米内的敌人死亡时，恢复(100 + 5%最大HP)的生命值。"
+        "Lược đoạt sinh mệnh": "Khi kẻ địch trong vòng 15 mét quanh bạn tử vong, hồi phục (100 + 5% HP tối đa) sinh mệnh."
       },
-      "description": "以一位席卷大陆的野心家的模样制成的护符。当司法裁决的君主发誓犯下反叛生命的亵渎之举，所有的掠夺残杀行为都受到肯定。"
+      "description": "Hộ phù làm theo dáng vẻ của một nhà dã tâm quét ngang đại lục. Khi vị quân chủ tư pháp phán quyết thề phạm vào hành vi báng bổ phản bội lại sinh mệnh, tất cả hành vi cướp đoạt tàn sát đều được khẳng định."
     },
     {
-      "name": "守护之主的角",
+      "name": "Thủ Hộ Chi Chủ Chi Giác",
       "cost": 47,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "饰品",
-        "防御: 260"
+        "Trang sức",
+        "Phòng thủ: 260"
       ],
       "rarity": "epic",
       "effect": {
-        "掠夺法力": "当你周围15米内的敌人死亡时，恢复(100 + 5%最大MP)的法力值。"
+        "Lược đoạt pháp lực": "Khi kẻ địch trong vòng 15 mét quanh bạn tử vong, hồi phục (100 + 5% MP tối đa) pháp lực."
       },
-      "description": "切下山林与原野之主的角而成的物品。魔力不仅来自于群星与夜空，也来自于悠久的生命与死亡。"
+      "description": "Vật phẩm cắt từ sừng của chúa tể núi rừng và nguyên dã. Ma lực không chỉ đến từ quần tinh và bầu trời đêm, cũng đến từ sinh mệnh và cái chết lâu đời."
     },
     {
-      "name": "圣祭襁褓",
+      "name": "Thánh Tế Cưỡng Bảo",
       "cost": 45,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "饰品",
-        "防御: 250"
+        "Trang sức",
+        "Phòng thủ: 250"
       ],
       "rarity": "epic",
       "effect": {
-        "连续攻击恢复": "当你连续使用普通攻击命中同一目标3次时，恢复(50 + 5%最大HP)的生命值。"
+        "Liên tục công kích khôi phục": "Khi bạn sử dụng tấn công thường trúng cùng một mục tiêu 3 lần liên tiếp, hồi phục (50 + 5% HP tối đa) sinh mệnh."
       },
-      "description": "一小块古代的祭祀制品。千刀万剐之后，神圣献祭者的遗体会用这块布包裹，庆贺他们迎来截然不同的“生”。"
+      "description": "Một mảnh nhỏ chế phẩm tế tự cổ đại. Sau khi bị băm vằm trăm ngàn nhát dao, di thể của người hiến tế thần thánh sẽ được bọc bằng tấm vải này, chúc mừng họ đón chào 'sự sống' hoàn toàn khác biệt."
     },
     {
-      "name": "翼剑徽章",
+      "name": "Dực Kiếm Huy Chương",
       "cost": 45,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 250"
+        "Huy chương",
+        "Phòng thủ: 250"
       ],
       "rarity": "epic",
       "effect": {
-        "连击之翼": "当你连续使用普通攻击命中同一目标3次时，获得一层[连击之翼]效果，使你造成的物理伤害提升5%，持续至战斗结束。此效果最多叠加4次。"
+        "Liên kích chi dực": "Khi bạn sử dụng tấn công thường trúng cùng một mục tiêu 3 lần liên tiếp, nhận được một tầng hiệu ứng [Liên Kích Chi Dực], mỗi tầng khiến sát thương vật lý bạn gây ra tăng 5%, duy trì đến khi kết thúc chiến đấu. Hiệu quả này cộng dồn tối đa 4 lần."
       },
-      "description": "参考高举曲剑的义手与簇拥义手的飞翼为形象，制成的古老护符。传说中的剑士对决古老腐败时的写照。"
+      "description": "Hộ phù cổ xưa làm theo hình tượng cánh tay giả giơ cao kiếm cong và đôi cánh bao quanh cánh tay giả. Tả thực kiếm sĩ trong truyền thuyết khi đối quyết với mục nát cổ xưa."
     },
     {
-      "name": "克雷普的小瓶子",
+      "name": "Tiểu Bình Của Krep",
       "cost": 40,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "饰品",
-        "防御: 180"
+        "Trang sức",
+        "Phòng thủ: 180"
       ],
       "rarity": "epic",
       "effect": {
-        "彻底无声": "你的所有移动行为(包括奔跑、跳跃)都不会发出任何声音。"
+        "Triệt để vô thanh": "Tất cả hành vi di chuyển của bạn (bao gồm chạy, nhảy) đều sẽ không phát ra bất kỳ âm thanh nào."
       },
-      "description": "封着暗雾的神秘小瓶子，以‘阴影之手’刺客宗师‘克雷普’命名。新晋杀手，在一片寂静的时刻最为心慌。"
+      "description": "Cái chai nhỏ thần bí phong ấn sương mù đen, đặt tên theo tông sư sát thủ 'Krep' của 'Ám Ảnh Chi Thủ'. Sát thủ mới vào nghề, vào thời khắc yên tĩnh là hoảng loạn nhất."
     },
     {
-      "name": "隐身面纱",
+      "name": "Ẩn Thân Diện Sa",
       "cost": 40,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "饰品",
-        "防御: 180"
+        "Trang sức",
+        "Phòng thủ: 180"
       ],
       "rarity": "epic",
       "effect": {
-        "伏击": "当你蹲下且保持静止超过3秒，且距离最近的敌人超过15米时，你将进入[隐形]状态。移动或进行任何动作会解除此状态。"
+        "Phục kích": "Khi bạn ngồi xổm và giữ yên tĩnh quá 3 giây, đồng thời khoảng cách với kẻ địch gần nhất vượt quá 15 mét, bạn sẽ tiến vào trạng thái [Ẩn hình]. Di chuyển hoặc thực hiện bất kỳ động tác nào sẽ giải trừ trạng thái này."
       },
-      "description": "表面具有光泽的暗色布卷成的护符。此为过去的刺客大师，在刺杀之夜用于隐藏身形的部分面纱。"
+      "description": "Hộ phù cuộn từ vải tối màu có độ bóng bề mặt. Đây là một phần khăn che mặt đại sư sát thủ trong quá khứ dùng để ẩn giấu thân hình vào đêm ám sát."
     },
     {
-      "name": "主人伪装镜",
+      "name": "Chủ Nhân Ngụy Trang Kính",
       "cost": 40,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "饰品",
-        "防御: 180"
+        "Trang sức",
+        "Phòng thủ: 180"
       ],
       "rarity": "epic",
       "effect": {
-        "伪装": "激活后，在接下来的10分钟内，所有智慧生物对你的初次印象将是“本地人”或“无威胁的自己人”，除非你做出明显的敌对行为。每日可使用一次。"
+        "Ngụy trang": "Sau khi kích hoạt, trong 10 phút tiếp theo, ấn tượng đầu tiên của tất cả sinh vật có trí tuệ đối với bạn sẽ là 'người bản địa' hoặc 'người mình không có uy hiếp', trừ khi bạn có hành vi thù địch rõ ràng. Mỗi ngày có thể sử dụng một lần."
       },
-      "description": "映照出模糊人影的小镜子，古老的易容器具。为了欺骗，使他人相信自己也是这里原有的一员。"
+      "description": "Cái gương nhỏ phản chiếu bóng người mơ hồ, dụng cụ dịch dung cổ xưa. Vì lừa gạt, khiến người khác tin tưởng bản thân cũng là một thành viên vốn có ở nơi này."
     },
     {
-      "name": "狂怒神兽",
+      "name": "Cuồng Nộ Thần Thú",
       "cost": 48,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 290"
+        "Hộ phù",
+        "Phòng thủ: 290"
       ],
       "rarity": "epic",
       "effect": {
-        "风雷增伤": "你所有造成能量伤害(雷电或风)的技能，最终伤害提升20%。"
+        "Phong lôi tăng thương": "Tất cả kỹ năng gây sát thương năng lượng (Lôi điện hoặc Gió) của bạn, sát thương cuối cùng tăng 20%."
       },
-      "description": "参考古代祭祀中狂怒舞动的神兽模样制成的护符。它的愤怒会造成天空失序，而其中最显著的，就是风暴。"
+      "description": "Hộ phù chế tác tham khảo dáng vẻ thần thú múa may cuồng nộ trong tế tự cổ đại. Sự phẫn nộ của nó sẽ khiến bầu trời mất trật tự, mà trong đó dễ thấy nhất, chính là bão tố."
     },
     {
-      "name": "星与火浮雕坠饰",
+      "name": "Tinh Dữ Hỏa Phù Điêu Trụ Sức",
       "cost": 48,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "项链",
-        "防御: 290"
+        "Dây chuyền",
+        "Phòng thủ: 290"
       ],
       "rarity": "epic",
       "effect": {
-        "准备攻击": "当你使用[动作]资源进行[准备](不做任何事)时，你的下一次[攻击]造成的伤害提升50%。"
+        "Chuẩn bị công kích": "Khi bạn sử dụng tài nguyên [Hành động] để tiến hành [Chuẩn bị] (không làm gì cả), [Công kích] lần tiếp theo của bạn gây ra sát thương tăng 50%."
       },
-      "description": "星火骑士——执掌魔剑与火剑的双剑骑士，雕着她凛然面容的肖像护符。"
+      "description": "Tinh Hỏa Kỵ Sĩ—— kỵ sĩ song kiếm nắm giữ ma kiếm và hỏa kiếm, hộ phù chân dung khắc dung nhan lẫm liệt của cô ấy."
     },
     {
-      "name": "古龙大盾徽章",
+      "name": "Cổ Long Đại Thuẫn Huy Chương",
       "cost": 65,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "徽章",
-        "防御: 500"
+        "Huy chương",
+        "Phòng thủ: 500"
       ],
       "rarity": "legendary",
       "effect": {
-        "究极物理防护": "受到的所有物理伤害降低30%。"
+        "Cứu cực vật lý phòng hộ": "Tất cả sát thương vật lý phải chịu giảm 30%."
       },
-      "description": "有着巨大古龙浮雕的古代熟铁制护符。龙的图案被视为各种庇佑的象征。"
+      "description": "Hộ phù làm bằng sắt rèn cổ đại có phù điêu cổ long khổng lồ. Hoa văn rồng được coi là biểu tượng của các loại che chở."
     },
     {
-      "name": "金黄色编发",
+      "name": "Kim Hoàng Sắc Biên Phát",
       "cost": 75,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "饰品",
-        "防御: 550"
+        "Trang sức",
+        "Phòng thủ: 550"
       ],
       "rarity": "legendary",
       "effect": {
-        "神圣庇护": "受到的能量伤害(神圣)降低80%。"
+        "Thần thánh tích hộ": "Sát thương năng lượng (Thần thánh) phải chịu giảm 80%."
       },
-      "description": "古代神祇的遗物，此为其使用、遗留的祭品。没有人知道神祇为了什么而祈祷、许愿，又或是，为了什么而忏悔。"
+      "description": "Di vật của thần linh cổ đại, đây là tế phẩm ngài từng sử dụng, để lại. Không ai biết thần linh cầu nguyện, hứa hẹn vì điều gì, hay là, sám hối vì điều gì."
     },
     {
-      "name": "黄金义手",
+      "name": "Hoàng Kim Nghĩa Thủ",
       "cost": 80,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "义肢",
-        "防御: 450"
+        "Nghĩa chi",
+        "Phòng thủ: 450"
       ],
       "rarity": "legendary",
       "effect": {
-        "连舞": "当你使用带有[连击]或[多段]标签的技能并完整命中时，获得一层[连舞]效果，每层使你造成的物理伤害提升10%，持续至战斗结束。此效果最多叠加6次。"
+        "Liên vũ": "Khi bạn sử dụng kỹ năng có gắn thẻ [Liên kích] hoặc [Đa đoạn] và trúng hoàn toàn, nhận được một tầng hiệu ứng [Liên Vũ], mỗi tầng khiến sát thương vật lý bạn gây ra tăng 10%, duy trì đến khi kết thúc chiến đấu. Hiệu quả này cộng dồn tối đa 6 lần."
       },
-      "description": "传说中的剑士其肢体并不完整，此为其对决古老腐败时，使用的黄金义肢。"
+      "description": "Kiếm sĩ trong truyền thuyết chân tay cũng không trọn vẹn, đây là cánh tay giả bằng vàng ngài sử dụng khi đối quyết với mục nát cổ xưa."
     },
     {
-      "name": "长尾猫别针",
+      "name": "Trường Vĩ Miêu Biệt Châm",
       "cost": 60,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "别针",
-        "防御: 400"
+        "Ghim cài",
+        "Phòng thủ: 400"
       ],
       "rarity": "legendary",
       "effect": {
-        "猫之优雅": "你免疫所有因高处坠落造成的伤害。"
+        "Miêu chi ưu nhã": "Bạn miễn dịch tất cả sát thương gây ra do rơi từ trên cao xuống."
       },
-      "description": "以长尾猫的形象制成的别针。据说那是月与群星的神祇故事中出现的妖精猫，曾从星间跃下落到地面，却安然无恙。"
+      "description": "Ghim cài làm theo hình tượng mèo đuôi dài. Nghe nói đó là yêu tinh mèo xuất hiện trong câu chuyện về thần của mặt trăng và quần tinh, từng từ giữa các vì sao nhảy xuống mặt đất, nhưng vẫn bình an vô sự."
     },
     {
-      "name": "狂龙护符",
+      "name": "Cuồng Long Hộ Phù",
       "cost": 90,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 650"
+        "Hộ phù",
+        "Phòng thủ: 650"
       ],
       "rarity": "legendary",
       "effect": {
-        "狂龙之力": "你造成的能量伤害(火焰、雷电)提升40%。你免疫[燃烧]和[麻痹]效果。"
+        "Cuồng long chi lực": "Sát thương năng lượng (Hỏa, Lôi điện) bạn gây ra tăng 40%. Bạn miễn dịch hiệu quả [Thiêu đốt] và [Tê liệt]."
       },
-      "description": "参考飞龙首领的模样制成的护符。飞龙的首领是裹挟着焰雷的狂龙，据说它曾挑战古龙之王，最后落得两败俱伤。"
+      "description": "Hộ phù chế tác tham khảo dáng vẻ thủ lĩnh phi long. Thủ lĩnh của phi long là cuồng long cuốn theo sấm sét, nghe nói nó từng khiêu chiến Cổ Long Chi Vương, cuối cùng kết cục lưỡng bại câu thương."
     },
     {
-      "name": "王受赐护符",
+      "name": "Vương Thụ Tứ Hộ Phù",
       "cost": 85,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 600"
+        "Hộ phù",
+        "Phòng thủ: 600"
       ],
       "rarity": "legendary",
       "effect": {
-        "不动之王": "当你使用任何恢复HP、MP或SP的[消耗品]或技能时，该过程不会被第五层级及以下的敌人的攻击所打断。"
+        "Bất động chi vương": "Khi bạn sử dụng bất kỳ [Tiêu hao phẩm] hoặc kỹ năng hồi phục HP, MP hoặc SP nào, quá trình đó sẽ không bị tấn công của kẻ địch cấp 5 trở xuống cắt ngang."
       },
-      "description": "参考绝强的战王，誓约神祇并受到赐福时的模样制成的护符。誓约神祇之王，耸立于大地。"
+      "description": "Hộ phù chế tác tham khảo dáng vẻ khi chiến vương cực mạnh thề ước với thần linh và nhận được chúc phúc. Vương thề ước với thần linh, đứng sừng sững trên mặt đất."
     },
     {
-      "name": "亲爱的星尘",
+      "name": "Thân Ái Đích Tinh Trần",
       "cost": 95,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 400"
+        "Hộ phù",
+        "Phòng thủ: 400"
       ],
       "rarity": "legendary",
       "effect": {
-        "极速施法": "所有需要消耗[动作]资源的技能，现在改为不消耗[动作]资源，但你受到的所有伤害提升100%。"
+        "Cực tốc thi pháp": "Tất cả kỹ năng cần tiêu hao tài nguyên [Hành động], hiện tại đổi thành không tiêu hao tài nguyên [Hành động], nhưng tất cả sát thương bạn phải chịu tăng 100%."
       },
-      "description": "以老者手指轻捏星屑的模样制成的护符。你呀，要去学会爱。"
+      "description": "Hộ phù làm theo dáng vẻ ngón tay lão giả nhẹ nhàng nhón lấy tinh trần. Ngươi nha, phải đi học được cách yêu thương."
     },
     {
-      "name": "战王的肖像",
+      "name": "Chiến Vương Đích Tiêu Tượng",
       "cost": 80,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "饰品",
-        "防御: 580"
+        "Trang sức",
+        "Phòng thủ: 580"
       ],
       "rarity": "legendary",
       "effect": {
-        "战王之力": "你的所有蓄力攻击(消耗[攻击]与[动作])造成的最终伤害提升60%。"
+        "Chiến vương chi lực": "Tất cả tấn công tụ lực (tiêu hao [Công kích] và [Hành động]) của bạn gây ra sát thương cuối cùng tăng 60%."
       },
-      "description": "以古代王者的形象制成的小肖像，这位王者是勇猛的战士，与神祇誓约。"
+      "description": "Bức chân dung nhỏ làm theo hình tượng vương giả cổ đại, vị vương giả này là chiến binh dũng mãnh, thề ước với thần linh."
     },
     {
-      "name": "法王的肖像",
+      "name": "Pháp Vương Đích Tiêu Tượng",
       "cost": 80,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "饰品",
-        "防御: 580"
+        "Trang sức",
+        "Phòng thủ: 580"
       ],
       "rarity": "legendary",
       "effect": {
-        "法王之力": "所有需要引导的技能，其引导时间减半(至少保留一个最短的施法动作)。"
+        "Pháp vương chi lực": "Tất cả kỹ năng cần dẫn đạo, thời gian dẫn đạo giảm một nửa (ít nhất giữ lại một động tác thi pháp ngắn nhất)."
       },
-      "description": "以古代王者的形象制成的小肖像，这位王者精通魔法，与神祇相连。"
+      "description": "Bức chân dung nhỏ làm theo hình tượng vương giả cổ đại, vị vương giả này tinh thông ma pháp, liên kết với thần linh."
     },
     {
-      "name": "古王护符",
+      "name": "Cổ Vương Hộ Phù",
       "cost": 90,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "护符",
-        "防御: 680"
+        "Hộ phù",
+        "Phòng thủ: 680"
       ],
       "rarity": "legendary",
       "effect": {
-        "古王祝福": "你施加给自身或友方的所有[增益]效果，持续时间增加2回合，数值效果提升25%。"
+        "Cổ vương chúc phúc": "Tất cả hiệu quả [Tăng ích] bạn thi triển cho bản thân hoặc đồng minh, thời gian duy trì tăng 2 hiệp, hiệu quả trị số tăng 25%."
       },
-      "description": "参考远古巨龙之王的形象制成的远古熟铁护符。古王的城，据说还在遥远天际的彼端矗立。"
+      "description": "Hộ phù sắt rèn viễn cổ tham khảo hình tượng Cổ Long Chi Vương. Tòa thành của Cổ Vương, nghe nói vẫn còn đứng sừng sững ở bờ bên kia chân trời xa xôi."
     },
     {
-      "name": "牺牲细枝",
+      "name": "Hi Sinh Tế Chi",
       "cost": 110,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "奇物",
-        "防御: 800"
+        "Kỳ vật",
+        "Phòng thủ: 800"
       ],
       "rarity": "mythic",
       "effect": {
-        "神树庇护": "当你受到致命伤害时，免疫该次伤害，并立即传送脱离战斗。你的HP、MP、SP完全恢复。此效果触发后，该物品将被摧毁。"
+        "Thần thụ tích hộ": "Khi bạn chịu sát thương chí tử, miễn dịch sát thương lần đó, và lập tức truyền tống thoát khỏi chiến đấu. HP, MP, SP của bạn hồi phục hoàn toàn. Sau khi hiệu quả này kích hoạt, vật phẩm này sẽ bị phá hủy."
       },
-      "description": "世界树的一部份，在世界久远开端时剪下的树枝。"
+      "description": "Một bộ phận của Cây Thế Giới, cành cây cắt xuống khi thế giới mới bắt đầu đã lâu."
     },
     {
-      "name": "黑月",
+      "name": "Hắc Nguyệt",
       "cost": 200,
-      "type": "饰品",
+      "type": "Trang sức",
       "tag": [
-        "奇物",
-        "防御: 1200"
+        "Kỳ vật",
+        "Phòng thủ: 1200"
       ],
       "rarity": "mythic",
       "effect": {
-        "命运逆转": "一次性使用。你可以指定一个在过去24小时内死亡的生物(不包括神祇)，使其完全复活且不受任何先前伤病影响。使用后此物品消失。"
+        "Mệnh vận nghịch chuyển": "Sử dụng một lần. Bạn có thể chỉ định một sinh vật đã chết trong vòng 24 giờ qua (không bao gồm thần linh), khiến nó sống lại hoàn toàn và không chịu ảnh hưởng của bất kỳ thương bệnh nào trước đó. Sau khi sử dụng vật phẩm này sẽ biến mất."
       },
-      "description": "月与星辰的低语者・露娜的秘密宝藏，与露娜自己洁白完满的月不同，此为无数命运的尽头，那轮漆黑之月。"
+      "description": "Mặt trăng và gười thì thầm với sao trời · Kho báu bí mật của Luna, khác với vầng trăng trắng noãn tròn vành vạnh của chính Luna, đây là điểm cuối của vô số vận mệnh, vầng trăng đen kịt đó."
     }
   ]
 }
