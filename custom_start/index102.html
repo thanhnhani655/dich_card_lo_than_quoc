@@ -807,7 +807,7 @@
                                     type: 'message',
                                     message_id: 'latest'
                                 });
-                            _.set(r, 'stat_data.causality_system.fate_points', e.destinyPoints);
+                            _.set(r, 'stat_data.destiny_system.fate_points', e.destinyPoints);
                             const s = _.fromPairs(_.map(o, e => [e.name, {
                                 quality: _.get(ge, e.rarity, 'Thường'),
                                 type: e.type,
@@ -883,7 +883,7 @@
                                     skills: a
                                 }]
                             }));
-                            _.set(r, 'stat_data.causality_system.relationship_list', d), await Mvu.replaceMvuData(r, {
+                            _.set(r, 'stat_data.destiny_system.relationship_list', d), await Mvu.replaceMvuData(r, {
                                 type: 'message',
                                 message_id: 'latest'
                             }), console.log('✅ Dữ liệu thiết lập trước đã ghi vào biến tin nhắn')
