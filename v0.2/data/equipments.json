@@ -8,7 +8,7 @@
         "Pháp trượng",
         "Tấn công: 15"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Thân trượng bằng gỗ bạch lạp được đánh bóng đơn giản, thẳng tắp không trang trí, đỉnh hơi thô, là trang bị tiêu chuẩn của ma pháp sư tập sự."
     },
@@ -20,7 +20,7 @@
         "Đoản trượng",
         "Tấn công: 10"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Đoản trượng được đẽo từ gỗ bạch dương, thân trượng khắc những hoa văn hình học đơn giản, thích hợp cho các trò vặt hoặc câu chú cơ bản, thuận tiện mang theo."
     },
@@ -32,7 +32,7 @@
         "Pháp khí",
         "Tấn công: 10"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Quả cầu được đánh bóng từ thủy tinh kém chất lượng, bên trong vẩn đục và có tạp chất, có thể dùng để bói toán cơ bản hoặc làm vật trung gian thi pháp."
     },
@@ -44,7 +44,7 @@
         "Pháp trượng",
         "Tấn công: 35"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Pháp lực tiết kiệm": "Khi thi pháp giảm 8% tiêu hao MP"
       },
@@ -58,7 +58,7 @@
         "Ma đạo thư",
         "Tấn công: 25"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Mỗi ngày mở đầu": "Mỗi ngày lần đầu thi triển kỹ năng phẩm chất [Thường], không tiêu hao MP."
       },
@@ -72,7 +72,7 @@
         "Pháp khí",
         "Tấn công: 30"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Hỏa diễm phụ gia": "Tất cả kỹ năng gây sát thương năng lượng, gây thêm 60 điểm sát thương năng lượng (Hỏa)."
       },
@@ -87,7 +87,7 @@
         "Pháp trượng",
         "Tấn công: 150"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Sát thương tăng phúc": "Tăng 12% sát thương.",
         "Ngạch ngoại tăng phúc": "Tăng thêm 8% sát thương."
@@ -102,7 +102,7 @@
         "Pháp khí",
         "Tấn công: 85"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Phạm vi mở rộng": "Khi thi triển kỹ năng phạm vi, giới hạn số lượng mục tiêu trong phạm vi +1."
       },
@@ -116,7 +116,7 @@
         "Pháp trượng",
         "Tấn công: 110"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Năng lượng tụ tiêu": "Tất cả kỹ năng sát thương năng lượng đơn thể của bạn, sát thương cuối cùng lên mục tiêu tăng 10%."
       },
@@ -131,7 +131,7 @@
         "Tấn công: 880",
         "Có thể trưởng thành"
       ],
-      "quality": "only",
+      "rarity": "only",
       "effect": {
         "Người dẫn độ": "Số lượng triệu hoán đơn lần của bất kỳ kỹ năng loại triệu hoán nào +1 (phá vỡ giới hạn ban đầu của kỹ năng)",
         "Tiền mãi lộ": "Nếu trong trận chiến đã kích hoạt hiệu quả triệu hoán, sau khi kết thúc trận chiến chắc chắn sẽ gặp phải một sự kiện xui xẻo mang tính tường thuật cần \"phá tài tiêu tai\" (như rơi túi tiền, đạo cụ quý giá bất ngờ hư hỏng, v.v.), giá trị tổn thất tỷ lệ thuận với sức mạnh của vật triệu hoán"
@@ -148,7 +148,7 @@
         "Thánh huy",
         "Tấn công: 8"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Biểu tượng mặt trời được điêu khắc từ gỗ thường, viền thô ráp, có thể dùng làm vật trung gian thi triển thần thuật, là chứng nhận thân phận của mục sư thực tập."
     },
@@ -160,7 +160,7 @@
         "Thánh linh",
         "Tấn công: 10"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Chuông tay nhỏ đúc bằng sắt thô, tiếng chuông trầm đục, khi lắc có thể dẫn dắt sức mạnh thần thánh yếu ớt, dùng cho các nghi thức cầu nguyện đơn giản."
     },
@@ -172,7 +172,7 @@
         "Quyền trượng",
         "Tấn công: 18"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Cán bằng gỗ cứng, đỉnh gắn một khối đồng thau chưa qua mài dũa, tượng trưng cho thần quyền, cũng có thể dùng như vũ khí cùn."
     },
@@ -184,7 +184,7 @@
         "Đơn thủ chùy",
         "Tấn công: 40"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Thần thánh chuyển đổi": "Khi sử dụng vũ khí này để tấn công thường, 50% sát thương vật lý chuyển hóa thành sát thương năng lượng."
       },
@@ -198,7 +198,7 @@
         "Thánh linh",
         "Tấn công: 28"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Trị liệu tăng phúc": "Tất cả kỹ năng có nhãn [Trị liệu], hồi phục thêm cho mục tiêu 15 điểm HP."
       },
@@ -212,7 +212,7 @@
         "Ma đạo thư",
         "Tấn công: 25"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Tăng ích kéo dài": "Tất cả kỹ năng có nhãn [Tăng ích], thời gian duy trì tăng thêm 1 hiệp."
       },
@@ -226,7 +226,7 @@
         "Thánh huy",
         "Tấn công: 75"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Thương xót": "Kỹ năng trị liệu của bạn đối với mục tiêu có HP dưới 30%, hiệu quả trị liệu tăng 20%."
       },
@@ -240,7 +240,7 @@
         "Thánh linh",
         "Tấn công: 70"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Tà ác chấn nhiếp": "Khi bạn sử dụng kỹ năng gây sát thương lên Vong Linh hoặc Thâm Uyên Ma Tộc, có 50% cơ hội (d20≥11) thi triển trạng thái [Chấn nhiếp] lên chúng, duy trì 1 hiệp."
       },
@@ -254,7 +254,7 @@
         "Đơn thủ chùy",
         "Tấn công: 105"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Thần thánh tài quyết": "Khi sử dụng vũ khí này tấn công thường hoặc kỹ năng sát thương vật lý trúng đích, gây thêm 40 điểm sát thương năng lượng. Hiệu quả này nhân đôi đối với Vong Linh hoặc Thâm Uyên Ma Tộc."
       },
@@ -270,7 +270,7 @@
         "Giáp vải",
         "Phòng thủ: 20"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Được cắt may từ vải bông thô dày màu đen, có mũ trùm đầu rộng, có thể che giấu thân hình, là chứng nhận thân phận của học đồ pháp sư."
     },
@@ -282,7 +282,7 @@
         "Giáp vải",
         "Phòng thủ: 18"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Chất liệu vải đay thô, liền với một mũ trùm lớn, có thể chắn gió che mưa, cung cấp sự bảo vệ nhẹ và giữ ấm."
     },
@@ -294,7 +294,7 @@
         "Giáp vải",
         "Phòng thủ: 50"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Pháp lực tăng phúc": "Giảm 8% tiêu hao MP."
       },
@@ -308,7 +308,7 @@
         "Giáp vải",
         "Phòng thủ: 120"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Áo thuật tinh thông": "Tăng 15% sát thương cuối cùng của tất cả kỹ năng gây sát thương năng lượng.",
         "Pháp lực hồi phục": "Mỗi hiệp hồi phục thêm 10 điểm MP."
@@ -323,7 +323,7 @@
         "Giáp vải",
         "Phòng thủ: 110"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Nguyên tố kháng tính": "Giảm 10% tất cả sát thương năng lượng phải chịu."
       },
@@ -339,7 +339,7 @@
         "Đơn thủ kiếm",
         "Tấn công: 18"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Được rèn đúc nhiều lần từ sắt tinh luyện, thân kiếm thon dài, có rãnh huyết, độ dẻo dai tốt, thích hợp cho nhiều loại hình chiến đấu."
     },
@@ -351,7 +351,7 @@
         "Thích kiếm",
         "Tấn công: 15"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Thân kiếm mảnh dẻ rèn từ thép tinh luyện, phối với miếng bảo vệ tay hình bướm phức tạp, nhẹ nhàng linh hoạt, là vũ khí thường dùng trong quyết đấu của quý tộc."
     },
@@ -363,7 +363,7 @@
         "Đơn thủ kiếm",
         "Tấn công: 19"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Rèn từ sắt chất lượng cao, chiều dài cán kiếm có thể cầm một tay hoặc hai tay, chiến thuật linh hoạt đa biến."
     },
@@ -375,7 +375,7 @@
         "Song thủ kiếm",
         "Tấn công: 20"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Trọng kiếm hai lưỡi đúc bằng sắt tinh luyện, phối với miếng bảo vệ tay hình chữ thập dài, cần hai tay để huy động, uy lực to lớn."
     },
@@ -387,7 +387,7 @@
         "Đơn thủ đao",
         "Tấn công: 16"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Đao thân thẳng một lưỡi bằng sắt, chuôi đao có một vòng sắt, trọng tâm dồn về phía trước, chém mạnh mẽ."
     },
@@ -399,7 +399,7 @@
         "Đơn thủ đao",
         "Tấn công: 17"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Đao cong một lưỡi bằng sắt, độ cong vừa phải, thuận lợi cho việc chém và cắt trên lưng ngựa."
     },
@@ -411,7 +411,7 @@
         "Chủy thủ",
         "Tấn công: 10"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Rèn từ sắt tinh luyện, lưỡi dao ngắn nhỏ mỏng nhẹ và cực kỳ sắc bén, thiết kế chuyên dùng cho ẩn nấp và ám sát."
     },
@@ -423,7 +423,7 @@
         "Đoản đao",
         "Tấn công: 12"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Đao chặt cán ngắn lưỡi sắt dày rộng, trọng tâm ở phía trước, thích hợp chặt cây cỏ và xử lý con mồi, là công cụ thực dụng để sinh tồn nơi hoang dã."
     },
@@ -435,7 +435,7 @@
         "Song thủ phủ",
         "Tấn công: 20"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Rìu sắt hai lưỡi nặng nề, gắn trên cán gỗ chắc chắn, cần hai tay để huy động, khả năng phá giáp cực mạnh."
     },
@@ -447,7 +447,7 @@
         "Đơn thủ chùy",
         "Tấn công: 14"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Đầu búa hình vuông đúc bằng sắt, một đầu hình nón, gắn trên cán gỗ, lực đánh tập trung, có thể đối phó hiệu quả với áo giáp."
     },
@@ -459,7 +459,7 @@
         "Liên gia",
         "Tấn công: 17"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Quả cầu sắt có gai nối với cán cầm qua dây xích sắt, khi vung có thể tạo ra lực xung kích to lớn, là vũ khí phá giáp kinh điển."
     },
@@ -471,7 +471,7 @@
         "Trường bính vũ khí",
         "Tấn công: 18"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Đỉnh cán gỗ dài phối với đầu rìu một lưỡi dày nặng, kiêm cụ phạm vi tấn công và sát thương, thích hợp đối kháng nhiều người trên chiến trường."
     },
@@ -483,7 +483,7 @@
         "Trường bính vũ khí",
         "Tấn công: 15"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Cán gỗ dẻo dai phối với đầu thương sắt đơn giản, ưu thế chiều dài giúp nó thuận lợi trong việc kiểm soát khoảng cách trong trận tuyến."
     },
@@ -495,7 +495,7 @@
         "Trường bính vũ khí",
         "Tấn công: 20"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Đại đao hai lưỡi cán dài, thân đao rộng, phạm vi chém rộng, là vũ khí lợi hại của bộ binh chống lại kỵ binh."
     },
@@ -507,7 +507,7 @@
         "Trường bính vũ khí",
         "Tấn công: 19"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Bên cạnh lưỡi thương dài có thêm một móc cong, có thể dùng để móc kéo kẻ địch hoặc cắt chân ngựa, chức năng đa dạng."
     },
@@ -519,7 +519,7 @@
         "Tiên",
         "Tấn công: 19"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Được nối từ nhiều đốt phiến sắt có lưỡi bằng vòng sắt, có thể vung vẩy như roi, cũng có thể thu gọn lại như kiếm, biến ảo khôn lường."
     },
@@ -531,7 +531,7 @@
         "Quyền sáo",
         "Tấn công: 16"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Tay cầm hình chữ H bằng sắt, hai đầu duỗi ra lưỡi ngắn sắc bén, thích hợp cận chiến quấn đấu ám sát, khó phòng ngự."
     },
@@ -543,7 +543,7 @@
         "Quyền sáo",
         "Tấn công: 9"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Tay gấu bằng sắt đúc nguyên khối, có bốn gai ngắn nhọn, có thể tăng cường cực lớn sát thương của cú đấm."
     },
@@ -555,7 +555,7 @@
         "Đơn thủ kiếm",
         "Tấn công: 55"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Xé rách": "Tấn công thường có 25% cơ hội (d20≥16) gây ra hiệu quả [Chảy máu], mỗi hiệp mất 10 điểm HP, duy trì 2 hiệp."
       },
@@ -569,7 +569,7 @@
         "Thích kiếm",
         "Tấn công: 50"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Chí mệnh": "Ngưỡng kiểm định bạo kích -1 (d20≥19 có thể bạo kích)."
       },
@@ -583,7 +583,7 @@
         "Song thủ chùy",
         "Tấn công: 58"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Phá giáp": "Khi tấn công, bỏ qua 20 điểm giá trị phòng thủ trang bị của mục tiêu."
       },
@@ -597,7 +597,7 @@
         "Đơn thủ kiếm",
         "Tấn công: 52"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Tiên thủ": "Khi trang bị vũ khí này, kiểm định tiên công của bạn nhận được +2 giá trị cộng thêm."
       },
@@ -611,7 +611,7 @@
         "Đơn thủ đao",
         "Tấn công: 50"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Cắt đứt": "Khi gây bạo kích, chắc chắn thi triển hiệu quả [Chảy máu] lên mục tiêu, mỗi hiệp mất 15 điểm HP, duy trì 2 hiệp."
       },
@@ -625,7 +625,7 @@
         "Trường bính vũ khí",
         "Tấn công: 48"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Xuyên thấu": "Tất cả kỹ năng sát thương vật lý, nhận thêm 20 điểm sát thương chuẩn."
       },
@@ -639,7 +639,7 @@
         "Song thủ phủ",
         "Tấn công: 60"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Chấn động": "Khi kiểm định tấn công là [Hữu hiệu trúng đích] hoặc cao hơn, có 50% cơ hội (d20≥11) đánh ngã mục tiêu, khiến nó không thể hành động trong hiệp sau."
       },
@@ -653,7 +653,7 @@
         "Liên gia",
         "Tấn công: 55"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Choáng váng": "Khi kiểm định tấn công là [Hữu hiệu trúng đích] hoặc cao hơn, có 50% cơ hội (d20≥11) làm mục tiêu [Chóng mặt], tỷ lệ trúng đích giảm 20%, duy trì 1 hiệp."
       },
@@ -667,7 +667,7 @@
         "Quyền sáo",
         "Tấn công: 45"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Tôi độc": "Khi tấn công có 25% cơ hội (d20≥16) thi triển hiệu quả [Trúng độc], mỗi hiệp gây 10 điểm sát thương chuẩn, duy trì 3 hiệp."
       },
@@ -681,7 +681,7 @@
         "Chủy thủ",
         "Tấn công: 40"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Bối thích": "Khi tấn công từ phía sau kẻ địch chưa phát hiện ra bạn, đòn tấn công đầu tiên chắc chắn bạo kích."
       },
@@ -695,7 +695,7 @@
         "Trường bính vũ khí",
         "Tấn công: 56"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Phá tổn": "Khi tấn công trúng đích, có 25% cơ hội (d20≥16) làm giảm 10% giá trị phòng thủ của một trang bị [Phòng cụ] của mục tiêu, duy trì đến khi kết thúc chiến đấu."
       },
@@ -709,7 +709,7 @@
         "Trường bính vũ khí",
         "Tấn công: 60"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Cự vật sát thủ": "Sát thương vật lý gây ra cho kẻ địch có thể hình lớn hơn bản thân tăng 15%."
       },
@@ -723,7 +723,7 @@
         "Đơn thủ chùy",
         "Tấn công: 45"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Đoạn cốt": "Khi kiểm định tấn công là [Hữu hiệu trúng đích] hoặc cao hơn, có 50% cơ hội (d20≥11) làm mục tiêu [Gãy xương], Nhạy bén tạm thời -1, duy trì 2 hiệp."
       },
@@ -737,7 +737,7 @@
         "Đơn thủ kiếm",
         "Tấn công: 120"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Liệt diễm": "Tất cả đòn tấn công kèm thêm 50 điểm sát thương năng lượng (Hỏa)."
       },
@@ -751,7 +751,7 @@
         "Song thủ kiếm",
         "Tấn công: 140"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Thần thánh trừng phạt": "Sát thương cuối cùng gây ra cho Vong Linh và Thâm Uyên Ma Tộc tăng 30%."
       },
@@ -765,7 +765,7 @@
         "Song thủ kiếm",
         "Tấn công: 145"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Dung nham bạo phát": "Trọng kích (tiêu hao [Tấn công] và [Hành động]): Đập mạnh xuống đất, gây 80 điểm sát thương năng lượng (Hỏa) cho tối đa 3 kẻ địch trong vòng 3 mét xung quanh bản thân."
       },
@@ -779,7 +779,7 @@
         "Song thủ kiếm",
         "Tấn công: 700"
       ],
-      "quality": "legendary",
+      "rarity": "legendary",
       "effect": {
         "Sương Chi Ai Thương": "Khi vũ khí gây sát thương, mỗi lần tấn công gây thêm 700 điểm sát thương năng lượng (Băng).",
         "Quyền năng: Linh hồn thu hoạch": "Khi tung kỹ năng tấn công, gây thêm sát thương năng lượng bằng 15% HP tối đa của mục tiêu.",
@@ -795,7 +795,7 @@
         "Trường bính vũ khí",
         "Tấn công: 130"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Ẩm ướt": "Khi tấn công trúng đích có 50% cơ hội (d20≥11) làm mục tiêu [Ẩm ướt], sát thương năng lượng (Lôi) phải chịu tăng 20%, duy trì 2 hiệp."
       },
@@ -809,7 +809,7 @@
         "Song thủ phủ",
         "Tấn công: 135"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Thuận phách": "Khi bạn sử dụng kỹ năng tiêu hao tài nguyên [Tấn công], gây 25% sát thương vật lý lan tỏa cho tối đa 2 kẻ địch khác trong vòng 2 mét xung quanh mục tiêu."
       },
@@ -823,7 +823,7 @@
         "Song thủ phủ",
         "Tấn công: 135"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Sương đống": "Khi tấn công trúng đích có 50% cơ hội (d20≥11) thi triển hiệu quả [Đóng băng], làm tốc độ di chuyển của mục tiêu giảm 30%, duy trì 2 hiệp."
       },
@@ -837,7 +837,7 @@
         "Đơn thủ chùy",
         "Tấn công: 110"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Ma túy": "Khi tấn công trúng đích có 25% cơ hội (d20≥16) làm mục tiêu [Tê liệt], hiệp sau không thể sử dụng tài nguyên [Hành động]."
       },
@@ -851,7 +851,7 @@
         "Song đao",
         "Tấn công: 95"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Nguyệt chi chúc phúc": "Vào ban đêm hoặc môi trường tối tăm, tất cả đòn tấn công của bạn kèm thêm 30 điểm sát thương năng lượng."
       },
@@ -865,7 +865,7 @@
         "Chủy thủ",
         "Tấn công: 90"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Hư nhược": "Khi tấn công trúng đích có 50% cơ hội (d20≥11) thi triển trạng thái [Suy yếu] lên mục tiêu, khiến sát thương vật lý gây ra giảm 15%, duy trì 2 hiệp."
       },
@@ -879,7 +879,7 @@
         "Tiên",
         "Tấn công: 85"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Cấp thủ sinh mệnh": "Khi gây sát thương, hồi phục HP bằng 10% giá trị sát thương gây ra."
       },
@@ -895,7 +895,7 @@
         "Cung",
         "Tấn công: 17"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Thân cung được chế tạo từ gỗ và sừng thú ép lại, lực kéo vừa phải, độ chính xác tốt, là vũ khí thường dùng của thợ săn và trinh sát."
     },
@@ -907,7 +907,7 @@
         "Cung",
         "Tấn công: 19"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Làm từ một cây gỗ thủy tùng nguyên vẹn, thân cung thon dài, tầm bắn xa, cần lực tay khá mạnh mới có thể kéo ra."
     },
@@ -919,7 +919,7 @@
         "Nỏ",
         "Tấn công: 20"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Cấu tạo từ cánh nỏ sắt và thân nỏ gỗ, lên dây bằng cơ cấu cơ khí, độ chính xác cao nhưng nạp đạn chậm, thích hợp phòng thủ thành và bắn tỉa."
     },
@@ -931,7 +931,7 @@
         "Cung",
         "Tấn công: 55"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Tinh chuẩn": "Kết quả kiểm định tấn công của bạn là [Miễn cưỡng trúng đích] thì tự động nâng lên thành [Hữu hiệu trúng đích]."
       },
@@ -945,7 +945,7 @@
         "Súng",
         "Tấn công: 60"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Phá giáp xạ kích": "Khi tấn công, bỏ qua 15 điểm giá trị phòng thủ trang bị của mục tiêu."
       },
@@ -959,7 +959,7 @@
         "Nỏ",
         "Tấn công: 58"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Chí mệnh xạ kích": "Bội số sát thương bạo kích của bạn tăng thêm 0.2 lần (từ 1.5 lần lên 1.7 lần)."
       },
@@ -973,7 +973,7 @@
         "Súng",
         "Tấn công: 60"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Viễn trình ưu thế": "Khi tấn công mục tiêu cách xa hơn 20 mét, sát thương cuối cùng tăng 10%."
       },
@@ -987,7 +987,7 @@
         "Vũ khí ném",
         "Tấn công: 30"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Linh xảo đầu trịch": "Khi trang bị vũ khí này, Nhạy bén của bạn cung cấp thêm +2 giá trị cộng thêm trong kiểm định tấn công."
       },
@@ -1001,7 +1001,7 @@
         "Súng",
         "Tấn công: 150"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Ổn định xạ kích": "Nếu hiệp này bạn chưa sử dụng tài nguyên [Hành động] để di chuyển, thì lần [Tấn công] tiếp theo của bạn gây thêm 25% sát thương."
       },
@@ -1015,7 +1015,7 @@
         "Súng",
         "Tấn công: 145"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Bạo tạc đạn": "Khi tấn công trúng đích, gây 40 điểm sát thương năng lượng (Hỏa) lan tỏa cho mục tiêu và tối đa 2 kẻ địch trong vòng 2 mét xung quanh."
       },
@@ -1029,7 +1029,7 @@
         "Cung",
         "Tấn công: 140"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Phong chi tấn tiệp": "Khi kiểm định tấn công là [Hữu hiệu trúng đích] hoặc cao hơn, có 50% cơ hội (d20≥11) làm Nhạy bén của bạn tạm thời tăng 1 điểm, duy trì 2 hiệp."
       },
@@ -1043,7 +1043,7 @@
         "Súng",
         "Tấn công: 130"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Xuyên giáp đạn": "Tấn công bỏ qua 50% giá trị phòng thủ trang bị của mục tiêu."
       },
@@ -1057,7 +1057,7 @@
         "Súng",
         "Tấn công: 115"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Linh hồn cấp thủ": "Khi gây sát thương, hồi phục lượng MP bằng 15% giá trị sát thương gây ra."
       },
@@ -1071,7 +1071,7 @@
         "Vũ khí ném",
         "Tấn công: 105"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Cảm điện": "Khi tấn công trúng đích, có 25% cơ hội (d20≥16) làm mục tiêu [Cảm điện], chịu tất cả sát thương tăng 10%, duy trì 1 hiệp.",
         "Tự động hồi thu": "Sau khi ném vũ khí này sẽ tự động quay về tay bạn vào đầu hiệp sau."
@@ -1086,7 +1086,7 @@
         "Nỏ",
         "Tấn công: 110"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Cơ hội": "Khi tấn công nếu kiểm định tấn công là [Trượt], thì có thể lập tức tiêu hao 10 điểm SP, tiến hành lại một lần kiểm định tấn công (mỗi hiệp giới hạn một lần)."
       },
@@ -1102,7 +1102,7 @@
         "Vũ khí ném",
         "Tấn công: 5"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Cấu tạo từ hai sợi dây da và một túi da, dùng để ném đá tốc độ cao, là trang bị tầm xa đơn giản nhất."
     },
@@ -1114,7 +1114,7 @@
         "Vũ khí ném",
         "Tấn công: 8"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Gai ngắn nhọn hình thoi bằng sắt, đã được cân bằng trọng lượng, thích hợp ném nhanh để quấy rối kẻ địch."
     },
@@ -1126,7 +1126,7 @@
         "Chủy thủ",
         "Tấn công: 10"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Dao găm sắt bản rộng, có miếng bảo vệ tay cong lên trên, chuyên dùng để đỡ đòn và phản công."
     },
@@ -1138,7 +1138,7 @@
         "Thủ phủ",
         "Tấn công: 9"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Rìu sắt một lưỡi cán ngắn, trọng lượng cân bằng, vừa có thể chém gần, cũng thích hợp để ném."
     },
@@ -1150,7 +1150,7 @@
         "Đoản đao",
         "Tấn công: 11"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Đao một lưỡi cán ngắn, chỗ mũi dao có một móc cong sắc bén, có thể móc kéo vũ khí hoặc mũ giáp của đối thủ."
     },
@@ -1162,7 +1162,7 @@
         "Tiên",
         "Tấn công: 7"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Roi mềm cán ngắn đan bằng da dày, phần cuối gia trọng, chủ yếu dùng để quất làm rối loạn nhịp điệu của đối thủ."
     },
@@ -1174,7 +1174,7 @@
         "Đoản kiếm",
         "Tấn công: 30"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Cường hóa phòng ngự": "Khi bạn sử dụng [Hành động] để phòng ngự, nhận thêm 20 điểm miễn thương vật lý tạm thời."
       },
@@ -1188,7 +1188,7 @@
         "Chủy thủ",
         "Tấn công: 35"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Tự cơ phản kích": "Sau khi né tránh thành công đòn tấn công của kẻ địch, sát thương tấn công thường tiếp theo của bạn tăng 25%."
       },
@@ -1202,7 +1202,7 @@
         "Thủ phủ",
         "Tấn công: 32"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Chí mệnh đầu trịch": "Ngưỡng kiểm định bạo kích của đòn ném -1 (d20≥19 có thể bạo kích)."
       },
@@ -1216,7 +1216,7 @@
         "Đoản đao",
         "Tấn công: 38"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Xé rách hộ giáp": "Khi tấn công, có 15% cơ hội (d20≥18) bỏ qua 50% giá trị phòng thủ trang bị của mục tiêu."
       },
@@ -1230,7 +1230,7 @@
         "Tiên",
         "Tấn công: 28"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Tinh lực tước nhược": "Khi kiểm định tấn công là [Hữu hiệu trúng đích] hoặc cao hơn, có 50% cơ hội (d20≥11) làm tốc độ hồi phục SP của mục tiêu giảm 20%, duy trì 2 hiệp."
       },
@@ -1244,7 +1244,7 @@
         "Quyền sáo",
         "Tấn công: 85"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Ám ảnh phản kích": "Nếu hiệp này bạn né tránh hoặc đỡ đòn thành công công kích của kẻ địch, lần tấn công tiếp theo của bạn đính kèm thêm 40 điểm sát thương chuẩn."
       },
@@ -1258,7 +1258,7 @@
         "Vũ khí ném",
         "Tấn công: 80"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Liên tỏa thiểm điện": "Khi ném trúng đích, sẽ bật nảy sang một kẻ địch khác trong vòng 2 mét, gây 50% sát thương ban đầu.",
         "Tự động hồi thu": "Sau khi ném vũ khí này sẽ tự động quay về tay bạn vào đầu hiệp sau."
@@ -1275,7 +1275,7 @@
         "Khiên",
         "Phòng thủ: 8"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Khiên tròn mặt sắt nhỏ đường kính khoảng một cánh tay, nhẹ nhàng linh hoạt, thuận lợi để đỡ nhanh đòn tấn công của đối thủ."
     },
@@ -1287,7 +1287,7 @@
         "Khiên",
         "Phòng thủ: 10"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Khiên tròn ép từ nhiều lớp ván gỗ và phủ da, trung tâm có lòng khiên bằng sắt, cung cấp bảo hộ cơ bản đáng tin cậy."
     },
@@ -1299,7 +1299,7 @@
         "Khiên",
         "Phòng thủ: 12"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Thiết kế hình diều gỗ trên rộng dưới hẹp, có thể bảo vệ hiệu quả thân mình, là trang bị tiêu chuẩn khi bộ binh xung phong."
     },
@@ -1311,7 +1311,7 @@
         "Khiên",
         "Phòng thủ: 18"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Khiên chữ nhật lớn bằng gỗ cao bằng người, mép gia cố bằng lá sắt, cung cấp bảo hộ toàn diện nhưng cực kỳ cồng kềnh."
     },
@@ -1323,7 +1323,7 @@
         "Tí giáp",
         "Phòng thủ: 8"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Giáp tay cấu tạo từ vài phiến giáp sắt và đai da, bảo vệ toàn bộ cẳng tay, có thể dùng để đỡ đao kiếm."
     },
@@ -1335,7 +1335,7 @@
         "Khiên",
         "Phòng thủ: 40"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Vật lý giảm thương": "Sát thương vật lý phải chịu giảm 5%."
       },
@@ -1349,7 +1349,7 @@
         "Khiên",
         "Phòng thủ: 35"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Tinh lực hồi phục": "Sau khi đỡ thành công đòn tấn công của kẻ địch, bản thân hồi phục 15 điểm SP."
       },
@@ -1363,7 +1363,7 @@
         "Tí giáp",
         "Phòng thủ: 38"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Thể chất gia thành": "Khi trang bị phòng cụ này, Thể chất của bạn được +2 khi tính toán giảm miễn vật lý."
       },
@@ -1377,7 +1377,7 @@
         "Khiên",
         "Phòng thủ: 60"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Thất hoành": "Khi bị tấn công, có 25% cơ hội (d20≥16) làm người tấn công [Mất thăng bằng], kết quả kiểm định tấn công lần sau giảm một cấp."
       },
@@ -1391,7 +1391,7 @@
         "Khiên",
         "Phòng thủ: 80"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Thủ hộ đảo ngôn": "Khi bạn hoặc đồng minh chịu tấn công từ Vong Linh hoặc Thâm Uyên Ma Tộc, bạn có thể tiêu hao [Hành động] để cung cấp một lần đỡ đòn cho mục tiêu, hấp thụ sát thương bằng 10% HP tối đa của bạn."
       },
@@ -1405,7 +1405,7 @@
         "Khiên",
         "Phòng thủ: 90"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Pháp thuật thiên chuyển": "Khi bạn trở thành mục tiêu của pháp thuật đơn thể, có 15% cơ hội (d20≥18) làm pháp thuật đó vô hiệu."
       },
@@ -1419,7 +1419,7 @@
         "Sách ma đạo",
         "Phòng thủ: 70"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Pháp thuật hấp thu": "Mỗi trận chiến một lần, khi bạn chịu sát thương năng lượng, có thể tiêu hao [Hành động] lưu trữ 50% sát thương lần đó, và giải phóng trong lần tấn công tiếp theo của bạn, đính kèm lượng sát thương năng lượng tương đương."
       },
@@ -1433,7 +1433,7 @@
         "Tí giáp",
         "Phòng thủ: 75"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Đạn đạo thiên chuyển": "Tất cả sát thương vật lý tầm xa phải chịu giảm 20%."
       },
@@ -1447,7 +1447,7 @@
         "Khiên",
         "Phòng thủ: 85"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Kinh cức phản thương": "Khi đỡ đòn cận chiến thành công, gây cho kẻ tấn công sát thương vật lý bằng 15% giá trị sát thương trước khi đỡ."
       },
@@ -1461,7 +1461,7 @@
         "Tí giáp",
         "Phòng thủ: 70"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Hỏa diễm hấp thu": "Sát thương năng lượng (Hỏa) phải chịu giảm 30%, và chuyển hóa 50% giá trị giảm thiểu thành sát thương năng lượng (Hỏa) thêm cho lần tấn công tiếp theo của bạn."
       },
@@ -1475,7 +1475,7 @@
         "Khiên",
         "Phòng thủ: 80"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Băng sương cách đáng": "Khi đỡ đòn cận chiến thành công, có 50% cơ hội (d20≥11) thi triển hiệu ứng [Sương giá] lên kẻ tấn công, làm tốc độ di chuyển của hắn giảm 30%, duy trì 1 hiệp."
       },
@@ -1491,7 +1491,7 @@
         "Giáp nhẹ",
         "Phòng thủ: 18"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "May và nhồi từ nhiều lớp vải lanh hoặc vải bông, cung cấp sự bảo vệ cơ bản nhất, có còn hơn không."
     },
@@ -1503,7 +1503,7 @@
         "Giáp nhẹ",
         "Phòng thủ: 20"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Trên nền da cứng khảm dày đặc đinh sắt, trong khi giữ được sự linh hoạt đồng thời tăng cường bảo vệ đối với đòn chém."
     },
@@ -1515,7 +1515,7 @@
         "Giáp nhẹ",
         "Phòng thủ: 6"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Mũ giáp đơn giản may từ da thuộc cứng, chỉ che được đỉnh đầu, cung cấp sự bảo vệ chấn động cơ bản nhất."
     },
@@ -1527,7 +1527,7 @@
         "Giáp nặng",
         "Phòng thủ: 8"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Mũ sắt hình nồi, phía trước tán đinh một thanh sắt hướng xuống để bảo vệ sống mũi, là trang bị thường thấy trong quân đội."
     },
@@ -1539,7 +1539,7 @@
         "Giáp nhẹ",
         "Phòng thủ: 5"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Da thuộc dày dặn đã qua xử lý may thành, bảo vệ lòng bàn tay và ngón tay, ngăn vũ khí mài mòn."
     },
@@ -1551,7 +1551,7 @@
         "Giáp nặng",
         "Phòng thủ: 7"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Miếng sắt che mu bàn tay, cố định bằng dây da, có thể bảo vệ tay khỏi đòn chém khi đỡ đòn."
     },
@@ -1563,7 +1563,7 @@
         "Giáp nhẹ",
         "Phòng thủ: 5"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Giày ống ngắn chắc chắn làm từ da bò, đế giày khá dày, có thể bảo vệ chân và thích ứng với việc đi đường dài."
     },
@@ -1575,7 +1575,7 @@
         "Giáp nặng",
         "Phòng thủ: 7"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Giáp chân cấu tạo từ nhiều miếng sắt khớp nối, thường bọc bên ngoài giày, bảo vệ đôi chân."
     },
@@ -1587,7 +1587,7 @@
         "Giáp nhẹ",
         "Phòng thủ: 55"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Ẩn nặc": "Trong trạng thái phi chiến đấu, giảm tỷ lệ bị kẻ địch phát hiện."
       },
@@ -1601,7 +1601,7 @@
         "Giáp nặng",
         "Phòng thủ: 60"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Liên giáp phòng hộ": "Sát thương vật lý (Chém/Đâm) phải chịu giảm 10%."
       },
@@ -1615,7 +1615,7 @@
         "Giáp nặng",
         "Phòng thủ: 65"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Sinh mệnh gia thành": "Giới hạn HP tối đa tăng 80 điểm."
       },
@@ -1629,7 +1629,7 @@
         "Giáp nặng",
         "Phòng thủ: 58"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Kháng bạo kích": "Sát thương bạo kích vật lý phải chịu giảm 20%."
       },
@@ -1643,7 +1643,7 @@
         "Giáp nhẹ",
         "Phòng thủ: 52"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Nại lực gia thành": "Giới hạn SP tối đa tăng 50 điểm."
       },
@@ -1657,7 +1657,7 @@
         "Giáp nặng",
         "Phòng thủ: 30"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Kiên định": "Miễn dịch hiệu ứng tiêu cực sinh ra do kiểm định tấn công là [Bạo kích]."
       },
@@ -1671,7 +1671,7 @@
         "Giáp nặng",
         "Phòng thủ: 32"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Tinh thần phòng hộ": "Sát thương tinh thần phải chịu giảm 10%."
       },
@@ -1685,7 +1685,7 @@
         "Giáp nhẹ",
         "Phòng thủ: 25"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Trọng kích": "Sát thương cuối cùng của tấn công thường tăng 10 điểm."
       },
@@ -1699,7 +1699,7 @@
         "Giáp nặng",
         "Phòng thủ: 35"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Lực lượng tăng phúc": "Khi sử dụng kỹ năng liên quan đến [Sức mạnh], sát thương cuối cùng tăng 5%."
       },
@@ -1713,7 +1713,7 @@
         "Giáp nhẹ",
         "Phòng thủ: 28"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Cấp hành": "Mỗi ngày có thể tiến hành một lần di chuyển nhanh kéo dài 1 giờ, không tiêu hao thêm thể lực."
       },
@@ -1727,7 +1727,7 @@
         "Giáp nặng",
         "Phòng thủ: 34"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Ổn cố": "Miễn dịch hiệu ứng [Đánh ngã]."
       },
@@ -1741,7 +1741,7 @@
         "Giáp nặng",
         "Phòng thủ: 40"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Phạm vi giảm thương": "Sát thương phạm vi phải chịu giảm 15%."
       },
@@ -1755,7 +1755,7 @@
         "Giáp nặng",
         "Phòng thủ: 150"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Vật lý phòng hộ": "Tất cả sát thương vật lý phải chịu giảm 15%."
       },
@@ -1769,7 +1769,7 @@
         "Giáp nặng",
         "Phòng thủ: 140"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Nguyên tố phòng hộ": "Tất cả sát thương năng lượng phải chịu giảm 15%."
       },
@@ -1783,7 +1783,7 @@
         "Giáp nhẹ",
         "Phòng thủ: 130"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Âm ảnh thiểm tị": "Trong môi trường bóng tối hoặc mờ tối, kiểm định né tránh của bạn nhận thêm +3 giá trị cộng thêm."
       },
@@ -1797,7 +1797,7 @@
         "Giáp nặng",
         "Phòng thủ: 145"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Lực lượng gia thành": "Thuộc tính [Sức mạnh] của bạn khi tính toán sát thương được +2 thêm."
       },
@@ -1811,7 +1811,7 @@
         "Giáp nhẹ",
         "Phòng thủ: 135"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Mẫn tiệp gia thành": "Thuộc tính [Nhạy bén] của bạn khi tính toán né tránh và tiên công được +2 thêm."
       },
@@ -1825,7 +1825,7 @@
         "Trang sức",
         "Phòng thủ: 20"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Ngụy trang": "Khi kiểm định đối kháng thám tra tinh thần hoặc hiệu ứng mị hoặc, thuộc tính [Tinh thần] của bạn được coi như +5 thêm."
       },
@@ -1839,7 +1839,7 @@
         "Giáp nặng",
         "Phòng thủ: 80"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Hỏa diễm kháng tính": "Sát thương năng lượng (Hỏa) phải chịu giảm 25%."
       },
@@ -1853,7 +1853,7 @@
         "Giáp vải",
         "Phòng thủ: 40"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Chân thị": "Bạn có thể cảm nhận được đơn vị tàng hình trong phạm vi 10 mét."
       },
@@ -1867,7 +1867,7 @@
         "Giáp nhẹ",
         "Phòng thủ: 45"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Thi pháp cảnh thị": "Khi có người thi pháp thù địch bắt đầu thi pháp trong vòng 15 mét, bạn sẽ lập tức nhận được cảnh báo."
       },
@@ -1881,7 +1881,7 @@
         "Giáp nặng",
         "Phòng thủ: 70"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Thiết quyền": "Tấn công tay không của bạn gây sát thương vật lý tương đương (Sức mạnh x5), và có 25% cơ hội (d20≥16) đánh ngã mục tiêu."
       },
@@ -1895,7 +1895,7 @@
         "Giáp vải",
         "Phòng thủ: 40"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Thi pháp tiết ước": "Tất cả kỹ năng cần động tác thi pháp, tiêu hao MP hoặc SP giảm 10%."
       },
@@ -1909,7 +1909,7 @@
         "Giáp nhẹ",
         "Phòng thủ: 65"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Vô thanh di động": "Di chuyển của bạn sẽ không phát ra bất kỳ âm thanh nào, và tốc độ di chuyển tăng 15%."
       },
@@ -1923,7 +1923,7 @@
         "Giáp nhẹ",
         "Phòng thủ: 60"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Phụ trọng tăng cường": "Khả năng mang vác của bạn tăng 50%."
       },
@@ -1937,7 +1937,7 @@
         "Giáp nặng",
         "Phòng thủ: 75"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Bất động như sơn": "Khi bạn bị cưỡng chế di dời, bạn có thể tiến hành một lần kiểm định thể chất (d20+Thể chất), nếu kết quả lớn hơn 15, thì kháng cự hiệu quả di dời lần đó."
       },
@@ -1951,7 +1951,7 @@
         "Giáp nhẹ",
         "Phòng thủ: 55"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Thủy thượng hành tẩu": "Bạn có thể tiêu hao tài nguyên [Hành động] để đi lại trên mặt nước, giống như trên đất bằng, duy trì 1 phút."
       },
@@ -1967,7 +1967,7 @@
         "Nhẫn",
         "Phòng thủ: 5"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Nhẫn bạc bình thường, thiết kế đơn giản không hoa văn, có thể dùng làm nền tảng phụ ma hoặc dùng làm tín vật."
     },
@@ -1979,7 +1979,7 @@
         "Dây chuyền",
         "Phòng thủ: 5"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Dây da buộc một túi da nhỏ, bên trong đựng một ít thảo dược hoặc mảnh đá chúc phúc, cung cấp an ủi về mặt tâm lý."
     },
@@ -1991,7 +1991,7 @@
         "Vòng tay",
         "Phòng thủ: 6"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Vòng tay hở làm bằng đồng, gia công thô sơ nhưng vô cùng bền, là trang sức thường thấy trong giới lính đánh thuê và mạo hiểm giả."
     },
@@ -2003,7 +2003,7 @@
         "Dây chuyền",
         "Phòng thủ: 8"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Xâu chuỗi từ răng dã thú hoặc mẩu xương nhỏ, tượng trưng cho dũng khí và kỹ năng săn bắn của thợ săn."
     },
@@ -2015,7 +2015,7 @@
         "Trâm ngực",
         "Phòng thủ: 10"
       ],
-      "quality": "common",
+      "rarity": "common",
       "effect": {},
       "description": "Trâm ngực hình lá bằng bạc, ở giữa khảm một viên đá quý nhỏ rẻ tiền, có thể tăng nhẹ mị lực của người đeo."
     },
@@ -2027,7 +2027,7 @@
         "Nhẫn",
         "Phòng thủ: 30"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Viễn trình tăng thương": "Sát thương cuối cùng của tất cả tấn công vật lý tầm xa tăng 10 điểm."
       },
@@ -2041,7 +2041,7 @@
         "Dây chuyền",
         "Phòng thủ: 35"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Vật lý hộ thuẫn": "Nhận được một lá chắn có thể hấp thụ 30 điểm sát thương vật lý. Sau khi lá chắn này bị phá hủy, sẽ hồi phục khi bắt đầu trận chiến tiếp theo."
       },
@@ -2055,7 +2055,7 @@
         "Giày sức",
         "Phòng thủ: 28"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Tiên phát chế nhân": "Kiểm định tiên công của bạn nhận thêm +2 giá trị cộng thêm."
       },
@@ -2069,7 +2069,7 @@
         "Dây chuyền",
         "Phòng thủ: 32"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Năng lượng hộ thuẫn": "Nhận được một lá chắn có thể hấp thụ 30 điểm sát thương năng lượng. Sau khi lá chắn này bị phá hủy, sẽ hồi phục khi bắt đầu trận chiến tiếp theo."
       },
@@ -2083,7 +2083,7 @@
         "Dây chuyền",
         "Phòng thủ: 90"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Sinh mệnh khôi phục": "Khi kết thúc mỗi hiệp, hồi phục 15 điểm HP."
       },
@@ -2097,7 +2097,7 @@
         "Thát sức",
         "Phòng thủ: 85"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Ứng cấp hộ thuẫn": "Khi HP của bạn lần đầu tiên thấp hơn 50%, tự động nhận được một lá chắn có thể hấp thụ 200 điểm sát thương toàn loại, duy trì 3 hiệp. Mỗi trận chiến chỉ có thể kích hoạt một lần."
       },
@@ -2111,7 +2111,7 @@
         "Vòng tay",
         "Phòng thủ: 80"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Lôi điện phụ gia": "Tấn công sát thương vật lý của bạn có 25% cơ hội (d20≥16) đính kèm thêm 60 điểm sát thương năng lượng (Lôi điện)."
       },
@@ -2125,7 +2125,7 @@
         "Phụ kiện trang bị",
         "Phòng thủ: 20"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Miêu chuẩn gia thành": "Trang bị trên cung, nỏ hoặc súng. Kiểm định tấn công khi trang bị vũ khí này nhận thêm +3 giá trị cộng thêm."
       },
@@ -2139,7 +2139,7 @@
         "Dây chuyền",
         "Phòng thủ: 88"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Nguyên tố để kháng": "Tất cả sát thương năng lượng phải chịu giảm 10%."
       },
@@ -2153,7 +2153,7 @@
         "Trâm ngực",
         "Phòng thủ: 75"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Tiềm hành cường hóa": "Trong trạng thái tiềm hành, kiểm định trinh sát của kẻ địch đối với bạn cần phải vượt qua thêm 10 điểm độ khó."
       },
@@ -2167,7 +2167,7 @@
         "Nhẫn",
         "Phòng thủ: 70"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Pháp lực khôi phục": "Khi kết thúc mỗi hiệp, hồi phục 10 điểm MP."
       },
@@ -2181,7 +2181,7 @@
         "Giày sức",
         "Phòng thủ: 72"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Thiểm tị gia thành": "Kẻ địch phát động tấn công đối với bạn, kết quả kiểm định tấn công của hắn -2."
       },
@@ -2197,7 +2197,7 @@
         "Dây chuyền",
         "Phòng thủ: 28"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Sinh mệnh gia thành": "Giới hạn HP tối đa tăng 6%."
       },
@@ -2211,7 +2211,7 @@
         "Dây chuyền",
         "Phòng thủ: 28"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Pháp lực gia thành": "Giảm 8% tiêu hao MP."
       },
@@ -2225,7 +2225,7 @@
         "Dây chuyền",
         "Phòng thủ: 28"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Nại lực gia thành": "Giảm 8% tiêu hao SP."
       },
@@ -2239,7 +2239,7 @@
         "Dây chuyền",
         "Phòng thủ: 30"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Nại lực khôi phục": "Khi kết thúc mỗi hiệp, hồi phục 60 điểm SP."
       },
@@ -2253,7 +2253,7 @@
         "Huy chương",
         "Phòng thủ: 35"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Đa trọng phòng hộ": "Tất cả sát thương năng lượng và chuẩn phải chịu giảm 8%."
       },
@@ -2267,7 +2267,7 @@
         "Huy chương",
         "Phòng thủ: 35"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Ma pháp phòng hộ": "Sát thương năng lượng phải chịu giảm 8%."
       },
@@ -2281,7 +2281,7 @@
         "Huy chương",
         "Phòng thủ: 35"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Hỏa diễm phòng hộ": "Sát thương năng lượng (Hỏa) phải chịu giảm 20%."
       },
@@ -2295,7 +2295,7 @@
         "Huy chương",
         "Phòng thủ: 35"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Lôi điện phòng hộ": "Sát thương năng lượng (Lôi điện) phải chịu giảm 20%."
       },
@@ -2309,7 +2309,7 @@
         "Huy chương",
         "Phòng thủ: 35"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Thần thánh phòng hộ": "Sát thương năng lượng (Thần thánh) phải chịu giảm 20%."
       },
@@ -2323,7 +2323,7 @@
         "Đầu sức",
         "Phòng thủ: 32"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Kháng độc": "Trong kiểm định đối kháng hiệu ứng [Trúng độc], kiểm định thể chất của bạn +5."
       },
@@ -2337,7 +2337,7 @@
         "Đầu sức",
         "Phòng thủ: 32"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Cường nhận": "Sát thương vật lý liên tục phải chịu (như chảy máu) giảm 25%."
       },
@@ -2351,7 +2351,7 @@
         "Đầu sức",
         "Phòng thủ: 32"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Thanh tỉnh": "Trong kiểm định đối kháng hiệu ứng giảm ích loại tinh thần (như mị hoặc, sợ hãi), kiểm định tinh thần của bạn +5."
       },
@@ -2365,7 +2365,7 @@
         "Hộ phù",
         "Phòng thủ: 25"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Pháp thuật tăng thương": "Sát thương cuối cùng của tất cả kỹ năng sát thương năng lượng tăng 5%."
       },
@@ -2379,7 +2379,7 @@
         "Hộ phù",
         "Phòng thủ: 25"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Luyện kim cường hóa": "Đạo cụ [Tiêu hao phẩm] bạn sử dụng, hiệu quả trị số tăng 10%."
       },
@@ -2393,7 +2393,7 @@
         "Hộ phù",
         "Phòng thủ: 30"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Chuyên chú": "Khi bạn sử dụng kỹ năng cần dẫn đạo, kiểm định thể chất kháng cự đánh gãy nhận thêm +5 giá trị cộng thêm."
       },
@@ -2407,7 +2407,7 @@
         "Hộ phù",
         "Phòng thủ: 15"
       ],
-      "quality": "uncommon",
+      "rarity": "uncommon",
       "effect": {
         "Khinh doanh": "Kiểm định né tránh của bạn nhận thêm +3 giá trị cộng thêm, nhưng tất cả sát thương bạn phải chịu tăng 15%."
       },
@@ -2421,7 +2421,7 @@
         "Dây chuyền",
         "Phòng thủ: 75"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Cường hiệu sinh mệnh gia thành": "Giới hạn HP tối đa tăng 12%."
       },
@@ -2435,7 +2435,7 @@
         "Dây chuyền",
         "Phòng thủ: 75"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Cường hiệu pháp lực gia thành": "Giới hạn MP tối đa tăng 12%."
       },
@@ -2449,7 +2449,7 @@
         "Dây chuyền",
         "Phòng thủ: 75"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Cường hiệu nại lực gia thành": "Giới hạn SP tối đa tăng 12%."
       },
@@ -2463,7 +2463,7 @@
         "Dây chuyền",
         "Phòng thủ: 80"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Sinh mệnh khôi phục": "Khi kết thúc mỗi hiệp, hồi phục 10 điểm HP."
       },
@@ -2477,7 +2477,7 @@
         "Dây chuyền",
         "Phòng thủ: 80"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Pháp lực khôi phục": "Khi kết thúc mỗi hiệp, hồi phục 10 điểm MP."
       },
@@ -2491,7 +2491,7 @@
         "Dây chuyền",
         "Phòng thủ: 85"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Nại lực khôi phục": "Khi kết thúc mỗi hiệp, hồi phục 10 điểm SP."
       },
@@ -2505,7 +2505,7 @@
         "Dây chuyền",
         "Phòng thủ: 82"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Trị liệu tăng phúc": "Tất cả hiệu quả hồi phục HP từ mọi nguồn tăng 30%."
       },
@@ -2519,7 +2519,7 @@
         "Dây chuyền",
         "Phòng thủ: 82"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Pháp lực hồi phục tăng phúc": "Tất cả hiệu quả hồi phục MP từ mọi nguồn tăng 30%."
       },
@@ -2533,7 +2533,7 @@
         "Huy chương",
         "Phòng thủ: 100"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Vật lý phòng hộ": "Tất cả sát thương vật lý phải chịu giảm 10%."
       },
@@ -2547,7 +2547,7 @@
         "Huy chương",
         "Phòng thủ: 110"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Cường hiệu đa trọng phòng hộ": "Tất cả sát thương năng lượng, tinh thần, chuẩn phải chịu giảm 10%."
       },
@@ -2561,7 +2561,7 @@
         "Huy chương",
         "Phòng thủ: 110"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Cường hiệu ma pháp phòng hộ": "Sát thương năng lượng phải chịu giảm 25%."
       },
@@ -2575,7 +2575,7 @@
         "Huy chương",
         "Phòng thủ: 110"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Cường hiệu hỏa diễm phòng hộ": "Sát thương năng lượng (Hỏa) phải chịu giảm 40%."
       },
@@ -2589,7 +2589,7 @@
         "Huy chương",
         "Phòng thủ: 110"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Cường hiệu lôi điện phòng hộ": "Sát thương năng lượng (Lôi điện) phải chịu giảm 40%."
       },
@@ -2603,7 +2603,7 @@
         "Huy chương",
         "Phòng thủ: 110"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Cường hiệu thần thánh phòng hộ": "Sát thương năng lượng (Thần thánh) phải chịu giảm 40%."
       },
@@ -2617,7 +2617,7 @@
         "Đầu sức",
         "Phòng thủ: 90"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Độc tố miễn dịch": "Trong kiểm định đối kháng hiệu ứng [Trúng độc], bạn có 70% cơ hội (d20≥7) trực tiếp miễn dịch hiệu quả này."
       },
@@ -2631,7 +2631,7 @@
         "Đầu sức",
         "Phòng thủ: 90"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Cường nhận thân khu": "Sát thương vật lý liên tục phải chịu (như chảy máu) giảm 50%."
       },
@@ -2645,7 +2645,7 @@
         "Đầu sức",
         "Phòng thủ: 90"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Cương thiết ý chí": "Trong kiểm định đối kháng hiệu ứng giảm ích loại tinh thần (như mị hoặc, sợ hãi), bạn có 75% cơ hội (d20≥6) trực tiếp miễn dịch hiệu quả này."
       },
@@ -2659,7 +2659,7 @@
         "Hộ phù",
         "Phòng thủ: 88"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Thích ứng tính": "Sau khi bạn kháng cự thành công một hiệu quả tiêu cực, kiểm định kháng cự đối với hiệu quả tiêu cực cùng tên của bạn trong trận chiến này nhận thêm +5 giá trị cộng thêm. Hệu quả này cộng dồn tối đa 3 lần."
       },
@@ -2673,7 +2673,7 @@
         "Hộ phù",
         "Phòng thủ: 70"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Thâu tập": "Khi bạn tấn công một kẻ địch chưa tiến vào trạng thái chiến đấu, sát thương cuối cùng đòn tấn công đầu tiên của bạn tăng 70%."
       },
@@ -2687,7 +2687,7 @@
         "Hộ phù",
         "Phòng thủ: 70"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Phản kích": "Trong vòng 1 hiệp sau khi bạn đỡ đòn hoặc né tránh thành công kẻ địch tấn công, sát thương cuối cùng đòn tấn công tiếp theo của bạn tăng 50%."
       },
@@ -2701,7 +2701,7 @@
         "Hộ phù",
         "Phòng thủ: 70"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Chung kết nhất kích": "Khi bạn sử dụng kỹ năng có gắn thẻ [Liên kích] hoặc [Đa đoạn], sát thương tấn công lần cuối cùng của kỹ năng đó tăng 40%."
       },
@@ -2715,7 +2715,7 @@
         "Hộ phù",
         "Phòng thủ: 70"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Súc lực công kích cường hóa": "Tấn công tụ lực của bạn (đòn đánh mạnh tiêu hao [Công kích] và [Hành động]) gây ra sát thương cuối cùng tăng 30%."
       },
@@ -2729,7 +2729,7 @@
         "Hộ phù",
         "Phòng thủ: 70"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Phá thuẫn": "Khi bạn tấn công kẻ địch trang bị [Giáp nặng] hoặc [Khiên], sát thương vật lý gây ra tăng 20%."
       },
@@ -2743,7 +2743,7 @@
         "Hộ phù",
         "Phòng thủ: 70"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Nghênh kích": "Khi bạn gây sát thương cho kẻ địch đang thực hiện động tác tấn công, sát thương lần đó tăng 30%."
       },
@@ -2757,7 +2757,7 @@
         "Hộ phù",
         "Phòng thủ: 80"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Kỵ thừa công kích cường hóa": "Trong trạng thái cưỡi ngựa, sát thương cuối cùng của tất cả tấn công của bạn tăng 20%."
       },
@@ -2771,7 +2771,7 @@
         "Hộ phù",
         "Phòng thủ: 80"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Cao địa ưu thế": "Khi bạn phát động tấn công từ vị trí cao hơn mục tiêu, sát thương cuối cùng của lần tấn công đó tăng 50%."
       },
@@ -2785,7 +2785,7 @@
         "Hộ phù",
         "Phòng thủ: 85"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Thuẫn phòng cường hóa": "Khi bạn trang bị [Khiên], kiểm định kháng cự hiệu ứng [Đẩy lui] nhận thêm +5 giá trị cộng thêm, đồng thời sát thương SP phải chịu khi đỡ đòn giảm 30%."
       },
@@ -2799,7 +2799,7 @@
         "Hộ phù",
         "Phòng thủ: 85"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Song thủ trì ác": "Khi bạn cầm một vũ khí cận chiến bằng hai tay, sát thương vật lý bạn gây ra tăng 10%."
       },
@@ -2813,7 +2813,7 @@
         "Hộ phù",
         "Phòng thủ: 82"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Cung thuật tinh thông": "Tất cả tấn công sử dụng vũ khí loại [Cung], sát thương cuối cùng tăng 20%."
       },
@@ -2827,7 +2827,7 @@
         "Hộ phù",
         "Phòng thủ: 82"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Viễn trình xạ kích": "Tầm tấn công hiệu quả của tất cả vũ khí loại [Cung] tăng 50%, đồng thời sát thương cuối cùng gây ra tăng 10%."
       },
@@ -2841,7 +2841,7 @@
         "Hộ phù",
         "Phòng thủ: 82"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Miêu chuẩn xạ kích": "Bạn có thể tiêu hao tài nguyên [Hành động] để tiến hành ngắm bắn, lần tấn công sử dụng [Cung] hoặc [Nỏ] tiếp theo của bạn, sát thương cuối cùng tăng 50%."
       },
@@ -2855,7 +2855,7 @@
         "Hộ phù",
         "Phòng thủ: 85"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Pháp thuật thương hại cường hóa": "Sát thương cuối cùng của tất cả kỹ năng sát thương năng lượng tăng 10%."
       },
@@ -2869,7 +2869,7 @@
         "Dây chuyền",
         "Phòng thủ: 90"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Bào hao cường hóa": "Kỹ năng loại gầm thét hoặc loại phun thở của bạn, sát thương cuối cùng gây ra tăng 20%."
       },
@@ -2883,7 +2883,7 @@
         "Huy chương",
         "Phòng thủ: 95"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Ma kiếm sĩ": "Khi bạn sử dụng vũ khí cận chiến thi triển kỹ năng có thể gây ra sát thương năng lượng, tiêu hao MP hoặc SP của kỹ năng đó giảm 30%."
       },
@@ -2897,7 +2897,7 @@
         "Hộ phù",
         "Phòng thủ: 95"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Chiến kỹ cường hóa": "Chiến kỹ vũ khí của bạn (kỹ năng chuyên thuộc vũ khí tiêu hao SP), sát thương cuối cùng gây ra tăng 20%."
       },
@@ -2911,7 +2911,7 @@
         "Hộ phù",
         "Phòng thủ: 100"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Cường nhận": "Khi bạn sử dụng kỹ năng cần dẫn đạo, kiểm định thể chất kháng cự đánh gãy nhận thêm +10 giá trị cộng thêm."
       },
@@ -2925,7 +2925,7 @@
         "Hộ phù",
         "Phòng thủ: 85"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Xung kích cường hóa": "Các kỹ năng loại đá, dậm đất hoặc húc của bạn, sát thương cuối cùng gây ra tăng 15%."
       },
@@ -2939,7 +2939,7 @@
         "Hộ phù",
         "Phòng thủ: 150"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Phụ trọng phòng ngự": "Tổng trọng lượng trang bị của bạn mỗi khi vượt quá 25% giới hạn tải trọng cơ bản của bạn, giảm miễn sát thương vật lý bạn nhận được tăng 3%. (Tối đa 12%)"
       },
@@ -2953,7 +2953,7 @@
         "Hộ phù",
         "Phòng thủ: 50"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Ma lực tăng phúc": "Tất cả sát thương năng lượng bạn gây ra tăng 12%, nhưng tất cả sát thương vật lý bạn phải chịu cũng tăng 10%."
       },
@@ -2967,7 +2967,7 @@
         "Hộ phù",
         "Phòng thủ: 50"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Hỏa diễm tăng phúc": "Sát thương năng lượng (Hỏa) bạn gây ra tăng 15%, nhưng tất cả sát thương vật lý bạn phải chịu cũng tăng 10%."
       },
@@ -2981,7 +2981,7 @@
         "Hộ phù",
         "Phòng thủ: 50"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Lôi điện tăng phúc": "Sát thương năng lượng (Lôi điện) bạn gây ra tăng 15%, nhưng tất cả sát thương vật lý bạn phải chịu cũng tăng 10%."
       },
@@ -2995,7 +2995,7 @@
         "Hộ phù",
         "Phòng thủ: 50"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Thần thánh tăng phúc": "Sát thương năng lượng (Thần thánh) bạn gây ra tăng 15%, nhưng tất cả sát thương vật lý bạn phải chịu cũng tăng 10%."
       },
@@ -3009,7 +3009,7 @@
         "Hộ phù",
         "Phòng thủ: 70"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Tần tử bạo phát": "Khi HP của bạn thấp hơn 20%, tất cả sát thương bạn gây ra tăng 20%."
       },
@@ -3023,7 +3023,7 @@
         "Hộ phù",
         "Phòng thủ: 110"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Tần tử thủ hộ": "Khi HP của bạn thấp hơn 20%, tất cả sát thương bạn phải chịu giảm 30%."
       },
@@ -3037,7 +3037,7 @@
         "Dây chuyền",
         "Phòng thủ: 90"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Hoàn hảo tăng thương": "Khi HP của bạn là 100%, tất cả sát thương bạn gây ra tăng 10%."
       },
@@ -3051,7 +3051,7 @@
         "Dây chuyền",
         "Phòng thủ: 120"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Hoàn hảo giảm thương": "Khi HP của bạn là 100%, tất cả sát thương bạn phải chịu giảm 25%."
       },
@@ -3065,7 +3065,7 @@
         "Hộ phù",
         "Phòng thủ: 75"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Bạo kích hấp huyết": "Khi bạn gây bạo kích lên một mục tiêu, hồi phục (85 + 10% HP tối đa) sinh mệnh. Mỗi mục tiêu chỉ có thể kích hoạt một lần."
       },
@@ -3079,7 +3079,7 @@
         "Hộ phù",
         "Phòng thủ: 75"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Bạo kích hấp lam": "Khi bạn gây bạo kích lên một mục tiêu, hồi phục (85 + 10% MP tối đa) pháp lực. Mỗi mục tiêu chỉ có thể kích hoạt một lần."
       },
@@ -3093,7 +3093,7 @@
         "Hộ phù",
         "Phòng thủ: 80"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Bạo kích tăng thương": "Sau khi bạn gây ra bạo kích, tất cả sát thương của bạn trong 2 hiệp tiếp theo tăng 20%. Hiệu quả này không cộng dồn."
       },
@@ -3107,7 +3107,7 @@
         "Huy chương",
         "Phòng thủ: 80"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Kích sát tăng thương": "Sau khi bạn hạ gục một kẻ địch, tất cả sát thương của bạn trong 2 hiệp tiếp theo tăng 20%. Hiệu quả này không cộng dồn."
       },
@@ -3121,7 +3121,7 @@
         "Trang sức",
         "Phòng thủ: 80"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Triệu hoán vật tử vong tăng thương": "Khi sinh vật triệu hồi của bạn chết hoặc biến mất, tất cả sát thương của bạn trong 2 hiệp tiếp theo tăng 20%. Hiệu quả này không cộng dồn."
       },
@@ -3135,7 +3135,7 @@
         "Hộ phù",
         "Phòng thủ: 80"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Hỗn loạn tăng thương": "Khi trong vòng 10 mét quanh bạn có đơn vị rơi vào trạng thái [Hỗn loạn] hoặc [Sợ hãi], tất cả sát thương của bạn tăng 20%, cho đến khi trạng thái đó kết thúc."
       },
@@ -3149,7 +3149,7 @@
         "Hộ phù",
         "Phòng thủ: 80"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Thụy miên tăng thương": "Khi trong vòng 10 mét quanh bạn có đơn vị rơi vào trạng thái [Ngủ] , tất cả sát thương của bạn tăng 20%, cho đến khi trạng thái đó kết thúc."
       },
@@ -3163,7 +3163,7 @@
         "Hộ phù",
         "Phòng thủ: 80"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Trung độc tăng thương": "Khi trong vòng 10 mét quanh bạn có đơn vị rơi vào trạng thái [Trúng độc], tất cả sát thương của bạn tăng 20%, cho đến khi trạng thái đó kết thúc."
       },
@@ -3177,7 +3177,7 @@
         "Hộ phù",
         "Phòng thủ: 80"
       ],
-      "quality": "rare",
+      "rarity": "rare",
       "effect": {
         "Lưu huyết tăng thương": "Khi trong vòng 10 mét quanh bạn có đơn vị rơi vào trạng thái [Chảy máu], tất cả sát thương của bạn tăng 20%, cho đến khi trạng thái đó kết thúc."
       },
@@ -3191,7 +3191,7 @@
         "Hộ phù",
         "Phòng thủ: 200"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Toàn diện đề thăng": "Giới hạn HP, MP, SP tối đa đều tăng 10%."
       },
@@ -3205,7 +3205,7 @@
         "Huy chương",
         "Phòng thủ: 300"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Cường hiệu vật lý phòng hộ": "Tất cả sát thương vật lý phải chịu giảm 20%."
       },
@@ -3219,7 +3219,7 @@
         "Huy chương",
         "Phòng thủ: 320"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Cứu cực đa trọng phòng hộ": "Tất cả sát thương năng lượng, tinh thần, chuẩn phải chịu giảm 15%."
       },
@@ -3233,7 +3233,7 @@
         "Huy chương",
         "Phòng thủ: 320"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Cứu cực ma pháp phòng hộ": "Sát thương năng lượng phải chịu giảm 35%."
       },
@@ -3247,7 +3247,7 @@
         "Huy chương",
         "Phòng thủ: 320"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Cứu cực hỏa diễm phòng hộ": "Sát thương năng lượng (Hỏa) phải chịu giảm 60%."
       },
@@ -3261,7 +3261,7 @@
         "Huy chương",
         "Phòng thủ: 320"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Cứu cực lôi điện phòng hộ": "Sát thương năng lượng (Lôi điện) phải chịu giảm 60%."
       },
@@ -3275,7 +3275,7 @@
         "Huy chương",
         "Phòng thủ: 320"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Cứu cực thần thánh phòng hộ": "Sát thương năng lượng (Thần thánh) phải chịu giảm 60%."
       },
@@ -3289,7 +3289,7 @@
         "Hộ phù",
         "Phòng thủ: 250"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Đại pháp sư": "Sát thương cuối cùng của tất cả kỹ năng sát thương năng lượng tăng 20%."
       },
@@ -3303,7 +3303,7 @@
         "Hộ phù",
         "Phòng thủ: 280"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Bạo tạc vật cường hóa": "Đạo cụ [Tiêu hao phẩm] gây sát thương năng lượng (Hỏa) bạn sử dụng, sát thương tăng 100%."
       },
@@ -3317,7 +3317,7 @@
         "Hộ phù",
         "Phòng thủ: 200"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Pha lê đại pháo": "Tiêu hao MP của tất cả kỹ năng giảm 35%, nhưng giới hạn HP tối đa của bạn giảm 15%."
       },
@@ -3331,7 +3331,7 @@
         "Hộ phù",
         "Phòng thủ: 220"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Cứu cực thiểm tị": "Kiểm định né tránh của bạn nhận thêm +5 giá trị cộng thêm, nhưng tất cả sát thương bạn phải chịu tăng 10%."
       },
@@ -3345,7 +3345,7 @@
         "Dây chuyền",
         "Phòng thủ: 260"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Lược đoạt sinh mệnh": "Khi kẻ địch trong vòng 15 mét quanh bạn tử vong, hồi phục (100 + 5% HP tối đa) sinh mệnh."
       },
@@ -3359,7 +3359,7 @@
         "Trang sức",
         "Phòng thủ: 260"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Lược đoạt pháp lực": "Khi kẻ địch trong vòng 15 mét quanh bạn tử vong, hồi phục (100 + 5% MP tối đa) pháp lực."
       },
@@ -3373,7 +3373,7 @@
         "Trang sức",
         "Phòng thủ: 250"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Liên tục công kích khôi phục": "Khi bạn sử dụng tấn công thường trúng cùng một mục tiêu 3 lần liên tiếp, hồi phục (50 + 5% HP tối đa) sinh mệnh."
       },
@@ -3387,7 +3387,7 @@
         "Huy chương",
         "Phòng thủ: 250"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Liên kích chi dực": "Khi bạn sử dụng tấn công thường trúng cùng một mục tiêu 3 lần liên tiếp, nhận được một tầng hiệu ứng [Liên Kích Chi Dực], mỗi tầng khiến sát thương vật lý bạn gây ra tăng 5%, duy trì đến khi kết thúc chiến đấu. Hiệu quả này cộng dồn tối đa 4 lần."
       },
@@ -3401,7 +3401,7 @@
         "Trang sức",
         "Phòng thủ: 180"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Triệt để vô thanh": "Tất cả hành vi di chuyển của bạn (bao gồm chạy, nhảy) đều sẽ không phát ra bất kỳ âm thanh nào."
       },
@@ -3415,7 +3415,7 @@
         "Trang sức",
         "Phòng thủ: 180"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Phục kích": "Khi bạn ngồi xổm và giữ yên tĩnh quá 3 giây, đồng thời khoảng cách với kẻ địch gần nhất vượt quá 15 mét, bạn sẽ tiến vào trạng thái [Ẩn hình]. Di chuyển hoặc thực hiện bất kỳ động tác nào sẽ giải trừ trạng thái này."
       },
@@ -3429,7 +3429,7 @@
         "Trang sức",
         "Phòng thủ: 180"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Ngụy trang": "Sau khi kích hoạt, trong 10 phút tiếp theo, ấn tượng đầu tiên của tất cả sinh vật có trí tuệ đối với bạn sẽ là 'người bản địa' hoặc 'người mình không có uy hiếp', trừ khi bạn có hành vi thù địch rõ ràng. Mỗi ngày có thể sử dụng một lần."
       },
@@ -3443,7 +3443,7 @@
         "Hộ phù",
         "Phòng thủ: 290"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Phong lôi tăng thương": "Tất cả kỹ năng gây sát thương năng lượng (Lôi điện hoặc Gió) của bạn, sát thương cuối cùng tăng 20%."
       },
@@ -3457,7 +3457,7 @@
         "Dây chuyền",
         "Phòng thủ: 290"
       ],
-      "quality": "epic",
+      "rarity": "epic",
       "effect": {
         "Chuẩn bị công kích": "Khi bạn sử dụng tài nguyên [Hành động] để tiến hành [Chuẩn bị] (không làm gì cả), [Công kích] lần tiếp theo của bạn gây ra sát thương tăng 50%."
       },
@@ -3471,7 +3471,7 @@
         "Huy chương",
         "Phòng thủ: 500"
       ],
-      "quality": "legendary",
+      "rarity": "legendary",
       "effect": {
         "Cứu cực vật lý phòng hộ": "Tất cả sát thương vật lý phải chịu giảm 30%."
       },
@@ -3485,7 +3485,7 @@
         "Trang sức",
         "Phòng thủ: 550"
       ],
-      "quality": "legendary",
+      "rarity": "legendary",
       "effect": {
         "Thần thánh tích hộ": "Sát thương năng lượng (Thần thánh) phải chịu giảm 80%."
       },
@@ -3499,7 +3499,7 @@
         "Nghĩa chi",
         "Phòng thủ: 450"
       ],
-      "quality": "legendary",
+      "rarity": "legendary",
       "effect": {
         "Liên vũ": "Khi bạn sử dụng kỹ năng có gắn thẻ [Liên kích] hoặc [Đa đoạn] và trúng hoàn toàn, nhận được một tầng hiệu ứng [Liên Vũ], mỗi tầng khiến sát thương vật lý bạn gây ra tăng 10%, duy trì đến khi kết thúc chiến đấu. Hiệu quả này cộng dồn tối đa 6 lần."
       },
@@ -3513,7 +3513,7 @@
         "Ghim cài",
         "Phòng thủ: 400"
       ],
-      "quality": "legendary",
+      "rarity": "legendary",
       "effect": {
         "Miêu chi ưu nhã": "Bạn miễn dịch tất cả sát thương gây ra do rơi từ trên cao xuống."
       },
@@ -3527,7 +3527,7 @@
         "Hộ phù",
         "Phòng thủ: 650"
       ],
-      "quality": "legendary",
+      "rarity": "legendary",
       "effect": {
         "Cuồng long chi lực": "Sát thương năng lượng (Hỏa, Lôi điện) bạn gây ra tăng 40%. Bạn miễn dịch hiệu quả [Thiêu đốt] và [Tê liệt]."
       },
@@ -3541,7 +3541,7 @@
         "Hộ phù",
         "Phòng thủ: 600"
       ],
-      "quality": "legendary",
+      "rarity": "legendary",
       "effect": {
         "Bất động chi vương": "Khi bạn sử dụng bất kỳ [Tiêu hao phẩm] hoặc kỹ năng hồi phục HP, MP hoặc SP nào, quá trình đó sẽ không bị tấn công của kẻ địch cấp 5 trở xuống cắt ngang."
       },
@@ -3555,7 +3555,7 @@
         "Hộ phù",
         "Phòng thủ: 400"
       ],
-      "quality": "legendary",
+      "rarity": "legendary",
       "effect": {
         "Cực tốc thi pháp": "Tất cả kỹ năng cần tiêu hao tài nguyên [Hành động], hiện tại đổi thành không tiêu hao tài nguyên [Hành động], nhưng tất cả sát thương bạn phải chịu tăng 100%."
       },
@@ -3569,7 +3569,7 @@
         "Trang sức",
         "Phòng thủ: 580"
       ],
-      "quality": "legendary",
+      "rarity": "legendary",
       "effect": {
         "Chiến vương chi lực": "Tất cả tấn công tụ lực (tiêu hao [Công kích] và [Hành động]) của bạn gây ra sát thương cuối cùng tăng 60%."
       },
@@ -3583,7 +3583,7 @@
         "Trang sức",
         "Phòng thủ: 580"
       ],
-      "quality": "legendary",
+      "rarity": "legendary",
       "effect": {
         "Pháp vương chi lực": "Tất cả kỹ năng cần dẫn đạo, thời gian dẫn đạo giảm một nửa (ít nhất giữ lại một động tác thi pháp ngắn nhất)."
       },
@@ -3597,7 +3597,7 @@
         "Hộ phù",
         "Phòng thủ: 680"
       ],
-      "quality": "legendary",
+      "rarity": "legendary",
       "effect": {
         "Cổ vương chúc phúc": "Tất cả hiệu quả [Tăng ích] bạn thi triển cho bản thân hoặc đồng minh, thời gian duy trì tăng 2 hiệp, hiệu quả trị số tăng 25%."
       },
@@ -3611,7 +3611,7 @@
         "Kỳ vật",
         "Phòng thủ: 800"
       ],
-      "quality": "mythic",
+      "rarity": "mythic",
       "effect": {
         "Thần thụ tích hộ": "Khi bạn chịu sát thương chí tử, miễn dịch sát thương lần đó, và lập tức truyền tống thoát khỏi chiến đấu. HP, MP, SP của bạn hồi phục hoàn toàn. Sau khi hiệu quả này kích hoạt, vật phẩm này sẽ bị phá hủy."
       },
@@ -3625,7 +3625,7 @@
         "Kỳ vật",
         "Phòng thủ: 1200"
       ],
-      "quality": "mythic",
+      "rarity": "mythic",
       "effect": {
         "Mệnh vận nghịch chuyển": "Sử dụng một lần. Bạn có thể chỉ định một sinh vật đã chết trong vòng 24 giờ qua (không bao gồm thần linh), khiến nó sống lại hoàn toàn và không chịu ảnh hưởng của bất kỳ thương bệnh nào trước đó. Sau khi sử dụng vật phẩm này sẽ biến mất."
       },
