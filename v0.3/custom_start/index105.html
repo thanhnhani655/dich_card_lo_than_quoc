@@ -179,6 +179,7 @@
                 }), e
             })),
             x = ['力量', '敏捷', '体质', '智力', '精神'],
+            //attributeLabelMap = {    '力量': 'Sức Mạnh',    '敏捷': 'Khéo Léo',    '体质': 'Thể Chất',    '智力': 'Trí Tuệ',    '精神': 'Tinh Thần'},
             S = e => e >= 1 && e <= 4 ? 0 : e >= 5 && e <= 8 ? 1 : e >= 9 && e <= 12 ? 2 : e >= 13 && e <= 16 ? 3 : e >= 17 && e <= 20 ? 4 : e >= 21 && e <= 24 ? 5 : e >= 25 ? 6 : 0,
             w = e => e >= 1 && e <= 4 ? 'Tầng 1' : e >= 5 && e <= 8 ? 'Tầng 2' : e >= 9 && e <= 12 ? 'Tầng 3' : e >= 13 && e <= 16 ? 'Tầng 4' : e >= 17 && e <= 20 ? 'Tầng 5' : e >= 21 && e <= 24 ? 'Tầng 6' : e >= 25 ? 'Tầng 7' : 'Tầng không rõ',
             D = {};
@@ -827,6 +828,37 @@
                                 slot: '' // Hoặc map nếu có thông tin slot
                             }]));
                             _.set(r, 'stat_data.protagonist.equipment', eq);
+                            const protagonistData = {
+                                name: e.name, // Tên nhân vật
+                                gender: '自定义' === e.gender ? e.customGender : e.gender, // Giới tính
+                                age: e.age, // Tuổi
+                                race: '自定义' === e.race ? e.customRace : e.race, // Chủng tộc
+                                identity: ['自定义' === e.identity ? e.customIdentity : e.identity], // Thân phận (chuyển thành mảng)
+                                start_location: '自定义' === e.startLocation ? e.customStartLocation : e.startLocation, // Nơi bắt đầu
+                                level: e.level, // Cấp độ
+                                life_tier: w(e.level), // Tầng sinh mệnh (dùng hàm w để tính từ level)
+                                attribute: { // Thuộc tính
+                                    strength: 4 + S(e.level) + e.attributePoints.力量,
+                                    dexterity: 4 + S(e.level) + e.attributePoints.敏捷,
+                                    constitution: 4 + S(e.level) + e.attributePoints.体质,
+                                    intelligence: 4 + S(e.level) + e.attributePoints.智力,
+                                    mind: 4 + S(e.level) + e.attributePoints.精神
+                                },
+                                // Các chỉ số sống cơ bản (tính toán sơ bộ hoặc để 0 để hệ thống tự tính sau)
+                                current_hp: 100,
+                                max_hp: 100,
+                                current_mp: 50,
+                                max_mp: 50,
+                                attribute_point: e.remainingAP || 0, // Điểm thuộc tính còn dư
+
+                                // Các trường khác nếu cần thiết theo schema mvu_zod
+                                job: [], // Nếu có chọn nghề nghiệp
+                                path_to_godhood: { is_unlocked: false } // Mặc định chưa mở
+                            };
+                            _.set(r, 'stat_data.protagonist.race', protagonistData.race);
+                            _.set(r, 'stat_data.protagonist.life_tier', protagonistData.life_tier);
+                            _.set(r, 'stat_data.protagonist.identity', protagonistData.identity);
+                            _.set(r, 'stat_data.protagonist.attribute', protagonistData.attribute);
                             const i = _.fromPairs(_.map(n, e => [e.name, {
                                 rarity: _.get(ge, e.rarity, 'Thường'),
                                 amount: e.quantity || 1,
@@ -5379,7 +5411,7 @@
                         class: 'attribute-item'
                     }, [(0, r.createVNode)((0, r.unref)(jl), {
                         'model-value': (0, r.unref)(l).attributePoints[e],
-                        label: e,
+                        label: { '力量': 'Sức Mạnh', '敏捷': 'Khéo Léo', '体质': 'Thể Chất', '智力': 'Trí Tuệ', '精神': 'Tinh Thần' }[e] || e,
                         min: 0,
                         max: (0, r.unref)(t).maxAP,
                         'disable-increment': (0, r.unref)(t).remainingAP <= 0,
