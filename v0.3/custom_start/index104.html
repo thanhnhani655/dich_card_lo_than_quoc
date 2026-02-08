@@ -798,7 +798,7 @@
             return {
                 executeJourney: async () => {
                     try {
-                        await async function (e, t, a, l) {
+                        await async function (e, t, a, l, u) {
                             await waitGlobalInitialized('Mvu');
                             const o = _.filter(a, e => !e.isCustom),
                                 n = _.filter(t, e => !e.isCustom),
@@ -817,6 +817,16 @@
                                 description: e.description
                             }]));
                             _.set(r, 'stat_data.protagonist.skills', s);
+                            const eq = _.fromPairs(_.map(u, e => [e.name, {
+                                rarity: _.get(ge, e.rarity, 'Thường'),
+                                type: e.type,
+                                // map các trường khác tương tự như inventory
+                                tag: e.tag || [],
+                                effect: e.effect || {},
+                                description: e.description,
+                                slot: '' // Hoặc map nếu có thông tin slot
+                            }]));
+                            _.set(r, 'stat_data.protagonist.equipment', eq);
                             const i = _.fromPairs(_.map(n, e => [e.name, {
                                 rarity: _.get(ge, e.rarity, 'Thường'),
                                 amount: e.quantity || 1,
@@ -887,7 +897,7 @@
                                 type: 'message',
                                 message_id: 'latest'
                             }), console.log('✅ Dữ liệu thiết lập trước đã ghi vào biến tin nhắn')
-                        }(l.value, e.selectedItems, e.selectedSkills, e.selectedPartners), console.log('✅ Dữ liệu nhân vật đã ghi vào biến MVU');
+                        }(l.value, e.selectedItems, e.selectedSkills, e.selectedPartners, e.selectedEquipments), console.log('✅ Dữ liệu nhân vật đã ghi vào biến MVU');
                         const a = function (e, t, a, l, o, n, c) {
                             const r = [],
                                 s = '自定义' === e.gender ? e.customGender : e.gender,
