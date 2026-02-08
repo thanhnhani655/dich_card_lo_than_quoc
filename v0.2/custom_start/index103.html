@@ -73,20 +73,20 @@
             }],
             v = [{
                 label: 'Vũ Khí',
-                value: '武器'
+                value: 'weapon'
             }, {
                 label: 'Giáp',
-                value: '防具'
+                value: 'armor'
             }, {
                 label: 'Phụ Kiện',
-                value: '饰品'
+                value: 'accessory'
             }],
             V = [{
                 label: 'Chủ Động',
-                value: '主动'
+                value: 'active'
             }, {
                 label: 'Bị Động',
-                value: '被动'
+                value: 'passive'
             }],
             f = [{
                 value: 'equipment',
@@ -102,7 +102,7 @@
             y = e => p.find(t => t.value === e)?.color || '#9e9e9e';
         async function N(e, t) {
             try {
-                const a = await fetch(`https://testingcf.jsdelivr.net/gh/thanhnhani655/dich_card_lo_than_quoc@main/ver0.1/data/${e}`);
+                const a = await fetch(`https://testingcf.jsdelivr.net/gh/thanhnhani655/dich_card_lo_than_quoc@main/v0.2/data/${e}`);
                 if (!a.ok) return console.log(`未找到自定义数据文件 (${e})`), {};
                 const o = await a.text(),
                     n = l.parse(o);
@@ -809,7 +809,7 @@
                                 });
                             _.set(r, 'stat_data.destiny_system.fate_points', e.destinyPoints);
                             const s = _.fromPairs(_.map(o, e => [e.name, {
-                                quality: _.get(ge, e.rarity, 'Thường'),
+                                rarity: _.get(ge, e.rarity, 'Thường'),
                                 type: e.type,
                                 cost: e.consume || '',
                                 tag: e.tag || [],
@@ -818,7 +818,7 @@
                             }]));
                             _.set(r, 'stat_data.protagonist.skills', s);
                             const i = _.fromPairs(_.map(n, e => [e.name, {
-                                quality: _.get(ge, e.rarity, 'Thường'),
+                                rarity: _.get(ge, e.rarity, 'Thường'),
                                 amount: e.quantity || 1,
                                 type: e.type,
                                 tag: e.tag || [],
@@ -828,7 +828,7 @@
                             _.set(r, 'stat_data.protagonist.inventory', i), _.set(r, 'stat_data.protagonist.currency', Math.max(0, Math.round(e.money))), _.set(r, 'stat_data.protagonist.level', e.level);
                             const d = _.fromPairs(_.map(c, e => {
                                 const t = _.fromPairs(_.chain(e.equip).filter(e => !!e.name).map(e => [e.name, {
-                                    quality: _.get(ge, e.rarity || '', 'Thường'),
+                                    rarity: _.get(ge, e.rarity || '', 'Thường'),
                                     type: e.type || '',
                                     tag: e.tag || [],
                                     effect: e.effect || {},
@@ -836,7 +836,7 @@
                                     slot: e.position || ''
                                 }]).value()),
                                     a = _.fromPairs(_.map(e.skills, e => [e.name, {
-                                        quality: _.get(ge, e.rarity, 'Thường'),
+                                        rarity: _.get(ge, e.rarity, 'Thường'),
                                         type: e.type,
                                         cost: e.consume || '',
                                         tag: e.tag || [],
@@ -3398,7 +3398,7 @@
                             onClick: f
                         }, ' Lưu ', 8, so)])])) : ((0, r.openBlock)(), (0, r.createElementBlock)(r.Fragment, {
                             key: 1
-                        }, [(0, r.createCommentVNode)(' 显示模式 '), (0, r.createElementVNode)('div', io, [(0, r.createElementVNode)('span', mo, (0, r.toDisplayString)(t.type || '武器'), 1), (0, r.createElementVNode)('span', uo, (0, r.toDisplayString)(t.name), 1), (0, r.createElementVNode)('span', {
+                        }, [(0, r.createCommentVNode)(' 显示模式 '), (0, r.createElementVNode)('div', io, [(0, r.createElementVNode)('span', mo, (0, r.toDisplayString)(t.type || 'weapon'), 1), (0, r.createElementVNode)('span', uo, (0, r.toDisplayString)(t.name), 1), (0, r.createElementVNode)('span', {
                             class: 'item-rarity',
                             style: (0, r.normalizeStyle)({
                                 '--rarity-color': (0, r.unref)(y)(t.rarity)
@@ -3814,7 +3814,7 @@
                             onClick: f
                         }, ' Lưu ', 8, Xo)])])) : ((0, r.openBlock)(), (0, r.createElementBlock)(r.Fragment, {
                             key: 1
-                        }, [(0, r.createCommentVNode)(' 显示模式 '), (0, r.createElementVNode)('div', Yo, [(0, r.createElementVNode)('span', Zo, (0, r.toDisplayString)(t.type || '主动'), 1), (0, r.createElementVNode)('span', en, (0, r.toDisplayString)(t.name), 1), (0, r.createElementVNode)('span', {
+                        }, [(0, r.createCommentVNode)(' 显示模式 '), (0, r.createElementVNode)('div', Yo, [(0, r.createElementVNode)('span', Zo, (0, r.toDisplayString)(t.type || 'active'), 1), (0, r.createElementVNode)('span', en, (0, r.toDisplayString)(t.name), 1), (0, r.createElementVNode)('span', {
                             class: 'item-rarity',
                             style: (0, r.normalizeStyle)({
                                 '--rarity-color': (0, r.unref)(y)(t.rarity)

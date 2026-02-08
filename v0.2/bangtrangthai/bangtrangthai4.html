@@ -9034,7 +9034,7 @@
                 quest_reward: b.z.string().prefault('')
             }).prefault({}),
             x = b.z.object({
-                quality: b.z.string().prefault(''),
+                rarity: b.z.string().prefault(''),
                 type: b.z.string().prefault(''),
                 tag: b.z.array(b.z.string()).prefault([]).transform(e => _.uniq(e)).optional(),
                 effect: b.z.record(b.z.string(), b.z.string()).prefault({}),
@@ -9045,7 +9045,7 @@
             }),
             S = x.extend({
                 cost: b.z.string().prefault('')
-            }).transform(e => _.pick(e, ['quality', 'type', 'cost', 'tag', 'effect', 'description'])),
+            }).transform(e => _.pick(e, ['rarity', 'type', 'cost', 'tag', 'effect', 'description'])),
             T = b.z.object({
                 type: b.z.enum(['buff', 'debuff', 'special']).prefault('buff'),
                 effect: b.z.string().prefault(''),
@@ -9055,7 +9055,7 @@
             }).prefault({}),
             C = x.extend({
                 amount: b.z.coerce.number().prefault(1)
-            }).transform(e => _.pick(e, ['quality', 'type', 'amount', 'tag', 'effect', 'description'])),
+            }).transform(e => _.pick(e, ['rarity', 'type', 'amount', 'tag', 'effect', 'description'])),
             N = b.z.object(_.mapValues({
                 strength: 0,
                 dexterity: 0,
@@ -9951,7 +9951,7 @@
                 神话: 6,
                 唯一: 7
             },
-            ye = e => _.orderBy(Object.entries(e), [([e, t]) => ve(t?.quality), ([e]) => e], ['desc', 'asc']),
+            ye = e => _.orderBy(Object.entries(e), [([e, t]) => ve(t?.rarity), ([e]) => e], ['desc', 'asc']),
             ve = e => e ? be[e] ?? 0 : 0,
             _e = {
                 unique: 'qualityUnique',
@@ -10814,7 +10814,7 @@
                 title: e,
                 children: t,
                 className: n = '',
-                quality: a
+                rarity: a
             }) => {
                 const r = a ? Ot[`cardQuality${a.charAt(0).toUpperCase() + a.slice(1)}`] : '';
                 return (0, o.jsxs)('div', {
@@ -10857,7 +10857,7 @@
                 children: t,
                 defaultOpen: n = !1,
                 className: a = '',
-                quality: r
+                rarity: r
             }) => {
                 const [l, i] = (0, u.useState)(n), s = r && Vt[r] ? qt[Vt[r]] : '', c = l ? qt.open : '';
                 return (0, o.jsxs)('div', {
@@ -11006,12 +11006,12 @@
                 onDelete: i,
                 itemCategory: s = 'item'
             }) => (0, o.jsx)(Ut, {
-                quality: ge[t.quality ?? ''],
+                rarity: ge[t.rarity ?? ''],
                 defaultOpen: a,
                 title: (0, o.jsxs)('div', {
                     className: Wt.itemTitle,
                     children: [(0, o.jsx)('span', {
-                        className: `${Wt.itemName} ${ke(t.quality, Wt)}`,
+                        className: `${Wt.itemName} ${ke(t.rarity, Wt)}`,
                         children: e
                     }), n, r && i && (0, o.jsx)('button', {
                         className: Wt.deleteButton,
@@ -11026,20 +11026,20 @@
                 }),
                 children: (0, o.jsxs)('div', {
                     className: Wt.itemDetails,
-                    children: [(t.quality || r) && (0, o.jsxs)('div', {
+                    children: [(t.rarity || r) && (0, o.jsxs)('div', {
                         className: Wt.itemQuality,
                         children: [(0, o.jsx)('span', {
                             className: Wt.fieldLabel,
-                            children: 'quality:'
+                            children: 'rarity:'
                         }), r && l ? (0, o.jsx)(It, {
-                            path: `${l}.quality`,
-                            value: t.quality ?? '',
+                            path: `${l}.rarity`,
+                            value: t.rarity ?? '',
                             type: 'select',
                             selectConfig: {
                                 options: Gt
                             }
                         }) : (0, o.jsx)('span', {
-                            children: t.quality
+                            children: t.rarity
                         })]
                     }), (t.type || r) && (0, o.jsxs)('div', {
                         className: Wt.itemType,
@@ -15156,27 +15156,27 @@
         }
 
         .Card-module__cardQualityUnique--b4TFV {
-            border-color: var(--theme-quality-unique)
+            border-color: var(--theme-rarity-unique)
         }
 
         .Card-module__cardQualityMythic--SW8gC {
-            border-color: var(--theme-quality-mythic)
+            border-color: var(--theme-rarity-mythic)
         }
 
         .Card-module__cardQualityLegendary--LtlNp {
-            border-color: var(--theme-quality-legendary)
+            border-color: var(--theme-rarity-legendary)
         }
 
         .Card-module__cardQualityEpic--lXIt2 {
-            border-color: var(--theme-quality-epic)
+            border-color: var(--theme-rarity-epic)
         }
 
         .Card-module__cardQualityRare--BZnKw {
-            border-color: var(--theme-quality-rare)
+            border-color: var(--theme-rarity-rare)
         }
 
         .Card-module__cardQualityUncommon--K1VQ2 {
-            border-color: var(--theme-quality-uncommon)
+            border-color: var(--theme-rarity-uncommon)
         }
 
         .Collapse-module__collapse--D3tNw {
@@ -15246,27 +15246,27 @@
         }
 
         .Collapse-module__collapseQualityUnique--XBXGM {
-            border-color: var(--theme-quality-unique)
+            border-color: var(--theme-rarity-unique)
         }
 
         .Collapse-module__collapseQualityMythic--dkWND {
-            border-color: var(--theme-quality-mythic)
+            border-color: var(--theme-rarity-mythic)
         }
 
         .Collapse-module__collapseQualityLegendary--Ycj5Y {
-            border-color: var(--theme-quality-legendary)
+            border-color: var(--theme-rarity-legendary)
         }
 
         .Collapse-module__collapseQualityEpic--DH1xJ {
-            border-color: var(--theme-quality-epic)
+            border-color: var(--theme-rarity-epic)
         }
 
         .Collapse-module__collapseQualityRare--OL4GM {
-            border-color: var(--theme-quality-rare)
+            border-color: var(--theme-rarity-rare)
         }
 
         .Collapse-module__collapseQualityUncommon--xHs_D {
-            border-color: var(--theme-quality-uncommon)
+            border-color: var(--theme-rarity-uncommon)
         }
 
         @media (max-width:540px) {
@@ -15414,27 +15414,27 @@
         }
 
         .ItemDetail-module__qualityUnique--pILYT {
-            color: var(--theme-quality-unique)
+            color: var(--theme-rarity-unique)
         }
 
         .ItemDetail-module__qualityMythic--KyiRA {
-            color: var(--theme-quality-mythic)
+            color: var(--theme-rarity-mythic)
         }
 
         .ItemDetail-module__qualityLegendary--ey8qh {
-            color: var(--theme-quality-legendary)
+            color: var(--theme-rarity-legendary)
         }
 
         .ItemDetail-module__qualityEpic--HHDZF {
-            color: var(--theme-quality-epic)
+            color: var(--theme-rarity-epic)
         }
 
         .ItemDetail-module__qualityRare--aLHZw {
-            color: var(--theme-quality-rare)
+            color: var(--theme-rarity-rare)
         }
 
         .ItemDetail-module__qualityUncommon--PGVYl {
-            color: var(--theme-quality-uncommon)
+            color: var(--theme-rarity-uncommon)
         }
 
         .ResourceBar-module__resourceBar--HfHxO {
@@ -16277,27 +16277,27 @@
         }
 
         .ItemsTab-module__qualityUnique--W2dNF {
-            color: var(--theme-quality-unique)
+            color: var(--theme-rarity-unique)
         }
 
         .ItemsTab-module__qualityMythic--K1VmI {
-            color: var(--theme-quality-mythic)
+            color: var(--theme-rarity-mythic)
         }
 
         .ItemsTab-module__qualityLegendary--oelWY {
-            color: var(--theme-quality-legendary)
+            color: var(--theme-rarity-legendary)
         }
 
         .ItemsTab-module__qualityEpic--nQxhU {
-            color: var(--theme-quality-epic)
+            color: var(--theme-rarity-epic)
         }
 
         .ItemsTab-module__qualityRare--Uwywa {
-            color: var(--theme-quality-rare)
+            color: var(--theme-rarity-rare)
         }
 
         .ItemsTab-module__qualityUncommon--dHPvm {
-            color: var(--theme-quality-uncommon)
+            color: var(--theme-rarity-uncommon)
         }
 
         .MapTab-module__mapTab--z0TIF {
@@ -18205,12 +18205,12 @@
             --theme-resource-sp: #3a8b4f;
             --theme-resource-exp: #c08b2f;
             --theme-resource-text: #f1e1c6;
-            --theme-quality-unique: #d38b3d;
-            --theme-quality-mythic: #c33d5b;
-            --theme-quality-legendary: #d7b25c;
-            --theme-quality-epic: #8e4fb3;
-            --theme-quality-rare: #3f7fc4;
-            --theme-quality-uncommon: #4d8b5a;
+            --theme-rarity-unique: #d38b3d;
+            --theme-rarity-mythic: #c33d5b;
+            --theme-rarity-legendary: #d7b25c;
+            --theme-rarity-epic: #8e4fb3;
+            --theme-rarity-rare: #3f7fc4;
+            --theme-rarity-uncommon: #4d8b5a;
             --theme-primary-bg: #8b5a2b;
             --theme-primary-text: #f7e9d2;
             --theme-success: #4e9a62;
