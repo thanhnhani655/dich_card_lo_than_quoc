@@ -854,29 +854,29 @@
                                     intelligence: 4 + S(e.level) + e.attributePoints.智力,
                                     mind: 4 + S(e.level) + e.attributePoints.精神
                                 },
-                                // Các chỉ số sống cơ bản (tính toán sơ bộ hoặc để 0 để hệ thống tự tính sau)
-                                max_hp: attribute.constitution * 100 * getCoefficients(e.level).hp + attribute.constitution + attribute.strength + attribute.dexterity + attribute.intelligence + attribute.mind,
-                                current_hp: max_hp,
-                                max_mp: attribute.intelligence * 50 * getCoefficients(e.level).mp_sp,
-                                current_mp: max_mp,
-                                max_sp: (attribute.strength + attribute.dexterity) * 50 * getCoefficients(e.level).mp_sp,
-                                current_sp: max_sp,
+
                                 attribute_point: e.remainingAP || 0, // Điểm thuộc tính còn dư
 
                                 // Các trường khác nếu cần thiết theo schema mvu_zod
                                 job: [], // Nếu có chọn nghề nghiệp
                                 path_to_godhood: { is_unlocked: false } // Mặc định chưa mở
                             };
+                            const resources_stat = {
+                                // Các chỉ số sống cơ bản (tính toán sơ bộ hoặc để 0 để hệ thống tự tính sau)
+                                max_hp: protagonistData.attribute.constitution * 100 * getCoefficients(e.level).hp + protagonistData.attribute.constitution + protagonistData.attribute.strength + protagonistData.attribute.dexterity + protagonistData.attribute.intelligence + protagonistData.attribute.mind,
+                                max_mp: protagonistData.attribute.intelligence * 50 * getCoefficients(e.level).mp_sp,
+                                max_sp: (protagonistData.attribute.strength + protagonistData.attribute.dexterity) * 50 * getCoefficients(e.level).mp_sp,
+                            };
                             _.set(r, 'stat_data.protagonist.race', protagonistData.race);
                             _.set(r, 'stat_data.protagonist.life_tier', protagonistData.life_tier);
                             _.set(r, 'stat_data.protagonist.identity', protagonistData.identity);
                             _.set(r, 'stat_data.protagonist.attribute', protagonistData.attribute);
-                            _.set(r, 'stat_data.protagonist.max_hp', protagonistData.max_hp);
-                            _.set(r, 'stat_data.protagonist.current_hp', protagonistData.current_hp);
-                            _.set(r, 'stat_data.protagonist.max_mp', protagonistData.max_mp);
-                            _.set(r, 'stat_data.protagonist.current_mp', protagonistData.current_mp);
-                            _.set(r, 'stat_data.protagonist.max_stamina', protagonistData.max_sp);
-                            _.set(r, 'stat_data.protagonist.current_stamina', protagonistData.current_sp);
+                            _.set(r, 'stat_data.protagonist.max_hp', resources_stat.max_hp);
+                            _.set(r, 'stat_data.protagonist.current_hp', resources_stat.max_hp);
+                            _.set(r, 'stat_data.protagonist.max_mp', resources_stat.max_mp);
+                            _.set(r, 'stat_data.protagonist.current_mp', resources_stat.max_mp);
+                            _.set(r, 'stat_data.protagonist.max_stamina', resources_stat.max_sp);
+                            _.set(r, 'stat_data.protagonist.current_stamina', resources_stat.max_sp);
                             const i = _.fromPairs(_.map(n, e => [e.name, {
                                 rarity: _.get(ge, e.rarity, 'Thường'),
                                 amount: e.quantity || 1,
