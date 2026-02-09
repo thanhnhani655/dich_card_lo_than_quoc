@@ -855,11 +855,11 @@
                                     mind: 4 + S(e.level) + e.attributePoints.精神
                                 },
                                 // Các chỉ số sống cơ bản (tính toán sơ bộ hoặc để 0 để hệ thống tự tính sau)
-                                max_hp: protagonistData.attribute.constitution * 100 * getCoefficients(e.level).hp + protagonistData.attribute.constitution + protagonistData.attribute.strength + protagonistData.attribute.dexterity + protagonistData.attribute.intelligence + protagonistData.attribute.mind,
+                                max_hp: constitution * 100 * getCoefficients(e.level).hp + constitution + strength + dexterity + intelligence + mind,
                                 current_hp: max_hp,
-                                max_mp: protagonistData.attribute.intelligence * 50 * getCoefficients(e.level).mp_sp,
+                                max_mp: intelligence * 50 * getCoefficients(e.level).mp_sp,
                                 current_mp: max_mp,
-                                max_sp: (protagonistData.attribute.strength + protagonistData.attribute.dexterity) * 50 * getCoefficients(e.level).mp_sp,
+                                max_sp: (strength + dexterity) * 50 * getCoefficients(e.level).mp_sp,
                                 current_sp: max_sp,
                                 attribute_point: e.remainingAP || 0, // Điểm thuộc tính còn dư
 
