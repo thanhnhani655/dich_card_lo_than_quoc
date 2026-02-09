@@ -9141,7 +9141,7 @@
                 favorability: y(0, -100, 100),
                 inner_thoughts: b.z.string().prefault(''),
                 background: b.z.string().prefault('')
-            }).prefault({}).transform(e => _.pick(e, ['is_present', 'race', 'identity', 'job', 'life_tier', 'personality', 'favorite', 'appearance', 'clothing', 'level', 'attribute', 'equipment', 'skills', 'path_to_godhood', 'destiny_contract', 'relationship_list', 'inner_thoughts', 'inner_thoughts']))).prefault({}),
+            }).prefault({}).transform(e => _.pick(e, ['is_present', 'race', 'identity', 'job', 'life_tier', 'personality', 'favorite', 'appearance', 'clothing', 'level', 'attribute', 'equipment', 'skills', 'path_to_godhood', 'destiny_contract', 'favorability', 'inner_thoughts', 'background']))).prefault({}),
             L = b.z.object({
                 astaria_express: b.z.object({
                     faction_daily: b.z.string().prefault(''),
