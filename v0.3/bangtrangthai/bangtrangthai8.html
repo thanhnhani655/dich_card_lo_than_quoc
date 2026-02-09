@@ -9141,7 +9141,7 @@
                 favorability: y(0, -100, 100),
                 inner_thoughts: b.z.string().prefault(''),
                 background: b.z.string().prefault('')
-            }).prefault({}).transform(e => _.pick(e, ['is_present', 'race', 'identity', 'job', 'life_tier', 'personality', 'favorite', 'appearance', 'clothing', 'level', 'attribute', 'equipment', 'skills', 'path_to_godhood', 'destiny_contract', 'favorability', 'inner_thoughts', 'inner_thoughts']))).prefault({}),
+            }).prefault({}).transform(e => _.pick(e, ['is_present', 'race', 'identity', 'job', 'life_tier', 'personality', 'favorite', 'appearance', 'clothing', 'level', 'attribute', 'equipment', 'skills', 'path_to_godhood', 'destiny_contract', 'relationship_list', 'inner_thoughts', 'inner_thoughts']))).prefault({}),
             L = b.z.object({
                 astaria_express: b.z.object({
                     faction_daily: b.z.string().prefault(''),
@@ -9907,17 +9907,17 @@
                 }
             },
             me = [{
-                threshold: 1e12,
-                suffix: 'Triệu (nghìn tỷ)',
-                divisor: 1e12
+                threshold: 1e9,
+                suffix: ' Tỷ',
+                divisor: 1e9
             }, {
-                threshold: 1e8,
-                suffix: 'Ức (trăm triệu)',
-                divisor: 1e8
+                threshold: 1e6,
+                suffix: ' Triệu',
+                divisor: 1e6
             }, {
-                threshold: 1e4,
-                suffix: 'Vạn (mười nghìn)',
-                divisor: 1e4
+                threshold: 1e3,
+                suffix: ' Nghìn',
+                divisor: 1e3
             }];
 
         function pe(e) {
@@ -10721,19 +10721,19 @@
                     className: `${At.ascension} ${t ? At.compact : ''}`,
                     children: [r({
                         data: e.elements,
-                        title: 'elements',
+                        title: 'Nguyên Tố',
                         icon: 'fa-solid fa-atom',
                         itemClass: 'itemElement',
                         sectionKey: 'elements'
                     }), r({
                         data: e.authorities,
-                        title: 'authorities',
+                        title: 'Quyền Năng',
                         icon: 'fa-solid fa-fire',
                         itemClass: 'itemPower',
                         sectionKey: 'authorities'
                     }), r({
                         data: e.divine_law,
-                        title: 'divine_law',
+                        title: 'Quy Tắc',
                         icon: 'fa-solid fa-scroll',
                         itemClass: 'itemLaw',
                         sectionKey: 'divine_law'
@@ -10743,7 +10743,7 @@
                             className: At.sectionTitle,
                             children: [(0, o.jsx)('i', {
                                 className: 'fa-solid fa-crown'
-                            }), ' godhood']
+                            }), ' Thần Vị']
                         }), (0, o.jsx)('div', {
                             className: At.godInfo,
                             children: n && a ? (0, o.jsx)(It, {
@@ -10761,7 +10761,7 @@
                             className: At.sectionTitle,
                             children: [(0, o.jsx)('i', {
                                 className: 'fa-solid fa-landmark'
-                            }), ' divine_realm']
+                            }), ' Thần Quốc']
                         }), (0, o.jsx)('div', {
                             className: At.godInfo,
                             children: n && a ? (0, o.jsxs)(o.Fragment, {
@@ -10769,7 +10769,7 @@
                                     className: At.godInfoRow,
                                     children: [(0, o.jsx)('span', {
                                         className: At.godInfoLabel,
-                                        children: 'name:'
+                                        children: 'Tên:'
                                     }), (0, o.jsx)(It, {
                                         path: `${a}.divine_realm.name`,
                                         value: e.divine_realm?.name,
@@ -10779,7 +10779,7 @@
                                     className: At.godInfoRow,
                                     children: [(0, o.jsx)('span', {
                                         className: At.godInfoLabel,
-                                        children: 'description:'
+                                        children: 'Mô tả:'
                                     }), (0, o.jsx)(It, {
                                         path: `${a}.divine_realm.description`,
                                         value: e.divine_realm?.description,
@@ -11030,7 +11030,7 @@
                         className: Wt.itemQuality,
                         children: [(0, o.jsx)('span', {
                             className: Wt.fieldLabel,
-                            children: 'rarity:'
+                            children: 'Độ hiếm:'
                         }), r && l ? (0, o.jsx)(It, {
                             path: `${l}.rarity`,
                             value: t.rarity ?? '',
@@ -11045,7 +11045,7 @@
                         className: Wt.itemType,
                         children: [(0, o.jsx)('span', {
                             className: Wt.fieldLabel,
-                            children: 'type:'
+                            children: 'Loại:'
                         }), r && l ? (0, o.jsx)(It, {
                             path: `${l}.type`,
                             value: t.type ?? '',
@@ -11057,7 +11057,7 @@
                         className: Wt.itemSlot,
                         children: [(0, o.jsx)('span', {
                             className: Wt.fieldLabel,
-                            children: 'slot:'
+                            children: 'Vị trí:'
                         }), r && l ? (0, o.jsx)(It, {
                             path: `${l}.slot`,
                             value: t.slot ?? '',
@@ -11069,7 +11069,7 @@
                         className: Wt.itemCost,
                         children: [(0, o.jsx)('span', {
                             className: Wt.fieldLabel,
-                            children: 'cost:'
+                            children: 'Tiêu hao:'
                         }), r && l ? (0, o.jsx)(It, {
                             path: `${l}.cost`,
                             value: t.cost ?? '',
@@ -11081,7 +11081,7 @@
                         className: Wt.itemQuantity,
                         children: [(0, o.jsx)('span', {
                             className: Wt.fieldLabel,
-                            children: 'amount:'
+                            children: 'Số lượng:'
                         }), (0, o.jsx)(It, {
                             path: `${l}.amount`,
                             value: t.amount ?? 1,
@@ -11112,7 +11112,7 @@
                         className: Wt.itemEffects,
                         children: [(0, o.jsx)('div', {
                             className: Wt.effectsHeader,
-                            children: 'effect'
+                            children: 'Hiệu quả'
                         }), r && l ? (0, o.jsx)(It, {
                             path: `${l}.effect`,
                             value: t.effect ?? {},
@@ -11282,6 +11282,8 @@
             })(({
                 data: e
             }) => {
+                console.log('DestinyTab Data:', e);
+                console.log('Relationship List:', e?.destiny_system?.relationship_list);
                 const t = g(e => e.editEnabled),
                     {
                         deleteTarget: n,
@@ -11291,7 +11293,7 @@
                         isConfirmOpen: i
                     } = fe(),
                     s = e.destiny_system,
-                    u = s?.favorability,
+                    u = s?.relationship_list,
                     c = (e, n, a, r, l, i, s, u) => {
                         if (!t && (null == a || '' === a)) return null;
                         return (0, o.jsxs)('div', {
@@ -11347,7 +11349,7 @@
                             className: 'equipment' === e ? tn.partnerEquipment : tn.partnerSkills,
                             children: [(0, o.jsx)('div', {
                                 className: tn.sectionLabel,
-                                children: e
+                                children: 'equipment' === e ? 'Trang Bị' : 'Kỹ Năng'
                             }), (0, o.jsx)('div', {
                                 className: r,
                                 children: ye(n).map(([e, n]) => (0, o.jsx)(Xt, {
@@ -11355,10 +11357,10 @@
                                     data: n,
                                     titleSuffix: l(n),
                                     editEnabled: t,
-                                    pathPrefix: `destiny_system.favorability.${i}.${s}.${e}`,
+                                    pathPrefix: `destiny_system.relationship_list.${i}.${s}.${e}`,
                                     onDelete: () => a({
                                         type: s,
-                                        path: `destiny_system.favorability.${i}.${s}.${e}`,
+                                        path: `destiny_system.relationship_list.${i}.${s}.${e}`,
                                         name: e
                                     }),
                                     itemCategory: u
@@ -11394,7 +11396,7 @@
                                 className: `fa-solid fa-star ${tn.destinyPointsIcon}`
                             }), (0, o.jsx)('span', {
                                 className: tn.destinyPointsLabel,
-                                children: 'Điểm Định Mệnh'
+                                children: 'Điểm Vận Mệnh'
                             }), t ? (0, o.jsx)(It, {
                                 path: 'destiny_system.fate_points',
                                 value: s?.fate_points ?? 0,
@@ -11426,15 +11428,15 @@
                                         className: tn.partnerMeta,
                                         children: [(0, o.jsxs)('span', {
                                             className: tn.affectionBadge,
-                                            children: ['favorability ', e.favorability ?? 0]
+                                            children: ['Độ Thiện Cảm ', e.favorability ?? 0]
                                         }), (0, o.jsxs)('div', {
                                             className: tn.partnerTags,
                                             children: [e.is_present && (0, o.jsx)('span', {
                                                 className: `${tn.tag} ${tn.tagPresent}`,
-                                                children: 'is_present'
+                                                children: 'Hiện Diện'
                                             }), e.destiny_contract && (0, o.jsx)('span', {
                                                 className: `${tn.tag} ${tn.tagContract}`,
-                                                children: 'destiny_contract'
+                                                children: 'Khế Ước'
                                             })]
                                         })]
                                     }), t && (0, o.jsx)('button', {
@@ -11442,7 +11444,7 @@
                                         onClick: e => {
                                             e.stopPropagation(), a({
                                                 type: 'Đồng Hành',
-                                                path: `destiny_system.favorability.${n}`,
+                                                path: `destiny_system.relationship_list.${n}`,
                                                 name: n
                                             })
                                         },
@@ -11458,9 +11460,9 @@
                                         className: tn.partnerAffection,
                                         children: [(0, o.jsx)('span', {
                                             className: tn.label,
-                                            children: 'favorability'
+                                            children: 'Hảo Cảm'
                                         }), t ? (0, o.jsx)(It, {
-                                            path: `destiny_system.favorability.${n}.favorability`,
+                                            path: `destiny_system.relationship_list.${n}.favorability`,
                                             value: e.favorability ?? 0,
                                             type: 'number',
                                             numberConfig: {
@@ -11477,7 +11479,7 @@
                                                 className: tn.toggleLabel,
                                                 children: 'Tình trạng hiện tại'
                                             }), (0, o.jsx)(It, {
-                                                path: `destiny_system.favorability.${n}.is_present`,
+                                                path: `destiny_system.relationship_list.${n}.is_present`,
                                                 value: e.is_present ?? !1,
                                                 type: 'toggle',
                                                 toggleConfig: {
@@ -11490,9 +11492,9 @@
                                             className: tn.toggleRow,
                                             children: [(0, o.jsx)('span', {
                                                 className: tn.toggleLabel,
-                                                children: 'destiny_contract'
+                                                children: 'Khế Ước'
                                             }), (0, o.jsx)(It, {
-                                                path: `destiny_system.favorability.${n}.destiny_contract`,
+                                                path: `destiny_system.relationship_list.${n}.destiny_contract`,
                                                 value: e.destiny_contract ?? !1,
                                                 type: 'toggle',
                                                 toggleConfig: {
@@ -11504,18 +11506,18 @@
                                         })]
                                     }), (0, o.jsxs)('div', {
                                         className: tn.partnerInfo,
-                                        children: [c('race', `destiny_system.favorability.${n}.race`, e.race, 'text', tn.infoRow, tn.infoLabel, tn.infoValue), c('identity', `destiny_system.favorability.${n}.identity`, e.identity, 'tags', tn.infoRow, tn.infoLabel, tn.infoValue), c('job', `destiny_system.favorability.${n}.job`, e.job, 'tags', tn.infoRow, tn.infoLabel, tn.infoValue), d('life_tier', e.life_tier, tn.infoRow, tn.infoLabel, tn.infoValue), d('level', e.level ? `Lv.${e.level}` : '', tn.infoRow, tn.infoLabel, tn.infoValue)]
+                                        children: [c('Chủng Tộc', `destiny_system.relationship_list.${n}.race`, e.race, 'text', tn.infoRow, tn.infoLabel, tn.infoValue), c('Thân Phận', `destiny_system.relationship_list.${n}.identity`, e.identity, 'tags', tn.infoRow, tn.infoLabel, tn.infoValue), c('Nghề Nghiệp', `destiny_system.relationship_list.${n}.job`, e.job, 'tags', tn.infoRow, tn.infoLabel, tn.infoValue), d('Tầng Sinh Mệnh', e.life_tier, tn.infoRow, tn.infoLabel, tn.infoValue), d('Cấp Độ', e.level ? `Lv.${e.level}` : '', tn.infoRow, tn.infoLabel, tn.infoValue)]
                                     }), (e.appearance || e.clothing || t) && (0, o.jsxs)('div', {
                                         className: tn.partnerAppearance,
-                                        children: [c('appearance', `destiny_system.favorability.${n}.appearance`, e.appearance, 'textarea', tn.appearanceRow, tn.appearanceLabel, tn.appearanceValue), c('clothing', `destiny_system.favorability.${n}.clothing`, e.clothing, 'textarea', tn.appearanceRow, tn.appearanceLabel, tn.appearanceValue)]
+                                        children: [c('Ngoại Hình', `destiny_system.relationship_list.${n}.appearance`, e.appearance, 'textarea', tn.appearanceRow, tn.appearanceLabel, tn.appearanceValue), c('Trang Phục', `destiny_system.relationship_list.${n}.clothing`, e.clothing, 'textarea', tn.appearanceRow, tn.appearanceLabel, tn.appearanceValue)]
                                     }), (e.personality || e.favorite || t) && (0, o.jsxs)('div', {
                                         className: tn.partnerTraits,
-                                        children: [c('personality', `destiny_system.favorability.${n}.personality`, e.personality, 'textarea', tn.traitRow, tn.traitLabel, tn.traitValue), c('favorite', `destiny_system.favorability.${n}.favorite`, e.favorite, 'textarea', tn.traitRow, tn.traitLabel, tn.traitValue)]
+                                        children: [c('Tính Cách', `destiny_system.relationship_list.${n}.personality`, e.personality, 'textarea', tn.traitRow, tn.traitLabel, tn.traitValue), c('Sở Thích', `destiny_system.relationship_list.${n}.favorite`, e.favorite, 'textarea', tn.traitRow, tn.traitLabel, tn.traitValue)]
                                     }), !_.isEmpty(e.attribute) && (0, o.jsxs)('div', {
                                         className: tn.partnerAttributes,
                                         children: [(0, o.jsx)('div', {
                                             className: tn.sectionLabel,
-                                            children: 'attribute'
+                                            children: 'Thuộc Tính'
                                         }), (0, o.jsx)('div', {
                                             className: `${tn.attributeGrid} ${t ? tn.attributeGridEdit : ''}`,
                                             children: _.map(e.attribute, (e, a) => (0, o.jsxs)('div', {
@@ -11524,7 +11526,7 @@
                                                     className: tn.attributeKey,
                                                     children: a
                                                 }), t ? (0, o.jsx)(It, {
-                                                    path: `destiny_system.favorability.${n}.attribute.${a}`,
+                                                    path: `destiny_system.relationship_list.${n}.attribute.${a}`,
                                                     value: e ?? 0,
                                                     type: 'number',
                                                     numberConfig: {
@@ -11546,20 +11548,20 @@
                                         children: e.cost
                                     }) : null, n), (e.inner_thoughts || t) && (0, o.jsx)('div', {
                                         className: tn.partnerThoughts,
-                                        children: c('inner_thoughts', `destiny_system.favorability.${n}.inner_thoughts`, e.inner_thoughts, 'textarea', tn.thoughtsRow, tn.thoughtsLabel, tn.thoughtsContent)
+                                        children: c('Tâm Tình', `destiny_system.relationship_list.${n}.inner_thoughts`, e.inner_thoughts, 'textarea', tn.thoughtsRow, tn.thoughtsLabel, tn.thoughtsContent)
                                     }), (e.background || t) && (0, o.jsx)('div', {
                                         className: tn.partnerBackground,
-                                        children: c('background', `destiny_system.favorability.${n}.background`, e.background, 'textarea', tn.backgroundRow, tn.backgroundLabel, tn.backgroundContent)
+                                        children: c('Tiểu Sử', `destiny_system.relationship_list.${n}.background`, e.background, 'textarea', tn.backgroundRow, tn.backgroundLabel, tn.backgroundContent)
                                     }), e.path_to_godhood?.is_unlocked && (0, o.jsxs)('div', {
                                         className: tn.partnerAscension,
                                         children: [(0, o.jsx)('div', {
                                             className: tn.ascensionLabel,
-                                            children: 'path_to_godhood'
+                                            children: 'Đăng Thần Trường Giai'
                                         }), (0, o.jsx)($t, {
                                             data: e.path_to_godhood,
                                             compact: !0,
                                             editEnabled: t,
-                                            pathPrefix: `destiny_system.favorability.${n}.path_to_godhood`
+                                            pathPrefix: `destiny_system.relationship_list.${n}.path_to_godhood`
                                         })]
                                     })]
                                 })

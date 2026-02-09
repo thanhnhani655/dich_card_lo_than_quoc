@@ -1,0 +1,4222 @@
+```
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>角色信息卡</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Sans+SC:wght@300;400;700&family=Noto+Serif+SC:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            /* --- 字型定義 (Fonts Definition) --- */
+            /* 用於史詩感標題 (角色名) 和清晰的數據 (Lv, HP, 數值) */
+            --font-primary: 'Cinzel', Georgia, serif;
+
+            /* 用於UI介面、標題和需要高可讀性的地方 */
+            --font-secondary: 'Noto Sans SC', 'Noto Sans TC', 'Microsoft YaHei', 'Microsoft JhengHei', 'PingFang SC', 'PingFang TC', Roboto, 'Helvetica Neue', Helvetica, Arial, serif, sans-serif;
+
+            /* 用於背景故事等長篇內文，營造書卷氣 */
+            --font-body-serif: 'Noto Serif SC', 'Noto Serif TC', 'SimSun', 'PMingLiU', 'MingLiU', 'Songti SC', 'Songti TC', Georgia, 'Times New Roman', serif, sans-serif;
+
+            /* --- 顏色定義 (Color Definitions) --- */
+            --primary-theme-color: #808080;
+            --primary-theme-color-rgb: 128, 128, 128;
+            --secondary-theme-color: #808080;
+            --secondary-theme-color-rgb: 128, 128, 128;
+
+            --tier-1-color: #57595D;
+            --tier-1-color-rgb: 87, 89, 93;
+            --tier-2-color: #50C878;
+            --tier-2-color-rgb: 80, 200, 120;
+            --tier-3-color: #2196F3;
+            --tier-3-color-rgb: 33, 150, 243;
+            --tier-4-color: #9932CC;
+            --tier-4-color-rgb: 153, 50, 204;
+            --tier-5-color: #FFD700;
+            --tier-5-color-rgb: 255, 215, 0;
+            --tier-6-color: #DC143C;
+            --tier-6-color-rgb: 220, 20, 60;
+            --tier-7-color: #00FFFF;
+            --tier-7-color-rgb: 0, 255, 255;
+
+            --bg-color: #1a1a1a;
+            --card-bg-color: #2c2c2c;
+            --border-color: #444;
+            --text-color: #e0e0e0;
+            --text-muted-color: #a0a0a0;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        /* 默認使用UI字體，確保整體清晰度 */
+        body {
+            font-family: var(--font-secondary);
+            background-color: transparent;
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            transition: padding 0.3s ease;
+        }
+
+        /* --- 字型應用規則 (Font Application Rules) --- */
+        /* 數據與象徵性標籤使用Cinzel字體 */
+        .char-level,
+        .vital-label,
+        .vital-value,
+        .attribute-total {
+            font-family: var(--font-primary);
+        }
+
+        /* 長篇內文使用思源宋體 */
+        .story,
+        .profile-text-block,
+        .card-body p {
+            font-family: var(--font-body-serif);
+        }
+
+        .card-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            z-index: 10;
+        }
+
+        .card-wrapper[data-tier="1"] {
+            --secondary-theme-color: var(--tier-1-color);
+            --secondary-theme-color-rgb: var(--tier-1-color-rgb);
+        }
+
+        .card-wrapper[data-tier="2"] {
+            --secondary-theme-color: var(--tier-2-color);
+            --secondary-theme-color-rgb: var(--tier-2-color-rgb);
+        }
+
+        .card-wrapper[data-tier="3"] {
+            --secondary-theme-color: var(--tier-3-color);
+            --secondary-theme-color-rgb: var(--tier-3-color-rgb);
+        }
+
+        .card-wrapper[data-tier="4"] {
+            --secondary-theme-color: var(--tier-4-color);
+            --secondary-theme-color-rgb: var(--tier-4-color-rgb);
+        }
+
+        .card-wrapper[data-tier="5"] {
+            --secondary-theme-color: var(--tier-5-color);
+            --secondary-theme-color-rgb: var(--tier-5-color-rgb);
+        }
+
+        .card-wrapper[data-tier="6"] {
+            --secondary-theme-color: var(--tier-6-color);
+            --secondary-theme-color-rgb: var(--tier-6-color-rgb);
+        }
+
+        .card-wrapper[data-tier="7"] {
+            --secondary-theme-color: var(--tier-7-color);
+            --secondary-theme-color-rgb: var(--tier-7-color-rgb);
+        }
+
+        .card-wrapper::before,
+        .card-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--card-bg-color);
+            border: 2px solid;
+            border-radius: 10px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .card-wrapper::before {
+            transform: rotate(-4deg);
+            opacity: 0.8;
+            border-color: var(--secondary-theme-color);
+        }
+
+        .card-wrapper::after {
+            transform: rotate(3deg);
+            opacity: 0.6;
+            border-color: var(--primary-theme-color);
+        }
+
+        .character-sheet {
+            border: 3px solid var(--primary-theme-color);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            background:
+                linear-gradient(to bottom, rgba(var(--secondary-theme-color-rgb), 0.3) 0%, transparent 40%),
+                radial-gradient(ellipse at 50% 100%, rgba(var(--secondary-theme-color-rgb), 0.25) 0%, transparent 70%),
+                var(--card-bg-color);
+        }
+
+        .character-sheet::before,
+        .character-sheet::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            opacity: 1;
+            pointer-events: none;
+        }
+
+        .character-sheet::after {
+            content: none;
+        }
+
+        /* --- ANIMATION STYLES START --- */
+
+        /* ========================================================================== */
+        /* ===              全局動態背景網格 (Global Animated Grid)               === */
+        /* ========================================================================== */
+        /* 此效果將會應用在 .character-sheet 的偽元素上，
+   位於基礎漸層色之上，種族特定動畫之下 (z-index: 0)。 */
+
+        /* --- 核心修改：重新定義偽元素以承載網格 --- */
+        .character-sheet::before,
+        .character-sheet::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            /* 確保在 z-index: 1 的種族動畫之下 */
+            pointer-events: none;
+            opacity: 0.7;
+            /* 移除舊的、不必要的屬性 */
+        }
+
+        /* --- 第一層: 等角投影主網格 (Isometric Grid) --- */
+        .character-sheet::before {
+            /* 使用兩組傾斜的線性漸變來創建等角網格線 */
+            background-image:
+                repeating-linear-gradient(60deg,
+                    /* 第一組線條角度 */
+                    rgba(var(--secondary-theme-color-rgb), 0.15) 0,
+                    rgba(var(--secondary-theme-color-rgb), 0.15) 1px,
+                    transparent 1px,
+                    transparent 40px
+                    /* 網格間距 */
+                ),
+                repeating-linear-gradient(120deg,
+                    /* 第二組線條角度 */
+                    rgba(var(--secondary-theme-color-rgb), 0.15) 0,
+                    rgba(var(--secondary-theme-color-rgb), 0.15) 1px,
+                    transparent 1px,
+                    transparent 40px);
+            /* 應用一個緩慢的、對角線平移的動畫 */
+            animation: grid-pan-slow 35s linear infinite;
+            opacity: 0.5;
+            /* 讓主網格更柔和 */
+        }
+
+        /* --- 第二層: 視差粒子點陣 (Parallax Dot Matrix) --- */
+        .character-sheet::after {
+            /* 使用徑向漸變創建點陣圖案 */
+            background-image:
+                radial-gradient(rgba(var(--secondary-theme-color-rgb), 0.2) 1px,
+                    /* 點的大小和顏色 */
+                    transparent 1px);
+            background-size: 25px 25px;
+            /* 點陣間距 */
+            /* 應用一個速度更快的平移動畫，以創造深度感 */
+            animation: grid-pan-fast 20s linear infinite;
+            opacity: 0.6;
+            /* 讓粒子點更明顯一些 */
+        }
+
+        /* --- 動畫定義 --- */
+
+        /* 緩慢的主網格平移動畫 */
+        @keyframes grid-pan-slow {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: -400px -400px;
+            }
+        }
+
+        /* 較快的粒子點陣平移動畫 */
+        @keyframes grid-pan-fast {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 0px 500px;
+            }
+        }
+
+        /* ========================================================================== */
+        /* ===                現代化動態背景動畫合集 (優化版)                 === */
+        /* ========================================================================== */
+
+        /* --- 基礎容器規則 --- */
+        .dynamic-bg-container {
+            display: none;
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* === 1. 天界恩典 (Celestial Grace) === */
+        /* 說明：主要羽毛和光暈使用主色，閃爍的星點保留白色核心，但外圈輝光改為輔色，增強主題感。*/
+        .card-wrapper.bg-anim-celestial-grace .dynamic-bg-container {
+            display: block;
+            mix-blend-mode: screen;
+            filter: brightness(1.1);
+            opacity: 0.8;
+        }
+
+        .bg-anim-celestial-grace .particle {
+            position: absolute;
+            top: -15%;
+            opacity: 0;
+            animation-name: celestial-drift;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            will-change: transform, opacity;
+        }
+
+        @keyframes celestial-drift {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: var(--max-opacity, 0.9);
+            }
+
+            85% {
+                opacity: var(--max-opacity, 0.9);
+            }
+
+            100% {
+                transform: translateY(120vh) rotate(var(--spin, 0deg));
+                opacity: 0;
+            }
+        }
+
+        .bg-anim-celestial-grace .particle:nth-child(-n+3) {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 80'%3E%3Cpath fill='rgba(var(--secondary-theme-color-rgb),0.7)' d='M25,80 C50,60 50,30 25,0 C0,30 0,60 25,80Z'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            filter: drop-shadow(0 0 8px rgba(var(--secondary-theme-color-rgb), 0.5));
+        }
+
+        .bg-anim-celestial-grace .particle:nth-child(n+4):nth-child(-n+7) {
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(var(--secondary-theme-color-rgb), 0.5), transparent 70%);
+            filter: blur(20px);
+        }
+
+        .bg-anim-celestial-grace .particle:nth-child(n+8) {
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 0 5px #fff, 0 0 10px rgba(var(--primary-theme-color-rgb), 0.6), 0 0 15px rgba(var(--secondary-theme-color-rgb), 0.5);
+        }
+
+        .bg-anim-celestial-grace .p1 {
+            left: 10%;
+            width: 40px;
+            height: 60px;
+            --spin: 60deg;
+            --max-opacity: 0.8;
+            animation-duration: 25s;
+            animation-delay: -5s;
+        }
+
+        .bg-anim-celestial-grace .p2 {
+            left: 75%;
+            width: 50px;
+            height: 75px;
+            --spin: -45deg;
+            --max-opacity: 0.9;
+            animation-duration: 20s;
+            animation-delay: -15s;
+        }
+
+        .bg-anim-celestial-grace .p3 {
+            left: 40%;
+            width: 35px;
+            height: 50px;
+            --spin: 80deg;
+            --max-opacity: 0.7;
+            animation-duration: 30s;
+            animation-delay: -2s;
+        }
+
+        .bg-anim-celestial-grace .p4 {
+            left: -5%;
+            width: 180px;
+            height: 180px;
+            --spin: 0deg;
+            --max-opacity: 0.4;
+            animation-duration: 35s;
+            animation-delay: 0s;
+        }
+
+        .bg-anim-celestial-grace .p5 {
+            left: 80%;
+            width: 150px;
+            height: 150px;
+            --spin: 0deg;
+            --max-opacity: 0.5;
+            animation-duration: 32s;
+            animation-delay: -20s;
+        }
+
+        .bg-anim-celestial-grace .p6 {
+            left: 25%;
+            width: 220px;
+            height: 220px;
+            --spin: 0deg;
+            --max-opacity: 0.3;
+            animation-duration: 40s;
+            animation-delay: -10s;
+        }
+
+        .bg-anim-celestial-grace .p7 {
+            left: 50%;
+            width: 160px;
+            height: 160px;
+            --spin: 0deg;
+            --max-opacity: 0.4;
+            animation-duration: 28s;
+            animation-delay: -30s;
+        }
+
+        .bg-anim-celestial-grace .p8 {
+            left: 20%;
+            width: 3px;
+            height: 3px;
+            --spin: 180deg;
+            --max-opacity: 1;
+            animation-duration: 12s;
+            animation-delay: -1s;
+        }
+
+        .bg-anim-celestial-grace .p9 {
+            left: 90%;
+            width: 4px;
+            height: 4px;
+            --spin: -120deg;
+            --max-opacity: 1;
+            animation-duration: 10s;
+            animation-delay: -8s;
+        }
+
+        .bg-anim-celestial-grace .p10 {
+            left: 60%;
+            width: 2px;
+            height: 2px;
+            --spin: 360deg;
+            --max-opacity: 1;
+            animation-duration: 15s;
+            animation-delay: -4s;
+        }
+
+        .bg-anim-celestial-grace .p11 {
+            left: 5%;
+            width: 3px;
+            height: 3px;
+            --spin: -270deg;
+            --max-opacity: 1;
+            animation-duration: 11s;
+            animation-delay: -13s;
+        }
+
+        .bg-anim-celestial-grace .p12 {
+            left: 95%;
+            width: 2.5px;
+            height: 2.5px;
+            --spin: 90deg;
+            --max-opacity: 1;
+            animation-duration: 13s;
+            animation-delay: -6s;
+        }
+
+        /* === 2. 太初源質 (Primordial Essence) === */
+        /* 說明：與天界恩典類似，大部分元素使用主色。閃爍星點的輝光加入輔色，使其在主色背景上更突出。*/
+        .card-wrapper.bg-anim-primordial-essence .dynamic-bg-container {
+            display: block;
+            mix-blend-mode: lighten;
+            filter: brightness(1.1);
+        }
+
+        .bg-anim-primordial-essence .particle {
+            position: absolute;
+            bottom: -20%;
+            opacity: 0;
+            animation-name: elemental-drift;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            will-change: transform, opacity;
+        }
+
+        .bg-anim-primordial-essence .particle:nth-child(-n+4) {
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(var(--secondary-theme-color-rgb), 0.7) 0%, transparent 80%);
+            filter: blur(5px);
+        }
+
+        .bg-anim-primordial-essence .particle:nth-child(n+5):nth-child(-n+6) {
+            background: rgba(var(--secondary-theme-color-rgb), 0.8);
+            clip-path: polygon(50% 0%, 100% 35%, 85% 100%, 15% 100%, 0% 35%);
+            box-shadow: 0 0 15px rgba(var(--secondary-theme-color-rgb), 0.5);
+        }
+
+        .bg-anim-primordial-essence .particle:nth-child(n+7):nth-child(-n+9) {
+            border-radius: 45% 55% 60% 40% / 55% 45% 55% 45%;
+            background: rgba(var(--secondary-theme-color-rgb), 0.5);
+            filter: blur(15px);
+        }
+
+        .bg-anim-primordial-essence .particle:nth-child(n+10) {
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px #fff, 0 0 12px rgba(var(--primary-theme-color-rgb), 0.8), 0 0 20px rgba(var(--secondary-theme-color-rgb), 0.6);
+        }
+
+        @keyframes elemental-drift {
+            0% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.9;
+            }
+
+            90% {
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: translateY(-120vh) translateX(calc(var(--sway) * 50px)) rotate(calc(var(--spin) * 90deg));
+                opacity: 0;
+            }
+        }
+
+        .bg-anim-primordial-essence .p1 {
+            left: 10%;
+            width: 50px;
+            height: 50px;
+            --sway: 1;
+            --spin: 1;
+            animation-duration: 22s;
+            animation-delay: -5s;
+        }
+
+        .bg-anim-primordial-essence .p2 {
+            left: 75%;
+            width: 80px;
+            height: 80px;
+            --sway: -1;
+            --spin: -1.5;
+            animation-duration: 18s;
+            animation-delay: -2s;
+        }
+
+        .bg-anim-primordial-essence .p3 {
+            left: 40%;
+            width: 30px;
+            height: 30px;
+            --sway: -1.2;
+            --spin: 2;
+            animation-duration: 28s;
+            animation-delay: -15s;
+        }
+
+        .bg-anim-primordial-essence .p4 {
+            left: 90%;
+            width: 65px;
+            height: 65px;
+            --sway: 0.5;
+            --spin: -0.8;
+            animation-duration: 16s;
+            animation-delay: -10s;
+        }
+
+        .bg-anim-primordial-essence .p5 {
+            left: 25%;
+            width: 25px;
+            height: 40px;
+            --sway: 1.5;
+            --spin: 3;
+            animation-duration: 19s;
+            animation-delay: -7s;
+        }
+
+        .bg-anim-primordial-essence .p6 {
+            left: 60%;
+            width: 35px;
+            height: 50px;
+            --sway: -0.8;
+            --spin: -2.5;
+            animation-duration: 25s;
+            animation-delay: -18s;
+        }
+
+        .bg-anim-primordial-essence .p7 {
+            left: 5%;
+            width: 120px;
+            height: 90px;
+            --sway: 0.3;
+            --spin: 0.5;
+            animation-duration: 35s;
+            animation-delay: -1s;
+        }
+
+        .bg-anim-primordial-essence .p8 {
+            left: 50%;
+            width: 150px;
+            height: 110px;
+            --sway: -0.5;
+            --spin: -0.3;
+            animation-duration: 30s;
+            animation-delay: -20s;
+        }
+
+        .bg-anim-primordial-essence .p9 {
+            left: 85%;
+            width: 100px;
+            height: 80px;
+            --sway: 1;
+            --spin: 1;
+            animation-duration: 40s;
+            animation-delay: -25s;
+        }
+
+        .bg-anim-primordial-essence .p10 {
+            left: 20%;
+            width: 3px;
+            height: 3px;
+            --sway: 2;
+            --spin: 0;
+            animation-duration: 12s;
+            animation-delay: -4s;
+        }
+
+        .bg-anim-primordial-essence .p11 {
+            left: 80%;
+            width: 4px;
+            height: 4px;
+            --sway: -2.5;
+            --spin: 0;
+            animation-duration: 10s;
+            animation-delay: -8s;
+        }
+
+        .bg-anim-primordial-essence .p12 {
+            left: 55%;
+            width: 2px;
+            height: 2px;
+            --sway: -1.8;
+            --spin: 0;
+            animation-duration: 15s;
+            animation-delay: -13s;
+        }
+
+        /* === 3. 輝光之心 (Radiant Heart) === */
+        /* 說明：核心光輝和光束使用主色。其中一個旋轉的裝飾環改用輔色來創造色彩層次。漂浮的火花和閃光也加入了輔色輝光。*/
+        .card-wrapper.bg-anim-radiant-heart .dynamic-bg-container {
+            display: block;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .bg-anim-radiant-heart .particle {
+            position: absolute;
+            opacity: 0;
+            animation-iteration-count: infinite;
+            will-change: transform, opacity, filter;
+        }
+
+        @keyframes radiant-heart-pulse {
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(0.95);
+                opacity: 0.6;
+                filter: brightness(0.9);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.05);
+                opacity: 0.8;
+                filter: brightness(1.1);
+            }
+        }
+
+        @keyframes radiant-heart-spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes radiant-heart-ember-drift {
+            0% {
+                transform: translateY(0) translateX(var(--x-start, 0px)) scale(0.5);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) translateX(var(--x-end, 0px)) scale(1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes radiant-heart-arc-flash {
+
+            0%,
+            100% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .bg-anim-radiant-heart .p1 {
+            top: 50%;
+            left: 50%;
+            width: 90vmin;
+            height: 90vmin;
+            background: radial-gradient(circle, rgba(var(--secondary-theme-color-rgb), 0.3) 0%, transparent 60%);
+            border-radius: 50%;
+            filter: blur(20px);
+            animation-name: radiant-heart-pulse;
+            animation-duration: 8s;
+            animation-timing-function: ease-in-out;
+        }
+
+        .bg-anim-radiant-heart .p2,
+        .bg-anim-radiant-heart .p3 {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            mix-blend-mode: screen;
+            animation-name: radiant-heart-spin;
+            animation-timing-function: linear;
+        }
+
+        .bg-anim-radiant-heart .p2 {
+            background: repeating-conic-gradient(from 0deg at 50% 50%, transparent 0, rgba(var(--secondary-theme-color-rgb), 0.1) 20deg, rgba(var(--secondary-theme-color-rgb), 0.05) 45deg, transparent 50deg, transparent 180deg);
+            animation-duration: 25s;
+        }
+
+        .bg-anim-radiant-heart .p3 {
+            background: repeating-conic-gradient(from 90deg at 50% 50%, transparent 0, rgba(var(--secondary-theme-color-rgb), 0.15) 10deg, rgba(var(--secondary-theme-color-rgb), 0.05) 20deg, transparent 22deg, transparent 180deg);
+            animation-duration: 20s;
+            animation-direction: reverse;
+        }
+
+        .bg-anim-radiant-heart .p4,
+        .bg-anim-radiant-heart .p5 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background: transparent;
+            opacity: 0.4;
+            animation-name: radiant-heart-spin;
+            animation-timing-function: linear;
+        }
+
+        .bg-anim-radiant-heart .p4 {
+            width: 70vmin;
+            height: 70vmin;
+            border: 2px dashed rgba(var(--secondary-theme-color-rgb), 0.8);
+            animation-duration: 50s;
+        }
+
+        .bg-anim-radiant-heart .p5 {
+            width: 55vmin;
+            height: 55vmin;
+            border: 1px dotted rgba(var(--primary-theme-color-rgb), 0.7);
+            animation-duration: 40s;
+            animation-direction: reverse;
+        }
+
+        .bg-anim-radiant-heart .particle:nth-child(n+6):nth-child(-n+9) {
+            bottom: 0;
+            border-radius: 50%;
+            background: #fff;
+            filter: brightness(1.5);
+            box-shadow: 0 0 4px #fff, 0 0 10px rgba(var(--primary-theme-color-rgb), 0.8), 0 0 15px rgba(var(--secondary-theme-color-rgb), 1);
+            animation-name: radiant-heart-ember-drift;
+            animation-timing-function: ease-out;
+        }
+
+        .bg-anim-radiant-heart .p6 {
+            left: 15%;
+            width: 4px;
+            height: 4px;
+            --x-end: -50px;
+            animation-duration: 12s;
+            animation-delay: -2s;
+        }
+
+        .bg-anim-radiant-heart .p7 {
+            left: 85%;
+            width: 3px;
+            height: 3px;
+            --x-end: 60px;
+            animation-duration: 15s;
+            animation-delay: -8s;
+        }
+
+        .bg-anim-radiant-heart .p8 {
+            left: 40%;
+            width: 5px;
+            height: 5px;
+            --x-end: 80px;
+            animation-duration: 10s;
+            animation-delay: -5s;
+        }
+
+        .bg-anim-radiant-heart .p9 {
+            left: 60%;
+            width: 2.5px;
+            height: 2.5px;
+            --x-end: -70px;
+            animation-duration: 18s;
+            animation-delay: -14s;
+        }
+
+        .bg-anim-radiant-heart .particle:nth-child(n+10) {
+            border-radius: 50%;
+            background: rgba(var(--secondary-theme-color-rgb), 0.9);
+            box-shadow: 0 0 5px #fff, 0 0 10px rgba(var(--secondary-theme-color-rgb), 1);
+            animation-name: radiant-heart-arc-flash;
+            animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .bg-anim-radiant-heart .p10 {
+            top: 25%;
+            left: 20%;
+            width: 8px;
+            height: 8px;
+            animation-duration: 2.5s;
+            animation-delay: -0.5s;
+        }
+
+        .bg-anim-radiant-heart .p11 {
+            top: 70%;
+            left: 80%;
+            width: 10px;
+            height: 10px;
+            animation-duration: 3s;
+            animation-delay: -2s;
+        }
+
+        .bg-anim-radiant-heart .p12 {
+            top: 50%;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            animation-duration: 2s;
+            animation-delay: -1.2s;
+        }
+
+        /* === 4. 絨毛狂熱 (Fluffy Frenzy) === */
+        /* 說明：大部分絨毛使用主色，每第三個絨毛球改為使用輔色，並降低其透明度，製造出柔和的色彩混合效果。*/
+        .card-wrapper.bg-anim-fluffy-frenzy .dynamic-bg-container {
+            display: block;
+            filter: blur(25px) brightness(1.2);
+            overflow: hidden;
+        }
+
+        .bg-anim-fluffy-frenzy .particle {
+            position: absolute;
+            opacity: 0;
+            background-color: rgba(var(--secondary-theme-color-rgb), 0.6);
+            border-radius: 50%;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .bg-anim-fluffy-frenzy .particle:nth-child(3n) {
+            background-color: rgba(var(--primary-theme-color-rgb), 0.45);
+        }
+
+        @keyframes fluffy-float-b-to-t {
+            0% {
+                transform: translateY(20vh) scale(0.7);
+                opacity: 0;
+            }
+
+            30%,
+            70% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-20vh) scale(1.1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fluffy-float-t-to-b {
+            0% {
+                transform: translateY(-20vh) scale(0.8);
+                opacity: 0;
+            }
+
+            30%,
+            70% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(20vh) scale(1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fluffy-float-l-to-r {
+            0% {
+                transform: translateX(-20vw) rotate(-90deg) scale(0.6);
+                opacity: 0;
+            }
+
+            30%,
+            70% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(20vw) rotate(90deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fluffy-float-r-to-l {
+            0% {
+                transform: translateX(20vw) rotate(90deg) scale(0.9);
+                opacity: 0;
+            }
+
+            30%,
+            70% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(-20vw) rotate(-90deg) scale(1);
+                opacity: 0;
+            }
+        }
+
+        .bg-anim-fluffy-frenzy .p1 {
+            width: 25vw;
+            height: 25vw;
+            top: 80%;
+            left: 10%;
+            animation-name: fluffy-float-b-to-t;
+            animation-duration: 15s;
+            animation-delay: -2s;
+        }
+
+        .bg-anim-fluffy-frenzy .p2 {
+            width: 35vw;
+            height: 35vw;
+            top: 90%;
+            left: 60%;
+            animation-name: fluffy-float-b-to-t;
+            animation-duration: 18s;
+            animation-delay: -10s;
+        }
+
+        .bg-anim-fluffy-frenzy .p3 {
+            width: 30vw;
+            height: 30vw;
+            top: -10%;
+            left: 40%;
+            animation-name: fluffy-float-t-to-b;
+            animation-duration: 16s;
+            animation-delay: -5s;
+        }
+
+        .bg-anim-fluffy-frenzy .p4 {
+            width: 28vw;
+            height: 28vw;
+            top: -20%;
+            left: 85%;
+            animation-name: fluffy-float-t-to-b;
+            animation-duration: 14s;
+            animation-delay: -12s;
+        }
+
+        .bg-anim-fluffy-frenzy .p5 {
+            width: 40vw;
+            height: 40vw;
+            top: 10%;
+            left: -20%;
+            animation-name: fluffy-float-l-to-r;
+            animation-duration: 20s;
+            animation-delay: 0s;
+        }
+
+        .bg-anim-fluffy-frenzy .p6 {
+            width: 20vw;
+            height: 20vw;
+            top: 60%;
+            left: -10%;
+            animation-name: fluffy-float-l-to-r;
+            animation-duration: 13s;
+            animation-delay: -8s;
+        }
+
+        .bg-anim-fluffy-frenzy .p7 {
+            width: 38vw;
+            height: 38vw;
+            top: 40%;
+            left: 90%;
+            animation-name: fluffy-float-r-to-l;
+            animation-duration: 22s;
+            animation-delay: -3s;
+        }
+
+        .bg-anim-fluffy-frenzy .p8 {
+            width: 22vw;
+            height: 22vw;
+            top: 5%;
+            left: 80%;
+            animation-name: fluffy-float-r-to-l;
+            animation-duration: 17s;
+            animation-delay: -15s;
+        }
+
+        .bg-anim-fluffy-frenzy .p9 {
+            width: 22vw;
+            height: 22vw;
+            top: 70%;
+            left: 35%;
+            animation-name: fluffy-float-b-to-t;
+            animation-duration: 19s;
+            animation-delay: -7s;
+        }
+
+        .bg-anim-fluffy-frenzy .p10 {
+            width: 33vw;
+            height: 33vw;
+            top: 0%;
+            left: 70%;
+            animation-name: fluffy-float-t-to-b;
+            animation-duration: 21s;
+            animation-delay: -14s;
+        }
+
+        .bg-anim-fluffy-frenzy .p11 {
+            width: 28vw;
+            height: 28vw;
+            top: 30%;
+            left: -15%;
+            animation-name: fluffy-float-l-to-r;
+            animation-duration: 14s;
+            animation-delay: -4s;
+        }
+
+        .bg-anim-fluffy-frenzy .p12 {
+            width: 32vw;
+            height: 32vw;
+            top: 80%;
+            left: 80%;
+            animation-name: fluffy-float-r-to-l;
+            animation-duration: 19s;
+            animation-delay: -9s;
+        }
+
+        /* === 5. 林地微風 (Sylvan Breeze) === */
+        /* 說明：原版已完美使用主色和輔色。將葉片的漸變色明確指向主色和輔色，確保與新系統完全兼容。*/
+        .card-wrapper.bg-anim-sylvan-breeze .dynamic-bg-container {
+            display: block;
+            overflow: hidden;
+        }
+
+        .bg-anim-sylvan-breeze .particle {
+            position: absolute;
+            bottom: -15%;
+            opacity: 0;
+            background-image: linear-gradient(to bottom, rgba(var(--secondary-theme-color-rgb), 0.9), rgba(var(--primary-theme-color-rgb), 0.5));
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 80'%3E%3Cpath fill='white' d='M25,80 C50,60 50,30 25,0 C0,30 0,60 25,80Z'/%3E%3C/svg%3E");
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 80'%3E%3Cpath fill='white' d='M25,80 C50,60 50,30 25,0 C0,30 0,60 25,80Z'/%3E%3C/svg%3E");
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            filter: brightness(1.2);
+        }
+
+        @keyframes leaf-flutter {
+            0% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-120vh) translateX(150px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes leaf-flutter-reverse {
+            0% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-120vh) translateX(-150px) rotate(-720deg);
+                opacity: 0;
+            }
+        }
+
+        .bg-anim-sylvan-breeze .p1 {
+            left: 10%;
+            width: 40px;
+            height: 60px;
+            animation-name: leaf-flutter;
+            animation-duration: 12s;
+            animation-delay: 0s;
+        }
+
+        .bg-anim-sylvan-breeze .p2 {
+            left: 70%;
+            width: 60px;
+            height: 90px;
+            animation-name: leaf-flutter-reverse;
+            animation-duration: 10s;
+            animation-delay: -5s;
+        }
+
+        .bg-anim-sylvan-breeze .p3 {
+            left: 40%;
+            width: 30px;
+            height: 45px;
+            animation-name: leaf-flutter;
+            animation-duration: 18s;
+            animation-delay: -2s;
+        }
+
+        .bg-anim-sylvan-breeze .p4 {
+            left: 90%;
+            width: 50px;
+            height: 75px;
+            animation-name: leaf-flutter;
+            animation-duration: 11s;
+            animation-delay: -10s;
+        }
+
+        .bg-anim-sylvan-breeze .p5 {
+            left: -10%;
+            width: 45px;
+            height: 65px;
+            animation-name: leaf-flutter-reverse;
+            animation-duration: 14s;
+            animation-delay: -12s;
+        }
+
+        .bg-anim-sylvan-breeze .p6 {
+            left: 25%;
+            width: 25px;
+            height: 40px;
+            animation-name: leaf-flutter;
+            animation-duration: 20s;
+            animation-delay: -7s;
+        }
+
+        .bg-anim-sylvan-breeze .p7 {
+            left: 30%;
+            width: 55px;
+            height: 80px;
+            animation-name: leaf-flutter-reverse;
+            animation-duration: 15s;
+            animation-delay: -8s;
+        }
+
+        .bg-anim-sylvan-breeze .p8 {
+            left: 80%;
+            width: 35px;
+            height: 50px;
+            animation-name: leaf-flutter;
+            animation-duration: 13s;
+            animation-delay: -3s;
+        }
+
+        .bg-anim-sylvan-breeze .p9 {
+            left: 55%;
+            width: 65px;
+            height: 95px;
+            animation-name: leaf-flutter-reverse;
+            animation-duration: 9s;
+            animation-delay: -9s;
+        }
+
+        .bg-anim-sylvan-breeze .p10 {
+            left: 0%;
+            width: 38px;
+            height: 55px;
+            animation-name: leaf-flutter;
+            animation-duration: 17s;
+            animation-delay: -15s;
+        }
+
+        .bg-anim-sylvan-breeze .p11 {
+            left: 85%;
+            width: 28px;
+            height: 42px;
+            animation-name: leaf-flutter-reverse;
+            animation-duration: 22s;
+            animation-delay: -1s;
+        }
+
+        .bg-anim-sylvan-breeze .p12 {
+            left: 48%;
+            width: 48px;
+            height: 70px;
+            animation-name: leaf-flutter;
+            animation-duration: 16s;
+            animation-delay: -11s;
+        }
+
+        /* === 6. 龍鱗統御 (Dragonscale Dominion) === */
+        /* 說明：將鱗片的漸變光暈改為從輔色（高光）過渡到主色（主體），更好地體現雙色主題。*/
+        .card-wrapper.bg-anim-dragonscale-dominion .dynamic-bg-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+            overflow: hidden;
+        }
+
+        .bg-anim-dragonscale-dominion .particle:nth-child(4n - 3) {
+            grid-column: 1;
+        }
+
+        .bg-anim-dragonscale-dominion .particle:nth-child(4n - 2) {
+            grid-column: 2;
+            margin-top: 15vmin;
+        }
+
+        .bg-anim-dragonscale-dominion .particle:nth-child(4n - 1) {
+            grid-column: 3;
+        }
+
+        .bg-anim-dragonscale-dominion .particle:nth-child(4n) {
+            grid-column: 4;
+            margin-top: 15vmin;
+        }
+
+        .bg-anim-dragonscale-dominion .particle {
+            position: relative;
+            width: 25vmin;
+            height: 30vmin;
+            margin-bottom: -15vmin;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%);
+            background: radial-gradient(ellipse at 50% 100%, rgba(var(--primary-theme-color-rgb), 0.9) 0%, rgba(var(--secondary-theme-color-rgb), 0.6) 60%, transparent 80%);
+            animation-name: scale-glimmer, endless-scroll-grid;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out, linear;
+        }
+
+        @keyframes scale-glimmer {
+
+            0%,
+            100% {
+                opacity: 0.6;
+                transform: scale(1);
+                filter: brightness(0.8);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+                filter: brightness(1.2);
+            }
+        }
+
+        @keyframes endless-scroll-grid {
+            from {
+                transform: translateY(-30vmin);
+            }
+
+            to {
+                transform: translateY(30vmin);
+            }
+        }
+
+        .bg-anim-dragonscale-dominion .p1,
+        .p5,
+        .p9 {
+            animation-duration: 5s, 30s;
+            animation-delay: -1s, 0s;
+        }
+
+        .bg-anim-dragonscale-dominion .p2,
+        .p6,
+        .p10 {
+            animation-duration: 7s, 35s;
+            animation-delay: -3s, -5s;
+            animation-direction: alternate, reverse;
+        }
+
+        .bg-anim-dragonscale-dominion .p3,
+        .p7,
+        .p11 {
+            animation-duration: 6s, 28s;
+            animation-delay: -2s, -10s;
+        }
+
+        .bg-anim-dragonscale-dominion .p4,
+        .p8,
+        .p12 {
+            animation-duration: 8s, 40s;
+            animation-delay: -5s, -15s;
+            animation-direction: alternate, reverse;
+        }
+
+        /* === 7. 猩紅權威 (Crimson Authority) === */
+        /* 說明：下落的條紋和光束使用主色。作為點綴的符文，其文字陰影從原來的白色改為輔色，與主色形成呼應。*/
+        .card-wrapper.bg-anim-crimson-authority .dynamic-bg-container {
+            display: block;
+            mix-blend-mode: lighten;
+            filter: brightness(1.2);
+            opacity: 0.9;
+        }
+
+        .bg-anim-crimson-authority .particle {
+            position: absolute;
+            top: -20%;
+            opacity: 0;
+            animation-name: crimson-descent;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            will-change: transform, opacity;
+        }
+
+        @keyframes crimson-descent {
+            0% {
+                transform: translateY(0) rotate(var(--spin, 0deg));
+                opacity: 0;
+            }
+
+            10% {
+                opacity: var(--max-opacity, 0.8);
+            }
+
+            90% {
+                opacity: var(--max-opacity, 0.8);
+            }
+
+            100% {
+                transform: translateY(130vh) rotate(var(--spin, 0deg));
+                opacity: 0;
+            }
+        }
+
+        .bg-anim-crimson-authority .particle:nth-child(-n+4) {
+            height: 150%;
+            background: repeating-linear-gradient(to bottom, rgba(var(--secondary-theme-color-rgb), 0.6) 0, rgba(var(--secondary-theme-color-rgb), 0.6) 15px, transparent 15px, transparent 25px);
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
+        }
+
+        .bg-anim-crimson-authority .particle:nth-child(n+5):nth-child(-n+8) {
+            height: 60vh;
+            background: linear-gradient(to bottom, rgba(var(--secondary-theme-color-rgb), 0.8) 0%, transparent 100%);
+            filter: blur(4px);
+        }
+
+        .bg-anim-crimson-authority .particle:nth-child(n+9) {
+            font-family: 'Times New Roman', serif;
+            color: rgba(var(--secondary-theme-color-rgb), 1);
+            text-shadow: 0 0 8px rgba(var(--secondary-theme-color-rgb), 1), 0 0 15px rgba(var(--primary-theme-color-rgb), 0.7);
+        }
+
+        .bg-anim-crimson-authority .particle:nth-child(2n+9)::before {
+            content: '❖';
+        }
+
+        .bg-anim-crimson-authority .particle:nth-child(2n+10)::before {
+            content: '†';
+        }
+
+        .bg-anim-crimson-authority .p1 {
+            left: 20%;
+            width: 5px;
+            --max-opacity: 0.5;
+            animation-duration: 22s;
+            animation-delay: -10s;
+        }
+
+        .bg-anim-crimson-authority .p2 {
+            left: 45%;
+            width: 8px;
+            --max-opacity: 0.7;
+            animation-duration: 18s;
+            animation-delay: -2s;
+        }
+
+        .bg-anim-crimson-authority .p3 {
+            left: 70%;
+            width: 5px;
+            --max-opacity: 0.5;
+            animation-duration: 25s;
+            animation-delay: -18s;
+        }
+
+        .bg-anim-crimson-authority .p4 {
+            left: 95%;
+            width: 6px;
+            --max-opacity: 0.6;
+            animation-duration: 20s;
+            animation-delay: -5s;
+        }
+
+        .bg-anim-crimson-authority .p5 {
+            left: 10%;
+            width: 2px;
+            --max-opacity: 0.8;
+            animation-duration: 8s;
+            animation-delay: -1s;
+        }
+
+        .bg-anim-crimson-authority .p6 {
+            left: 33%;
+            width: 1px;
+            --max-opacity: 0.6;
+            animation-duration: 10s;
+            animation-delay: -7s;
+        }
+
+        .bg-anim-crimson-authority .p7 {
+            left: 66%;
+            width: 2px;
+            --max-opacity: 0.8;
+            animation-duration: 7s;
+            animation-delay: -4s;
+        }
+
+        .bg-anim-crimson-authority .p8 {
+            left: 85%;
+            width: 1.5px;
+            --max-opacity: 0.7;
+            animation-duration: 9s;
+            animation-delay: -9s;
+        }
+
+        .bg-anim-crimson-authority .p9 {
+            left: 15%;
+            font-size: 24px;
+            --spin: 90deg;
+            --max-opacity: 1;
+            animation-duration: 15s;
+            animation-delay: -3s;
+        }
+
+        .bg-anim-crimson-authority .p10 {
+            left: 55%;
+            font-size: 30px;
+            --spin: -120deg;
+            --max-opacity: 1;
+            animation-duration: 13s;
+            animation-delay: -11s;
+        }
+
+        .bg-anim-crimson-authority .p11 {
+            left: 80%;
+            font-size: 20px;
+            --spin: 180deg;
+            --max-opacity: 1;
+            animation-duration: 17s;
+            animation-delay: -8s;
+        }
+
+        .bg-anim-crimson-authority .p12 {
+            left: 25%;
+            font-size: 28px;
+            --spin: -60deg;
+            --max-opacity: 1;
+            animation-duration: 14s;
+            animation-delay: -16s;
+        }
+
+        /* === 8. 夢幻光彩 (Dreamy Radiance) === */
+        /* 說明：將一半的光球基礎色改為輔色，另一半保持主色。它們在動畫中都會進行色相旋轉，創造出兩種顏色交織變幻的夢幻效果。*/
+        .card-wrapper.bg-anim-dreamy-radiance .dynamic-bg-container {
+            display: block;
+            mix-blend-mode: screen;
+            filter: brightness(1.1) saturate(1.2);
+            opacity: 0.8;
+        }
+
+        .bg-anim-dreamy-radiance .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(var(--secondary-theme-color-rgb), 0.7) 0%, transparent 70%);
+            animation-name: dreamy-drift;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            will-change: transform, opacity, filter;
+        }
+
+        /* 將偶數粒子改為輔色 */
+        .bg-anim-dreamy-radiance .particle:nth-child(2n) {
+            background: radial-gradient(circle, rgba(var(--primary-theme-color-rgb), 0.6) 0%, transparent 70%);
+        }
+
+        @keyframes dreamy-drift {
+            from {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.8;
+                filter: blur(60px) hue-rotate(0deg);
+            }
+
+            to {
+                transform: translate(var(--x, 40vw), var(--y, 30vh)) scale(var(--s, 1.5));
+                opacity: 1;
+                filter: blur(40px) hue-rotate(120deg);
+            }
+        }
+
+        .bg-anim-dreamy-radiance .p1 {
+            width: 60vmin;
+            height: 60vmin;
+            top: 10%;
+            left: -20%;
+            --x: 40vw;
+            --y: 20vh;
+            --s: 1.2;
+            animation-duration: 30s;
+            animation-delay: -5s;
+        }
+
+        .bg-anim-dreamy-radiance .p2 {
+            width: 55vmin;
+            height: 55vmin;
+            top: 40%;
+            left: 60%;
+            --x: -30vw;
+            --y: -30vh;
+            --s: 1.3;
+            animation-duration: 35s;
+            animation-delay: -15s;
+            animation-direction: alternate-reverse;
+        }
+
+        .bg-anim-dreamy-radiance .p3 {
+            width: 70vmin;
+            height: 70vmin;
+            top: -20%;
+            left: 40%;
+            --x: 10vw;
+            --y: 50vh;
+            --s: 1.1;
+            animation-duration: 40s;
+            animation-delay: -2s;
+        }
+
+        .bg-anim-dreamy-radiance .p4 {
+            width: 35vmin;
+            height: 35vmin;
+            top: 80%;
+            left: 0%;
+            --x: 60vw;
+            --y: -40vh;
+            --s: 1.5;
+            animation-duration: 22s;
+            animation-delay: -8s;
+        }
+
+        .bg-anim-dreamy-radiance .p5 {
+            width: 40vmin;
+            height: 40vmin;
+            top: 5%;
+            left: 80%;
+            --x: -50vw;
+            --y: 30vh;
+            --s: 1.4;
+            animation-duration: 25s;
+            animation-delay: -12s;
+            animation-direction: alternate-reverse;
+        }
+
+        .bg-anim-dreamy-radiance .p6 {
+            width: 30vmin;
+            height: 30vmin;
+            top: 60%;
+            left: 25%;
+            --x: 20vw;
+            --y: -50vh;
+            --s: 1.6;
+            animation-duration: 28s;
+            animation-delay: -20s;
+        }
+
+        .bg-anim-dreamy-radiance .p7 {
+            width: 20vmin;
+            height: 20vmin;
+            top: 30%;
+            left: 10%;
+            --x: 80vw;
+            --y: 10vh;
+            --s: 2;
+            animation-duration: 15s;
+            animation-delay: -3s;
+        }
+
+        .bg-anim-dreamy-radiance .p8 {
+            width: 25vmin;
+            height: 25vmin;
+            top: 70%;
+            left: 75%;
+            --x: -70vw;
+            --y: -20vh;
+            --s: 1.8;
+            animation-duration: 18s;
+            animation-delay: -9s;
+            animation-direction: alternate-reverse;
+        }
+
+        .bg-anim-dreamy-radiance .p9 {
+            width: 18vmin;
+            height: 18vmin;
+            top: 0%;
+            left: 50%;
+            --x: 10vw;
+            --y: 80vh;
+            --s: 2.2;
+            animation-duration: 20s;
+            animation-delay: -1s;
+        }
+
+        .bg-anim-dreamy-radiance .p10 {
+            width: 45vmin;
+            height: 45vmin;
+            top: 90%;
+            left: 30%;
+            --x: -20vw;
+            --y: -80vh;
+            --s: 1.3;
+            animation-duration: 33s;
+            animation-delay: -25s;
+        }
+
+        .bg-anim-dreamy-radiance .p11 {
+            width: 22vmin;
+            height: 22vmin;
+            top: 50%;
+            left: 50%;
+            --x: 30vw;
+            --y: -30vh;
+            --s: 1.9;
+            animation-duration: 16s;
+            animation-delay: -6s;
+            animation-direction: alternate-reverse;
+        }
+
+        .bg-anim-dreamy-radiance .p12 {
+            width: 38vmin;
+            height: 38vmin;
+            top: 20%;
+            left: 70%;
+            --x: -60vw;
+            --y: 40vh;
+            --s: 1.4;
+            animation-duration: 26s;
+            animation-delay: -18s;
+        }
+
+        /* === 9. 海洋之息 (Oceanic Breath) === */
+        /* 說明：將氣泡的材質從原來的白色高光改為輔色高光，主體漸變至主色，使氣泡色彩更豐富且貼合主題。外圈輝光也加入了輔色。*/
+        .card-wrapper.bg-anim-oceanic-breath .dynamic-bg-container {
+            display: block;
+            filter: blur(1px) brightness(1.2);
+            mix-blend-mode: screen;
+        }
+
+        .bg-anim-oceanic-breath .particle {
+            position: absolute;
+            bottom: -20%;
+            opacity: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(var(--primary-theme-color-rgb), 0.8) 0%, rgba(var(--primary-theme-color-rgb), 0.2) 30%, rgba(var(--secondary-theme-color-rgb), 0.6) 100%);
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3), 0 0 15px rgba(var(--secondary-theme-color-rgb), 0.6), 0 0 5px rgba(var(--primary-theme-color-rgb), 0.5);
+            animation-name: oceanic-drift;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            will-change: transform, opacity;
+        }
+
+        @keyframes oceanic-drift {
+            0% {
+                transform: translate(var(--x-start, 0px), 0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translate(var(--x-end, 0px), -120vh) rotate(var(--rot, 0deg));
+                opacity: 0;
+            }
+        }
+
+        .bg-anim-oceanic-breath .p1 {
+            left: 10%;
+            width: 60px;
+            height: 60px;
+            --x-start: 0vw;
+            --x-end: -5vw;
+            --rot: -30deg;
+            animation-duration: 14s;
+            animation-delay: -2s;
+        }
+
+        .bg-anim-oceanic-breath .p2 {
+            left: 80%;
+            width: 75px;
+            height: 75px;
+            --x-start: 0vw;
+            --x-end: 8vw;
+            --rot: 40deg;
+            animation-duration: 12s;
+            animation-delay: -8s;
+        }
+
+        .bg-anim-oceanic-breath .p3 {
+            left: 40%;
+            width: 50px;
+            height: 50px;
+            --x-start: 0vw;
+            --x-end: 10vw;
+            --rot: 20deg;
+            animation-duration: 18s;
+            animation-delay: -5s;
+        }
+
+        .bg-anim-oceanic-breath .p4 {
+            left: 20%;
+            width: 35px;
+            height: 35px;
+            filter: blur(2px);
+            --x-start: 0vw;
+            --x-end: -8vw;
+            --rot: -50deg;
+            animation-duration: 25s;
+            animation-delay: -1s;
+        }
+
+        .bg-anim-oceanic-breath .p5 {
+            left: 65%;
+            width: 45px;
+            height: 45px;
+            filter: blur(1.5px);
+            --x-start: 0vw;
+            --x-end: 6vw;
+            --rot: 60deg;
+            animation-duration: 22s;
+            animation-delay: -12s;
+        }
+
+        .bg-anim-oceanic-breath .p6 {
+            left: 90%;
+            width: 40px;
+            height: 40px;
+            filter: blur(2px);
+            --x-start: 0vw;
+            --x-end: -12vw;
+            --rot: -25deg;
+            animation-duration: 28s;
+            animation-delay: -18s;
+        }
+
+        .bg-anim-oceanic-breath .p7 {
+            left: 5%;
+            width: 25px;
+            height: 25px;
+            filter: blur(4px);
+            --x-start: 0vw;
+            --x-end: 4vw;
+            --rot: 80deg;
+            animation-duration: 35s;
+            animation-delay: -4s;
+        }
+
+        .bg-anim-oceanic-breath .p8 {
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            filter: blur(3px);
+            --x-start: 0vw;
+            --x-end: -5vw;
+            --rot: -70deg;
+            animation-duration: 32s;
+            animation-delay: -25s;
+        }
+
+        .bg-anim-oceanic-breath .p9 {
+            left: 75%;
+            width: 20px;
+            height: 20px;
+            filter: blur(4.5px);
+            --x-start: 0vw;
+            --x-end: 10vw;
+            --rot: 90deg;
+            animation-duration: 40s;
+            animation-delay: -30s;
+        }
+
+        .bg-anim-oceanic-breath .p10 {
+            left: 30%;
+            width: 15px;
+            height: 15px;
+            filter: blur(1px);
+            --x-start: 0vw;
+            --x-end: -15vw;
+            --rot: -120deg;
+            animation-duration: 15s;
+            animation-delay: -10s;
+        }
+
+        .bg-anim-oceanic-breath .p11 {
+            left: 60%;
+            width: 18px;
+            height: 18px;
+            filter: blur(0.5px);
+            --x-start: 0vw;
+            --x-end: 12vw;
+            --rot: 100deg;
+            animation-duration: 19s;
+            animation-delay: -15s;
+        }
+
+        .bg-anim-oceanic-breath .p12 {
+            left: 2%;
+            width: 20px;
+            height: 20px;
+            filter: blur(3px);
+            --x-start: 0vw;
+            --x-end: 5vw;
+            --rot: 45deg;
+            animation-duration: 26s;
+            animation-delay: -22s;
+        }
+
+        /* === 10. 水晶晶格 (Crystalline Lattice) === */
+        /* 說明：保持晶格內部漸變為主色，將銳利的邊框改為輔色，形成清晰的輪廓。整體的輝光也疊加了輔色。*/
+        .card-wrapper.bg-anim-crystalline-lattice .dynamic-bg-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            place-items: center;
+            transform: scale(1.5) rotate(15deg);
+            opacity: 0.7;
+            filter: drop-shadow(0 0 8px rgba(var(--secondary-theme-color-rgb), 0.4)) drop-shadow(0 0 4px rgba(var(--primary-theme-color-rgb), 0.3));
+        }
+
+        .bg-anim-crystalline-lattice .particle {
+            width: 90%;
+            height: 90%;
+            background: radial-gradient(circle, rgba(var(--secondary-theme-color-rgb), 0.5) 0%, rgba(var(--secondary-theme-color-rgb), 0.1) 70%);
+            border: 1px solid rgba(var(--primary-theme-color-rgb), 0.7);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            animation-name: crystal-resonate;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+            will-change: transform, filter, opacity;
+        }
+
+        @keyframes crystal-resonate {
+
+            0%,
+            100% {
+                transform: scale(0.6);
+                filter: brightness(0.7);
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: scale(1);
+                filter: brightness(1.5);
+                opacity: 1;
+            }
+        }
+
+        .bg-anim-crystalline-lattice .p1 {
+            animation-delay: -0.0s;
+        }
+
+        .bg-anim-crystalline-lattice .p2,
+        .bg-anim-crystalline-lattice .p4 {
+            animation-delay: -0.2s;
+        }
+
+        .bg-anim-crystalline-lattice .p3,
+        .bg-anim-crystalline-lattice .p5,
+        .bg-anim-crystalline-lattice .p7 {
+            animation-delay: -0.4s;
+        }
+
+        .bg-anim-crystalline-lattice .p6,
+        .bg-anim-crystalline-lattice .p8,
+        .bg-anim-crystalline-lattice .p10 {
+            animation-delay: -0.6s;
+        }
+
+        .bg-anim-crystalline-lattice .p9,
+        .bg-anim-crystalline-lattice .p11 {
+            animation-delay: -0.8s;
+        }
+
+        .bg-anim-crystalline-lattice .p12 {
+            animation-delay: -1.0s;
+        }
+
+        .bg-anim-crystalline-lattice .p5,
+        .bg-anim-crystalline-lattice .p11 {
+            transform: rotate(90deg);
+        }
+
+        .bg-anim-crystalline-lattice .p3,
+        .bg-anim-crystalline-lattice .p8 {
+            animation-direction: reverse;
+        }
+
+        /* === 11. 機巧樞紐 (Machina Core) === */
+        /* 說明：這是一個複雜的機械結構。將幾個旋轉的齒輪和裝飾環的顏色從主色改為輔色，以區分不同的機械部件。閃爍的指示燈輝光也加入了輔色。*/
+        .card-wrapper.bg-anim-machina-core .dynamic-bg-container {
+            display: block;
+            background: repeating-linear-gradient(to bottom, transparent, transparent 1px, rgba(0, 0, 0, 0.2) 2px, rgba(0, 0, 0, 0.2) 3px);
+            overflow: hidden;
+        }
+
+        .bg-anim-machina-core .particle {
+            position: absolute;
+            will-change: transform, opacity;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes machina-spin-cw {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes machina-spin-ccw {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes machina-piston {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(100%);
+            }
+        }
+
+        @keyframes machina-flow-h {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 200px 0;
+            }
+        }
+
+        @keyframes machina-flow-v {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 0 200px;
+            }
+        }
+
+        @keyframes machina-indicator-blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        .bg-anim-machina-core .p1,
+        .bg-anim-machina-core .p2 {
+            border-style: dashed;
+            border-radius: 50%;
+            opacity: 0.2;
+            z-index: 1;
+            animation-name: machina-spin-cw;
+        }
+
+        .bg-anim-machina-core .p1 {
+            top: -20%;
+            left: -25%;
+            width: 80vmin;
+            height: 80vmin;
+            border: 30px dashed rgba(var(--secondary-theme-color-rgb), 0.5);
+            animation-duration: 80s;
+        }
+
+        .bg-anim-machina-core .p2 {
+            top: 40%;
+            left: 50%;
+            width: 70vmin;
+            height: 70vmin;
+            border: 20px dashed rgba(var(--primary-theme-color-rgb), 0.4);
+            animation-name: machina-spin-ccw;
+            animation-duration: 60s;
+            animation-delay: -5s;
+        }
+
+        .bg-anim-machina-core .p3,
+        .bg-anim-machina-core .p4,
+        .bg-anim-machina-core .p5 {
+            border-radius: 50%;
+            opacity: 0.4;
+            z-index: 2;
+            animation-name: machina-spin-cw;
+        }
+
+        .bg-anim-machina-core .p3 {
+            top: 30%;
+            left: 35%;
+            width: 30vmin;
+            height: 30vmin;
+            border: 2px solid rgba(var(--secondary-theme-color-rgb), 0.8);
+            background: repeating-conic-gradient(rgba(var(--secondary-theme-color-rgb), 0.3) 0% 5%, transparent 5% 10%);
+            animation-duration: 25s;
+        }
+
+        .bg-anim-machina-core .p4 {
+            top: 5%;
+            right: -5%;
+            width: 25vmin;
+            height: 25vmin;
+            border: 5px double rgba(var(--primary-theme-color-rgb), 0.5);
+            animation-name: machina-spin-ccw;
+            animation-duration: 15s;
+        }
+
+        .bg-anim-machina-core .p5 {
+            bottom: -5%;
+            left: 5%;
+            width: 20vmin;
+            height: 20vmin;
+            background: radial-gradient(transparent 40%, rgba(var(--secondary-theme-color-rgb), 0.4) 42%, transparent 45%);
+            border: none;
+            animation-duration: 18s;
+        }
+
+        .bg-anim-machina-core .p6,
+        .bg-anim-machina-core .p7 {
+            width: 5vmin;
+            background: rgba(var(--secondary-theme-color-rgb), 0.3);
+            z-index: 2;
+            animation-name: machina-piston;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+        }
+
+        .bg-anim-machina-core .p6 {
+            top: 50%;
+            left: 15%;
+            height: 60%;
+            animation-duration: 6s;
+            animation-delay: -1s;
+        }
+
+        .bg-anim-machina-core .p7 {
+            top: 50%;
+            right: 20%;
+            height: 40%;
+            animation-duration: 4s;
+            animation-delay: -3s;
+        }
+
+        .bg-anim-machina-core .p8 {
+            top: 20%;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, rgba(var(--secondary-theme-color-rgb), 1) 50%, transparent 100%);
+            background-size: 100px 100%;
+            z-index: 3;
+            opacity: 0.6;
+            filter: blur(1px) brightness(1.2);
+            animation-name: machina-flow-h;
+            animation-duration: 3s;
+        }
+
+        .bg-anim-machina-core .p9 {
+            top: 0;
+            left: 80%;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent 0%, rgba(var(--secondary-theme-color-rgb), 1) 50%, transparent 100%);
+            background-size: 100% 100px;
+            z-index: 3;
+            opacity: 0.6;
+            filter: blur(1px) brightness(1.2);
+            animation-name: machina-flow-v;
+            animation-duration: 2.5s;
+            animation-delay: -0.5s;
+        }
+
+        .bg-anim-machina-core .p10,
+        .bg-anim-machina-core .p11,
+        .bg-anim-machina-core .p12 {
+            border-radius: 50%;
+            background-color: rgba(var(--secondary-theme-color-rgb), 1);
+            box-shadow: 0 0 8px rgba(var(--secondary-theme-color-rgb), 1), 0 0 15px rgba(var(--primary-theme-color-rgb), 0.6);
+            z-index: 4;
+            animation-name: machina-indicator-blink;
+            animation-timing-function: steps(1, end);
+        }
+
+        .bg-anim-machina-core .p10 {
+            top: 18%;
+            left: 45%;
+            width: 10px;
+            height: 10px;
+            animation-duration: 2s;
+            animation-delay: -0.2s;
+        }
+
+        .bg-anim-machina-core .p11 {
+            top: 78%;
+            left: 13%;
+            width: 15px;
+            height: 15px;
+            animation-duration: 3.5s;
+            animation-delay: -1.5s;
+        }
+
+        .bg-anim-machina-core .p12 {
+            top: 40%;
+            right: 10%;
+            width: 8px;
+            height: 8px;
+            animation-duration: 1.8s;
+            animation-delay: -0.8s;
+        }
+
+        /* === 12. 光譜漂移 (Spectral Drift) === */
+        /* 說明：類似絨毛狂熱，將一半的粒子基礎色改為輔色，创造主色和辅色兩種幽靈般的形态交織漂浮的景象。*/
+        .card-wrapper.bg-anim-spectral-drift .dynamic-bg-container {
+            display: block;
+            filter: brightness(1.1);
+            overflow: hidden;
+        }
+
+        .bg-anim-spectral-drift .particle {
+            position: absolute;
+            opacity: 0;
+            background-color: rgba(var(--secondary-theme-color-rgb), 0.4);
+            border-radius: 45% 55% 60% 40% / 55% 45% 55% 45%;
+            filter: blur(40px);
+            animation-name: spectral-wisp-float, spectral-wisp-morph;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        /* 將偶數粒子改為輔色 */
+        .bg-anim-spectral-drift .particle:nth-child(2n) {
+            background-color: rgba(var(--primary-theme-color-rgb), 0.35);
+        }
+
+        @keyframes spectral-wisp-float {
+            0% {
+                transform: translate(0, 0) scale(1) rotate(0deg);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translate(25vw, -30vh) scale(1.5) rotate(90deg);
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes spectral-wisp-morph {
+            0% {
+                border-radius: 45% 55% 60% 40% / 55% 45% 55% 45%;
+            }
+
+            50% {
+                border-radius: 60% 40% 45% 55% / 40% 60% 45% 55%;
+            }
+
+            100% {
+                border-radius: 45% 55% 60% 40% / 55% 45% 55% 45%;
+            }
+        }
+
+        .bg-anim-spectral-drift .p1 {
+            width: 40vw;
+            height: 50vh;
+            top: 50%;
+            left: 10%;
+            animation-duration: 25s, 35s;
+            animation-delay: -5s, -10s;
+            animation-direction: alternate, normal;
+        }
+
+        .bg-anim-spectral-drift .p2 {
+            width: 30vw;
+            height: 35vh;
+            top: 10%;
+            left: 60%;
+            animation-duration: 18s, 28s;
+            animation-delay: 0s, -15s;
+            animation-direction: alternate-reverse, normal;
+        }
+
+        .bg-anim-spectral-drift .p3 {
+            width: 50vw;
+            height: 20vh;
+            top: 80%;
+            left: 40%;
+            animation-duration: 30s, 20s;
+            animation-delay: -12s, -3s;
+            animation-direction: alternate, normal;
+        }
+
+        .bg-anim-spectral-drift .p4 {
+            width: 25vw;
+            height: 45vh;
+            top: -10%;
+            left: 20%;
+            animation-duration: 22s, 32s;
+            animation-delay: -8s, -18s;
+            animation-direction: alternate-reverse, normal;
+        }
+
+        .bg-anim-spectral-drift .p5 {
+            width: 35vw;
+            height: 30vh;
+            bottom: 5%;
+            right: 5%;
+            animation-duration: 19s, 26s;
+            animation-delay: -2s, -9s;
+            animation-direction: alternate, normal;
+        }
+
+        .bg-anim-spectral-drift .p6 {
+            width: 20vw;
+            height: 60vh;
+            top: 20%;
+            left: 75%;
+            animation-duration: 28s, 18s;
+            animation-delay: -14s, -2s;
+            animation-direction: alternate-reverse, normal;
+        }
+
+        .bg-anim-spectral-drift .p7 {
+            width: 45vw;
+            height: 40vh;
+            top: 30%;
+            left: -10%;
+            animation-duration: 26s, 38s;
+            animation-delay: -3s, -20s;
+            animation-direction: alternate, normal;
+        }
+
+        .bg-anim-spectral-drift .p8 {
+            width: 38vw;
+            height: 25vh;
+            bottom: 10%;
+            left: 70%;
+            animation-duration: 21s, 29s;
+            animation-delay: -9s, -1s;
+            animation-direction: alternate-reverse, normal;
+        }
+
+        .bg-anim-spectral-drift .p9 {
+            width: 28vw;
+            height: 55vh;
+            top: -15%;
+            right: -5%;
+            animation-duration: 32s, 22s;
+            animation-delay: -1s, -11s;
+            animation-direction: alternate, normal;
+        }
+
+        .bg-anim-spectral-drift .p10 {
+            width: 33vw;
+            height: 33vh;
+            top: 50%;
+            left: 50%;
+            animation-duration: 16s, 24s;
+            animation-delay: -6s, -16s;
+            animation-direction: alternate-reverse, normal;
+        }
+
+        .bg-anim-spectral-drift .p11 {
+            width: 42vw;
+            height: 28vh;
+            top: 75%;
+            left: 0%;
+            animation-duration: 29s, 19s;
+            animation-delay: -18s, -8s;
+            animation-direction: alternate, normal;
+        }
+
+        .bg-anim-spectral-drift .p12 {
+            width: 22vw;
+            height: 50vh;
+            bottom: -10%;
+            left: 30%;
+            animation-duration: 23s, 33s;
+            animation-delay: -13s, -23s;
+            animation-direction: alternate-reverse, normal;
+        }
+
+
+        /* === 13. 深淵凝視 (Void Gaze) === */
+        /* 說明：眼睛的核心（虹膜）改為从輔色到主色的漸變，增加視覺焦點。周圍扭曲的觸鬚狀物體中，有一個改為輔色以增加混亂感。漂浮的星點輝光也加入了輔色。*/
+        .card-wrapper.bg-anim-void-gaze .dynamic-bg-container {
+            display: block;
+            background-color: rgb(5, 0, 10);
+            overflow: hidden;
+            opacity: 0.4;
+            /* 調整了透明度以更好地融入深色背景 */
+        }
+
+        .bg-anim-void-gaze .particle {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            will-change: transform, opacity, filter;
+        }
+
+        @keyframes void-gaze-upper-lid {
+
+            0%,
+            10%,
+            90%,
+            100% {
+                transform: translateY(0%);
+            }
+
+            30%,
+            70% {
+                transform: translateY(-100%);
+            }
+        }
+
+        @keyframes void-gaze-lower-lid {
+
+            0%,
+            10%,
+            90%,
+            100% {
+                transform: translateY(0%);
+            }
+
+            30%,
+            70% {
+                transform: translateY(100%);
+            }
+        }
+
+        @keyframes void-iris-pulse {
+            0% {
+                filter: brightness(1) hue-rotate(0deg);
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+                filter: brightness(2) hue-rotate(90deg);
+                transform: translate(-50%, -50%) scale(1.15);
+            }
+
+            100% {
+                filter: brightness(1) hue-rotate(0deg);
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        @keyframes void-writhe {
+            0% {
+                transform: translate(-50%, -50%) rotate(-15deg) skew(5deg, 5deg);
+                opacity: 0.6;
+            }
+
+            50% {
+                transform: translate(-40%, -60%) rotate(10deg) skew(-10deg, -5deg) scale(1.15);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-55%, -45%) rotate(-5deg) skew(10deg, 10deg);
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes void-drift {
+            from {
+                opacity: 0;
+                transform: var(--start-pos) scale(0.5);
+            }
+
+            to {
+                opacity: 0.7;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        .bg-anim-void-gaze .p1 {
+            width: 80vmin;
+            height: 80vmin;
+            background: radial-gradient(circle, transparent 40%, rgba(var(--secondary-theme-color-rgb), 0.3) 100%);
+            border-radius: 50%;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        .bg-anim-void-gaze .p2 {
+            width: 40vmin;
+            height: 40vmin;
+            background: radial-gradient(circle, rgba(var(--primary-theme-color-rgb), 0.9), rgba(var(--secondary-theme-color-rgb), 0.6) 60%, transparent 80%);
+            border-radius: 50%;
+            z-index: 2;
+            animation-name: void-iris-pulse;
+            animation-duration: 12s;
+        }
+
+        .bg-anim-void-gaze .p3 {
+            width: 3vmin;
+            height: 38vmin;
+            background-color: #000;
+            border-radius: 20px;
+            box-shadow: 0 0 10px #000;
+            z-index: 3;
+        }
+
+        .bg-anim-void-gaze .p4,
+        .bg-anim-void-gaze .p5 {
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-color: rgb(5, 0, 10);
+            z-index: 4;
+            animation-duration: 12s;
+            animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+            transform: translateY(0);
+        }
+
+        .bg-anim-void-gaze .p4 {
+            top: 0;
+            animation-name: void-gaze-upper-lid;
+        }
+
+        .bg-anim-void-gaze .p5 {
+            top: 50%;
+            animation-name: void-gaze-lower-lid;
+        }
+
+        .bg-anim-void-gaze .p6,
+        .bg-anim-void-gaze .p7,
+        .bg-anim-void-gaze .p8 {
+            filter: blur(20px);
+            mix-blend-mode: screen;
+            opacity: 1;
+            z-index: 1;
+            animation-name: void-writhe;
+            animation-direction: alternate;
+        }
+
+        .bg-anim-void-gaze .p6 {
+            width: 10vmin;
+            height: 80vmin;
+            top: 50%;
+            left: 20%;
+            background: rgba(var(--secondary-theme-color-rgb), 0.7);
+            animation-duration: 22s;
+            animation-delay: -2s;
+        }
+
+        .bg-anim-void-gaze .p7 {
+            width: 15vmin;
+            height: 70vmin;
+            top: 50%;
+            left: 80%;
+            transform: rotate(30deg);
+            background: rgba(var(--primary-theme-color-rgb), 0.6);
+            animation-duration: 18s;
+            animation-delay: -8s;
+        }
+
+        .bg-anim-void-gaze .p8 {
+            width: 12vmin;
+            height: 90vmin;
+            top: 50%;
+            left: 50%;
+            transform: rotate(-45deg);
+            background: rgba(var(--secondary-theme-color-rgb), 0.7);
+            animation-duration: 15s;
+            animation-delay: -5s;
+        }
+
+        .bg-anim-void-gaze .p9,
+        .bg-anim-void-gaze .p10,
+        .bg-anim-void-gaze .p11,
+        .bg-anim-void-gaze .p12 {
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px #fff, 0 0 10px rgba(var(--primary-theme-color-rgb), 0.7);
+            animation-name: void-drift;
+            animation-timing-function: ease-in;
+            z-index: 5;
+        }
+
+        .bg-anim-void-gaze .p9 {
+            --start-pos: translate(-40vw, -45vh);
+            animation-duration: 18s;
+            animation-delay: -2s;
+        }
+
+        .bg-anim-void-gaze .p10 {
+            --start-pos: translate(45vw, -30vh);
+            animation-duration: 15s;
+            animation-delay: -8s;
+        }
+
+        .bg-anim-void-gaze .p11 {
+            --start-pos: translate(-35vw, 40vh);
+            animation-duration: 22s;
+            animation-delay: -5s;
+        }
+
+        .bg-anim-void-gaze .p12 {
+            --start-pos: translate(30vw, 48vh);
+            animation-duration: 12s;
+            animation-delay: -11s;
+        }
+
+        /* === 14. 奇美拉流 (Chimeric Flow) === */
+        .card-wrapper.bg-anim-chimeric-flow .dynamic-bg-container {
+            display: block;
+            overflow: hidden;
+        }
+
+        .bg-anim-chimeric-flow .particle {
+            position: absolute;
+            opacity: 0;
+            animation-iteration-count: infinite;
+            will-change: transform, opacity, filter;
+        }
+
+        @keyframes chimeric-morph-wander {
+            0% {
+                transform: translate(0, 0) scale(1);
+                border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+                filter: hue-rotate(0deg) blur(30px);
+            }
+
+            50% {
+                transform: translate(var(--x, 10vw), var(--y, 15vh)) scale(1.2);
+                border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+                filter: hue-rotate(180deg) blur(30px);
+            }
+
+            100% {
+                transform: translate(0, 0) scale(1);
+                border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+                filter: hue-rotate(360deg) blur(30px);
+            }
+        }
+
+        @keyframes chimeric-glitch-flicker {
+            0% {
+                opacity: 0;
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            20% {
+                opacity: 1;
+                transform: translate(5px, -10px) rotate(15deg);
+            }
+
+            40% {
+                opacity: 0.3;
+                transform: translate(-15px, 5px) rotate(-10deg);
+            }
+
+            60% {
+                opacity: 1;
+                transform: translate(10px, 10px) rotate(5deg);
+            }
+
+            80% {
+                opacity: 0.5;
+                transform: translate(-5px, -5px) rotate(0deg);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translate(0, 0) rotate(-15deg);
+            }
+        }
+
+        @keyframes chimeric-scan-scroll {
+            from {
+                transform: translateY(-20vh);
+            }
+
+            to {
+                transform: translateY(120vh);
+            }
+        }
+
+        .bg-anim-chimeric-flow .particle:nth-child(-n+4) {
+            mix-blend-mode: soft-light;
+            background: radial-gradient(circle, rgba(var(--secondary-theme-color-rgb), 0.7), rgba(var(--secondary-theme-color-rgb), 0.2) 70%);
+            animation-name: chimeric-morph-wander;
+            animation-timing-function: ease-in-out;
+            z-index: 1;
+        }
+
+        .bg-anim-chimeric-flow .particle:nth-child(n+5):nth-child(-n+8) {
+            background-color: #fff;
+            box-shadow: 0 0 10px #fff, 0 0 20px rgba(var(--secondary-theme-color-rgb), 0.8);
+            animation-name: chimeric-glitch-flicker;
+            animation-timing-function: steps(1, end);
+            z-index: 3;
+        }
+
+        .bg-anim-chimeric-flow .particle:nth-child(n+9) {
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(var(--secondary-theme-color-rgb), 0.7), 0 0 10px rgba(var(--secondary-theme-color-rgb), 0.5);
+            animation-name: chimeric-scan-scroll;
+            animation-timing-function: linear;
+            z-index: 4;
+        }
+
+        .bg-anim-chimeric-flow .p1 {
+            top: -20%;
+            left: -20%;
+            width: 70vmin;
+            height: 70vmin;
+            --x: 30vw;
+            --y: 40vh;
+            animation-duration: 22s;
+            animation-delay: -5s;
+            opacity: 0.6;
+        }
+
+        .bg-anim-chimeric-flow .p2 {
+            top: 50%;
+            left: -30%;
+            width: 80vmin;
+            height: 80vmin;
+            --x: 40vw;
+            --y: -30vh;
+            animation-duration: 25s;
+            animation-delay: -15s;
+            opacity: 0.6;
+        }
+
+        .bg-anim-chimeric-flow .p3 {
+            top: -10%;
+            left: 60%;
+            width: 60vmin;
+            height: 60vmin;
+            --x: -50vw;
+            --y: 50vh;
+            animation-duration: 20s;
+            animation-delay: -2s;
+            opacity: 0.6;
+        }
+
+        .bg-anim-chimeric-flow .p4 {
+            top: 60%;
+            left: 70%;
+            width: 75vmin;
+            height: 75vmin;
+            --x: -30vw;
+            --y: -60vh;
+            animation-duration: 28s;
+            animation-delay: -12s;
+            opacity: 0.6;
+        }
+
+        .bg-anim-chimeric-flow .p5 {
+            top: 20%;
+            left: 30%;
+            width: 10px;
+            height: 10px;
+            animation-duration: 2s;
+            animation-delay: -0.5s;
+        }
+
+        .bg-anim-chimeric-flow .p6 {
+            top: 80%;
+            left: 10%;
+            width: 15px;
+            height: 15px;
+            animation-duration: 1.5s;
+            animation-delay: -1.2s;
+        }
+
+        .bg-anim-chimeric-flow .p7 {
+            top: 50%;
+            left: 85%;
+            width: 12px;
+            height: 12px;
+            animation-duration: 2.5s;
+            animation-delay: -2s;
+        }
+
+        .bg-anim-chimeric-flow .p8 {
+            top: 10%;
+            left: 60%;
+            width: 8px;
+            height: 8px;
+            animation-duration: 1.8s;
+            animation-delay: -0.8s;
+        }
+
+        .bg-anim-chimeric-flow .p9 {
+            top: 0;
+            animation-duration: 12s;
+            animation-delay: -8s;
+            opacity: 0.4;
+        }
+
+        .bg-anim-chimeric-flow .p10 {
+            top: 0;
+            animation-duration: 8s;
+            animation-delay: -2s;
+            opacity: 0.6;
+        }
+
+        .bg-anim-chimeric-flow .p11 {
+            top: 0;
+            animation-duration: 15s;
+            animation-delay: -14s;
+            opacity: 0.3;
+        }
+
+        .bg-anim-chimeric-flow .p12 {
+            top: 0;
+            animation-duration: 10s;
+            animation-delay: -5s;
+            opacity: 0.5;
+        }
+
+        /* --- LAYOUT & DECORATION STYLES START --- */
+        .frame-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+            display: none;
+        }
+
+        .frame-svg {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke: var(--secondary-theme-color);
+            stroke-width: 2.5;
+            filter: drop-shadow(0 0 5px rgba(var(--secondary-theme-color-rgb), 0.8));
+            vector-effect: non-scaling-stroke;
+        }
+
+        .high-tier .character-sheet,
+        .deluxe-tier .character-sheet {
+            border-top-width: 4px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(var(--secondary-theme-color-rgb), 0.25);
+        }
+
+        .deluxe-tier .frame-svg {
+            stroke-width: 3;
+            filter: drop-shadow(0 0 15px rgba(var(--secondary-theme-color-rgb), 0.7));
+        }
+
+        @keyframes deluxe-halo-pulse {
+
+            0%,
+            100% {
+                opacity: 0.7;
+                transform: scale(1.0);
+            }
+
+            50% {
+                opacity: 1.0;
+                transform: scale(1.01);
+            }
+        }
+
+        .frame-deluxe-halo {
+            stroke-width: 1.5;
+            opacity: 0.7;
+            animation: deluxe-halo-pulse 4s infinite ease-in-out;
+            transform-origin: center center;
+        }
+
+        .tier-6 .character-sheet {
+            animation: legendary-pulse 4s infinite ease-in-out;
+        }
+
+        @keyframes legendary-pulse {
+            0% {
+                border-color: rgba(var(--secondary-theme-color-rgb), 0.6);
+                box-shadow: 0 0 20px rgba(var(--secondary-theme-color-rgb), 0.2);
+            }
+
+            50% {
+                border-color: rgba(var(--secondary-theme-color-rgb), 1.0);
+                box-shadow: 0 0 40px rgba(var(--secondary-theme-color-rgb), 0.4);
+            }
+
+            100% {
+                border-color: rgba(var(--secondary-theme-color-rgb), 0.6);
+                box-shadow: 0 0 20px rgba(var(--secondary-theme-color-rgb), 0.2);
+            }
+        }
+
+        .sheet-header,
+        .sheet-body {
+            position: relative;
+            z-index: 2;
+        }
+
+        .sheet-header {
+            background: linear-gradient(145deg, transparent, rgba(0, 0, 0, 0.2));
+            padding: 25px 20px 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .sheet-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, rgba(var(--secondary-theme-color-rgb), 0.7), transparent);
+            filter: blur(1px);
+        }
+
+        .char-name {
+            display: inline-block;
+            font-family: var(--font-primary);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 2px;
+            cursor: pointer;
+            position: relative;
+            color: #383838;
+            text-shadow:
+                1px 0 0 var(--primary-theme-color), -1px 0 0 var(--primary-theme-color),
+                0 1px 0 var(--primary-theme-color), 0 -1px 0 var(--primary-theme-color),
+                1px 1px 0 var(--primary-theme-color), -1px -1px 0 var(--primary-theme-color),
+                1px -1px 0 var(--primary-theme-color), -1px 1px 0 var(--primary-theme-color),
+                2px 0 0 var(--primary-theme-color), -2px 0 0 var(--primary-theme-color),
+                0 2px 0 var(--primary-theme-color), 0 -2px 0 var(--primary-theme-color);
+        }
+
+        .char-sub-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 0.25rem;
+        }
+
+        .char-level,
+        .char-tier {
+            font-size: 1rem;
+            color: var(--text-muted-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .char-level::before,
+        .char-tier::before {
+            content: '◆';
+            color: var(--secondary-theme-color);
+            margin-right: 0.5em;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .sheet-body {
+            padding: 15px 20px;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            width: 100%;
+            position: relative;
+        }
+
+        .info-grid::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 140px;
+            height: 140px;
+            background: radial-gradient(circle, rgba(var(--primary-theme-color-rgb), 0.4) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            animation: glow-pulse 5s infinite ease-in-out;
+            pointer-events: none;
+        }
+
+        .info-item {
+            background: #222;
+            padding: 0.625rem;
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-grid .info-item:nth-child(1) {
+            border-bottom-right-radius: 30px;
+        }
+
+        .info-grid .info-item:nth-child(2) {
+            border-bottom-left-radius: 30px;
+        }
+
+        .info-grid .info-item:nth-child(3) {
+            border-top-right-radius: 30px;
+        }
+
+        .info-grid .info-item:nth-child(4) {
+            border-top-left-radius: 30px;
+        }
+
+        .info-label {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--text-muted-color);
+        }
+
+        .info-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .info-item[data-race-item] .info-value {
+            color: var(--primary-theme-color);
+            font-weight: 400;
+            text-shadow: 0 0 8px rgba(var(--primary-theme-color-rgb), 0.7);
+        }
+
+        .core-info-placeholder {
+            opacity: 0.6;
+            user-select: none;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .core-info-placeholder .info-value {
+            color: var(--text-muted-color);
+            text-shadow: 1px 0 0 var(--secondary-theme-color), 0 1px 0 var(--secondary-theme-color), -1px 0 0 var(--secondary-theme-color), 0 -1px 0 var(--secondary-theme-color);
+        }
+
+        .attribute-grid {
+            display: grid;
+            gap: 8px;
+            width: 100%;
+            position: relative;
+        }
+
+        .attribute-grid::before,
+        .attribute-grid::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: transparent;
+            border: 3px solid var(--secondary-theme-color);
+            transform-origin: center;
+            pointer-events: none;
+            z-index: 0;
+            display: none;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .attribute-item {
+            position: relative;
+            z-index: 1;
+        }
+
+        .attribute-item .attribute-box {
+            background: #333;
+            padding: 0.625rem 0.9rem;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            position: relative;
+            min-height: 40px;
+        }
+
+        .attribute-item.is-collapsible .attribute-box {
+            cursor: pointer;
+        }
+
+        .attribute-item .attribute-box:hover {
+            background-color: #404040;
+        }
+
+        .attribute-item.show-formula .attribute-box {
+            background-color: #2a2a2a;
+        }
+
+        .attribute-name {
+            font-weight: bold;
+        }
+
+        .attribute-value-container {
+            text-align: right;
+        }
+
+        .attribute-total {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-theme-color);
+        }
+
+        .attribute-details {
+            display: none;
+            font-size: 0.9rem;
+            color: var(--text-muted-color);
+        }
+
+        .attribute-item.show-formula .attribute-total {
+            display: none;
+        }
+
+        .attribute-item.show-formula .attribute-details {
+            display: block;
+        }
+
+        .placeholder-item {
+            opacity: 0.6;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .placeholder-item .attribute-box {
+            justify-content: center;
+        }
+
+        .placeholder-item .attribute-box:hover {
+            background-color: #333;
+        }
+
+        .placeholder-item .attribute-total {
+            margin: 0;
+            padding: 0;
+        }
+
+        .vitals-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        .vital-item {
+            padding: 0.625rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .vital-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsdGVyPSJ1cmwoI25vaXNlKSIvPjwvc3ZnPg==');
+            opacity: 0.05;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .vital-item.hp {
+            background: linear-gradient(180deg, rgba(220, 20, 60, 0.3) 0%, rgba(80, 10, 20, 0.7) 100%);
+        }
+
+        .vital-item.mp {
+            background: linear-gradient(180deg, rgba(30, 144, 255, 0.3) 0%, rgba(10, 40, 80, 0.7) 100%);
+        }
+
+        .vital-item.sp {
+            background: linear-gradient(180deg, rgba(173, 255, 47, 0.3) 0%, rgba(60, 80, 20, 0.7) 100%);
+        }
+
+        .vital-label,
+        .vital-value {
+            transition: color 0.2s ease;
+            position: relative;
+            z-index: 3;
+        }
+
+        .vital-label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .vital-value {
+            font-size: 1.2rem;
+        }
+
+        .card {
+            background: #333;
+            border-left: 4px solid var(--secondary-theme-color);
+            border-radius: 0 5px 5px 0;
+            padding: 0.9375rem;
+            margin-bottom: 0.75rem;
+            transition: background-color 0.2s ease-out;
+        }
+
+        .card:hover {
+            background-color: #404040;
+        }
+
+        .card:active {
+            background-color: #2a2a2a;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.625rem;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .card-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-muted-color);
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 0.625rem;
+        }
+
+        .card-tag {
+            background: #444;
+            color: #ccc;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+
+        .card-body p {
+            margin: 5px 0 0;
+            line-height: 1.6;
+        }
+
+        .card-label {
+            font-weight: bold;
+            color: var(--secondary-theme-color);
+        }
+
+        .story {
+            background-color: #222;
+            padding: 1rem;
+            border-radius: 5px;
+            line-height: 1.7;
+        }
+
+        .subsection-title {
+            font-family: var(--font-primary);
+            font-size: 1.5rem;
+            color: var(--secondary-theme-color);
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            border-left: 3px solid rgba(var(--secondary-theme-color-rgb), 0.5);
+            padding-left: 0.625rem;
+            font-weight: bold;
+        }
+
+        .profile-text-block {
+            background-color: #222;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            white-space: pre-wrap;
+            color: var(--text-color);
+        }
+
+        .godhood-display {
+            grid-column: 1 / -1;
+            background: linear-gradient(90deg, transparent, rgba(var(--primary-theme-color-rgb), 0.2), transparent);
+            padding: 5px;
+            text-align: center;
+            border-top: 1px solid var(--primary-theme-color);
+            border-bottom: 1px solid var(--primary-theme-color);
+            margin-bottom: 10px;
+            font-family: var(--font-primary);
+            letter-spacing: 2px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-shadow: 0 0 5px var(--primary-theme-color);
+        }
+
+        .divine-kingdom-card {
+            border: 2px solid var(--tier-7-color);
+            background: radial-gradient(circle at top left, #333, #111);
+            box-shadow: 0 0 15px rgba(var(--tier-7-color-rgb), 0.3);
+        }
+
+        .divine-kingdom-card .card-title {
+            color: var(--tier-7-color);
+            text-shadow: 0 0 5px rgba(var(--tier-7-color-rgb), 0.5);
+        }
+
+        .tab-container {
+            margin-top: 1rem;
+        }
+
+        .tab-nav {
+            display: flex;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .tab-button {
+            flex: 1 1 auto;
+            text-align: center;
+            font-family: var(--font-secondary);
+            font-size: 1rem;
+            background: rgba(51, 51, 51, 0.4);
+            border: none;
+            padding: 0.625rem 0.5rem;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s ease;
+            margin-bottom: -2px;
+            position: relative;
+            color: var(--text-muted-color);
+        }
+
+        .tab-button:hover {
+            background-color: rgba(51, 51, 51, 0.5);
+            color: var(--text-color);
+        }
+
+        .tab-button.active {
+            border-bottom-color: var(--secondary-theme-color);
+            font-weight: bold;
+            color: var(--secondary-theme-color);
+            background-color: rgba(51, 51, 51, 0.6);
+        }
+
+        .tab-button:active {
+            background-color: rgba(51, 51, 51, 0.7);
+        }
+
+        .tab-content-container {
+            padding: 1rem 5px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: slideInUp 0.5s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow-pulse {
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(0.95);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.05);
+            }
+        }
+
+        @keyframes release-shockwave-outer {
+            from {
+                transform: translate(-50%, -50%) scale(0.5);
+                opacity: 0.7;
+            }
+
+            to {
+                transform: translate(-50%, -50%) scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes release-shockwave-inner {
+            from {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0.8;
+            }
+
+            to {
+                transform: translate(-50%, -50%) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        .char-name::before,
+        .char-name::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            padding-top: 100%;
+            border-radius: 50%;
+            border-style: solid;
+            border-color: var(--secondary-theme-color);
+            opacity: 0;
+            pointer-events: none;
+            transform: translate(-50%, -50%) scale(0);
+        }
+
+        .char-name.is-releasing::before {
+            border-width: 4px;
+            animation: release-shockwave-inner 0.5s ease-out;
+        }
+
+        .char-name.is-releasing::after {
+            border-width: 2px;
+            animation: release-shockwave-outer 0.7s ease-out;
+        }
+
+        @keyframes release-glow {
+            from {
+                box-shadow: 0 0 0 0px rgba(var(--primary-theme-color-rgb), 0.5);
+            }
+
+            to {
+                box-shadow: 0 0 0 15px rgba(var(--primary-theme-color-rgb), 0);
+            }
+        }
+
+        .attribute-item.is-releasing-glow .attribute-box,
+        .tab-button.is-releasing-glow {
+            animation: release-glow 0.5s ease-out;
+        }
+
+        @keyframes scan-pulse {
+            from {
+                background-position: -200% 0;
+            }
+
+            to {
+                background-position: 200% 0;
+            }
+        }
+
+        .vital-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+            background-size: 200% 100%;
+            background-position: -200% 0;
+            pointer-events: none;
+        }
+
+        .vital-item.is-active::before {
+            animation: scan-pulse 0.7s ease-out;
+        }
+
+        .vital-item.is-active .vital-label,
+        .vital-item.is-active .vital-value {
+            color: #fff;
+        }
+
+        #save-to-lorebook-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 8px 12px;
+            background-color: #4A5568;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: var(--font-secondary);
+            font-size: 0.875rem;
+            opacity: 0.8;
+            transition: all 0.2s ease;
+            z-index: 50;
+        }
+
+        #save-to-lorebook-btn:hover {
+            opacity: 1;
+        }
+
+        /* --- MEDIA QUERIES & RESPONSIVE DESIGN START --- */
+        @media (min-width: 768px) {
+            .sheet-body {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+
+            .vitals-section,
+            .tab-container {
+                grid-column: 1 / -1;
+            }
+
+            .core-info {
+                grid-column: 1 / 2;
+                display: flex;
+            }
+
+            .attribute-section {
+                grid-column: 2 / 3;
+                display: flex;
+            }
+
+            .info-grid {
+                grid-auto-rows: 1fr;
+            }
+
+            .attribute-grid {
+                grid-template-columns: repeat(2, 1fr);
+                flex-grow: 1;
+            }
+
+            .attribute-grid::before,
+            .attribute-grid::after {
+                display: block;
+                left: 50%;
+            }
+
+            .attribute-grid::before {
+                top: 33.333%;
+            }
+
+            .attribute-grid::after {
+                top: 66.666%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            .card-wrapper::before,
+            .card-wrapper::after {
+                display: none;
+            }
+
+            .core-info,
+            .attribute-section {
+                display: flex;
+                justify-content: center;
+            }
+
+            .attribute-section,
+            .vitals-section {
+                margin-top: 15px;
+            }
+
+            .info-grid,
+            .attribute-grid {
+                max-width: 500px;
+            }
+
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .attribute-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .attribute-grid::before,
+            .attribute-grid::after {
+                display: block;
+                top: 50%;
+            }
+
+            .attribute-grid::before {
+                left: calc(33.333% - 1.33px);
+            }
+
+            .attribute-grid::after {
+                left: calc(66.666% + 1.33px);
+            }
+        }
+
+        @media (min-width: 481px) {
+
+            .attribute-grid::before,
+            .attribute-grid::after {
+                width: 28px;
+                height: 28px;
+                border-width: 4px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            html {
+                font-size: 14px;
+            }
+
+            .character-sheet {
+                box-shadow: none;
+                border-width: 2px;
+            }
+
+            .sheet-header {
+                border-bottom-width: 0;
+                padding-top: 15px;
+            }
+
+            .sheet-body {
+                display: block;
+                padding: 15px;
+            }
+
+            .core-info,
+            .attribute-section {
+                display: block;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                max-width: 100%;
+            }
+
+            .info-grid::before {
+                display: none;
+            }
+
+            .info-grid .info-item {
+                border-radius: 5px !important;
+            }
+
+            .attribute-grid {
+                max-width: 100%;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .attribute-grid::before,
+            .attribute-grid::after {
+                display: block;
+                left: 50%;
+                top: auto;
+            }
+
+            .attribute-grid::before {
+                top: 33.333%;
+            }
+
+            .attribute-grid::after {
+                top: 66.666%;
+            }
+
+            .core-info-placeholder {
+                display: none;
+            }
+
+            .tab-nav {
+                flex-wrap: wrap;
+            }
+
+            .tab-button {
+                flex-basis: 50%;
+            }
+
+            #save-to-lorebook-btn {
+                padding: 5px 8px;
+                font-size: 1.2rem;
+                top: 10px;
+                right: 10px;
+                width: auto;
+                height: auto;
+                background-color: rgba(74, 85, 104, 0.6);
+            }
+
+            .btn-text {
+                display: none;
+            }
+        }
+
+        @media (max-width: 360px) {
+
+            /* 1. 基礎字體縮小至 10pt */
+            html {
+                font-size: 10pt;
+            }
+
+            /* 2. 縮減各容器體積與間距，以適應極窄螢幕 */
+            body {
+                padding: 10px 5px;
+            }
+
+            .sheet-header {
+                padding: 10px 10px 5px;
+            }
+
+            .sheet-body {
+                padding: 10px 5px;
+            }
+
+            .card {
+                padding: 0.75rem;
+                /* ~10px */
+                margin-bottom: 0.5rem;
+                /* ~7px */
+            }
+
+            .tab-content-container {
+                padding: 0.75rem 0;
+            }
+
+            /* 3. 大幅降低標題與文本字體的差距 */
+            .char-name {
+                font-size: 2rem;
+                /* 從 2.5rem 縮小 */
+                letter-spacing: 1px;
+                /* 簡化文字陰影以提高小尺寸下的清晰度 */
+                text-shadow:
+                    1px 1px 0 var(--primary-theme-color),
+                    -1px -1px 0 var(--primary-theme-color),
+                    1px -1px 0 var(--primary-theme-color),
+                    -1px 1px 0 var(--primary-theme-color),
+                    0 0 3px var(--primary-theme-color);
+            }
+
+            .char-sub-info {
+                gap: 0.75rem;
+                /* 從 1.5rem 縮小 */
+                margin-top: 0.5rem;
+            }
+
+            .subsection-title {
+                font-size: 1.3rem;
+                margin-top: 0.75rem;
+                margin-bottom: 0.25rem;
+                padding-left: 0.5rem;
+            }
+
+            .card-title {
+                font-size: 1.2rem;
+            }
+
+            .attribute-total {
+                font-size: 1.3rem;
+            }
+
+            .info-value,
+            .vital-value {
+                font-size: 1.1rem;
+            }
+
+            /* 確保標籤和次要文本不會過小 */
+            .info-label,
+            .card-subtitle,
+            .card-tag {
+                font-size: 0.9rem;
+            }
+
+            .tab-button {
+                font-size: 0.9rem;
+                padding: 0.5rem 0.25rem;
+            }
+
+            /* 4. 其他能幫助正常閱讀的設計 (佈局調整) */
+            .vitals-grid {
+                grid-template-columns: 1fr;
+                /* 將 HP/MP/SP 垂直堆疊 */
+                gap: 5px;
+            }
+
+            .attribute-grid {
+                grid-template-columns: 1fr;
+                /* 將屬性垂直堆疊 */
+            }
+
+            .attribute-grid::before,
+            .attribute-grid::after {
+                display: none;
+                /* 在單欄佈局中隱藏不適用的裝飾線 */
+            }
+
+            /* 5. 優化右上角按鈕 */
+            #save-to-lorebook-btn {
+                top: 8px;
+                right: 8px;
+                padding: 4px 6px;
+                font-size: 1rem;
+                /* 從 1.2rem 縮小 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-wrapper">
+        <div class="character-sheet">
+            <!-- ======[ 動態背景容器 START ]====== -->
+            <div class="dynamic-bg-container">
+                <div class="particle p1"></div>
+                <div class="particle p2"></div>
+                <div class="particle p3"></div>
+                <div class="particle p4"></div>
+                <div class="particle p5"></div>
+                <div class="particle p6"></div>
+                <div class="particle p7"></div>
+                <div class="particle p8"></div>
+                <div class="particle p9"></div>
+                <div class="particle p10"></div>
+                <div class="particle p11"></div>
+                <div class="particle p12"></div>
+            </div>
+            <!-- ======[ 動態背景容器 END ]====== -->
+            <div class="frame-layer" id="frame-layer"></div>
+            <header class="sheet-header">
+                <div class="char-name" data-name></div>
+                <div class="char-sub-info">
+                    <div class="char-level" data-level></div>
+                    <div class="char-tier" data-tier-name></div>
+                </div>
+            </header>
+            <main class="sheet-body">
+                <section class="core-info">
+                    <h2 class="visually-hidden">核心信息</h2>
+                    <div class="info-grid" data-core-info></div>
+                </section>
+                <section class="attribute-section">
+                    <h2 class="visually-hidden">属性</h2>
+                    <div class="attribute-grid" data-attribute></div>
+                </section>
+                <section class="vitals-section">
+                    <h2 class="visually-hidden">状态</h2>
+                    <div class="vitals-grid" data-vitals></div>
+                </section>
+                <div class="tab-container">
+                    <nav class="tab-nav">
+                        <button class="tab-button" data-tab-target="#tab-profile">Hồ Sơ</button>
+                        <button class="tab-button" data-tab-target="#tab-skills">Kỹ Năng</button>
+                        <button class="tab-button" data-tab-target="#tab-divinity">Con Đường Thành Thần</button>
+                        <button class="tab-button" data-tab-target="#tab-equipment">Trang Bị</button>
+                        <button class="tab-button" data-tab-target="#tab-inventory">Túi Đồ</button>
+                        <button class="tab-button" data-tab-target="#tab-backstory">Tiểu Sử</button>
+                    </nav>
+                    <div class="tab-content-container">
+                        <div id="tab-profile" class="tab-content"></div>
+                        <div id="tab-skills" class="tab-content"></div>
+                        <div id="tab-divinity" class="tab-content"></div>
+                        <div id="tab-equipment" class="tab-content"></div>
+                        <div id="tab-inventory" class="tab-content"></div>
+                        <div id="tab-backstory" class="tab-content"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script id="data-source" type="text/yaml">$1</script>
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const raceColorMap = {
+                /* --- [Tên Chủng Tộc Cụ Thể / Specific Race Names] --- */
+                /* --- Thần Vực Vực Thẳm & Siêu Nhiên (Biến Chất) / Abyss Gods & Supernatural (Transcension) --- */
+                'Dị Thần': '#C2D67A', 'Alien God': '#C2D67A',                /* Xanh huỳnh quang dị hỏa (Alien Fluorescent Green) */
+                'Ma Vương': '#C876E7', 'Ma vương': '#C876E7', 'Demon Lord': '#C876E7',
+                'Thâm Uyên': '#C876E7', 'Abyss': '#C876E7',                   /* Tím tinh thể ma thuật (Magic Crystal Purple) */
+                'Bất Tử': '#B0C4DE', 'Undead': '#B0C4DE',
+                'Vong': '#B0C4DE', 'Dead': '#B0C4DE',                         /* Xanh thép (Steel Blue) */
+
+                /* --- Tinh Linh Kỳ Lạ & Cấu Trúc Vật (Khái Niệm Đặc Biệt) / Strange Spirits & Constructs (Special Concepts) --- */
+                'Thi Linh': '#D1C4E9', 'Poetry Spirit': '#D1C4E9',            /* Tím đinh hương (Lilac Purple) */
+                'Cấu Trang': '#B0BEC5', 'Construct': '#B0BEC5',               /* Xám thép tấm (Steel Plate Gray) */
+                'Bất Định Hình': '#98FB98', 'Amorphous': '#98FB98',
+                'Slime': '#98FB98',                                           /* Xanh gel (Gel Green) */
+
+                /* --- Sinh Vật & Ma Vật (Khái Niệm Chung) / Creatures & Monsters (General Concepts) --- */
+                'Nguyên Tố': '#8DFAFA', 'Element': '#8DFAFA',                 /* Xanh lơ ma lực (Mana Cyan) */
+                'Thực Vật': '#C5E1A5', 'Plant': '#C5E1A5',                   /* Xanh lá non (Tender Green) */
+                'Ma Vật': '#E64DE6', 'Monster': '#E64DE6',                    /* Hồng năng lượng ma thuật (Mana Pink) */
+
+                /* --- Các Phân Loại Tinh Linh / Elf Subspecies --- */
+                'Thủy Tổ Tinh Linh': '#C0F0C0', 'Origin Elf': '#C0F0C0',      /* Xanh sữa bạc hà (Mint Milk Green) */
+                'Ám Dạ Tinh Linh': '#9575CD', 'Night Elf': '#9575CD',        /* Tím bóng tối (Shadow Purple) */
+                'Quyến Nhuy Tinh Linh': '#FFAB91', 'Kin-Pistil Elf': '#FFAB91',
+                'Triền Tâm Tinh Linh': '#FFAB91', 'Heart-Twining Elf': '#FFAB91', /* San hô đào (Coral Peach) */
+                'Tuyết Tinh Linh': '#E0FFFF', 'Snow Elf': '#E0FFFF',           /* Xanh băng tinh (Ice Crystal Cyan) */
+                'Thái Dương Tinh Linh': '#E6C64D', 'Sun Elf': '#E6C64D',      /* Vàng ròng (Gilded Gold) */
+                'Liêu Tộc': '#BA68C8', 'Fanged Tribe': '#BA68C8',             /* Tím lan (Orchid Purple) */
+                'Tinh Linh': '#98D98E', 'Elf': '#98D98E',                     /* Xanh lá (Leaf Green) */
+
+                /* --- Các Phân Loại Long Tộc / Dragon Subspecies --- */
+                'Thiên Vũ Long': '#E1BEE7', 'Sky Dance Dragon': '#E1BEE7',    /* Tím ngọc trai (Pearl Purple) */
+                'Ma Văn Long': '#D1C4E9', 'Magic Pattern Dragon': '#D1C4E9',  /* Tím đinh hương (Lilac Purple) */
+                'Á Long': '#E6924D', 'Drake': '#E6924D',                      /* Nâu đất (Ochre) */
+
+                /* --- Yêu Tinh & Đứa Con Thiên Nhiên / Fairies & Children of Nature --- */
+                'Hoa Yêu': '#FFAB91', 'Flower Fairy': '#FFAB91',
+                'Hoa Tinh': '#FFAB91', 'Flower Spirit': '#FFAB91',            /* San hô đào (Coral Peach) */
+                'Yêu Tinh': '#F8BBD0', 'Fairy': '#F8BBD0',                    /* Hồng hoa hồng (Rose Pink) */
+                'Mộc Linh': '#C5E1A5', 'Wood Spirit': '#C5E1A5',              /* Xanh lá non (Tender Green) */
+                'Elin': '#F48FB1', 'Elin': '#F48FB1',                         /* Hồng dâu (Strawberry Pink) */
+                'Hắc Giác': '#F8BBD0', 'Black Horn': '#F8BBD0',               /* Hồng hoa hồng (Rose Pink) */
+
+                /* --- Người Khổng Lồ & Phân Loài / Giants & Subspecies --- */
+                'Thực Nhân Ma': '#A3D76B', 'Ogre': '#A3D76B',
+                'Cự Ma': '#A3D76B', 'Troll': '#A3D76B',                       /* Xanh tà năng (Fel Green) */
+                'Sơn Yêu': '#D19A66', 'Mountain Ogre': '#D19A66',             /* Nâu đồng (Copper Brown) */
+                'Tuyết Quái': '#D1D1FB', 'Yeti': '#D1D1FB',                   /* Tím ánh trăng (Moonlight Purple) */
+                'Titan': '#EBD284', 'Titan': '#EBD284',                       /* Vàng nóng chảy (Molten Gold) */
+                'Sương Cự Nhân': '#E0FFFF', 'Frost Giant': '#E0FFFF',         /* Xanh băng tinh (Ice Crystal Cyan) */
+                'Cự Nhân': '#E6924D', 'Giant': '#E6924D',                     /* Nâu đất (Ochre) */
+
+                /* --- Chủng Tộc Trí Tuệ / Intelligent Races --- */
+                'Nữ Yêu': '#D1D1FB', 'Banshee': '#D1D1FB',                    /* Tím ánh trăng (Moonlight Purple) */
+                'Bán Thân Nhân': '#E6B26A', 'Halfling': '#E6B26A',            /* Vàng lúa mạch (Barley Yellow) */
+                'Người Lùn': '#D19A66', 'Dwarf': '#D19A66',                   /* Nâu đồng (Copper Brown) */
+                'Địa Tinh': '#9CCC65', 'Goblin': '#9CCC65',                   /* Xanh rêu (Moss Green) */
+
+                /* --- [Tên Chủng Tộc Chung / General Race Names] --- */
+                'Thần': '#FFF8DC', 'God': '#FFF8DC', 'Thiên': '#FFF8DC', 'Heaven': '#FFF8DC', /* Trắng thánh quang (Holy Light White) */
+                'Long': '#EBD284', 'Dragon': '#EBD284',                       /* Vàng nóng chảy (Molten Gold) */
+                'Huyết': '#E65A5A', 'Blood': '#E65A5A',
+                'Ký': '#E65A5A', 'Parasite': '#E65A5A',
+                'Thực': '#E65A5A', 'Plant-Type': '#E65A5A',                   /* Đỏ thẫm (Crimson Blood) */
+                'Ma': '#B0C4DE', 'Demon': '#B0C4DE',
+                'Linh': '#B0C4DE', 'Spirit': '#B0C4DE',                       /* Xanh thép (Steel Blue) */
+                'Tinh': '#D1C4E9', 'Star': '#D1C4E9',
+                'Huyễn': '#D1C4E9', 'Phantom': '#D1C4E9',                     /* Tím đinh hương (Lilac Purple) */
+                'Ngư': '#7FFFD4', 'Fish': '#7FFFD4',                          /* Xanh lơ vịnh nông (Shallow Bay Aquamarine) */
+                'Dực': '#87CEFA', 'Wing': '#87CEFA',
+                'Điểu': '#87CEFA', 'Bird': '#87CEFA',
+                'Vũ': '#87CEFA', 'Feather': '#87CEFA',                        /* Xanh da trời (Azure) */
+                'Thú': '#E6924D', 'Beast': '#E6924D',                         /* Nâu đất (Ochre) */
+                'Thử': '#A3D76B', 'Rat': '#A3D76B',                           /* Xanh tà năng (Fel Green) */
+                'Cơ': '#B0BEC5', 'Mech': '#B0BEC5',
+                'Trang': '#B0BEC5', 'Construct-Part': '#B0BEC5',
+                'Khí': '#B0BEC5', 'Tool': '#B0BEC5',
+                'Vật': '#B0BEC5', 'Object': '#B0BEC5',
+                'Tượng': '#B0BEC5', 'Statue': '#B0BEC5',                     /* Xám thép tấm (Steel Plate Gray) */
+                'Yêu': '#E64DE6', 'Yokai': '#E64DE6',
+                'Quái': '#E64DE6', 'Monster-Part': '#E64DE6',                 /* Hồng năng lượng ma thuật (Mana Pink) */
+                'Nhân': '#DEB887', 'Human': '#DEB887',
+                'Nương': '#DEB887', 'Maiden': '#DEB887',                      /* Cát mềm (Soft Sand) */
+
+                /* --- [Phím Vạn Năng Cuối Cùng] Khi tất cả các kết quả khớp không thành công --- */
+                'Khác': '#C0C0C0', 'Other': '#C0C0C0'                         /* Bạc xám (Silver Gray) */
+            };
+
+            const raceAnimationMap = {
+                /* --- [Tên Chủng Tộc Cụ Thể] Theo cùng thứ tự với raceColorMap / [Specific Race Names] Following the same order as raceColorMap --- */
+                'Dị Thần': 'bg-anim-void-gaze', 'Alien God': 'bg-anim-void-gaze',
+                'Ma Vương': 'bg-anim-void-gaze', 'Demon Lord': 'bg-anim-void-gaze',
+                'Thâm Uyên': 'bg-anim-void-gaze', 'Abyss': 'bg-anim-void-gaze',
+                'Vong Linh Long': 'bg-anim-dragonscale-dominion', 'Undead Dragon': 'bg-anim-dragonscale-dominion',
+                'Bất Tử': 'bg-anim-spectral-drift', 'Undead': 'bg-anim-spectral-drift',
+                'Vong': 'bg-anim-spectral-drift', 'Dead': 'bg-anim-spectral-drift',
+                'Thi Linh': 'bg-anim-dreamy-radiance', 'Poetry Spirit': 'bg-anim-dreamy-radiance',
+                'Cấu Trang': 'bg-anim-machina-core', 'Construct': 'bg-anim-machina-core',
+                'Bất Định Hình': 'bg-anim-chimeric-flow', 'Amorphous': 'bg-anim-chimeric-flow',
+                'Slime': 'bg-anim-chimeric-flow',
+                'Nguyên Tố': 'bg-anim-primordial-essence', 'Element': 'bg-anim-primordial-essence',
+                'Thực Vật': 'bg-anim-sylvan-breeze', 'Plant': 'bg-anim-sylvan-breeze',
+                'Ma Vật': 'bg-anim-primordial-essence', 'Monster': 'bg-anim-primordial-essence',
+                'Liêu Tộc': 'bg-anim-void-gaze', 'Fanged Tribe': 'bg-anim-void-gaze',
+                'Tinh Linh': 'bg-anim-sylvan-breeze', 'Elf': 'bg-anim-sylvan-breeze',
+                'Hoa Yêu': 'bg-anim-dreamy-radiance', 'Flower Fairy': 'bg-anim-dreamy-radiance',
+                'Hoa Tinh': 'bg-anim-dreamy-radiance', 'Flower Spirit': 'bg-anim-dreamy-radiance',
+                'Yêu Tinh': 'bg-anim-dreamy-radiance', 'Fairy': 'bg-anim-dreamy-radiance',
+                'Mộc Linh': 'bg-anim-sylvan-breeze', 'Wood Spirit': 'bg-anim-sylvan-breeze',
+                'Elin': 'bg-anim-fluffy-frenzy',
+                'Hắc Giác': 'bg-anim-void-gaze', 'Black Horn': 'bg-anim-void-gaze',
+                'Nữ Yêu': 'bg-anim-celestial-grace', 'Banshee': 'bg-anim-celestial-grace',
+                'Bán Thân Nhân': 'bg-anim-radiant-heart', 'Halfling': 'bg-anim-radiant-heart',
+                'Người Lùn': 'bg-anim-crystalline-lattice', 'Dwarf': 'bg-anim-crystalline-lattice',
+                'Địa Tinh': 'bg-anim-machina-core', 'Goblin': 'bg-anim-machina-core',
+                'Thực Nhân Ma': 'bg-anim-chimeric-flow', 'Ogre': 'bg-anim-chimeric-flow',
+                'Cự Ma': 'bg-anim-chimeric-flow', 'Troll': 'bg-anim-chimeric-flow',
+                'Sơn Yêu': 'bg-anim-primordial-essence', 'Mountain Ogre': 'bg-anim-primordial-essence',
+                'Tuyết Quái': 'bg-anim-spectral-drift', 'Yeti': 'bg-anim-spectral-drift',
+                'Titan': 'bg-anim-celestial-grace',
+                'Sương Cự Nhân': 'bg-anim-crystalline-lattice', 'Frost Giant': 'bg-anim-crystalline-lattice',
+                'Cự Nhân': 'bg-anim-primordial-essence', 'Giant': 'bg-anim-primordial-essence',
+
+                /* --- [Tên Chủng Tộc Chung] / [General Race Names] --- */
+                'Thần': 'bg-anim-celestial-grace', 'God': 'bg-anim-celestial-grace',
+                'Thiên': 'bg-anim-celestial-grace', 'Heaven': 'bg-anim-celestial-grace',
+                'Long': 'bg-anim-dragonscale-dominion', 'Dragon': 'bg-anim-dragonscale-dominion',
+                'Huyết': 'bg-anim-crimson-authority', 'Blood': 'bg-anim-crimson-authority',
+                'Ký': 'bg-anim-crimson-authority', 'Parasite': 'bg-anim-crimson-authority',
+                'Thực': 'bg-anim-crimson-authority', 'Plant-Type': 'bg-anim-crimson-authority',
+                'Ma': 'bg-anim-spectral-drift', 'Demon': 'bg-anim-spectral-drift',
+                'Linh': 'bg-anim-spectral-drift', 'Spirit': 'bg-anim-spectral-drift',
+                'Tinh': 'bg-anim-dreamy-radiance', 'Star': 'bg-anim-dreamy-radiance',
+                'Huyễn': 'bg-anim-dreamy-radiance', 'Phantom': 'bg-anim-dreamy-radiance',
+                'Ngư': 'bg-anim-oceanic-breath', 'Fish': 'bg-anim-oceanic-breath',
+                'Dực': 'bg-anim-celestial-grace', 'Wing': 'bg-anim-celestial-grace',
+                'Điểu': 'bg-anim-celestial-grace', 'Bird': 'bg-anim-celestial-grace',
+                'Vũ': 'bg-anim-celestial-grace', 'Feather': 'bg-anim-celestial-grace',
+                'Thú': 'bg-anim-fluffy-frenzy', 'Beast': 'bg-anim-fluffy-frenzy',
+                'Thử': 'bg-anim-void-gaze', 'Rat': 'bg-anim-void-gaze',
+                'Cơ': 'bg-anim-machina-core', 'Mech': 'bg-anim-machina-core',
+                'Trang': 'bg-anim-machina-core', 'Construct-Part': 'bg-anim-machina-core',
+                'Khí': 'bg-anim-machina-core', 'Tool': 'bg-anim-machina-core',
+                'Vật': 'bg-anim-machina-core', 'Object': 'bg-anim-machina-core',
+                'Tượng': 'bg-anim-machina-core', 'Statue': 'bg-anim-machina-core',
+                'Yêu': 'bg-anim-primordial-essence', 'Yokai': 'bg-anim-primordial-essence',
+                'Quái': 'bg-anim-primordial-essence', 'Monster-Part': 'bg-anim-primordial-essence',
+                'Nhân': 'bg-anim-radiant-heart', 'Human': 'bg-anim-radiant-heart',
+                'Nương': 'bg-anim-radiant-heart', 'Maiden': 'bg-anim-radiant-heart',
+
+                /* --- [Phím Vạn Năng Cuối Cùng] Khi tất cả các kết quả khớp không thành công --- */
+                'Khác': 'bg-anim-chimeric-flow', 'Other': 'bg-anim-chimeric-flow'
+            };
+
+            const allAnimationClasses = [...new Set(Object.values(raceAnimationMap))];
+
+            function hexToRgb(hex) { if (!hex || typeof hex !== 'string') return '128, 128, 128'; hex = hex.replace(/^#/, ''); if (hex.length === 3) hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2]; const r = parseInt(hex.substring(0, 2), 16); const g = parseInt(hex.substring(2, 4), 16); const b = parseInt(hex.substring(4, 6), 16); return `${r}, ${g}, ${b}`; }
+            function getSmartArray(input) { if (input === undefined || input === null) return []; if (Array.isArray(input)) return input; const str = String(input).trim(); if (!str || str.toLowerCase() === 'null' || str.toLowerCase() === 'none') return []; let processed = str.replace(/\]\s*\[/g, '], ['); processed = processed.replace(/^[\s\["']+|[\s\]"']+$/g, ''); const items = processed.split(/[,;|，；、]/); return items.map(s => s.trim().replace(/^['"\[\(]+|['"\]\)]+$/g, '')).filter(s => s && s !== 'null'); }
+            function cleanYaml(yamlStr) { if (!yamlStr) return ''; yamlStr = yamlStr.replace(/\u00A0/g, ' ').replace(/\t/g, '  ').replace(/：/g, ': ').replace(/，/g, ',').replace(/；/g, ';').replace(/】/g, ']').replace(/【/g, '['); const lines = yamlStr.split('\n'); const sensitiveKeys = ['Thân Phận', 'Nghề Nghiệp', 'Tính Cách', 'Sở Thích', 'Ngoại Hình', 'Trang Phục', 'Tiểu Sử', 'Mô Tả', 'Hiệu Ứng', 'Nhãn', 'Tiêu Hao', 'Loại', 'Hiếm', 'Thần Vị', 'Tên', '姓名', 'Chủng Tộc', 'Cấp Độ', 'Sinh Mệnh Vị Giai']; const attrKeys = ['Sức Mạnh', 'Khéo Léo', 'Thể Chất', 'Trí Tuệ', 'Tinh Thần']; const cleanedLines = lines.map(line => { const match = line.match(/^(\s*)([-\w\u4e00-\u9fa5]+)\s*:\s*(.+)$/); if (!match) return line; const indent = match[1]; const key = match[2]; let val = match[3].trim(); if (val.startsWith('|') || val.startsWith('>')) return line; if (attrKeys.some(k => key.includes(k))) { if ((/[+=]/.test(val) || val.includes('{')) && !/^["'].*["']$/.test(val)) { val = val.replace(/"/g, '\\"'); return `${indent}${key}: \"${val}\"`; } } const isSensitive = sensitiveKeys.some(k => key.includes(k)); const hasDangerousChars = /[\{\}\[\]]/.test(val); const hasQuoteInside = val.includes('\"'); const isFullyQuoted = /^["'].*["']$/.test(val); if ((isSensitive || hasDangerousChars || hasQuoteInside) && !isFullyQuoted) { val = val.replace(/"/g, '\\"'); return `${indent}${key}: \"${val}\"`; } return line; }); return cleanedLines.join('\n'); }
+            function parseRobust(yamlStr) { try { return jsyaml.load(cleanYaml(yamlStr)); } catch (e) { console.error('YAML Parsing failed:', e, 'Cleaned YAML:', cleanYaml(yamlStr)); return null; } }
+            function hasText(val) { if (val === null || val === undefined) return false; const s = String(val).trim().toLowerCase(); return s !== '' && s !== 'null' && s !== 'none' && s !== '[]' && s !== '无'; }
+            function hasArrayContent(arr) { if (!arr || !Array.isArray(arr)) return false; return arr.length > 0 && arr.some(item => hasText(item)); }
+
+            function renderSheet(data, originalYaml) {
+                // console.log('--- RAW DATA START ---');
+                // console.log(data);
+                // console.log('--- RAW DATA END ---');
+                const wrapper = document.querySelector('.card-wrapper');
+                if (!wrapper || !data) return;
+
+                const tierMap = { '一': 1, '二': 2, '三': 3, '四': 4, '五': 5, '六': 6, '七': 7, '壹': 1, '貳': 2, '叁': 3, '肆': 4, '伍': 5, '陸': 6, '柒': 7, 'Một': 1, 'Hai': 2, 'Ba': 3, 'Bốn': 4, 'Năm': 5, 'Sáu': 6, 'Bảy': 7, 'I': 1, 'II': 2, 'III': 3, 'IV': 4, 'V': 5, 'VI': 6, 'VII': 7, 'Nhất': 1, 'Nhị': 2, 'Tam': 3, 'Tứ': 4, 'Ngũ': 5, 'Lục': 6, 'Thất': 7 };
+                const tierStr = (data.life_tier || '').toString().match(/Đệ \s*(.)\s* Giai/);
+                const tier = tierStr ? (tierMap[tierStr[1]] || parseInt(tierStr[1])) : (parseInt(data.life_tier) || 1);
+                wrapper.dataset.tier = tier;
+
+                const race = data.race || 'Không Rõ';
+                let raceKey = 'Không Rõ';
+                const orderedRaceKeys = Object.keys(raceColorMap);
+                for (const k of orderedRaceKeys) { if (race.includes(k)) { raceKey = k; break; } }
+                const raceColor = raceColorMap[raceKey] || raceColorMap['Không Rõ'];
+                const raceColorRgb = hexToRgb(raceColor);
+                wrapper.style.setProperty('--primary-theme-color', raceColor);
+                wrapper.style.setProperty('--primary-theme-color-rgb', raceColorRgb);
+
+                allAnimationClasses.forEach(cls => wrapper.classList.remove(cls));
+                let animationKey = raceKey;
+                if (!raceAnimationMap.hasOwnProperty(animationKey)) { for (const k of Object.keys(raceAnimationMap)) { if (race.includes(k)) { animationKey = k; break; } } }
+                const animationClass = raceAnimationMap[animationKey] || raceAnimationMap['Không Rõ'];
+
+                const frameLayer = document.getElementById('frame-layer');
+                let frameHTML = '';
+                let wrapperClassList = ['card-wrapper', animationClass];
+
+                if (tier >= 7) {
+                    wrapperClassList.push('deluxe-tier');
+                    const baseHighTierPath = `M 10,1190 L 10,100 L 100,10 L 700,10 L 790,100 L 790,1190 Z`;
+                    const highTierDetails = `<path d="M 25,1175 L 25,105 L 105,25 L 695,25 L 775,105 L 775,1175" stroke-width="1" opacity="0.6" /><polyline points="100,15 150,15 130,45" /><polyline points="700,15 650,15 670,45" />`;
+                    const sovereignCrown = `
+                        <path d="M 380,5 L 400,25 L 420,5 Z M 390,25 L 370,15 M 410,25 L 430,15" stroke-width="3" />
+                        <path d="M 10,1160 L 50,1190 L 80,1190" stroke-width="2.5" />
+                        <path d="M 790,1160 L 750,1190 L 720,1190" stroke-width="2.5" />
+                    `;
+                    frameHTML = `<svg class="frame-svg" viewBox="0 0 800 1200" preserveAspectRatio="none"><path class="frame-deluxe-halo" d="${baseHighTierPath}" /><path d="${baseHighTierPath}" />${highTierDetails}${sovereignCrown}</svg>`;
+                } else if (tier >= 5) {
+                    wrapperClassList.push('high-tier');
+                    frameHTML = `<svg class="frame-svg" viewBox="0 0 800 1200" preserveAspectRatio="none"><path d="M 10,1190 L 10,100 L 100,10 L 700,10 L 790,100 L 790,1190 Z" /><path d="M 25,1175 L 25,105 L 105,25 L 695,25 L 775,105 L 775,1175" stroke-width="1" opacity="0.6" /><polyline points="100,15 150,15 130,45" /><polyline points="700,15 650,15 670,45" /></svg>`;
+                } else if (tier >= 3) {
+                    wrapperClassList.push('intermediate-tier');
+                    frameHTML = `<svg class="frame-svg" viewBox="0 0 800 1200" preserveAspectRatio="none"><path d="M 25,150 L 25,25 L 150,25" /><path d="M 775,150 L 775,25 L 650,25" /><path d="M 25,1050 L 25,1175 L 150,1175" /><path d="M 775,1050 L 775,1175 L 650,1175" /><path d="M 395,15 L 405,15" opacity="0.8"/><path d="M 395,1185 L 405,1185" opacity="0.8"/></svg>`;
+                }
+
+                wrapper.className = wrapperClassList.join(' ');
+                frameLayer.innerHTML = frameHTML;
+                frameLayer.style.display = (tier >= 3) ? 'block' : 'none';
+
+                addLorebookButton(data, originalYaml);
+                document.querySelector('[data-name]').textContent = data.name || 'Unknown';
+                document.querySelector('[data-level]').textContent = `Lv. ${data.level || '?'}`;
+                document.querySelector('[data-tier-name]').textContent = data.life_tier || 'T?';
+
+                const formatList = (val) => getSmartArray(val).join(' / ') || 'N/A';
+                document.querySelector('[data-core-info]').innerHTML = `<div class="info-item" data-race-item><span class="info-label">Chủng Tộc</span><span class="info-value">${race}</span></div><div class="info-item"><span class="info-label">Thân Phận</span><span class="info-value" style="font-size:1rem">${formatList(data.identity)}</span></div><div class="info-item"><span class="info-label">Nghề Nghiệp</span><span class="info-value" style="font-size:1rem">${formatList(data.job)}</span></div><div class="info-item core-info-placeholder"><span class="info-value" style="font-size: 1.4rem;">⬦ ⚜ ⬦</span></div>`;
+                const res = data.resources || data.attribute || {};
+                document.querySelector('[data-vitals]').innerHTML = `<div class="vital-item hp"><span class="vital-label">HP</span><span class="vital-value">${(res.HP || 0).toLocaleString()}</span></div><div class="vital-item mp"><span class="vital-label">MP</span><span class="vital-value">${(res.MP || 0).toLocaleString()}</span></div><div class="vital-item sp"><span class="vital-label">SP</span><span class="vital-value">${(res.SP || 0).toLocaleString()}</span></div>`;
+                const attributesContainer = document.querySelector('[data-attribute]');
+                attributesContainer.innerHTML = '';
+                let attributeCount = 0;
+                const attributeKeys = ['strength', 'dexterity', 'constitution', 'intelligence', 'mind'];
+                const attributeNames = { strength: 'Sức Mạnh', dexterity: 'Khéo Léo', constitution: 'Thể Chất', intelligence: 'Trí Tuệ', mind: 'Tinh Thần' };
+                if (data.attribute) {
+                    attributeKeys.forEach(key => {
+                        if (data.attribute[key] === undefined) return;
+                        attributeCount++;
+                        const rawValue = String(data.attribute[key]); let total = rawValue; let details = '';
+                        if (rawValue.includes('=')) { const parts = rawValue.split('='); total = parts[parts.length - 1].trim(); details = parts[0].trim(); }
+                        const item = document.createElement('div');
+                        item.className = 'attribute-item';
+                        const hasDetails = details && details.trim() !== '';
+                        item.innerHTML = `<div class="attribute-box"><span class="attribute-name">${attributeNames[key]}</span><div class="attribute-value-container"><span class="attribute-total">${total}</span>${hasDetails ? `<span class="attribute-details">${details}</span>` : ''}</div></div>`;
+                        if (hasDetails) { item.classList.add('is-collapsible'); item.onclick = () => { item.classList.toggle('show-formula'); item.classList.add('is-releasing-glow'); item.addEventListener('animationend', () => item.classList.remove('is-releasing-glow'), { once: true }); }; }
+                        attributesContainer.appendChild(item);
+                    });
+                }
+                const currentColumns = window.innerWidth > 767 ? 2 : (window.innerWidth <= 480 ? 2 : 3);
+                if (attributeCount > 0 && (attributeCount % currentColumns !== 0)) { const placeholder = document.createElement('div'); placeholder.className = 'attribute-item placeholder-item'; placeholder.innerHTML = `<div class="attribute-box"><span class="attribute-total">⚜</span></div>`; attributesContainer.appendChild(placeholder); }
+
+                document.querySelector('#tab-profile').innerHTML = '';
+                const profileData = { 'Tính Cách': data.personality, 'Sở Thích': data.favorite, 'Ngoại Hình': data.appearance, 'Trang Phục': data.clothing };
+                for (const [label, content] of Object.entries(profileData)) {
+                    const formattedContent = getSmartArray(content).join(', ');
+                    if (hasText(formattedContent)) { document.querySelector('#tab-profile').innerHTML += `<h3 class="subsection-title">${label}</h3><div class="profile-text-block">${formattedContent}</div>`; }
+                }
+
+                renderCards('#tab-skills', data.skills, createSkillCard);
+
+                const divinityContainer = document.querySelector('#tab-divinity'); divinityContainer.innerHTML = '';
+                const divData = data.path_to_godhood || {};
+                const rawDeity = hasText(divData.godhood) ? divData.godhood : (hasText(data.godhood) ? data.godhood : null);
+                const rawKingdom = divData.divine_realm || data.divine_realm;
+                const rawElements = hasArrayContent(divData.elements) ? divData.elements : (hasArrayContent(data.elements) ? data.elements : []);
+                const rawPowers = hasArrayContent(divData.authorities) ? divData.authorities : (hasArrayContent(data.authorities) ? data.authorities : []);
+                const rawLaws = hasArrayContent(divData.divine_law) ? divData.divine_law : (hasArrayContent(data.divine_law) ? data.divine_law : []);
+                if (rawDeity) divinityContainer.innerHTML += `<div class="godhood-display">godhood：${rawDeity}</div>`;
+                if (rawKingdom && hasText(rawKingdom.name)) { divinityContainer.innerHTML += `<div class="card divine-kingdom-card"><div class="card-header"><h3 class="card-title">${rawKingdom.name}</h3></div><div class="card-body"><p>${rawKingdom.description || 'Không có thông tin mô tả.'}</p></div></div>`; }
+                if (rawElements.length > 0) { divinityContainer.innerHTML += `<div class="subsection-title">elements</div>`; renderCards('#tab-divinity', rawElements, createGenericCard); }
+                if (rawPowers.length > 0) { divinityContainer.innerHTML += `<div class="subsection-title">authorities</div>`; renderCards('#tab-divinity', rawPowers, createGenericCard); }
+                if (rawLaws.length > 0) { divinityContainer.innerHTML += `<div class="subsection-title">divine_law</div>`; renderCards('#tab-divinity', rawLaws, createLawCard); }
+
+                renderCards('#tab-equipment', data.equipment, createEquipmentCard);
+
+                const inventoryContainer = document.querySelector('#tab-inventory'); inventoryContainer.innerHTML = '';
+                if (hasArrayContent(data.item)) { inventoryContainer.innerHTML += `<div class="subsection-title">Vật Phẩm</div>`; renderCards('#tab-inventory', data.items, createEquipmentCard); }
+                if (hasArrayContent(data.special_items)) { inventoryContainer.innerHTML += `<div class="subsection-title">Vật Phẩm Đặc Biệt</div>`; renderCards('#tab-inventory', data.special_items, createEquipmentCard); }
+
+                document.querySelector('#tab-backstory').innerHTML = hasText(data.background) ? `<p class="story">${data.background}</p>` : '';
+
+                initializeTabsAndInteractivity(data);
+            }
+
+            function initializeTabsAndInteractivity(data) {
+                const tabButtons = document.querySelectorAll('.tab-button'); const tabContents = document.querySelectorAll('.tab-content'); let firstVisibleTab = null;
+                const divData = data.path_to_godhood || {};
+                const hasDivinity = hasText(divData.godhood) || hasText(data.godhood) || (divData.divine_realm && hasText(divData.divine_realm.name)) || (data.divine_realm && hasText(data.divine_realm.name)) || hasArrayContent(divData.elements) || hasArrayContent(data.elements) || hasArrayContent(divData.authorities) || hasArrayContent(data.authorities) || hasArrayContent(divData.divine_law) || hasArrayContent(data.divine_law);
+
+                tabButtons.forEach(button => {
+                    const targetId = button.dataset.tabTarget;
+                    const contentElement = document.querySelector(targetId);
+                    let hasContent = false;
+                    switch (targetId) {
+                        case '#tab-profile': hasContent = hasText(data.personality) || hasText(data.favorite) || hasText(data.appearance) || hasText(data.clothing); break;
+                        case '#tab-skills': hasContent = hasArrayContent(data.skills); break;
+                        case '#tab-divinity': hasContent = hasDivinity; break;
+                        case '#tab-equipment': hasContent = hasArrayContent(data.equipment); break;
+                        case '#tab-inventory': hasContent = hasArrayContent(data.inventory) || hasArrayContent(data.special_items); break;
+                        case '#tab-backstory': hasContent = hasText(data.background); break;
+                    }
+                    if (!hasContent) { button.style.display = 'none'; if (contentElement) contentElement.innerHTML = ''; } else { button.style.display = ''; if (!firstVisibleTab) firstVisibleTab = button; }
+
+                    button.addEventListener('click', () => {
+                        if (button.style.display === 'none') return;
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        tabContents.forEach(content => { content.classList.remove('active'); content.style.display = 'none'; });
+                        button.classList.add('active');
+                        const newActiveContent = document.querySelector(button.dataset.tabTarget);
+                        if (newActiveContent) { newActiveContent.classList.add('active'); newActiveContent.style.display = ''; }
+                        button.classList.add('is-releasing-glow');
+                        button.addEventListener('animationend', () => { button.classList.remove('is-releasing-glow'); }, { once: true });
+                    });
+                });
+
+                if (firstVisibleTab) { firstVisibleTab.click(); }
+
+                const charName = document.querySelector('.char-name'); if (charName) { charName.addEventListener('click', () => { charName.classList.add('is-releasing'); charName.addEventListener('animationend', () => charName.classList.remove('is-releasing'), { once: true }); }); }
+                const vitalItems = document.querySelectorAll('.vital-item'); vitalItems.forEach(item => { const activate = () => item.classList.add('is-active'); const deactivate = () => item.classList.remove('is-active'); item.addEventListener('mouseover', activate); item.addEventListener('mousedown', activate); item.addEventListener('mouseout', deactivate); item.addEventListener('mouseup', deactivate); });
+            }
+
+            function renderCards(containerSelector, items, cardCreator) {
+                const container = document.querySelector(containerSelector);
+                if (!container || !items || !Array.isArray(items) || items.length === 0) return;
+                items.forEach(item => { if (item && hasText(item.name)) { container.insertAdjacentHTML('beforeend', cardCreator(item)) } });
+            }
+            function createTags(tags) { const safeTags = getSmartArray(tags); return safeTags.length > 0 ? safeTags.map(tag => `<span class="card-tag">${tag}</span>`).join('') : ''; }
+            function createSkillCard(item) { const costStr = getSmartArray(item.cost).join(' / '); return `<div class="card"><div class="card-header"><h3 class="card-title">${item.name || ''}</h3><span class="card-subtitle">${item.quality || ''} / ${item.type || ''}</span></div><div class="card-body"><div class="card-tags">${createTags(item.tags)}</div><p><span class="card-label">Tiêu hao:</span> ${costStr || 'Không Có'}</p><p><span class="card-label">Tác dụng:</span> ${item.effect || 'Không Có'}</p><p><span class="card-label">Mô tả:</span> ${item.description || 'Không Có'}</p></div></div>`; }
+            function createEquipmentCard(item) { return `<div class="card"><div class="card-header"><h3 class="card-title">${item.name || ''}</h3><span class="card-subtitle">${item.quality || ''} / ${item.tag || item.type || ''}</span></div><div class="card-body"><div class="card-tags">${createTags(item.tags)}</div><p><span class="card-label">Tác dụng:</span> ${item.effect || 'Không Có'}</p><p><span class="card-label">Mô tả:</span> ${item.description || 'Không Có'}</p></div></div>`; }
+            function createLawCard(item) { return `<div class="card"><div class="card-header"><h3 class="card-title">${item.name || ''}</h3></div><div class="card-body"><p>${item.description || ''}</p><p><span class="card-label">Tác dụng tiêu cực:</span> ${item.passive_effect || 'Không Có'}</p><p><span class="card-label">Tác dụng tích cực:</span> ${item.active_effect || 'Không Có'}</p></div></div>`; }
+            function createGenericCard(item) { return `<div class="card"><div class="card-header"><h3 class="card-title">${item.name || ''}</h3></div><div class="card-body"><p>${item.effect || item.description || 'Không Có'}</p></div></div>`; }
+
+            function addLorebookButton(data, originalYaml) {
+                const header = document.querySelector('.sheet-header'); if (!header) return;
+                let button = document.getElementById('save-to-lorebook-btn'); if (button) button.remove();
+                button = document.createElement('button'); button.id = 'save-to-lorebook-btn'; button.innerHTML = '💾 <span class="btn-text">Lưu vào Worldbook</span>';
+                button.addEventListener('click', async (e) => {
+                    e.stopPropagation(); const api = window.TavernHelper || window;
+                    if (typeof api.getOrCreateChatWorldbook !== 'function' || typeof api.createWorldbookEntries !== 'function') { alert('Lỗi: Không tìm thấy Worldbook API (TavernHelper).'); return; }
+                    try {
+                        button.innerHTML = '⏳ <span class="btn-text">Đang xử lý...</span>';
+                        const characterName = data.name || 'Unknown'; let shortName = characterName.split(/[·\s]/)[0]; const lorebookKey = shortName && shortName.trim().length > 0 ? shortName : characterName;
+                        let bookName = (api.getChatWorldbookName) ? await api.getChatWorldbookName('current') : null;
+                        if (!bookName) { const now = new Date(); const timeStr = `${now.getFullYear()}_${(now.getMonth() + 1).toString().padStart(2, '0')}_${now.getDate().toString().padStart(2, '0')}`; const desiredName = `[Nhân Vật]-${timeStr}-Tự Bổ Sung`; bookName = await api.getOrCreateChatWorldbook('current', desiredName); }
+                        const newEntry = { name: characterName, enabled: true, strategy: { type: 'selective', keys: [lorebookKey] }, position: { type: 'after_character_definition', order: 601 }, content: originalYaml, };
+                        await api.createWorldbookEntries(bookName, [newEntry]);
+                        button.innerHTML = '✅ <span class="btn-text">Đã lưu!</span>'; button.disabled = true;
+                        setTimeout(() => { button.innerHTML = '💾 <span class="btn-text">Lưu vào Worldbook</span>'; button.disabled = false; }, 1500);
+                    } catch (err) { console.error('Worldbook Save Error:', err); button.innerHTML = '❌ <span class="btn-text">Lỗi</span>'; alert('Lưu thất bại: ' + err.message); setTimeout(() => (button.innerHTML = '💾 <span class="btn-text">Lưu vào Worldbook</span>'), 2000); }
+                });
+                header.appendChild(button);
+            }
+
+            const yamlDataSource = document.getElementById('data-source');
+            if (yamlDataSource) {
+                const rawYaml = yamlDataSource.textContent;
+                if (rawYaml && rawYaml.trim()) {
+                    const data = parseRobust(rawYaml);
+                    if (data) { renderSheet(data, rawYaml); }
+                    else { document.body.innerHTML = `<div style="color: #ff6b6b; padding: 20px; font-family: sans-serif; text-align: center; background: rgba(0,0,0,0.8); border-radius: 10px;"><h3>解析错误 (Parsing Error)</h3><p>数据格式似乎有误，请检查YAML。</p></div>`; }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
+```
