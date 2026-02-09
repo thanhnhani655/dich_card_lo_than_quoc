@@ -9907,17 +9907,17 @@
                 }
             },
             me = [{
-                threshold: 1e12,
-                suffix: 'Triệu (nghìn tỷ)',
-                divisor: 1e12
+                threshold: 1e9,
+                suffix: 'Tỷ',
+                divisor: 1e9
             }, {
-                threshold: 1e8,
-                suffix: 'Ức (trăm triệu)',
-                divisor: 1e8
+                threshold: 1e6,
+                suffix: 'Triệu',
+                divisor: 1e6
             }, {
-                threshold: 1e4,
-                suffix: 'Vạn (mười nghìn)',
-                divisor: 1e4
+                threshold: 1e3,
+                suffix: 'Nghìn',
+                divisor: 1e3
             }];
 
         function pe(e) {
@@ -11394,7 +11394,7 @@
                                 className: `fa-solid fa-star ${tn.destinyPointsIcon}`
                             }), (0, o.jsx)('span', {
                                 className: tn.destinyPointsLabel,
-                                children: 'Điểm Định Mệnh'
+                                children: 'Điểm Vận Mệnh'
                             }), t ? (0, o.jsx)(It, {
                                 path: 'destiny_system.fate_points',
                                 value: s?.fate_points ?? 0,
@@ -11426,7 +11426,7 @@
                                         className: tn.partnerMeta,
                                         children: [(0, o.jsxs)('span', {
                                             className: tn.affectionBadge,
-                                            children: ['relationship_list ', e.relationship_list ?? 0]
+                                            children: ['Độ Thiện Cảm ', e.favorability ?? 0]
                                         }), (0, o.jsxs)('div', {
                                             className: tn.partnerTags,
                                             children: [e.is_present && (0, o.jsx)('span', {

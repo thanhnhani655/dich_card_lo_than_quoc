@@ -790,6 +790,16 @@
                 mythic: 'Truyền Thuyết'
             };
 
+        const getCoefficients = (level) => {
+            if (level <= 4) return { hp: 1, mp_sp: 1 };       // Một
+            if (level <= 8) return { hp: 2, mp_sp: 2.5 };     // Hai
+            if (level <= 12) return { hp: 4, mp_sp: 6 };      // Ba
+            if (level <= 16) return { hp: 10, mp_sp: 15 };    // Bốn
+            if (level <= 20) return { hp: 20, mp_sp: 35 };    // Năm
+            if (level <= 24) return { hp: 40, mp_sp: 80 };    // Sáu
+            return { hp: 100, mp_sp: 160 };                   // Bảy (Level >= 25)
+        };
+
         function be() {
             const e = L(),
                 t = q(),
@@ -845,10 +855,12 @@
                                     mind: 4 + S(e.level) + e.attributePoints.精神
                                 },
                                 // Các chỉ số sống cơ bản (tính toán sơ bộ hoặc để 0 để hệ thống tự tính sau)
-                                current_hp: 100,
-                                max_hp: 100,
-                                current_mp: 50,
-                                max_mp: 50,
+                                max_hp: protagonistData.attribute.constitution * 100 * getCoefficients(e.level).hp + protagonistData.attribute.constitution + protagonistData.attribute.strength + protagonistData.attribute.dexterity + protagonistData.attribute.intelligence + protagonistData.attribute.mind,
+                                current_hp: max_hp,
+                                max_mp: protagonistData.attribute.intelligence * 50 * getCoefficients(e.level).mp_sp,
+                                current_mp: max_mp,
+                                max_sp: (protagonistData.attribute.strength + protagonistData.attribute.dexterity) * 50 * getCoefficients(e.level).mp_sp,
+                                current_sp: max_sp,
                                 attribute_point: e.remainingAP || 0, // Điểm thuộc tính còn dư
 
                                 // Các trường khác nếu cần thiết theo schema mvu_zod
@@ -859,6 +871,12 @@
                             _.set(r, 'stat_data.protagonist.life_tier', protagonistData.life_tier);
                             _.set(r, 'stat_data.protagonist.identity', protagonistData.identity);
                             _.set(r, 'stat_data.protagonist.attribute', protagonistData.attribute);
+                            _.set(r, 'stat_data.protagonist.max_hp', protagonistData.max_hp);
+                            _.set(r, 'stat_data.protagonist.current_hp', protagonistData.current_hp);
+                            _.set(r, 'stat_data.protagonist.max_mp', protagonistData.max_mp);
+                            _.set(r, 'stat_data.protagonist.current_mp', protagonistData.current_mp);
+                            _.set(r, 'stat_data.protagonist.max_stamina', protagonistData.max_sp);
+                            _.set(r, 'stat_data.protagonist.current_stamina', protagonistData.current_sp);
                             const i = _.fromPairs(_.map(n, e => [e.name, {
                                 rarity: _.get(ge, e.rarity, 'Thường'),
                                 amount: e.quantity || 1,

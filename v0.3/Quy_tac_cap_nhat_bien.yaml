@@ -1,0 +1,318 @@
+---
+variables_update_rules:
+  world:
+    time:
+      format: Kỷ Nguyên Phục Hưng ${yyy} năm-${mm} tháng-${dd} ngày-${hh}:${mm}
+      check:
+        - Chế 24 giờ
+        - Cập nhật sau mỗi lần cốt truyện tiến triển, hành động, nghỉ ngơi hoặc du hành, giữ thời gian trôi qua hợp lý
+        - Nếu khoảng thời gian lớn, nên giải thích lý do nhảy vọt
+    location:
+      format: ${Phương vị đại lục}-${Khu vực}-${Thế lực}-${Tụ lạc/Địa danh}-${Khu vị}-${Vị trí chi tiết}
+      check:
+        - Thay đổi thời thực theo <user> di động
+        - Tùy tình hình thực tế giữ lại 4~6 tầng, sắp xếp từ lớn đến nhỏ
+
+  quest_list:
+    type: |-
+      {
+        [quest_name: string]:// Tên nhiệm vụ sử dụng tiếng việt, viết hoa đầu mỗi chữ 
+        {
+          quest_desc: string; // Cấp độ, phía ủy thác nhiệm vụ và mô tả chi tiết
+          quest_target: string; // Điều kiện & thời gian cần thiết để hoàn thành nhiệm vụ
+          quest_reward: string; // Phần thưởng nhiệm vụ & cách nhận
+        }
+      }
+    check:
+      - Cập nhật theo cốt truyện tiến triển, hành vi thực tế của <user>
+      - Sau khi hoàn thành nhiệm vụ và nhận phần thưởng thì xóa trực tiếp nhiệm vụ đó
+      - Tên nhiệm vụ bằng tiếng Việt, ghi rõ nhiệm vụ đội/cá nhân
+      - Tránh thêm một lúc quá 3 nhiệm vụ
+
+  protagonist:
+    race: &race
+      check:
+        - Chỉ cập nhật khi chủng tộc nhân vật thay đổi thực chất
+    identity: &identity
+      type: Array<string>
+      check:
+        - Cập nhật theo cốt truyện tiến triển, hành vi thực tế của nhân vật
+        - Có thể đồng thời sở hữu nhiều thân phận
+        - Thân phận tương tự hoặc trùng lặp không ghi
+    job: &occupation
+      type: Array<string>
+      check:
+        - Cập nhật theo cốt truyện tiến triển, hành vi thực tế của nhân vật
+        - Có thể đồng thời sở hữu nhiều nghề nghiệp
+        - Nghề nghiệp tương tự hoặc trùng lặp không ghi
+    accumulated_experience:
+      type: number
+      check:
+        - Tăng theo cốt truyện tiến triển, chiến đấu v.v.
+    advenrure_rank:
+      check:
+        - Cập nhật theo biểu hiện và đánh giá của <user> tại Công Hội Mạo Hiểm Giả
+    attribute_point:
+      type: number
+      check:
+        - Chỉ giảm khi <user> phân bổ thuộc tính rõ ràng
+        - Không thể tăng tùy tiện, không tự động tăng theo cấp độ
+    attribute.${năm loại}: &attr
+      type: number
+      Ngũ duy: strength | dexterity | constitution | intelligence | mind
+      check:
+        - Thay đổi theo <user> phân bổ điểm thuộc tính v.v.
+        - Thay đổi một lần nên có căn cứ cốt truyện rõ ràng
+    ${Giá trị tài nguyên} tối đa:
+      type: number
+      Giá trị tài nguyên: max_hp | max_mp | max_stamina
+      check:
+        - Kiểm tra và cập nhật khi thuộc tính thay đổi
+        - Cập nhật theo hiệu quả của trang bị, kỹ năng, dược tễ
+    ${Giá trị tài nguyên}:
+      type: number
+      Giá trị tài nguyên: current_hp | current_mp | current_stamina
+      check:
+        - Theo chiến đấu, thi pháp, hành động tiêu hao hoặc trị liệu, nghỉ ngơi hồi phục
+        - Không thể vượt quá thượng hạn tương ứng
+    currency:
+      type: number
+      check:
+        - Cập nhật theo giao dịch, thu được, tiêu dùng
+        - Làm tròn lấy số nguyên
+    inventory:
+      type: |-
+        {
+          [item_name: string]: {
+            rarity: string;
+            type: string;
+            amount: number;
+            tag: string[];
+            effect: { [effect_name: string]: string };
+            description: string;
+          }
+        }
+      check:
+        - Cập nhật theo <user> thu được, sử dụng, vứt bỏ vật phẩm
+        - Tự động loại bỏ khi số lượng vật phẩm bằng 0
+        - Tên vật phẩm phải bằng tiếng Việt
+    Trang bị: &equip
+      type: |-
+        {
+          [equip_name: string]: {
+            rarity: string;
+            type: string;
+            tag: string[];
+            effect: { [effect_name: string]: string };
+            description: string;
+            slot: string;
+          }
+        }
+      check:
+        - Cập nhật khi nhân vật mặc, tháo, hư hại, thay thế trang bị
+        - Cùng một vị trí mặc không thể trang bị nhiều món
+        - Khi chưa trang bị, 'Vị trí' có thể là không gian chứa đồ
+        - Tên trang bị phải bằng tiếng Việt
+    skills: &skill
+      type: |-
+        {
+          [skill_name: string]: {
+            rarity: string;
+            type: string;
+            cost: string;
+            tag: string[];
+            effect: { [Tên hiệu quả: string]: string };
+            description: string;
+          }
+        }
+      check:
+        - Cập nhật theo nhân vật học, quên, nâng cấp kỹ năng
+        - Tên kỹ năng phải bằng tiếng Việt
+    Hiệu quả trạng thái:
+      type: |-
+        {
+          [status_name: string]: {
+            type: 'buff | 'debuff' | 'special';
+            effect: string;
+            stacks: number;
+            time_remaining: string;
+            source: string;
+          }
+        }
+      check:
+        - Cập nhật theo <user> thu được, loại bỏ hiệu quả trạng thái
+        - Thời gian còn lại phải giảm theo 'Thế giới.Thời gian' trôi qua
+        - Vào/Rời chiến đấu, thời gian còn lại phải cập nhật tương ứng thành số hồi hợp/thời gian thực tế
+        - Trong chiến đấu, <user> tiến hành một hành động hoàn chỉnh coi như trải qua 1 hồi hợp
+        - Loại bỏ sau khi thời gian còn lại về 0 hoặc hiệu quả kích hoạt
+        - Số tầng thay đổi cần có lý do rõ ràng
+    path_to_godhood: &ascension
+      is_unlocked:
+        type: boolean
+        check:
+          - Cập nhật thành true khi cấp độ đạt 12 và kinh nghiệm đầy/13 cấp trở lên
+          - Sau khi thành true không thể thay đổi lại
+      elements:
+        type: |-
+          { [ability_name: string]: { [Thuộc tính: string]: string } }
+        check:
+          - Cập nhật theo nhân vật thu được yếu tố
+          - Tối đa sở hữu 3 yếu tố
+          - Sau khi 3 yếu tố hợp thành 1 quyền năng thì xóa sạch
+      authorities:
+        type: |-
+          { [ability_name: string]: { [Thuộc tính: string]: string } }
+        check:
+          - Cập nhật theo hợp thành yếu tố hoặc cốt truyện thu được
+          - Tối đa sở hữu 1 quyền năng
+          - Sau khi sở hữu quyền năng và qua thử thách thu được 1 pháp tắc thì xóa sạch
+      divine_law:
+        type: |-
+          { [ability_name: string]: { [Thuộc tính: string]: string } }
+        check:
+          - Cập nhật theo hợp thành quyền năng hoặc cốt truyện thu được
+          - Trước khi thu được thần vị chỉ có thể sở hữu 1 pháp tắc
+          - Sau khi thu được thần vị có thể sở hữu nhiều pháp tắc
+      godhood:
+        check:
+          - Cập nhật theo nhân vật thành thần
+      divine_realm:
+        name:
+          check:
+            - Cập nhật theo nhân vật thành lập, đặt tên thần quốc
+        description:
+          check:
+            - Cập nhật theo thần quốc phát triển, thay đổi
+
+  causality_system:
+    fate_points:
+      type: number
+      value: FP, {{getvar::fp_definition}}
+      check:
+        - Cập nhật theo <user> tiêu hao hoặc thu được điểm vận mệnh
+        - Không thể âm
+    relationship_list:
+      type: |-
+        {
+          [character_name: string]: {
+            is_present: boolean;
+            race: string;
+            identity: string[];
+            job: string[];
+            life_tier: string;
+            level: number;
+            attribute: { strength: number; dexterity: number; constitution: number; intelligence: number; mind: number };
+            equipment: { [equip_name: string]: { rarity: string; type: string; tag: string[]; effect: { [k: string]: string }; description string; slot: string } };
+            skills: { [skill_name: string]: { rarity: string; type: string; cost: string; tag: string[]; effect: { [k: string]: string }; description: string } };
+            path_to_godhood: { is_unlocked: boolean; elements: object; authorities: object; divine_law: object; godhood: string; divine_realm { Tên: string; description: string } };
+            personality: string;
+            favorite: string;
+            appearance: string;
+            clothing: string;
+            destiny_contract: boolean;
+            favorability: number;
+            inner_thoughts: string;
+            background: string;
+          }
+        }
+      check:
+        - Phải cập nhật theo ý định chủ quan của <user>
+        - Tên nhân vật phải sử dụng tên chính thức, hoàn chỉnh, duy nhất
+        - Khi nhân vật chưa ký kết khế ước và <user> không còn lưu luyến thì xóa trực tiếp
+      "${character_name}":
+        is_present:
+          type: boolean
+          check:
+            - Cập nhật theo cốt truyện tiến triển, hành động nhân vật
+        race: *race
+        identity: *identity
+        job: *occupation
+        life_tier:
+          check:
+            - Cập nhật theo nhân vật hoàn thành đột phá tầng thứ
+        level:
+          type: number
+          range: 1~25
+          check:
+            - Thay đổi theo nhân vật chiến đấu, lịch luyện, thu được cơ duyên v.v.
+        attribute.${Ngũ duy}:
+          <<: *attr
+          check:
+            - Thay đổi theo nhân vật thăng cấp
+            - Thay đổi một lần nên có căn cứ cốt truyện rõ ràng
+        equipment:
+          <<: *equip
+          check:
+            - Tái sử dụng quy tắc *equip, vị trí không gian chứa đồ có thể lặp lại cất vật phẩm
+            - Vật phẩm trong không gian chứa đồ cần ghi chú số lượng trong 'Mô tả'
+        skills: *skill
+        path_to_godhood: *ascension
+        personality:
+          check:
+            - Chỉ cập nhật khi tính cách nhân vật thay đổi rõ rệt
+        favorite:
+          check:
+            - Cập nhật theo cốt truyện tiến triển, hành vi thực tế của nhân vật
+        appearance:
+          check:
+            - Chỉ cập nhật khi ngoại mạo nhân vật thay đổi rõ rệt
+        clothing:
+          check:
+            - Cập nhật theo cốt truyện tiến triển, hành vi thực tế của nhân vật
+        destiny_contract:
+          type: boolean
+          check:
+            - Cập nhật theo hành động thực tế của <user>
+            - Sau khi thành true không thể thay đổi lại
+        favorability:
+          type: number
+          range: -100~100
+          check:
+            - Khoảng thay đổi là -5~5
+            - Quy tắc thay đổi cụ thể tham khảo 'Định nghĩa độ cảm'
+        inner_thoughts:
+          check:
+            - Mỗi lần trả lời đều cần cập nhật theo cốt truyện thực tế
+        background:
+          check:
+            - Chỉ cập nhật khi xảy ra sự kiện có ảnh hưởng lớn đến kinh lịch nhân vật
+            - Bổ sung/Sửa đổi trên nền câu chuyện nền nguyên có
+
+  news:
+    astaria_express:
+      type: |-
+        {
+          faction_daily: string; // Động hướng mới nhất của các thế lực đỉnh cao như vương quốc, giáo hội, công hội v.v.
+          exalted_traces: string; // Ghi chép hoạt động công khai của cường giả cấp sử thi hoặc truyền thuyết
+          military_actions: string; // Tình báo chiến tranh hoặc xung đột biên cương, điều động quân đội quy mô
+          economic_artery: string; // Tin tức về cấm vận tài nguyên, thương lộ v.v. có ảnh hưởng lớn đến kinh tế đại lục
+          disaster_warning: string; // Cảnh báo thảm họa phạm vi rộng như triều ma thú, ôn dịch, thiên tai
+        }
+      value: Phát thanh tin tức chính thức quan trọng nhất và có sức ảnh hưởng phổ biến trong phạm vi đại lục Astaria; Phong cách nội dung khách quan, chính thức
+      check: &news_check
+        - Khi nội dung tin tức trống cần lập tức tiến hành một lần cập nhật toàn lượng
+        - Không được triển khai quanh kinh lịch <user>, chỉ khi <user> làm ra sự kiện có sức ảnh hưởng lớn mới lên tin
+        - Mỗi lần trả lời cần cập nhật 2~3 tin trong đó
+        - Nếu có tin tức <user> đang truy tầm, nên tùy tình hình thực tế cập nhật sớm hoặc muộn
+        - Nội dung mỗi tin ít nhất 80 chữ
+    tavern_bulletin_board:
+      type: |-
+        {
+          highbounty: string; // Nhiệm vụ thảo phạt hoặc tìm kiếm có tiền thưởng dị thường phong hậu ở khu vực gần
+          discovery: string; // Di tích, hang động hoặc điểm tài nguyên chưa biết mà nhà phiêu lưu tuyên bố phát hiện
+          monster_activity: string; // Tình hình ma vật mạnh gần đó tỉnh giấc, di cư hoặc tụ tập dị thường
+          wanted_criminals: string; // Tội phạm nguy hiểm đang bị truy nã ở thành trấn gần và đặc trưng của chúng
+          treasure_rumors: string; // Tin tức về trang bị, vật phẩm hoặc tài bảo hy hữu xuất hiện ở đâu đó gần
+        }
+      value: Ghi chép tin tức trong giới nhà phiêu lưu và lời đồn đại gần khu vực <user> đang ở; Tin tức khó phân chân giả, thường ẩn giấu manh mối nhiệm vụ
+      check: *news_check
+    afternoon_tea:
+      type: |-
+        {
+          social_anecdotes: string; // Bát quái nhân tế và phong lưu vận sự của danh lưu quý tộc hoặc nhân vật anh hùng
+          distant_vision: string; // Việc người được mệnh định đã ký kết khế ước nhưng không tại trường đang làm lúc này
+          fate_ripples: string; // Nhân vật tiềm lực chưa quen biết phù hợp sở thích <user>, ở khu vực gần <user>
+          encounter_omens: string; // Báo trước nhân vật nào đó chủ động lên kế hoạch gặp <user>; format: ${Nhân vật như thế nào ở địa điểm gì làm việc gì}
+        }
+      value: Nội dung tập trung vào động thái riêng tư và bát quái tình cảm của nhân vật nổi tiếng đại lục, {{getvar::leak_style}}
+      check: *news_check
