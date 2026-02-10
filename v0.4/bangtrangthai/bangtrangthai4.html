@@ -12971,64 +12971,64 @@
                 distant_vision: "Tầm Nhìn Xa",
                 fate_ripples: "Gợn Sóng Định Mệnh",
                 encounter_omens: "Điềm Báo Gặp Gỡ"
-            };
-        rr = en({
-            baseClassName: Wa
-        })(({
-            data: e
-        }) => {
-            const {
-                editEnabled: t
-            } = g(), n = e.news, a = (e, n) => {
-                const a = _.entries(n);
-                return a.some(([, e]) => !_.isEmpty(e)) ? (0, o.jsx)('div', {
-                    className: Xa,
-                    children: a.map(([n, a]) => {
-                        if (_.isEmpty(a)) return null;
-                        const r = `news.${e}.${n}`;
-                        return (0, o.jsxs)('div', {
-                            className: Ya,
-                            children: [(0, o.jsx)('div', {
-                                className: Ja,
-                                children: NEWS_FIELD_LABELS[n] || n
-                            }), (0, o.jsx)('div', {
-                                className: Za,
-                                children: t ? (0, o.jsx)(It, {
-                                    path: r,
-                                    value: a,
-                                    type: 'textarea',
-                                    className: tr
-                                }) : (0, o.jsx)('span', {
-                                    className: er,
-                                    children: a
-                                })
-                            })]
-                        }, n)
+            },
+            rr = en({
+                baseClassName: Wa
+            })(({
+                data: e
+            }) => {
+                const {
+                    editEnabled: t
+                } = g(), n = e.news, a = (e, n) => {
+                    const a = _.entries(n);
+                    return a.some(([, e]) => !_.isEmpty(e)) ? (0, o.jsx)('div', {
+                        className: Xa,
+                        children: a.map(([n, a]) => {
+                            if (_.isEmpty(a)) return null;
+                            const r = `news.${e}.${n}`;
+                            return (0, o.jsxs)('div', {
+                                className: Ya,
+                                children: [(0, o.jsx)('div', {
+                                    className: Ja,
+                                    children: NEWS_FIELD_LABELS[n] || n
+                                }), (0, o.jsx)('div', {
+                                    className: Za,
+                                    children: t ? (0, o.jsx)(It, {
+                                        path: r,
+                                        value: a,
+                                        type: 'textarea',
+                                        className: tr
+                                    }) : (0, o.jsx)('span', {
+                                        className: er,
+                                        children: a
+                                    })
+                                })]
+                            }, n)
+                        })
+                    }) : (0, o.jsx)(Qt, {
+                        className: nr,
+                        text: 'Không có tin tức'
                     })
-                }) : (0, o.jsx)(Qt, {
-                    className: nr,
-                    text: 'Không có tin tức'
+                };
+                return (0, o.jsx)('div', {
+                    className: Wa,
+                    children: ar.map(e => {
+                        const t = _.get(n, e.key, {});
+                        return (0, o.jsx)(Ut, {
+                            defaultOpen: !0,
+                            title: (0, o.jsx)(Kt, {
+                                icon: e.icon,
+                                text: e.label || e.key,
+                                className: Ga,
+                                style: {
+                                    color: e.color
+                                }
+                            }),
+                            children: a(e.key, t)
+                        }, e.key)
+                    })
                 })
-            };
-            return (0, o.jsx)('div', {
-                className: Wa,
-                children: ar.map(e => {
-                    const t = _.get(n, e.key, {});
-                    return (0, o.jsx)(Ut, {
-                        defaultOpen: !0,
-                        title: (0, o.jsx)(Kt, {
-                            icon: e.icon,
-                            text: e.label || e.key,
-                            className: Ga,
-                            style: {
-                                color: e.color
-                            }
-                        }),
-                        children: a(e.key, t)
-                    }, e.key)
-                })
-            })
-        }),
+            }),
             lr = 'QuestsTab-module__questsTab--GU4iV',
             ir = 'QuestsTab-module__stats--H6l1u',
             or = 'QuestsTab-module__statsCard--uKuD_',
