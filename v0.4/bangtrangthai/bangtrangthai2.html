@@ -9144,7 +9144,7 @@
             }).prefault({}).transform(e => _.pick(e, ['is_present', 'race', 'identity', 'job', 'life_tier', 'personality', 'favorite', 'appearance', 'clothing', 'level', 'attribute', 'equipment', 'skills', 'path_to_godhood', 'destiny_contract', 'favorability', 'inner_thoughts', 'background']))).prefault({}),
             L = b.z.object({
                 astaria_express: b.z.object({
-                    'h h': b.z.string().prefault(''),
+                    faction_daily: b.z.string().prefault(''),
                     exalted_traces: b.z.string().prefault(''),
                     military_actions: b.z.string().prefault(''),
                     economic_artery: b.z.string().prefault(''),
@@ -12940,73 +12940,95 @@
             nr = 'NewsTab-module__emptyHint--LCk5q',
             ar = [{
                 key: 'astaria_express',
+                label: 'Báo Astaria',
                 icon: 'fa-solid fa-newspaper',
                 color: '#1976d2'
             }, {
                 key: 'tavern_bulletin_board',
+                label: 'Bảng Tin Tửu Quán',
                 color: '#7b1fa2'
             }, {
                 key: 'afternoon_tea',
+                label: 'Tiệc Trà Chiều',
                 icon: 'fa-solid fa-mug-hot',
                 color: '#c2185b'
             }],
-            rr = en({
-                baseClassName: Wa
-            })(({
-                data: e
-            }) => {
-                const {
-                    editEnabled: t
-                } = g(), n = e.news, a = (e, n) => {
-                    const a = _.entries(n);
-                    return a.some(([, e]) => !_.isEmpty(e)) ? (0, o.jsx)('div', {
-                        className: Xa,
-                        children: a.map(([n, a]) => {
-                            if (_.isEmpty(a)) return null;
-                            const r = `news.${e}.${n}`;
-                            return (0, o.jsxs)('div', {
-                                className: Ya,
-                                children: [(0, o.jsx)('div', {
-                                    className: Ja,
-                                    children: n
-                                }), (0, o.jsx)('div', {
-                                    className: Za,
-                                    children: t ? (0, o.jsx)(It, {
-                                        path: r,
-                                        value: a,
-                                        type: 'textarea',
-                                        className: tr
-                                    }) : (0, o.jsx)('span', {
-                                        className: er,
-                                        children: a
-                                    })
-                                })]
-                            }, n)
-                        })
-                    }) : (0, o.jsx)(Qt, {
-                        className: nr,
-                        text: 'Không có tin tức'
+            NEWS_FIELD_LABELS = {
+                // Astaria Express
+                faction_daily: "Tin Tức Phe Phái",
+                exalted_traces: "Dấu Vết Thăng Hoa",
+                military_actions: "Hoạt Động Quân Sự",
+                economic_artery: "Huyết Mạch Kinh Tế",
+                disaster_warning: "Cảnh Báo Thảm Họa",
+                // Tavern Bulletin Board
+                highbounty: "Tiền Thưởng Cao",
+                discovery: "Khám Phá Mới",
+                monster_activity: "Hoạt Động Quái Vật",
+                wanted_criminals: "Tội Phạm Truy Nã",
+                treasure_rumors: "Tin Đồn Kho Báu",
+                // Afternoon Tea
+                social_anecdotes: "Giai Thoại Xã Hội",
+                distant_vision: "Tầm Nhìn Xa",
+                fate_ripples: "Gợn Sóng Định Mệnh",
+                encounter_omens: "Điềm Báo Gặp Gỡ"
+            };
+        rr = en({
+            baseClassName: Wa
+        })(({
+            data: e
+        }) => {
+            const {
+                editEnabled: t
+            } = g(), n = e.news, a = (e, n) => {
+                const a = _.entries(n);
+                return a.some(([, e]) => !_.isEmpty(e)) ? (0, o.jsx)('div', {
+                    className: Xa,
+                    children: a.map(([n, a]) => {
+                        if (_.isEmpty(a)) return null;
+                        const r = `news.${e}.${n}`;
+                        return (0, o.jsxs)('div', {
+                            className: Ya,
+                            children: [(0, o.jsx)('div', {
+                                className: Ja,
+                                children: NEWS_FIELD_LABELS[n] || n
+                            }), (0, o.jsx)('div', {
+                                className: Za,
+                                children: t ? (0, o.jsx)(It, {
+                                    path: r,
+                                    value: a,
+                                    type: 'textarea',
+                                    className: tr
+                                }) : (0, o.jsx)('span', {
+                                    className: er,
+                                    children: a
+                                })
+                            })]
+                        }, n)
                     })
-                };
-                return (0, o.jsx)('div', {
-                    className: Wa,
-                    children: ar.map(e => {
-                        const t = _.get(n, e.key, {});
-                        return (0, o.jsx)(Ut, {
-                            defaultOpen: !0,
-                            title: (0, o.jsx)(Kt, {
-                                icon: e.icon,
-                                text: e.key,
-                                className: Ga,
-                                style: {
-                                    color: e.color
-                                }
-                            }),
-                            children: a(e.key, t)
-                        }, e.key)
-                    })
+                }) : (0, o.jsx)(Qt, {
+                    className: nr,
+                    text: 'Không có tin tức'
                 })
-            }),
+            };
+            return (0, o.jsx)('div', {
+                className: Wa,
+                children: ar.map(e => {
+                    const t = _.get(n, e.key, {});
+                    return (0, o.jsx)(Ut, {
+                        defaultOpen: !0,
+                        title: (0, o.jsx)(Kt, {
+                            icon: e.icon,
+                            text: e.label || e.key,
+                            className: Ga,
+                            style: {
+                                color: e.color
+                            }
+                        }),
+                        children: a(e.key, t)
+                    }, e.key)
+                })
+            })
+        }),
             lr = 'QuestsTab-module__questsTab--GU4iV',
             ir = 'QuestsTab-module__stats--H6l1u',
             or = 'QuestsTab-module__statsCard--uKuD_',
