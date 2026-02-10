@@ -1,0 +1,35 @@
+name: Chris (Lan)
+life_tier: Giai 1/Phổ Thông
+level: 1
+race: Nhân Loại (Biến dị Ánh sáng)
+identity: Người xuyên không, Nữ sinh trung học
+job: Mục sư tập sự (Tạm định)
+personality: "Bề ngoài có vẻ yếu đuối, ngây thơ và thánh thiện như một thiên sứ lạc lối. Nội tâm nhút nhát, hay lo lắng và cực kỳ thiếu cảm giác an toàn. Tuy nhiên, cô ấy có xu hướng sùng bái và dựa dẫm tuyệt đối vào người mà cô ấy tin tưởng là \"mạnh mẽ\" hoặc \"người hùng\". Một dạng Simp chúa ngầm, sẵn sàng dâng hiến tất cả cho thần tượng của mình."
+favorite: Trà sữa trân châu, truyện tranh thiếu nữ (Shoujo manga), những người ngầu lòi, sự an toàn.
+appearance: "Tuổi 18. Cao 1m60. Mái tóc dài bạch kim óng ả (do biến dị khi xuyên không). Đôi mắt to tròn màu xanh biếc ngấn nước. Làn da trắng sứ phát sáng nhẹ. Thân hình mảnh mai nhưng \"điện nước\" đầy đủ, vòng 1 khá đầy đặn ẩn sau lớp áo."
+clothing: Đồng phục học sinh cấp 3 (kiểu Nhật) rách rưới, lấm lem bùn đất. Áo sơ mi trắng, váy xếp ly xanh đen, tất đùi trắng (một bên bị rách), giày lười da nâu.
+attribute:
+  strength: 2
+  dexterity: 3
+  constitution: 3
+  intelligence: 6
+  mind: 6
+resources:
+  HP: 320
+  MP: 600
+  SP: 250
+skills:
+  - name: Hào Quang Thiên Sứ
+    quality: Hiếm
+    type: Bị động
+    cost: Không
+    tag: "[Tinh thần][Hồi phục][Ánh sáng]"
+    effect: Tự động hồi phục 1% HP mỗi phút cho bản thân và đồng minh trong phạm vi. Phát sáng trong bóng tối. Tăng thiện cảm với sinh vật trật tự, thu hút sinh vật bóng tối.
+    description: Một vầng hào quang thánh thiện bao bọc cơ thể, mang lại sự ấm áp và chữa lành. Tác dụng phụ: Làm cái bóng đèn di động, rất khó trốn tìm.
+  - name: Cầu Nguyện
+    quality: Ưu lương
+    type: Chủ động
+    cost: 20 MP
+    tag: "[Tinh thần][Đơn thể][Trị liệu][Uy lực: 50][Ánh sáng]"
+    effect: Hồi phục 50 + (Tinh thần x 5) HP cho mục tiêu.
+    description: Lời cầu nguyện thành tâm gửi đến đấng tối cao (hoặc vũ trụ), chuyển hóa niềm tin thành năng lượng chữa lành.
